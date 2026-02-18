@@ -1,0 +1,15 @@
+.footer {
+    a {
+        color: #6c757d;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: #0d6efd;
+        }
+    }
+
+    i {
+        font-size: 1.1rem;
+    }
+}
+
