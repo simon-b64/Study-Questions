@@ -144,14 +144,6 @@ Build artifacts will be stored in the `dist/` directory, optimized for productio
 - **TypeScript**: Type-safe development
 - **RxJS**: Reactive programming
 
-## 🧪 Testing
-
-Run unit tests:
-
-```bash
-npm test
-```
-
 Tests are run using [Vitest](https://vitest.dev/).
 
 ## 🤝 Contributing
@@ -161,6 +153,20 @@ When adding new features:
 2. Maintain accessibility standards (WCAG AA)
 3. Ensure mobile responsiveness
 4. Update progress tracking if modifying question flow
+
+## 📝 License
+
+This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
+
+### What this means:
+- ✅ **Free to use**: You can use this software for any purpose
+- ✅ **Free to modify**: You can change and adapt the code
+- ✅ **Free to distribute**: You can share the original or modified versions
+- ⚠️ **Copyleft**: If you distribute modified versions, they must also be open source under GPL-3.0
+- ⚠️ **Share improvements**: Modifications must be made available under the same license
+- 📋 **Attribution**: You must include the original copyright and license notices
+
+See the [LICENSE](LICENSE) file for the full license text, or visit [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ## 🙏 Acknowledgments
 
