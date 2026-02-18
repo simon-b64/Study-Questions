@@ -1,59 +1,169 @@
-# StudyQuestions
+# Study Questions App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+> ⚠️ **AI Generation Disclaimer**: This application was developed with significant assistance from AI (GitHub Copilot). While the code has been reviewed and tested, users should be aware of this development approach.
 
-## Development server
+A modern, intelligent study application built with Angular 21 that helps you master course material through spaced repetition and smart question prioritization.
 
-To start a local development server, run:
+## ✨ Features
+
+### 🎯 Smart Learning Algorithm
+- **Adaptive Question Prioritization**: Questions are presented based on your mastery level
+  - New questions get priority to expand knowledge
+  - Struggling questions appear more frequently
+  - Mastered questions appear occasionally for retention
+- **Mastery Levels**: Track progress through 4 levels (Not Started → Learning → Reviewing → Mastered)
+- **Streak Tracking**: Monitor your learning momentum with consecutive correct answer tracking
+
+### 📊 Comprehensive Progress Tracking
+- **Detailed Metrics**: Track attempts, accuracy, consecutive correct answers, and mastery levels for each question
+- **Visual Progress Dashboard**: See your overall and per-topic progress at a glance
+- **Persistent Storage**: Progress automatically saved to localStorage
+- **Import/Export**: Backup and transfer your progress as JSON files
+- **Version Control**: Hash-based validation warns you when course content changes
+
+### 🎨 Modern UI/UX
+- **Responsive Design**: Optimized for mobile, tablet, and desktop
+- **Bootstrap 5**: Clean, professional interface
+- **Accessible**: WCAG AA compliant with proper ARIA labels and keyboard navigation
+- **Real-time Feedback**: Instant visual feedback on answers with explanations
+
+### 📚 Course Management
+- **Multiple Courses**: Support for unlimited courses
+- **Topic Organization**: Questions grouped by topics/themes
+- **Course Validation**: Automatic detection of course updates via content hashing
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm (v11.6.2 or higher)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd study-questions
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Add your course data:
+   - Place your course JSON files in the `public/` directory
+   - Format: `{courseId}.json` (e.g., `daten-informatikrecht.json`)
+
+### Development Server
+
+Start the local development server:
 
 ```bash
+npm start
+# or
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to `http://localhost:4200/`. The app will automatically reload when you change source files.
 
-## Code scaffolding
+## 📖 Usage
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Adding a Course
 
-```bash
-ng generate component component-name
+1. Create a JSON file in the `public/` directory following this structure:
+```json
+{
+  "questionGroups": [
+    {
+      "name": "Topic Name",
+      "question": [
+        {
+          "question": "Your question text?",
+          "hint": "A helpful hint",
+          "answers": [
+            { "text": "Ja", "correct": true },
+            { "text": "Nein", "correct": false }
+          ],
+          "reason": "Explanation why this is correct"
+        }
+      ]
+    }
+  ]
+}
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2. Update `src/app/view/course-overview/course-overview.ts` and `src/app/view/home/home.ts` to include your course metadata.
 
-```bash
-ng generate --help
+### Studying
+
+1. **Select a Course**: Click on a course from the home page
+2. **View Progress**: See your overall and per-topic progress
+3. **Start Questions**: Click "Alle Fragen starten" or choose a specific topic
+4. **Answer Questions**: Select your answer and get immediate feedback
+5. **Track Progress**: Watch your mastery levels increase as you learn
+
+### Managing Progress
+
+- **Export**: Download your progress as JSON for backup
+- **Import**: Load previously saved progress
+- **Reset**: Clear all progress and start fresh
+
+## 🏗️ Project Structure
+
+```
+src/
+├── app/
+│   ├── components/       # Reusable components (navbar, etc.)
+│   ├── model/           # Data models and interfaces
+│   ├── store/           # NgRx Signals store for state management
+│   ├── utils/           # Utility functions (hashing, etc.)
+│   └── view/            # Page components
+│       ├── home/                 # Course selection page
+│       ├── course-overview/     # Progress dashboard
+│       └── question-view/       # Question answering interface
+└── public/              # Static assets and course JSON files
 ```
 
-## Building
+## 🛠️ Building for Production
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Build the project:
 
 ```bash
-ng test
+npm run build
 ```
 
-## Running end-to-end tests
+Build artifacts will be stored in the `dist/` directory, optimized for production deployment.
 
-For end-to-end (e2e) testing, run:
+## 📦 Technologies Used
+
+- **Angular 21**: Modern standalone components with signals
+- **NgRx Signals**: Reactive state management
+- **Bootstrap 5**: Responsive UI framework
+- **Bootstrap Icons**: Icon library
+- **TypeScript**: Type-safe development
+- **RxJS**: Reactive programming
+
+## 🧪 Testing
+
+Run unit tests:
 
 ```bash
-ng e2e
+npm test
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Tests are run using [Vitest](https://vitest.dev/).
 
-## Additional Resources
+## 🤝 Contributing
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+When adding new features:
+1. Follow Angular best practices (standalone components, signals, OnPush change detection)
+2. Maintain accessibility standards (WCAG AA)
+3. Ensure mobile responsiveness
+4. Update progress tracking if modifying question flow
+
+## 🙏 Acknowledgments
+
+- Built with [Angular CLI](https://angular.dev/tools/cli) version 21.1.0
+- Developed with assistance from AI tooling
+- Bootstrap components and styling
