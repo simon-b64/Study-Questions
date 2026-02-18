@@ -58,6 +58,112 @@ export class CourseOverviewView implements OnInit {
             this.router.navigate(['/course', courseId, 'questions']);
         }
     }
+
+    protected resetProgress(): void {
+        const courseId = this.route.snapshot.paramMap.get('courseId');
+        if (!courseId) return;
+
+        if (confirm('Möchtest du deinen gesamten Lernfortschritt für diesen Kurs wirklich zurücksetzen? Diese Aktion kann nicht rückgängig gemacht werden.')) {
+            // Clear progress from localStorage
+            this.courseStore.clearProgress(courseId);
+
+            // Reload the course to initialize fresh progress
+            const courseMetadata: CourseMetadata = {
+                id: courseId,
+                name: this.getCourseName(courseId)
+            };
+            this.courseStore.loadCourse(courseMetadata);
+        }
+    }
+
+    protected downloadProgress(): void {
+        const progress = this.courseStore.progress();
+        if (!progress) return;
+
+        // Convert progress to JSON string
+        const json = JSON.stringify(progress, null, 2);
+
+        // Create blob and download link
+        const blob = new Blob([json], { type: 'application/json' });
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+
+        // Generate filename with course name and timestamp
+        const timestamp = new Date().toISOString().split('T')[0];
+        link.download = `${progress.courseId}-progress-${timestamp}.json`;
+
+        // Trigger download
+        document.body.appendChild(link);
+        link.click();
+
+        // Cleanup
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+    }
+
+    protected uploadProgress(): void {
+        // Create file input element
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = '.json';
+
+        input.onchange = (event: Event) => {
+            const target = event.target as HTMLInputElement;
+            const file = target.files?.[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const content = e.target?.result as string;
+                    const progress = JSON.parse(content);
+
+                    // Validate that it's a valid progress object
+                    if (!progress.courseId || !progress.groupsProgress) {
+                        alert('Ungültige Fortschrittsdatei. Bitte wähle eine gültige JSON-Datei aus.');
+                        return;
+                    }
+
+                    // Check if it matches the current course
+                    const currentCourseId = this.route.snapshot.paramMap.get('courseId');
+                    if (progress.courseId !== currentCourseId) {
+                        if (!confirm(`Diese Fortschrittsdatei ist für einen anderen Kurs (${progress.courseId}). Trotzdem laden?`)) {
+                            return;
+                        }
+                    }
+
+                    // Convert date strings back to Date objects
+                    if (progress.createdAt) progress.createdAt = new Date(progress.createdAt);
+                    if (progress.lastActivityAt) progress.lastActivityAt = new Date(progress.lastActivityAt);
+
+                    progress.groupsProgress?.forEach((group: any) => {
+                        if (group.startedAt) group.startedAt = new Date(group.startedAt);
+                        if (group.lastActivityAt) group.lastActivityAt = new Date(group.lastActivityAt);
+
+                        group.questionsProgress?.forEach((question: any) => {
+                            if (question.lastAttemptedAt) question.lastAttemptedAt = new Date(question.lastAttemptedAt);
+                            if (question.firstCorrectAt) question.firstCorrectAt = new Date(question.firstCorrectAt);
+                            if (question.masteredAt) question.masteredAt = new Date(question.masteredAt);
+                        });
+                    });
+
+                    // Update progress in store (this will also save to localStorage)
+                    this.courseStore.updateProgress(progress);
+
+                    alert('Fortschritt erfolgreich importiert!');
+                } catch (error) {
+                    console.error('Failed to parse progress file:', error);
+                    alert('Fehler beim Laden der Fortschrittsdatei. Bitte überprüfe, ob die Datei gültig ist.');
+                }
+            };
+
+            reader.readAsText(file);
+        };
+
+        // Trigger file selection
+        input.click();
+    }
 }
 
 

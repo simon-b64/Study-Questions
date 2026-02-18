@@ -1,0 +1,35 @@
+// Mobile optimization for header and buttons
+@media (max-width: 575.98px) {
+    .display-5 {
+        font-size: 2rem; // Smaller heading on mobile
+        word-break: break-word;
+    }
+
+    // Ensure buttons are touch-friendly
+    .btn {
+        min-height: 44px; // Minimum touch target size
+        padding: 0.5rem 1rem;
+    }
+
+    .btn-lg {
+        font-size: 1rem; // Slightly smaller on mobile
+        padding: 0.6rem 1.2rem;
+    }
+
+    // Make button group split evenly on mobile
+    .btn-group {
+        display: flex;
+
+        .btn {
+            flex: 1;
+        }
+    }
+}
+
+// Tablet adjustments
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .display-5 {
+        font-size: 2.5rem;
+    }
+}
+

@@ -35,11 +35,37 @@
                         </li>
                     </ol>
                 </nav>
-                <div class="d-flex justify-content-between align-items-center">
-                    <h1 class="display-5 mb-0">{{ courseStore.currentCourseMetadata()?.name }}</h1>
-                    <button class="btn btn-primary btn-lg" (click)="startQuestions()">
-                        <i class="bi bi-play-circle-fill me-2"></i>Alle Fragen starten
-                    </button>
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
+                    <h1 class="display-5 mb-0 w-100 w-md-auto">{{ courseStore.currentCourseMetadata()?.name }}</h1>
+                    <div class="d-flex flex-column flex-sm-row gap-2 w-100 w-md-auto flex-shrink-0">
+                        @if (courseStore.progress() && (courseStore.progressStats()?.mastered ?? 0) > 0) {
+                            <!-- Mobile: Stack vertically, Desktop: Row -->
+                            <div class="d-flex flex-column flex-sm-row gap-2 w-100 w-sm-auto">
+                                <div class="btn-group w-100 w-sm-auto" role="group" aria-label="Progress management">
+                                    <button class="btn btn-outline-secondary" (click)="downloadProgress()"
+                                            title="Fortschritt als JSON herunterladen">
+                                        <i class="bi bi-download me-1 me-sm-2"></i><span class="d-none d-sm-inline">Exportieren</span><span class="d-inline d-sm-none">Export</span>
+                                    </button>
+                                    <button class="btn btn-outline-secondary" (click)="uploadProgress()"
+                                            title="Fortschritt aus JSON laden">
+                                        <i class="bi bi-upload me-1 me-sm-2"></i><span class="d-none d-sm-inline">Importieren</span><span class="d-inline d-sm-none">Import</span>
+                                    </button>
+                                </div>
+                                <button class="btn btn-outline-danger w-100 w-sm-auto" (click)="resetProgress()"
+                                        title="Fortschritt zurücksetzen">
+                                    <i class="bi bi-arrow-counterclockwise me-1 me-sm-2"></i><span class="d-none d-sm-inline">Zurücksetzen</span><span class="d-inline d-sm-none">Reset</span>
+                                </button>
+                            </div>
+                        } @else if (courseStore.progress()) {
+                            <button class="btn btn-outline-secondary w-100 w-sm-auto" (click)="uploadProgress()"
+                                    title="Fortschritt aus JSON laden">
+                                <i class="bi bi-upload me-2"></i>Fortschritt importieren
+                            </button>
+                        }
+                        <button class="btn btn-primary btn-lg w-100 w-sm-auto" (click)="startQuestions()">
+                            <i class="bi bi-play-circle-fill me-2"></i><span class="d-none d-sm-inline">Alle Fragen starten</span><span class="d-inline d-sm-none">Starten</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

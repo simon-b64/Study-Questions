@@ -22,6 +22,59 @@ const initialState: CourseStore = {
     error: undefined
 }
 
+// Local Storage Keys
+const STORAGE_KEY_PREFIX = 'study-questions-progress-';
+
+// Local Storage Utilities
+function saveProgressToLocalStorage(progress: CourseProgress): void {
+    try {
+        const key = `${STORAGE_KEY_PREFIX}${progress.courseId}`;
+        const serialized = JSON.stringify(progress);
+        localStorage.setItem(key, serialized);
+    } catch (error) {
+        console.error('Failed to save progress to localStorage:', error);
+    }
+}
+
+function loadProgressFromLocalStorage(courseId: string): CourseProgress | null {
+    try {
+        const key = `${STORAGE_KEY_PREFIX}${courseId}`;
+        const serialized = localStorage.getItem(key);
+        if (!serialized) return null;
+
+        const progress = JSON.parse(serialized);
+
+        // Convert date strings back to Date objects
+        if (progress.createdAt) progress.createdAt = new Date(progress.createdAt);
+        if (progress.lastActivityAt) progress.lastActivityAt = new Date(progress.lastActivityAt);
+
+        progress.groupsProgress?.forEach((group: QuestionGroupProgress) => {
+            if (group.startedAt) group.startedAt = new Date(group.startedAt);
+            if (group.lastActivityAt) group.lastActivityAt = new Date(group.lastActivityAt);
+
+            group.questionsProgress?.forEach((question: QuestionProgress) => {
+                if (question.lastAttemptedAt) question.lastAttemptedAt = new Date(question.lastAttemptedAt);
+                if (question.firstCorrectAt) question.firstCorrectAt = new Date(question.firstCorrectAt);
+                if (question.masteredAt) question.masteredAt = new Date(question.masteredAt);
+            });
+        });
+
+        return progress;
+    } catch (error) {
+        console.error('Failed to load progress from localStorage:', error);
+        return null;
+    }
+}
+
+function clearProgressFromLocalStorage(courseId: string): void {
+    try {
+        const key = `${STORAGE_KEY_PREFIX}${courseId}`;
+        localStorage.removeItem(key);
+    } catch (error) {
+        console.error('Failed to clear progress from localStorage:', error);
+    }
+}
+
 function initializeCourseProgress(course: Course, metadata: CourseMetadata): CourseProgress {
     const groupsProgress: QuestionGroupProgress[] = course.questionGroups.map(group => {
         const questionsProgress: QuestionProgress[] = group.question.map((_, index) => ({
@@ -148,14 +201,22 @@ export const CourseStore = signalStore(
                 switchMap((metadata) =>
                     http.get<Course>(`/${metadata.id}.json`).pipe(
                         tap((course) => {
-                            // Check if we already have progress for this course
-                            const existingProgress = store.progress();
-                            const isSameCourse = existingProgress?.courseId === metadata.id;
+                            // Try to load progress from localStorage first
+                            let progress = loadProgressFromLocalStorage(metadata.id);
 
-                            // Only initialize new progress if we don't have progress for this course
-                            const progress = isSameCourse && existingProgress
-                                ? existingProgress
-                                : initializeCourseProgress(course, metadata);
+                            // If not in localStorage, check if we have it in the store
+                            if (!progress) {
+                                const existingProgress = store.progress();
+                                const isSameCourse = existingProgress?.courseId === metadata.id;
+                                progress = isSameCourse && existingProgress ? existingProgress : null;
+                            }
+
+                            // If still no progress, initialize new
+                            if (!progress) {
+                                progress = initializeCourseProgress(course, metadata);
+                                // Save the newly initialized progress to localStorage
+                                saveProgressToLocalStorage(progress);
+                            }
 
                             patchState(store, {
                                 course,
@@ -182,8 +243,24 @@ export const CourseStore = signalStore(
         updateProgress: (updatedProgress: CourseProgress) => {
             const recalculated = calculateOverallMetrics(updatedProgress);
             patchState(store, { progress: recalculated });
+            // Save to localStorage
+            saveProgressToLocalStorage(recalculated);
+        },
+        clearProgress: (courseId: string) => {
+            // Clear progress from localStorage
+            clearProgressFromLocalStorage(courseId);
+            // If this is the current course, reset the store
+            const currentCourse = store.currentCourseMetadata();
+            if (currentCourse?.id === courseId) {
+                patchState(store, { progress: undefined });
+            }
         },
         reset: () => {
+            // Clear localStorage for current course if any
+            const currentCourse = store.currentCourseMetadata();
+            if (currentCourse?.id) {
+                clearProgressFromLocalStorage(currentCourse.id);
+            }
             patchState(store, initialState);
         }
     }))
