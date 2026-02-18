@@ -35,7 +35,12 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 class="display-5">{{ courseStore.currentCourseMetadata()?.name }}</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="display-5 mb-0">{{ courseStore.currentCourseMetadata()?.name }}</h1>
+                    <button class="btn btn-primary btn-lg" (click)="startQuestions()">
+                        <i class="bi bi-play-circle-fill me-2"></i>Alle Fragen starten
+                    </button>
+                </div>
             </div>
         </div>
         <!-- Overall Progress Section -->
@@ -220,7 +225,8 @@
                             </div>
                         </div>
                         <div class="card-footer bg-transparent">
-                            <button class="btn btn-primary btn-sm w-100" disabled>
+                            <button class="btn btn-primary btn-sm w-100"
+                                    (click)="startQuestions(groupProgress.groupName)">
                                 <i class="bi bi-play-circle me-2"></i>Fragen starten
                             </button>
                         </div>

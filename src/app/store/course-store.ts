@@ -143,16 +143,19 @@ export const CourseStore = signalStore(
                     patchState(store, {
                         isLoading: true,
                         error: undefined,
-                        currentCourseMetadata: undefined,
-                        course: undefined,
-                        progress: undefined,
                     });
                 }),
                 switchMap((metadata) =>
                     http.get<Course>(`/${metadata.id}.json`).pipe(
                         tap((course) => {
-                            // Initialize progress tracking for the new course
-                            const progress = initializeCourseProgress(course, metadata);
+                            // Check if we already have progress for this course
+                            const existingProgress = store.progress();
+                            const isSameCourse = existingProgress?.courseId === metadata.id;
+
+                            // Only initialize new progress if we don't have progress for this course
+                            const progress = isSameCourse && existingProgress
+                                ? existingProgress
+                                : initializeCourseProgress(course, metadata);
 
                             patchState(store, {
                                 course,

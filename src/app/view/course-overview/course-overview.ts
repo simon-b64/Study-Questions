@@ -24,14 +24,18 @@ export class CourseOverviewView implements OnInit {
             return;
         }
 
-        // Create course metadata from the route parameter
-        const courseMetadata: CourseMetadata = {
-            id: courseId,
-            name: this.getCourseName(courseId)
-        };
+        // Only load course if it's not already loaded or if it's a different course
+        const currentCourse = this.courseStore.currentCourseMetadata();
+        if (!currentCourse || currentCourse.id !== courseId) {
+            // Create course metadata from the route parameter
+            const courseMetadata: CourseMetadata = {
+                id: courseId,
+                name: this.getCourseName(courseId)
+            };
 
-        // Load the course data
-        this.courseStore.loadCourse(courseMetadata);
+            // Load the course data
+            this.courseStore.loadCourse(courseMetadata);
+        }
     }
 
     private getCourseName(courseId: string): string {
@@ -40,6 +44,19 @@ export class CourseOverviewView implements OnInit {
             'daten-informatikrecht': 'Daten und Informatikrecht'
         };
         return courseNames[courseId] || courseId;
+    }
+
+    protected startQuestions(groupName?: string): void {
+        const courseId = this.route.snapshot.paramMap.get('courseId');
+        if (!courseId) return;
+
+        if (groupName) {
+            // Navigate to questions for specific group
+            this.router.navigate(['/course', courseId, 'questions', groupName]);
+        } else {
+            // Navigate to all questions
+            this.router.navigate(['/course', courseId, 'questions']);
+        }
     }
 }
 
