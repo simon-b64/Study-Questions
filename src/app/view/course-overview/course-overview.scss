@@ -1,35 +1,46 @@
 // Mobile optimization for header and buttons
 @media (max-width: 575.98px) {
-    .display-5 {
-        font-size: 2rem; // Smaller heading on mobile
-        word-break: break-word;
-    }
+  .display-5 {
+    font-size: 2rem; // Smaller heading on mobile
+    word-break: break-word;
+  }
 
-    // Ensure buttons are touch-friendly
+  // Ensure buttons are touch-friendly
+  .btn {
+    min-height: 44px; // Minimum touch target size
+    padding: 0.5rem 1rem;
+  }
+
+  // Make button group split evenly on mobile
+  .btn-group {
+    display: flex;
+
     .btn {
-        min-height: 44px; // Minimum touch target size
-        padding: 0.5rem 1rem;
+      flex: 1;
     }
-
-    .btn-lg {
-        font-size: 1rem; // Slightly smaller on mobile
-        padding: 0.6rem 1.2rem;
-    }
-
-    // Make button group split evenly on mobile
-    .btn-group {
-        display: flex;
-
-        .btn {
-            flex: 1;
-        }
-    }
+  }
 }
 
 // Tablet adjustments
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .display-5 {
-        font-size: 2.5rem;
-    }
+  .display-5 {
+    font-size: 2.5rem;
+  }
 }
+
+// Desktop optimization - make buttons more compact
+@media (min-width: 768px) {
+  .btn-group .btn,
+  .btn-outline-secondary,
+  .btn-outline-danger {
+    padding: 0.375rem 0.75rem; // Bootstrap default, more compact
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+
 
