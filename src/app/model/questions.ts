@@ -2,6 +2,7 @@ export interface CourseMetadata {
     id: string;
     name: string;
     description?: string;
+    url?: string;
 }
 
 export interface Course {
