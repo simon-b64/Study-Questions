@@ -3,6 +3,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CourseStore } from '../../store/course-store';
 import { CourseMetadata } from '../../model/questions';
+import { generateCourseHash } from '../../utils/course-hash.util';
 
 @Component({
     selector: 'app-course-overview',
@@ -131,6 +132,33 @@ export class CourseOverviewView implements OnInit {
                         if (!confirm(`Diese Fortschrittsdatei ist für einen anderen Kurs (${progress.courseId}). Trotzdem laden?`)) {
                             return;
                         }
+                    }
+
+                    // Validate hash if present
+                    const currentCourse = this.courseStore.course();
+                    if (currentCourse && progress.courseDataHash) {
+                        // Generate current course hash
+                        const currentHash = generateCourseHash(currentCourse);
+
+                        if (progress.courseDataHash !== currentHash) {
+                            const proceed = confirm(
+                                '⚠️ Warnung: Kurs-Version stimmt nicht überein!\n\n' +
+                                'Die importierte Fortschrittsdatei wurde für eine andere Version dieses Kurses erstellt. ' +
+                                'Die Fragen könnten sich geändert haben.\n\n' +
+                                'Möchtest du den Fortschritt trotzdem importieren?\n' +
+                                '(Der Fortschritt wird automatisch angepasst, aber es können Unstimmigkeiten auftreten)'
+                            );
+
+                            if (!proceed) {
+                                return;
+                            }
+
+                            // Update hash to current version
+                            progress.courseDataHash = currentHash;
+                        }
+                    } else if (currentCourse && !progress.courseDataHash) {
+                        // Old progress file without hash, add it
+                        progress.courseDataHash = generateCourseHash(currentCourse);
                     }
 
                     // Convert date strings back to Date objects

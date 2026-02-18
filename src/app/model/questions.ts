@@ -69,6 +69,7 @@ export interface QuestionGroupProgress {
 export interface CourseProgress {
     courseId: string;                      // Course identifier
     courseName: string;                    // Course display name
+    courseDataHash: string;                // Hash of the course question data to detect changes
     totalQuestions: number;                // Total questions across all groups
     totalQuestionGroups: number;           // Total number of question groups
     groupsProgress: QuestionGroupProgress[]; // Progress for each group

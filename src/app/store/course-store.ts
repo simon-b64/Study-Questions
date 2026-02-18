@@ -5,6 +5,7 @@ import { signalStore, withState, withMethods, patchState, withComputed } from '@
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
 import { pipe, switchMap, tap, catchError, of } from 'rxjs';
 import { computed } from '@angular/core';
+import { generateCourseHash } from '../utils/course-hash.util';
 
 type CourseStore = {
     currentCourseMetadata: CourseMetadata | undefined;
@@ -24,6 +25,7 @@ const initialState: CourseStore = {
 
 // Local Storage Keys
 const STORAGE_KEY_PREFIX = 'study-questions-progress-';
+
 
 // Local Storage Utilities
 function saveProgressToLocalStorage(progress: CourseProgress): void {
@@ -106,6 +108,7 @@ function initializeCourseProgress(course: Course, metadata: CourseMetadata): Cou
     return {
         courseId: metadata.id,
         courseName: metadata.name,
+        courseDataHash: generateCourseHash(course),
         totalQuestions,
         totalQuestionGroups: course.questionGroups.length,
         groupsProgress,
@@ -201,14 +204,56 @@ export const CourseStore = signalStore(
                 switchMap((metadata) =>
                     http.get<Course>(`/${metadata.id}.json`).pipe(
                         tap((course) => {
+                            // Generate hash for current course data
+                            const currentHash = generateCourseHash(course);
+
                             // Try to load progress from localStorage first
                             let progress = loadProgressFromLocalStorage(metadata.id);
+
+                            // Validate hash if progress exists
+                            if (progress) {
+                                if (!progress.courseDataHash) {
+                                    // Old progress without hash - update it
+                                    console.warn('Progress loaded without hash, updating...');
+                                    progress.courseDataHash = currentHash;
+                                    saveProgressToLocalStorage(progress);
+                                } else if (progress.courseDataHash !== currentHash) {
+                                    // Hash mismatch - course has changed
+                                    const proceed = confirm(
+                                        '⚠️ Warnung: Die Kursdaten haben sich geändert!\n\n' +
+                                        'Dein gespeicherter Fortschritt passt nicht zur aktuellen Version des Kurses. ' +
+                                        'Dies kann passieren, wenn Fragen hinzugefügt, entfernt oder geändert wurden.\n\n' +
+                                        'Möchtest du trotzdem deinen alten Fortschritt laden?\n' +
+                                        '(Empfohlen: "Abbrechen" um mit leerem Fortschritt zu beginnen)'
+                                    );
+
+                                    if (!proceed) {
+                                        // User chose to start fresh
+                                        console.log('User chose to reset progress due to course changes');
+                                        clearProgressFromLocalStorage(metadata.id);
+                                        progress = null;
+                                    } else {
+                                        // User chose to keep old progress, update hash
+                                        console.warn('User chose to keep outdated progress');
+                                        progress.courseDataHash = currentHash;
+                                        saveProgressToLocalStorage(progress);
+                                    }
+                                }
+                            }
 
                             // If not in localStorage, check if we have it in the store
                             if (!progress) {
                                 const existingProgress = store.progress();
                                 const isSameCourse = existingProgress?.courseId === metadata.id;
-                                progress = isSameCourse && existingProgress ? existingProgress : null;
+                                if (isSameCourse && existingProgress) {
+                                    // Validate hash for store progress too
+                                    if (existingProgress.courseDataHash !== currentHash) {
+                                        console.warn('Store progress hash mismatch, resetting');
+                                        progress = null;
+                                    } else {
+                                        progress = existingProgress;
+                                    }
+                                }
                             }
 
                             // If still no progress, initialize new
