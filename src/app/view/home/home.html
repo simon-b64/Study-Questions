@@ -1,1 +1,46 @@
-<p>home works!</p>
+<div class="container py-5">
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="display-4">Meine Kurse</h1>
+            <p class="lead text-muted">Wähle einen Kurs aus, um mit dem Lernen zu beginnen</p>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @for (course of courses(); track course.id) {
+            <div class="col">
+                <div
+                    class="card h-100 course-card"
+                    role="button"
+                    tabindex="0"
+                    (click)="navigateToCourse(course.id)"
+                    (keydown.enter)="navigateToCourse(course.id)"
+                    (keydown.space)="navigateToCourse(course.id); $event.preventDefault()"
+                    [attr.aria-label]="'Öffne Kurs: ' + course.name"
+                >
+                    <div class="card-body">
+                        <h5 class="card-title">{{ course.name }}</h5>
+                        @if (course.description) {
+                            <p class="card-text text-muted">{{ course.description }}</p>
+                        }
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <small class="text-primary">Zum Kurs →</small>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (courses().length === 0) {
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-info" role="alert">
+                    <h4 class="alert-heading">Keine Kurse verfügbar</h4>
+                    <p class="mb-0">Derzeit sind keine Kurse vorhanden.</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
