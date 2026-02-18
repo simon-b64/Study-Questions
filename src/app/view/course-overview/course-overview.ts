@@ -1,11 +1,12 @@
 import { Component, ChangeDetectionStrategy, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { CourseStore } from '../../store/course-store';
 import { CourseMetadata } from '../../model/questions';
 
 @Component({
     selector: 'app-course-overview',
-    imports: [RouterLink],
+    imports: [RouterLink, CommonModule],
     templateUrl: './course-overview.html',
     styleUrl: './course-overview.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

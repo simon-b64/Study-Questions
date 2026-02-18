@@ -21,7 +21,8 @@
                 </div>
             </div>
         </div>
-    } @else if (courseStore.course()) {
+    } @else if (courseStore.course() && courseStore.progress()) {
+        <!-- Header -->
         <div class="row mb-4">
             <div class="col">
                 <nav aria-label="breadcrumb">
@@ -35,30 +36,243 @@
                     </ol>
                 </nav>
                 <h1 class="display-5">{{ courseStore.currentCourseMetadata()?.name }}</h1>
-                <p class="lead text-muted">
-                    {{ courseStore.course()!.questionGroups.length }} Themengebiete verfügbar
-                </p>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <div class="card">
+        <!-- Overall Progress Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">
+                            <i class="bi bi-graph-up me-2"></i>Gesamtfortschritt
+                        </h5>
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">Themengebiete</h5>
-                        <ul class="list-group list-group-flush">
-                            @for (group of courseStore.course()!.questionGroups; track group.name) {
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    {{ group.name }}
-                                    <span class="badge bg-primary rounded-pill">{{ group.question.length }}
-                                        Fragen</span>
-                                </li>
+                        <!-- Overall Completion Progress Bar -->
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="fw-bold">Abschlussrate</span>
+                                <span class="badge bg-primary fs-6">
+                                    {{ courseStore.progressStats()?.completion || 0 }}%
+                                </span>
+                            </div>
+                            <div class="progress" style="height: 30px;" role="progressbar"
+                                [attr.aria-valuenow]="courseStore.progressStats()?.completion || 0" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="progress-bar bg-success progress-bar-striped"
+                                    [style.width.%]="courseStore.progressStats()?.completion || 0">
+                                    {{ courseStore.progressStats()?.mastered || 0 }} / {{
+                                    courseStore.progressStats()?.total || 0 }} gemeistert
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accuracy Metric -->
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="fw-bold">Gesamtgenauigkeit</span>
+                                <span class="badge bg-info fs-6">
+                                    {{ courseStore.progressStats()?.accuracy || 0 }}%
+                                </span>
+                            </div>
+                            <div class="progress" style="height: 25px;" role="progressbar"
+                                [attr.aria-valuenow]="courseStore.progressStats()?.accuracy || 0" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="progress-bar bg-info"
+                                    [style.width.%]="courseStore.progressStats()?.accuracy || 0">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Learning Status Cards -->
+                        <div class="row g-3">
+                            <div class="col-6 col-md-3">
+                                <div class="card border-success h-100">
+                                    <div class="card-body text-center">
+                                        <div class="display-6 text-success mb-2">
+                                            {{ courseStore.progressStats()?.mastered || 0 }}
+                                        </div>
+                                        <h6 class="card-subtitle text-success">
+                                            <i class="bi bi-check-circle-fill me-1"></i>Gemeistert
+                                        </h6>
+                                        <small class="text-muted">3+ richtig hintereinander</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="card border-info h-100">
+                                    <div class="card-body text-center">
+                                        <div class="display-6 text-info mb-2">
+                                            {{ courseStore.progressStats()?.reviewing || 0 }}
+                                        </div>
+                                        <h6 class="card-subtitle text-info">
+                                            <i class="bi bi-arrow-repeat me-1"></i>Wiederholung
+                                        </h6>
+                                        <small class="text-muted">Richtig beantwortet, benötigt Übung</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="card border-warning h-100">
+                                    <div class="card-body text-center">
+                                        <div class="display-6 text-warning mb-2">
+                                            {{ courseStore.progressStats()?.learning || 0 }}
+                                        </div>
+                                        <h6 class="card-subtitle text-warning">
+                                            <i class="bi bi-book me-1"></i>Im Lernen
+                                        </h6>
+                                        <small class="text-muted">Versucht, aber noch nicht gemeistert</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="card border-secondary h-100">
+                                    <div class="card-body text-center">
+                                        <div class="display-6 text-secondary mb-2">
+                                            {{ courseStore.progressStats()?.notStarted || 0 }}
+                                        </div>
+                                        <h6 class="card-subtitle text-secondary">
+                                            <i class="bi bi-circle me-1"></i>Nicht begonnen
+                                        </h6>
+                                        <small class="text-muted">Noch nicht versucht</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Question Groups Progress -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h3 class="mb-3">Themengebiete</h3>
+            </div>
+        </div>
+        <div class="row g-4">
+            @for (groupProgress of courseStore.progress()?.groupsProgress; track groupProgress.groupName) {
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header">
+                            <h5 class="mb-0">{{ groupProgress.groupName }}</h5>
+                            <small class="text-muted">{{ groupProgress.totalQuestions }} Fragen</small>
+                        </div>
+                        <div class="card-body">
+                            <!-- Group Progress Bar -->
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="small fw-bold">Fortschritt</span>
+                                    <span class="badge bg-primary">
+                                        {{ groupProgress.completionPercentage.toFixed(0) }}%
+                                    </span>
+                                </div>
+                                <div class="progress" style="height: 20px;" role="progressbar"
+                                    [attr.aria-valuenow]="groupProgress.completionPercentage" aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    [attr.aria-label]="'Fortschritt für ' + groupProgress.groupName">
+                                    <div class="progress-bar bg-success"
+                                        [style.width.%]="groupProgress.completionPercentage">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Group Accuracy -->
+                            @if (groupProgress.averageAccuracy > 0) {
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="small fw-bold">Genauigkeit</span>
+                                        <span class="badge bg-info">
+                                            {{ groupProgress.averageAccuracy.toFixed(0) }}%
+                                        </span>
+                                    </div>
+                                    <div class="progress" style="height: 15px;" role="progressbar"
+                                        [attr.aria-valuenow]="groupProgress.averageAccuracy" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <div class="progress-bar bg-info"
+                                            [style.width.%]="groupProgress.averageAccuracy">
+                                        </div>
+                                    </div>
+                                </div>
                             }
-                        </ul>
+                            <!-- Status Distribution -->
+                            <div class="row g-2 text-center small">
+                                <div class="col-3">
+                                    <div class="border rounded p-2">
+                                        <div class="text-success fw-bold">{{ groupProgress.masteredCount }}</div>
+                                        <div class="text-muted" style="font-size: 0.75rem;">Gemeistert</div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="border rounded p-2">
+                                        <div class="text-info fw-bold">{{ groupProgress.reviewingCount }}</div>
+                                        <div class="text-muted" style="font-size: 0.75rem;">Wiederholung</div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="border rounded p-2">
+                                        <div class="text-warning fw-bold">{{ groupProgress.learningCount }}</div>
+                                        <div class="text-muted" style="font-size: 0.75rem;">Lernen</div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="border rounded p-2">
+                                        <div class="text-secondary fw-bold">{{ groupProgress.notStartedCount }}</div>
+                                        <div class="text-muted" style="font-size: 0.75rem;">Nicht begonnen</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-primary btn-sm w-100" disabled>
+                                <i class="bi bi-play-circle me-2"></i>Fragen starten
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <!-- Legend -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <h6 class="card-title">
+                            <i class="bi bi-info-circle me-2"></i>Lernstatus-Legende
+                        </h6>
+                        <div class="row g-3 small">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <strong class="text-success">
+                                    <i class="bi bi-check-circle-fill me-1"></i>Gemeistert:
+                                </strong>
+                                <span class="text-muted d-block">
+                                    3+ aufeinanderfolgende richtige Antworten. Diese Fragen sind gut verstanden.
+                                </span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <strong class="text-info">
+                                    <i class="bi bi-arrow-repeat me-1"></i>Wiederholung:
+                                </strong>
+                                <span class="text-muted d-block">
+                                    1-2 richtige Antworten. Diese Fragen benötigen noch Verstärkung.
+                                </span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <strong class="text-warning">
+                                    <i class="bi bi-book me-1"></i>Im Lernen:
+                                </strong>
+                                <span class="text-muted d-block">
+                                    Versucht, aber noch nicht gemeistert. Weiter üben!
+                                </span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <strong class="text-secondary">
+                                    <i class="bi bi-circle me-1"></i>Nicht begonnen:
+                                </strong>
+                                <span class="text-muted d-block">
+                                    Noch nicht versucht. Neue Fragen warten auf dich!
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     }
 </div>
-
