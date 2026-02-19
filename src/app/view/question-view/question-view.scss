@@ -1,35 +1,44 @@
 .answer-button {
-  transition: all 0.2s ease-in-out;
-  border-width: 2px;
-  min-height: 60px;
+    transition: all 0.2s ease-in-out;
+    border-width: 2px;
+    min-height: 60px;
 
-  &:not(:disabled):hover {
-    transform: translateX(4px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
+    &:not(:disabled):hover {
+        transform: translateX(4px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
-  &:disabled {
-    cursor: default;
-  }
+    &:disabled {
+        cursor: default;
+    }
 
-  &.btn-success,
-  &.btn-danger {
-    font-weight: 500;
-  }
+    &.btn-success,
+    &.btn-danger {
+        font-weight: 500;
+    }
+}
+
+.progress-thin {
+    height: 8px;
+}
+
+.progress-mastery {
+    width: 150px;
+    height: 8px;
 }
 
 .card {
-  animation: slideIn 0.3s ease-out;
+    animation: slideIn 0.3s ease-out;
 }
 
 @keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 

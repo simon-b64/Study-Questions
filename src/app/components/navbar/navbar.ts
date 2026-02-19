@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 
@@ -7,15 +7,16 @@ import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
     imports: [RouterLink, RouterLinkActive, NgbCollapse],
     templateUrl: './navbar.html',
     styleUrl: './navbar.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Navbar {
-    isMenuCollapsed = signal(true);
+    protected readonly isMenuCollapsed = signal<boolean>(true);
 
-    toggleMenu() {
-        this.isMenuCollapsed.update(value => !value);
+    protected toggleMenu(): void {
+        this.isMenuCollapsed.update(collapsed => !collapsed);
     }
 
-    closeMenu() {
+    protected closeMenu(): void {
         this.isMenuCollapsed.set(true);
     }
 }

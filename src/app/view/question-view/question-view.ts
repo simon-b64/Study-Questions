@@ -4,11 +4,30 @@ import { CommonModule } from '@angular/common';
 import { CourseStore } from '../../store/course-store';
 import { Question, MasteryLevel, QuestionProgress, CourseProgress } from '../../model/questions';
 
+// Constants for mastery level calculation
+const MASTERY_THRESHOLD = 3; // Consecutive correct answers needed for mastery
+
+// Priority score ranges for question sorting
+const PRIORITY_RANGES = {
+    NOT_STARTED: { min: 0, max: 10 },
+    LEARNING: { min: 10, max: 20 },
+    REVIEWING: { min: 20, max: 30 },
+    MASTERED: { min: 30, max: 40 },
+    FALLBACK: 40
+} as const;
+
 interface QuestionWithContext {
     question: Question;
     groupName: string;
     groupIndex: number;
     progress: QuestionProgress;
+}
+
+interface SessionStats {
+    totalAnswered: number;
+    correctAnswers: number;
+    incorrectAnswers: number;
+    sessionStartTime: Date;
 }
 
 @Component({
@@ -23,19 +42,19 @@ export class QuestionView implements OnInit {
     protected readonly router = inject(Router);
     protected readonly courseStore = inject(CourseStore);
 
-    // State
+    // State signals
     protected readonly questionsQueue = signal<QuestionWithContext[]>([]);
     protected readonly currentQuestionIndex = signal<number>(0);
     protected readonly selectedAnswer = signal<number | null>(null);
     protected readonly showResult = signal<boolean>(false);
-    protected readonly sessionStats = signal({
+    protected readonly sessionStats = signal<SessionStats>({
         totalAnswered: 0,
         correctAnswers: 0,
         incorrectAnswers: 0,
         sessionStartTime: new Date()
     });
 
-    // Computed
+    // Computed values
     protected readonly currentQuestion = computed(() => {
         const queue = this.questionsQueue();
         const index = this.currentQuestionIndex();
@@ -60,10 +79,7 @@ export class QuestionView implements OnInit {
     });
 
     ngOnInit(): void {
-        const courseId = this.route.snapshot.paramMap.get('courseId');
-        const groupName = this.route.snapshot.paramMap.get('groupName');
-        const limitParam = this.route.snapshot.queryParamMap.get('limit');
-        const questionLimit = limitParam ? parseInt(limitParam, 10) : undefined;
+        const { courseId, groupName, questionLimit } = this.parseRouteParameters();
 
         if (!courseId || !this.courseStore.course() || !this.courseStore.progress()) {
             this.router.navigate(['/']);
@@ -73,51 +89,74 @@ export class QuestionView implements OnInit {
         this.initializeQuestionQueue(groupName, questionLimit);
     }
 
+    private parseRouteParameters(): { courseId: string | null; groupName: string | null; questionLimit?: number } {
+        const courseId = this.route.snapshot.paramMap.get('courseId');
+        const groupName = this.route.snapshot.paramMap.get('groupName');
+        const limitParam = this.route.snapshot.queryParamMap.get('limit');
+        const questionLimit = limitParam ? parseInt(limitParam, 10) : undefined;
+
+        return { courseId, groupName, questionLimit };
+    }
+
     private initializeQuestionQueue(groupName: string | null, questionLimit?: number): void {
         const course = this.courseStore.course();
         const progress = this.courseStore.progress();
 
         if (!course || !progress) return;
 
-        const allQuestions: QuestionWithContext[] = [];
-
         // Collect all questions with their context
-        course.questionGroups.forEach((group, groupIndex) => {
-            // If groupName is specified, only include that group
-            if (groupName && group.name !== groupName) return;
-
-            const groupProgress = progress.groupsProgress[groupIndex];
-
-            group.question.forEach((question) => {
-                // Find progress by question ID
-                const questionProgress = groupProgress.questionsProgress.find(
-                    qp => qp.questionId === question.id
-                );
-
-                // If no progress found (shouldn't happen but handle gracefully)
-                if (!questionProgress) {
-                    console.warn(`No progress found for question ${question.id}`);
-                    return;
-                }
-
-                allQuestions.push({
-                    question,
-                    groupName: group.name,
-                    groupIndex,
-                    progress: questionProgress
-                });
-            });
-        });
+        const allQuestions = this.collectQuestions(course, progress, groupName);
 
         // Smart sorting algorithm: prioritize by learning need
         const sortedQuestions = this.sortQuestionsByLearningPriority(allQuestions);
 
         // Apply question limit if specified
-        const limitedQuestions = questionLimit && questionLimit > 0
-            ? sortedQuestions.slice(0, questionLimit)
-            : sortedQuestions;
+        const limitedQuestions = this.applyQuestionLimit(sortedQuestions, questionLimit);
 
         this.questionsQueue.set(limitedQuestions);
+    }
+
+    private collectQuestions(course: any, progress: any, groupName: string | null): QuestionWithContext[] {
+        const allQuestions: QuestionWithContext[] = [];
+
+        course.questionGroups.forEach((group: any, groupIndex: number) => {
+            // If groupName is specified, only include that group
+            if (groupName && group.name !== groupName) return;
+
+            const groupProgress = progress.groupsProgress[groupIndex];
+
+            group.question.forEach((question: Question) => {
+                const questionProgress = this.findQuestionProgress(groupProgress, question.id);
+
+                if (questionProgress) {
+                    allQuestions.push({
+                        question,
+                        groupName: group.name,
+                        groupIndex,
+                        progress: questionProgress
+                    });
+                }
+            });
+        });
+
+        return allQuestions;
+    }
+
+    private findQuestionProgress(groupProgress: any, questionId: string): QuestionProgress | null {
+        const questionProgress = groupProgress.questionsProgress.find(
+            (qp: QuestionProgress) => qp.questionId === questionId
+        );
+
+        if (!questionProgress) {
+            console.warn(`No progress found for question ${questionId}`);
+            return null;
+        }
+
+        return questionProgress;
+    }
+
+    private applyQuestionLimit(questions: QuestionWithContext[], limit?: number): QuestionWithContext[] {
+        return limit && limit > 0 ? questions.slice(0, limit) : questions;
     }
 
     private sortQuestionsByLearningPriority(questions: QuestionWithContext[]): QuestionWithContext[] {
@@ -138,31 +177,30 @@ export class QuestionView implements OnInit {
     private calculatePriorityScore(progress: QuestionProgress): number {
         // Lower score = higher priority (should be shown sooner)
 
-        // Priority 1: Never attempted (score: 0-10)
-        if (progress.masteryLevel === MasteryLevel.NOT_STARTED) {
-            return Math.random() * 10; // Random within priority band
-        }
+        switch (progress.masteryLevel) {
+            case MasteryLevel.NOT_STARTED:
+                // Random within priority band
+                return PRIORITY_RANGES.NOT_STARTED.min +
+                       Math.random() * (PRIORITY_RANGES.NOT_STARTED.max - PRIORITY_RANGES.NOT_STARTED.min);
 
-        // Priority 2: Learning (attempted but struggling) (score: 10-20)
-        if (progress.masteryLevel === MasteryLevel.LEARNING) {
-            // More incorrect attempts = higher priority
-            const incorrectRatio = progress.incorrectAttempts / Math.max(progress.totalAttempts, 1);
-            return 10 + (1 - incorrectRatio) * 10;
-        }
+            case MasteryLevel.LEARNING:
+                // More incorrect attempts = higher priority
+                const incorrectRatio = progress.incorrectAttempts / Math.max(progress.totalAttempts, 1);
+                return PRIORITY_RANGES.LEARNING.min + (1 - incorrectRatio) *
+                       (PRIORITY_RANGES.LEARNING.max - PRIORITY_RANGES.LEARNING.min);
 
-        // Priority 3: Reviewing (getting right but needs reinforcement) (score: 20-30)
-        if (progress.masteryLevel === MasteryLevel.REVIEWING) {
-            // Fewer consecutive correct = higher priority within this band
-            return 20 + progress.consecutiveCorrect * 3;
-        }
+            case MasteryLevel.REVIEWING:
+                // Fewer consecutive correct = higher priority within this band
+                return PRIORITY_RANGES.REVIEWING.min + progress.consecutiveCorrect * 3;
 
-        // Priority 4: Mastered (score: 30-40)
-        if (progress.masteryLevel === MasteryLevel.MASTERED) {
-            // Still show occasionally for retention
-            return 30 + Math.random() * 10;
-        }
+            case MasteryLevel.MASTERED:
+                // Still show occasionally for retention
+                return PRIORITY_RANGES.MASTERED.min +
+                       Math.random() * (PRIORITY_RANGES.MASTERED.max - PRIORITY_RANGES.MASTERED.min);
 
-        return 40; // Fallback
+            default:
+                return PRIORITY_RANGES.FALLBACK;
+        }
     }
 
     protected selectAnswer(index: number): void {
@@ -176,7 +214,11 @@ export class QuestionView implements OnInit {
         const isCorrect = this.isAnswerCorrect();
         this.showResult.set(true);
 
-        // Update session stats
+        this.updateSessionStats(isCorrect);
+        this.updateQuestionProgress(isCorrect);
+    }
+
+    private updateSessionStats(isCorrect: boolean): void {
         const stats = this.sessionStats();
         this.sessionStats.set({
             ...stats,
@@ -184,9 +226,6 @@ export class QuestionView implements OnInit {
             correctAnswers: stats.correctAnswers + (isCorrect ? 1 : 0),
             incorrectAnswers: stats.incorrectAnswers + (isCorrect ? 0 : 1)
         });
-
-        // Update progress in store
-        this.updateQuestionProgress(isCorrect);
     }
 
     private updateQuestionProgress(isCorrect: boolean): void {
@@ -196,11 +235,7 @@ export class QuestionView implements OnInit {
         if (!current || !progress) return;
 
         const groupProgress = progress.groupsProgress[current.groupIndex];
-
-        // Find the question progress by ID
-        const questionProgressIndex = groupProgress.questionsProgress.findIndex(
-            qp => qp.questionId === current.question.id
-        );
+        const questionProgressIndex = this.findQuestionProgressIndex(groupProgress, current.question.id);
 
         if (questionProgressIndex === -1) {
             console.error(`Question progress not found for ID: ${current.question.id}`);
@@ -208,36 +243,67 @@ export class QuestionView implements OnInit {
         }
 
         const questionProgress = groupProgress.questionsProgress[questionProgressIndex];
+        const updatedQuestionProgress = this.buildUpdatedQuestionProgress(questionProgress, isCorrect);
+        const updatedGroupProgress = this.buildUpdatedGroupProgress(
+            groupProgress,
+            questionProgressIndex,
+            updatedQuestionProgress
+        );
+        const updatedProgress = this.buildUpdatedCourseProgress(
+            progress,
+            current.groupIndex,
+            updatedGroupProgress,
+            isCorrect
+        );
 
-        // Update question progress
-        const updatedQuestionProgress: QuestionProgress = {
+        this.courseStore.updateProgress(updatedProgress);
+    }
+
+    private findQuestionProgressIndex(groupProgress: any, questionId: string): number {
+        return groupProgress.questionsProgress.findIndex(
+            (qp: QuestionProgress) => qp.questionId === questionId
+        );
+    }
+
+    private buildUpdatedQuestionProgress(
+        questionProgress: QuestionProgress,
+        isCorrect: boolean
+    ): QuestionProgress {
+        const consecutiveCorrect = isCorrect ? questionProgress.consecutiveCorrect + 1 : 0;
+        const consecutiveIncorrect = isCorrect ? 0 : questionProgress.consecutiveIncorrect + 1;
+        const totalAttempts = questionProgress.totalAttempts + 1;
+        const correctAttempts = questionProgress.correctAttempts + (isCorrect ? 1 : 0);
+
+        const updatedProgress: QuestionProgress = {
             ...questionProgress,
-            totalAttempts: questionProgress.totalAttempts + 1,
-            correctAttempts: questionProgress.correctAttempts + (isCorrect ? 1 : 0),
+            totalAttempts,
+            correctAttempts,
             incorrectAttempts: questionProgress.incorrectAttempts + (isCorrect ? 0 : 1),
-            consecutiveCorrect: isCorrect ? questionProgress.consecutiveCorrect + 1 : 0,
-            consecutiveIncorrect: isCorrect ? 0 : questionProgress.consecutiveIncorrect + 1,
+            consecutiveCorrect,
+            consecutiveIncorrect,
             lastAttemptedAt: new Date(),
             firstCorrectAt: isCorrect && !questionProgress.firstCorrectAt ? new Date() : questionProgress.firstCorrectAt,
-            masteredAt: undefined, // Will be set below if mastered
-            masteryLevel: this.calculateMasteryLevel(
-                questionProgress.consecutiveCorrect + (isCorrect ? 1 : 0),
-                questionProgress.consecutiveIncorrect + (isCorrect ? 0 : 1),
-                questionProgress.totalAttempts + 1,
-                questionProgress.correctAttempts + (isCorrect ? 1 : 0)
-            )
+            masteredAt: undefined,
+            masteryLevel: this.calculateMasteryLevel(consecutiveCorrect, consecutiveIncorrect, totalAttempts, correctAttempts)
         };
 
         // Set mastered timestamp if just reached mastered level
-        if (updatedQuestionProgress.masteryLevel === MasteryLevel.MASTERED &&
+        if (updatedProgress.masteryLevel === MasteryLevel.MASTERED &&
             questionProgress.masteryLevel !== MasteryLevel.MASTERED) {
-            updatedQuestionProgress.masteredAt = new Date();
+            updatedProgress.masteredAt = new Date();
         }
 
-        // Update the progress object
+        return updatedProgress;
+    }
+
+    private buildUpdatedGroupProgress(
+        groupProgress: any,
+        questionProgressIndex: number,
+        updatedQuestionProgress: QuestionProgress
+    ): any {
         const updatedGroupProgress = {
             ...groupProgress,
-            questionsProgress: groupProgress.questionsProgress.map((qp, idx) =>
+            questionsProgress: groupProgress.questionsProgress.map((qp: QuestionProgress, idx: number) =>
                 idx === questionProgressIndex ? updatedQuestionProgress : qp
             ),
             lastActivityAt: new Date()
@@ -247,19 +313,26 @@ export class QuestionView implements OnInit {
             updatedGroupProgress.startedAt = new Date();
         }
 
-        const updatedProgress: CourseProgress = {
+        return updatedGroupProgress;
+    }
+
+    private buildUpdatedCourseProgress(
+        progress: CourseProgress,
+        groupIndex: number,
+        updatedGroupProgress: any,
+        isCorrect: boolean
+    ): CourseProgress {
+        const newStreak = isCorrect ? progress.currentStreak + 1 : 0;
+
+        return {
             ...progress,
             groupsProgress: progress.groupsProgress.map((gp, idx) =>
-                idx === current.groupIndex ? updatedGroupProgress : gp
+                idx === groupIndex ? updatedGroupProgress : gp
             ),
             lastActivityAt: new Date(),
-            currentStreak: isCorrect ? progress.currentStreak + 1 : 0,
-            longestStreak: isCorrect && progress.currentStreak + 1 > progress.longestStreak
-                ? progress.currentStreak + 1
-                : progress.longestStreak
+            currentStreak: newStreak,
+            longestStreak: Math.max(progress.longestStreak, newStreak)
         };
-
-        this.courseStore.updateProgress(updatedProgress);
     }
 
     private calculateMasteryLevel(
@@ -268,22 +341,18 @@ export class QuestionView implements OnInit {
         totalAttempts: number,
         _totalCorrect: number
     ): MasteryLevel {
-        // Never attempted
         if (totalAttempts === 0) {
             return MasteryLevel.NOT_STARTED;
         }
 
-        // Mastered: 3 or more consecutive correct answers
-        if (consecutiveCorrect >= 3) {
+        if (consecutiveCorrect >= MASTERY_THRESHOLD) {
             return MasteryLevel.MASTERED;
         }
 
-        // Reviewing: 1-2 consecutive correct answers
         if (consecutiveCorrect > 0) {
             return MasteryLevel.REVIEWING;
         }
 
-        // Learning: attempted but not getting it right consistently
         return MasteryLevel.LEARNING;
     }
 

@@ -9,15 +9,13 @@
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         @for (course of courses(); track course.id) {
             <div class="col">
-                <div
-                    class="card h-100 course-card"
-                    role="button"
-                    tabindex="0"
-                    (click)="navigateToCourse(course.id)"
-                    (keydown.enter)="navigateToCourse(course.id)"
-                    (keydown.space)="navigateToCourse(course.id); $event.preventDefault()"
-                    [attr.aria-label]="'Öffne Kurs: ' + course.name"
-                >
+                <div class="card h-100 course-card"
+                     role="button"
+                     tabindex="0"
+                     (click)="navigateToCourse(course.id)"
+                     (keydown.enter)="navigateToCourse(course.id)"
+                     (keydown.space)="navigateToCourse(course.id); $event.preventDefault()"
+                     [attr.aria-label]="'Öffne Kurs: ' + course.name">
                     <div class="card-body">
                         <h5 class="card-title">{{ course.name }}</h5>
                         @if (course.description) {

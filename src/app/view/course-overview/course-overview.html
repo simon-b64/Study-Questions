@@ -1,6 +1,6 @@
 <div class="container py-5">
     @if (courseStore.isLoading()) {
-        <div class="d-flex justify-content-center align-items-center" style="min-height: 50vh;">
+        <div class="d-flex justify-content-center align-items-center loading-container">
             <div class="text-center">
                 <div class="spinner-border text-primary" role="status">
                     <span class="visually-hidden">Lade Kurs...</span>
@@ -128,7 +128,7 @@
                                     {{ courseStore.progressStats()?.completion || 0 }}%
                                 </span>
                             </div>
-                            <div class="progress" style="height: 30px;" role="progressbar"
+                            <div class="progress progress-thick" role="progressbar"
                                 [attr.aria-valuenow]="courseStore.progressStats()?.completion || 0" aria-valuemin="0"
                                 aria-valuemax="100">
                                 <div class="progress-bar bg-success progress-bar-striped"
@@ -146,7 +146,7 @@
                                     {{ courseStore.progressStats()?.accuracy || 0 }}%
                                 </span>
                             </div>
-                            <div class="progress" style="height: 25px;" role="progressbar"
+                            <div class="progress progress-medium" role="progressbar"
                                 [attr.aria-valuenow]="courseStore.progressStats()?.accuracy || 0" aria-valuemin="0"
                                 aria-valuemax="100">
                                 <div class="progress-bar bg-info"
@@ -236,7 +236,7 @@
                                         {{ groupProgress.completionPercentage.toFixed(0) }}%
                                     </span>
                                 </div>
-                                <div class="progress" style="height: 20px;" role="progressbar"
+                                <div class="progress progress-standard" role="progressbar"
                                     [attr.aria-valuenow]="groupProgress.completionPercentage" aria-valuemin="0"
                                     aria-valuemax="100"
                                     [attr.aria-label]="'Fortschritt für ' + groupProgress.groupName">
@@ -254,9 +254,10 @@
                                             {{ groupProgress.averageAccuracy.toFixed(0) }}%
                                         </span>
                                     </div>
-                                    <div class="progress" style="height: 15px;" role="progressbar"
+                                    <div class="progress progress-thin" role="progressbar"
                                         [attr.aria-valuenow]="groupProgress.averageAccuracy" aria-valuemin="0"
-                                        aria-valuemax="100">
+                                        aria-valuemax="100"
+                                        [attr.aria-label]="'Genauigkeit für ' + groupProgress.groupName">
                                         <div class="progress-bar bg-info"
                                             [style.width.%]="groupProgress.averageAccuracy">
                                         </div>
@@ -268,25 +269,25 @@
                                 <div class="col-3">
                                     <div class="border rounded p-2">
                                         <div class="text-success fw-bold">{{ groupProgress.masteredCount }}</div>
-                                        <div class="text-muted" style="font-size: 0.75rem;">Gemeistert</div>
+                                        <div class="text-muted text-xs">Gemeistert</div>
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="border rounded p-2">
                                         <div class="text-info fw-bold">{{ groupProgress.reviewingCount }}</div>
-                                        <div class="text-muted" style="font-size: 0.75rem;">Wiederholung</div>
+                                        <div class="text-muted text-xs">Wiederholung</div>
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="border rounded p-2">
                                         <div class="text-warning fw-bold">{{ groupProgress.learningCount }}</div>
-                                        <div class="text-muted" style="font-size: 0.75rem;">Lernen</div>
+                                        <div class="text-muted text-xs">Lernen</div>
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="border rounded p-2">
                                         <div class="text-secondary fw-bold">{{ groupProgress.notStartedCount }}</div>
-                                        <div class="text-muted" style="font-size: 0.75rem;">Nicht begonnen</div>
+                                        <div class="text-muted text-xs">Nicht begonnen</div>
                                     </div>
                                 </div>
                             </div>
@@ -301,6 +302,7 @@
                 </div>
             }
         </div>
+
         <!-- Legend -->
         <div class="row mt-4">
             <div class="col-12">
