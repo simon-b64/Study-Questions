@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { CourseStore } from '../../store/course-store';
+import { CourseStore, migrateOldProgress } from '../../store/course-store';
 import { CourseMetadata } from '../../model/questions';
 import { generateCourseHash } from '../../utils/course-hash.util';
 
@@ -118,7 +118,7 @@ export class CourseOverviewView implements OnInit {
             reader.onload = (e) => {
                 try {
                     const content = e.target?.result as string;
-                    const progress = JSON.parse(content);
+                    let progress = JSON.parse(content);
 
                     // Validate that it's a valid progress object
                     if (!progress.courseId || !progress.groupsProgress) {
@@ -136,29 +136,34 @@ export class CourseOverviewView implements OnInit {
 
                     // Validate hash if present
                     const currentCourse = this.courseStore.course();
-                    if (currentCourse && progress.courseDataHash) {
-                        // Generate current course hash
-                        const currentHash = generateCourseHash(currentCourse);
+                    if (currentCourse) {
+                        // Migrate old progress if needed
+                        progress = migrateOldProgress(progress, currentCourse);
 
-                        if (progress.courseDataHash !== currentHash) {
-                            const proceed = confirm(
-                                '⚠️ Warnung: Kurs-Version stimmt nicht überein!\n\n' +
-                                'Die importierte Fortschrittsdatei wurde für eine andere Version dieses Kurses erstellt. ' +
-                                'Die Fragen könnten sich geändert haben.\n\n' +
-                                'Möchtest du den Fortschritt trotzdem importieren?\n' +
-                                '(Der Fortschritt wird automatisch angepasst, aber es können Unstimmigkeiten auftreten)'
-                            );
+                        if (progress.courseDataHash) {
+                            // Generate current course hash
+                            const currentHash = generateCourseHash(currentCourse);
 
-                            if (!proceed) {
-                                return;
+                            if (progress.courseDataHash !== currentHash) {
+                                const proceed = confirm(
+                                    '⚠️ Warnung: Kurs-Version stimmt nicht überein!\n\n' +
+                                    'Die importierte Fortschrittsdatei wurde für eine andere Version dieses Kurses erstellt. ' +
+                                    'Die Fragen könnten sich geändert haben.\n\n' +
+                                    'Möchtest du den Fortschritt trotzdem importieren?\n' +
+                                    '(Der Fortschritt wird automatisch angepasst, aber es können Unstimmigkeiten auftreten)'
+                                );
+
+                                if (!proceed) {
+                                    return;
+                                }
+
+                                // Update hash to current version
+                                progress.courseDataHash = currentHash;
                             }
-
-                            // Update hash to current version
-                            progress.courseDataHash = currentHash;
+                        } else {
+                            // Old progress file without hash, add it
+                            progress.courseDataHash = generateCourseHash(currentCourse);
                         }
-                    } else if (currentCourse && !progress.courseDataHash) {
-                        // Old progress file without hash, add it
-                        progress.courseDataHash = generateCourseHash(currentCourse);
                     }
 
                     // Convert date strings back to Date objects

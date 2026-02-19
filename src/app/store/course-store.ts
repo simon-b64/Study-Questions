@@ -77,10 +77,67 @@ function clearProgressFromLocalStorage(courseId: string): void {
     }
 }
 
+// Migration utility function - exported for use in components
+export function migrateOldProgress(progress: any, course: Course): CourseProgress {
+    // Check if migration is needed (old progress has questionIndex instead of questionId)
+    const needsMigration = progress.groupsProgress?.some((group: any) =>
+        group.questionsProgress?.some((qp: any) => 'questionIndex' in qp && !('questionId' in qp))
+    );
+
+    if (!needsMigration) {
+        return progress;
+    }
+
+    console.log('Migrating old progress data from index-based to ID-based...');
+
+    // Migrate each group's progress
+    const migratedGroupsProgress = progress.groupsProgress.map((groupProgress: any, groupIndex: number) => {
+        const courseGroup = course.questionGroups[groupIndex];
+        if (!courseGroup) {
+            console.warn(`No course group found at index ${groupIndex}`);
+            return groupProgress;
+        }
+
+        // Migrate question progress from index to ID
+        const migratedQuestionsProgress = groupProgress.questionsProgress.map((qp: any) => {
+            // If already has questionId, keep it
+            if ('questionId' in qp) {
+                return qp;
+            }
+
+            // Convert questionIndex to questionId
+            const questionIndex = qp.questionIndex;
+            const question = courseGroup.question[questionIndex];
+
+            if (!question || !question.id) {
+                console.warn(`Cannot migrate progress for question at index ${questionIndex} in group ${groupIndex}`);
+                return null;
+            }
+
+            // Create new progress object with questionId
+            const { questionIndex: _, ...rest } = qp; // Remove questionIndex
+            return {
+                ...rest,
+                questionId: question.id
+            };
+        }).filter((qp: any) => qp !== null); // Remove any failed migrations
+
+        return {
+            ...groupProgress,
+            questionsProgress: migratedQuestionsProgress
+        };
+    });
+
+    return {
+        ...progress,
+        groupsProgress: migratedGroupsProgress
+    };
+}
+
 function initializeCourseProgress(course: Course, metadata: CourseMetadata): CourseProgress {
     const groupsProgress: QuestionGroupProgress[] = course.questionGroups.map(group => {
-        const questionsProgress: QuestionProgress[] = group.question.map((_, index) => ({
-            questionIndex: index,
+        const questionsProgress: QuestionProgress[] = group.question.map((question) => ({
+            questionId: question.id,
             totalAttempts: 0,
             correctAttempts: 0,
             incorrectAttempts: 0,
@@ -210,6 +267,11 @@ export const CourseStore = signalStore(
                             // Try to load progress from localStorage first
                             let progress = loadProgressFromLocalStorage(metadata.id);
 
+                            // Migrate old progress if needed
+                            if (progress) {
+                                progress = migrateOldProgress(progress, course);
+                            }
+
                             // Validate hash if progress exists
                             if (progress) {
                                 if (!progress.courseDataHash) {
@@ -246,12 +308,15 @@ export const CourseStore = signalStore(
                                 const existingProgress = store.progress();
                                 const isSameCourse = existingProgress?.courseId === metadata.id;
                                 if (isSameCourse && existingProgress) {
+                                    // Migrate old progress if needed
+                                    let migratedProgress = migrateOldProgress(existingProgress, course);
+
                                     // Validate hash for store progress too
-                                    if (existingProgress.courseDataHash !== currentHash) {
+                                    if (migratedProgress.courseDataHash !== currentHash) {
                                         console.warn('Store progress hash mismatch, resetting');
                                         progress = null;
                                     } else {
-                                        progress = existingProgress;
+                                        progress = migratedProgress;
                                     }
                                 }
                             }

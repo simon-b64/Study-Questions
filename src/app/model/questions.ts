@@ -15,6 +15,7 @@ export interface QuestionGroup {
 }
 
 export interface Question {
+    id: string;                        // Unique identifier for the question
     question: string;
     hint: string; // Ein hilfreicher Hinweis zur Lösung
     answers: Answer[];
@@ -36,7 +37,7 @@ export enum MasteryLevel {
 }
 
 export interface QuestionProgress {
-    questionIndex: number;                 // Index within the question group
+    questionId: string;                    // ID of the question
     totalAttempts: number;                 // Total number of times attempted
     correctAttempts: number;               // Number of correct answers
     incorrectAttempts: number;             // Number of incorrect answers

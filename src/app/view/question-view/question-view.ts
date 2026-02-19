@@ -8,7 +8,6 @@ interface QuestionWithContext {
     question: Question;
     groupName: string;
     groupIndex: number;
-    questionIndex: number;
     progress: QuestionProgress;
 }
 
@@ -87,13 +86,22 @@ export class QuestionView implements OnInit {
 
             const groupProgress = progress.groupsProgress[groupIndex];
 
-            group.question.forEach((question, questionIndex) => {
-                const questionProgress = groupProgress.questionsProgress[questionIndex];
+            group.question.forEach((question) => {
+                // Find progress by question ID
+                const questionProgress = groupProgress.questionsProgress.find(
+                    qp => qp.questionId === question.id
+                );
+
+                // If no progress found (shouldn't happen but handle gracefully)
+                if (!questionProgress) {
+                    console.warn(`No progress found for question ${question.id}`);
+                    return;
+                }
+
                 allQuestions.push({
                     question,
                     groupName: group.name,
                     groupIndex,
-                    questionIndex,
                     progress: questionProgress
                 });
             });
@@ -181,7 +189,18 @@ export class QuestionView implements OnInit {
         if (!current || !progress) return;
 
         const groupProgress = progress.groupsProgress[current.groupIndex];
-        const questionProgress = groupProgress.questionsProgress[current.questionIndex];
+
+        // Find the question progress by ID
+        const questionProgressIndex = groupProgress.questionsProgress.findIndex(
+            qp => qp.questionId === current.question.id
+        );
+
+        if (questionProgressIndex === -1) {
+            console.error(`Question progress not found for ID: ${current.question.id}`);
+            return;
+        }
+
+        const questionProgress = groupProgress.questionsProgress[questionProgressIndex];
 
         // Update question progress
         const updatedQuestionProgress: QuestionProgress = {
@@ -212,7 +231,7 @@ export class QuestionView implements OnInit {
         const updatedGroupProgress = {
             ...groupProgress,
             questionsProgress: groupProgress.questionsProgress.map((qp, idx) =>
-                idx === current.questionIndex ? updatedQuestionProgress : qp
+                idx === questionProgressIndex ? updatedQuestionProgress : qp
             ),
             lastActivityAt: new Date()
         };
