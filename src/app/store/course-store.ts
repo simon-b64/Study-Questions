@@ -134,6 +134,115 @@ export function migrateOldProgress(progress: any, course: Course): CourseProgres
     };
 }
 
+// Synchronize progress with current course data - adds missing questions and cleans up orphaned ones
+function synchronizeProgressWithCourse(progress: CourseProgress, course: Course): CourseProgress {
+    let hasChanges = false;
+    let orphanedCount = 0;
+
+    const synchronizedGroupsProgress = course.questionGroups.map((courseGroup, groupIndex) => {
+        const groupProgress = progress.groupsProgress[groupIndex];
+
+        if (!groupProgress) {
+            // Entire group is missing - initialize it
+            console.log(`Adding missing group: ${courseGroup.name}`);
+            hasChanges = true;
+            return {
+                groupName: courseGroup.name,
+                totalQuestions: courseGroup.question.length,
+                questionsProgress: courseGroup.question.map((question) => ({
+                    questionId: question.id,
+                    totalAttempts: 0,
+                    correctAttempts: 0,
+                    incorrectAttempts: 0,
+                    consecutiveCorrect: 0,
+                    consecutiveIncorrect: 0,
+                    masteryLevel: MasteryLevel.NOT_STARTED,
+                    hintUsedCount: 0,
+                })),
+                notStartedCount: courseGroup.question.length,
+                learningCount: 0,
+                reviewingCount: 0,
+                masteredCount: 0,
+                completionPercentage: 0,
+                averageAccuracy: 0,
+            };
+        }
+
+        // Build set of valid question IDs from current course
+        const currentQuestionIds = new Set(courseGroup.question.map(q => q.id));
+
+        // Filter out orphaned progress entries (questions that no longer exist or were altered)
+        const validQuestionsProgress = groupProgress.questionsProgress.filter(qp => {
+            const isValid = currentQuestionIds.has(qp.questionId);
+            if (!isValid) {
+                orphanedCount++;
+                console.log(`Removing orphaned progress for question ID: ${qp.questionId} in group: ${courseGroup.name}`);
+                hasChanges = true;
+            }
+            return isValid;
+        });
+
+        // Check for missing questions in this group
+        const existingQuestionIds = new Set(validQuestionsProgress.map(qp => qp.questionId));
+        const missingQuestions = courseGroup.question.filter(q => !existingQuestionIds.has(q.id));
+
+        if (missingQuestions.length > 0) {
+            console.log(`Adding ${missingQuestions.length} new question(s) to group: ${courseGroup.name}`);
+            hasChanges = true;
+
+            // Add progress entries for missing questions
+            const newQuestionsProgress: QuestionProgress[] = missingQuestions.map(question => ({
+                questionId: question.id,
+                totalAttempts: 0,
+                correctAttempts: 0,
+                incorrectAttempts: 0,
+                consecutiveCorrect: 0,
+                consecutiveIncorrect: 0,
+                masteryLevel: MasteryLevel.NOT_STARTED,
+                hintUsedCount: 0,
+            }));
+
+            return {
+                ...groupProgress,
+                questionsProgress: [...validQuestionsProgress, ...newQuestionsProgress],
+                totalQuestions: courseGroup.question.length,
+                notStartedCount: groupProgress.notStartedCount + missingQuestions.length,
+            };
+        }
+
+        // Update total questions count if it's different or we removed orphaned entries
+        if (groupProgress.totalQuestions !== courseGroup.question.length || validQuestionsProgress.length !== groupProgress.questionsProgress.length) {
+            hasChanges = true;
+            return {
+                ...groupProgress,
+                questionsProgress: validQuestionsProgress,
+                totalQuestions: courseGroup.question.length,
+            };
+        }
+
+        return groupProgress;
+    });
+
+    if (hasChanges) {
+        if (orphanedCount > 0) {
+            console.log(`Progress synchronized: Removed ${orphanedCount} orphaned progress entry(ies) from altered/removed questions`);
+        } else {
+            console.log('Progress synchronized with current course data');
+        }
+
+        const totalQuestions = course.questionGroups.reduce((sum, group) => sum + group.question.length, 0);
+
+        return {
+            ...progress,
+            groupsProgress: synchronizedGroupsProgress,
+            totalQuestions,
+            totalQuestionGroups: course.questionGroups.length,
+        };
+    }
+
+    return progress;
+}
+
 function initializeCourseProgress(course: Course, metadata: CourseMetadata): CourseProgress {
     const groupsProgress: QuestionGroupProgress[] = course.questionGroups.map(group => {
         const questionsProgress: QuestionProgress[] = group.question.map((question) => ({
@@ -270,6 +379,8 @@ export const CourseStore = signalStore(
                             // Migrate old progress if needed
                             if (progress) {
                                 progress = migrateOldProgress(progress, course);
+                                // Synchronize progress with current course (adds missing questions)
+                                progress = synchronizeProgressWithCourse(progress, course);
                             }
 
                             // Validate hash if progress exists
@@ -310,6 +421,8 @@ export const CourseStore = signalStore(
                                 if (isSameCourse && existingProgress) {
                                     // Migrate old progress if needed
                                     let migratedProgress = migrateOldProgress(existingProgress, course);
+                                    // Synchronize progress with current course (adds missing questions)
+                                    migratedProgress = synchronizeProgressWithCourse(migratedProgress, course);
 
                                     // Validate hash for store progress too
                                     if (migratedProgress.courseDataHash !== currentHash) {
