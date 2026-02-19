@@ -1,8 +1,8 @@
-import { Component, ChangeDetectionStrategy, inject, OnInit, signal, computed } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, OnInit, signal, computed, effect } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CourseStore } from '../../store/course-store';
-import { Question, Answer, MasteryLevel, QuestionProgress, CourseProgress } from '../../model/questions';
+import { Question, Answer, MasteryLevel, QuestionProgress, CourseProgress, CourseMetadata } from '../../model/questions';
 
 // Constants for mastery level calculation
 const MASTERY_THRESHOLD = 3; // Consecutive correct answers needed for mastery
@@ -42,6 +42,9 @@ export class QuestionView implements OnInit {
     protected readonly router = inject(Router);
     protected readonly courseStore = inject(CourseStore);
 
+    // Store route parameters for use in effect
+    private routeParams: { groupName: string | null; questionLimit?: number } | null = null;
+
     // State signals
     protected readonly questionsQueue = signal<QuestionWithContext[]>([]);
     protected readonly currentQuestionIndex = signal<number>(0);
@@ -53,6 +56,19 @@ export class QuestionView implements OnInit {
         incorrectAnswers: 0,
         sessionStartTime: new Date()
     });
+
+    constructor() {
+        // Watch for course data to become available
+        effect(() => {
+            const course = this.courseStore.course();
+            const progress = this.courseStore.progress();
+
+            // Initialize questions when both course and progress are available
+            if (course && progress && this.routeParams && this.questionsQueue().length === 0) {
+                this.initializeQuestionQueue(this.routeParams.groupName, this.routeParams.questionLimit);
+            }
+        });
+    }
 
     // Computed values
     protected readonly currentQuestion = computed(() => {
@@ -93,12 +109,37 @@ export class QuestionView implements OnInit {
     ngOnInit(): void {
         const { courseId, groupName, questionLimit } = this.parseRouteParameters();
 
-        if (!courseId || !this.courseStore.course() || !this.courseStore.progress()) {
+        if (!courseId) {
             this.router.navigate(['/']);
             return;
         }
 
-        this.initializeQuestionQueue(groupName, questionLimit);
+        // Store route params for effect to use
+        this.routeParams = { groupName, questionLimit };
+
+        // Load course if not already loaded or if it's a different course
+        const currentCourse = this.courseStore.currentCourseMetadata();
+        if (!currentCourse || currentCourse.id !== courseId) {
+            // Create course metadata from the route parameter
+            const courseMetadata: CourseMetadata = {
+                id: courseId,
+                name: this.getCourseName(courseId)
+            };
+
+            // Load the course data - effect will initialize questions when ready
+            this.courseStore.loadCourse(courseMetadata);
+        } else if (this.courseStore.course() && this.courseStore.progress()) {
+            // Data already loaded, initialize immediately
+            this.initializeQuestionQueue(groupName, questionLimit);
+        }
+    }
+
+    private getCourseName(courseId: string): string {
+        // Map course IDs to their display names
+        const courseNames: Record<string, string> = {
+            'daten-informatikrecht': 'Daten und Informatikrecht'
+        };
+        return courseNames[courseId] || courseId;
     }
 
     private parseRouteParameters(): { courseId: string | null; groupName: string | null; questionLimit?: number } {
