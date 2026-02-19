@@ -54,22 +54,22 @@
                             @for (answer of currentQuestion()!.question.answers; track $index) {
                                 <button
                                     class="btn btn-lg text-start answer-button"
-                                    [class.btn-outline-primary]="selectedAnswer() !== $index && !showResult()"
-                                    [class.btn-primary]="selectedAnswer() === $index && !showResult()"
+                                    [class.btn-outline-primary]="!isAnswerSelected($index) && !showResult()"
+                                    [class.btn-primary]="isAnswerSelected($index) && !showResult()"
                                     [class.btn-success]="showResult() && answer.correct"
-                                    [class.btn-danger]="showResult() && selectedAnswer() === $index && !answer.correct"
-                                    [class.btn-outline-secondary]="showResult() && selectedAnswer() !== $index && !answer.correct"
+                                    [class.btn-danger]="showResult() && isAnswerSelected($index) && !answer.correct"
+                                    [class.btn-outline-secondary]="showResult() && !isAnswerSelected($index) && !answer.correct"
                                     [disabled]="showResult()"
                                     (click)="selectAnswer($index)"
-                                    [attr.aria-pressed]="selectedAnswer() === $index"
+                                    [attr.aria-pressed]="isAnswerSelected($index)"
                                     [attr.aria-label]="'Antwort: ' + answer.text">
                                     <div class="d-flex align-items-center">
                                         <span class="me-3 fs-5">
                                             @if (!showResult()) {
-                                                <i class="bi bi-circle" [class.bi-check-circle-fill]="selectedAnswer() === $index"></i>
+                                                <i class="bi bi-square" [class.bi-check-square-fill]="isAnswerSelected($index)"></i>
                                             } @else if (answer.correct) {
                                                 <i class="bi bi-check-circle-fill"></i>
-                                            } @else if (selectedAnswer() === $index && !answer.correct) {
+                                            } @else if (isAnswerSelected($index) && !answer.correct) {
                                                 <i class="bi bi-x-circle-fill"></i>
                                             } @else {
                                                 <i class="bi bi-circle"></i>
@@ -126,9 +126,44 @@
                                     <!-- Wrong Answer -->
                                     <div class="alert alert-danger d-flex align-items-start mb-3">
                                         <i class="bi bi-x-circle-fill me-2 fs-4 mt-1"></i>
-                                        <div>
+                                        <div class="w-100">
                                             <h5 class="alert-heading mb-2">Nicht ganz richtig</h5>
-                                            <p class="mb-0">{{ currentQuestion()!.question.reason }}</p>
+                                            <p class="mb-2">{{ currentQuestion()!.question.reason }}</p>
+
+                                            <!-- Show what user selected vs what's correct -->
+                                            <div class="mt-3">
+                                                <h6 class="mb-2"><strong>Deine Auswahl:</strong></h6>
+                                                <ul class="mb-2">
+                                                    @for (answer of currentQuestion()!.question.answers; track $index) {
+                                                        @if (isAnswerSelected($index)) {
+                                                            <li>
+                                                                @if (answer.correct) {
+                                                                    <i class="bi bi-check-circle-fill text-success me-1"></i>
+                                                                    <span>{{ answer.text }}</span>
+                                                                    <span class="badge bg-success ms-2">Richtig</span>
+                                                                } @else {
+                                                                    <i class="bi bi-x-circle-fill text-danger me-1"></i>
+                                                                    <span>{{ answer.text }}</span>
+                                                                    <span class="badge bg-danger ms-2">Falsch gewählt</span>
+                                                                }
+                                                            </li>
+                                                        }
+                                                    }
+                                                </ul>
+
+                                                <!-- Show missed correct answers -->
+                                                @if (getMissedCorrectAnswers().length > 0) {
+                                                    <h6 class="mb-2 mt-3"><strong>Nicht gewählt (aber richtig):</strong></h6>
+                                                    <ul class="mb-0">
+                                                        @for (answer of getMissedCorrectAnswers(); track answer.text) {
+                                                            <li class="text-warning">
+                                                                <i class="bi bi-exclamation-circle-fill me-1"></i>
+                                                                <span>{{ answer.text }}</span>
+                                                            </li>
+                                                        }
+                                                    </ul>
+                                                }
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="alert alert-light border">
@@ -152,7 +187,7 @@
                                 </button>
                                 <button
                                     class="btn btn-primary btn-lg px-5"
-                                    [disabled]="selectedAnswer() === null"
+                                    [disabled]="selectedAnswers().length === 0"
                                     (click)="submitAnswer()">
                                     <i class="bi bi-check-lg me-2"></i>Antwort bestätigen
                                 </button>

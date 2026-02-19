@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy, inject, OnInit, signal, computed } 
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CourseStore } from '../../store/course-store';
-import { Question, MasteryLevel, QuestionProgress, CourseProgress } from '../../model/questions';
+import { Question, Answer, MasteryLevel, QuestionProgress, CourseProgress } from '../../model/questions';
 
 // Constants for mastery level calculation
 const MASTERY_THRESHOLD = 3; // Consecutive correct answers needed for mastery
@@ -45,7 +45,7 @@ export class QuestionView implements OnInit {
     // State signals
     protected readonly questionsQueue = signal<QuestionWithContext[]>([]);
     protected readonly currentQuestionIndex = signal<number>(0);
-    protected readonly selectedAnswer = signal<number | null>(null);
+    protected readonly selectedAnswers = signal<number[]>([]);
     protected readonly showResult = signal<boolean>(false);
     protected readonly sessionStats = signal<SessionStats>({
         totalAnswered: 0,
@@ -66,10 +66,22 @@ export class QuestionView implements OnInit {
     });
 
     protected readonly isAnswerCorrect = computed(() => {
-        const selected = this.selectedAnswer();
+        const selected = this.selectedAnswers();
         const current = this.currentQuestion();
-        if (selected === null || !current) return false;
-        return current.question.answers[selected].correct;
+        if (selected.length === 0 || !current) return false;
+
+        // Get all correct answer indices
+        const correctIndices = current.question.answers
+            .map((answer, index) => answer.correct ? index : -1)
+            .filter(index => index !== -1);
+
+        // Check if selected answers match correct answers exactly
+        if (selected.length !== correctIndices.length) return false;
+
+        const sortedSelected = [...selected].sort((a, b) => a - b);
+        const sortedCorrect = [...correctIndices].sort((a, b) => a - b);
+
+        return sortedSelected.every((val, idx) => val === sortedCorrect[idx]);
     });
 
     protected readonly sessionAccuracy = computed(() => {
@@ -205,11 +217,35 @@ export class QuestionView implements OnInit {
 
     protected selectAnswer(index: number): void {
         if (this.showResult()) return; // Already answered
-        this.selectedAnswer.set(index);
+
+        const selected = this.selectedAnswers();
+        const indexPos = selected.indexOf(index);
+
+        if (indexPos === -1) {
+            // Add to selection
+            this.selectedAnswers.set([...selected, index]);
+        } else {
+            // Remove from selection
+            this.selectedAnswers.set(selected.filter(i => i !== index));
+        }
+    }
+
+    protected isAnswerSelected(index: number): boolean {
+        return this.selectedAnswers().includes(index);
+    }
+
+    protected getMissedCorrectAnswers(): Answer[] {
+        const current = this.currentQuestion();
+        if (!current) return [];
+
+        const selected = this.selectedAnswers();
+        return current.question.answers.filter((answer, index) =>
+            answer.correct && !selected.includes(index)
+        );
     }
 
     protected submitAnswer(): void {
-        if (this.selectedAnswer() === null || this.showResult()) return;
+        if (this.selectedAnswers().length === 0 || this.showResult()) return;
 
         const isCorrect = this.isAnswerCorrect();
         this.showResult.set(true);
@@ -363,7 +399,7 @@ export class QuestionView implements OnInit {
         }
 
         this.currentQuestionIndex.set(this.currentQuestionIndex() + 1);
-        this.selectedAnswer.set(null);
+        this.selectedAnswers.set([]);
         this.showResult.set(false);
     }
 
