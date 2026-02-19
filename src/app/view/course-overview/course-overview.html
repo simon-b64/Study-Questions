@@ -65,10 +65,47 @@
 
                     <div class="flex-grow-1 d-none d-sm-block"></div>
 
-                    <button class="btn btn-primary" (click)="startQuestions()">
-                        <i class="bi bi-play-circle-fill me-2"></i>
+                    <!-- Quick Session Button Group with Dropdown -->
+                    <div class="btn-group position-relative" role="group">
+                        <button class="btn btn-success btn-sm btn-md-regular"
+                                (click)="startQuickSession()"
+                                title="Schnelle Session mit begrenzter Fragenzahl starten">
+                            <i class="bi bi-lightning-fill me-1 me-sm-2"></i>
+                            <span class="d-none d-sm-inline">Quick Session ({{ quickSessionLimit() }} Fragen)</span>
+                            <span class="d-inline d-sm-none">Quick ({{ quickSessionLimit() }})</span>
+                        </button>
+                        <button type="button"
+                                class="btn btn-success dropdown-toggle dropdown-toggle-split btn-sm btn-md-regular"
+                                (click)="toggleDropdown($event)"
+                                [attr.aria-expanded]="isDropdownOpen()"
+                                [attr.aria-label]="'Fragenzahl konfigurieren'">
+                            <span class="visually-hidden">Fragenzahl anpassen</span>
+                        </button>
+
+                        @if (isDropdownOpen()) {
+                            <ul class="dropdown-menu dropdown-menu-end show">
+                                <li><h6 class="dropdown-header">Fragenzahl wählen</h6></li>
+                                @for (limit of [10, 20, 30, 50, 100]; track limit) {
+                                    <li>
+                                        <button type="button"
+                                                class="dropdown-item"
+                                                [class.active]="quickSessionLimit() === limit"
+                                                (click)="setQuickSessionLimit(limit)">
+                                            {{ limit }} Fragen
+                                            @if (quickSessionLimit() === limit) {
+                                                <i class="bi bi-check-lg ms-2"></i>
+                                            }
+                                        </button>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    </div>
+
+                    <button class="btn btn-primary btn-sm btn-md-regular" (click)="startQuestions()">
+                        <i class="bi bi-play-circle-fill me-1 me-sm-2"></i>
                         <span class="d-none d-sm-inline">Alle Fragen starten</span>
-                        <span class="d-inline d-sm-none">Starten</span>
+                        <span class="d-inline d-sm-none">Alle</span>
                     </button>
                 </div>
             </div>

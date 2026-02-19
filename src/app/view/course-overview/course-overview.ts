@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, inject, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CourseStore, migrateOldProgress } from '../../store/course-store';
@@ -11,11 +11,18 @@ import { generateCourseHash } from '../../utils/course-hash.util';
     templateUrl: './course-overview.html',
     styleUrl: './course-overview.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        '(document:click)': 'onDocumentClick()'
+    }
 })
 export class CourseOverviewView implements OnInit {
     private readonly route = inject(ActivatedRoute);
     protected readonly router = inject(Router);
     protected readonly courseStore = inject(CourseStore);
+
+    // Quick session configuration
+    protected readonly quickSessionLimit = signal<number>(20);
+    protected readonly isDropdownOpen = signal<boolean>(false);
 
     ngOnInit(): void {
         const courseId = this.route.snapshot.paramMap.get('courseId');
@@ -59,6 +66,33 @@ export class CourseOverviewView implements OnInit {
             this.router.navigate(['/course', courseId, 'questions']);
         }
     }
+
+    protected startQuickSession(): void {
+        const courseId = this.route.snapshot.paramMap.get('courseId');
+        if (!courseId) return;
+
+        // Navigate to all questions with limit query parameter
+        this.router.navigate(['/course', courseId, 'questions'], {
+            queryParams: { limit: this.quickSessionLimit() }
+        });
+    }
+
+    protected setQuickSessionLimit(limit: number): void {
+        this.quickSessionLimit.set(limit);
+        this.isDropdownOpen.set(false);
+    }
+
+    protected toggleDropdown(event: Event): void {
+        event.stopPropagation();
+        this.isDropdownOpen.update(isOpen => !isOpen);
+    }
+
+    protected onDocumentClick(): void {
+        if (this.isDropdownOpen()) {
+            this.isDropdownOpen.set(false);
+        }
+    }
+
 
     protected resetProgress(): void {
         const courseId = this.route.snapshot.paramMap.get('courseId');

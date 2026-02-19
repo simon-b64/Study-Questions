@@ -1,3 +1,28 @@
+// Dropdown menu styling and positioning
+.dropdown-menu {
+  z-index: 1050;
+  min-width: 200px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.125rem;
+}
+
+// Button size adjustments for mobile and desktop
+.btn-sm {
+  @media (max-width: 767.98px) {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+.btn-md-regular {
+  @media (min-width: 768px) {
+    font-size: 1rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+}
+
 // Mobile optimization for header and buttons
 @media (max-width: 575.98px) {
   .display-5 {
@@ -5,18 +30,25 @@
     word-break: break-word;
   }
 
-  // Ensure buttons are touch-friendly
+  // Ensure buttons are touch-friendly and full width
   .btn {
     min-height: 44px; // Minimum touch target size
-    padding: 0.5rem 1rem;
   }
 
-  // Make button group split evenly on mobile
-  .btn-group {
-    display: flex;
-
+  // Make buttons full width on mobile
+  .d-flex.flex-column.flex-sm-row {
+    .btn-group,
     .btn {
-      flex: 1;
+      width: 100%;
+      flex: 1 1 100%;
+    }
+
+    .btn-group {
+      display: flex;
+
+      .btn {
+        flex: 1 1 auto;
+      }
     }
   }
 }
@@ -37,7 +69,8 @@
     font-size: 0.9rem;
   }
 
-  .btn-primary {
+  .btn-primary,
+  .btn-success {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }

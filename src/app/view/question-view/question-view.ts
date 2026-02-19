@@ -62,16 +62,18 @@ export class QuestionView implements OnInit {
     ngOnInit(): void {
         const courseId = this.route.snapshot.paramMap.get('courseId');
         const groupName = this.route.snapshot.paramMap.get('groupName');
+        const limitParam = this.route.snapshot.queryParamMap.get('limit');
+        const questionLimit = limitParam ? parseInt(limitParam, 10) : undefined;
 
         if (!courseId || !this.courseStore.course() || !this.courseStore.progress()) {
             this.router.navigate(['/']);
             return;
         }
 
-        this.initializeQuestionQueue(groupName);
+        this.initializeQuestionQueue(groupName, questionLimit);
     }
 
-    private initializeQuestionQueue(groupName: string | null): void {
+    private initializeQuestionQueue(groupName: string | null, questionLimit?: number): void {
         const course = this.courseStore.course();
         const progress = this.courseStore.progress();
 
@@ -110,7 +112,12 @@ export class QuestionView implements OnInit {
         // Smart sorting algorithm: prioritize by learning need
         const sortedQuestions = this.sortQuestionsByLearningPriority(allQuestions);
 
-        this.questionsQueue.set(sortedQuestions);
+        // Apply question limit if specified
+        const limitedQuestions = questionLimit && questionLimit > 0
+            ? sortedQuestions.slice(0, questionLimit)
+            : sortedQuestions;
+
+        this.questionsQueue.set(limitedQuestions);
     }
 
     private sortQuestionsByLearningPriority(questions: QuestionWithContext[]): QuestionWithContext[] {
