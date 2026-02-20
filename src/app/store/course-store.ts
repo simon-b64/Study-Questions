@@ -1,10 +1,18 @@
-import { inject } from '@angular/core';
+import { computed, effect, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Course, CourseMetadata, CourseProgress, QuestionGroupProgress, QuestionProgress, MasteryLevel } from '../model/questions';
-import { signalStore, withState, withMethods, patchState, withComputed } from '@ngrx/signals';
+import {
+    Course,
+    CourseMetadata,
+    CourseProgress,
+    MasteryLevel,
+    QuestionGroupProgress,
+    QuestionProgress
+} from '../model/questions';
+import { patchState, signalStore, withComputed, withHooks, withMethods, withState } from '@ngrx/signals';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
-import { pipe, switchMap, tap, catchError, of } from 'rxjs';
-import { computed } from '@angular/core';
+import { catchError, from, of, pipe, switchMap } from 'rxjs';
+import { FirestoreProgressService } from '../services/firestore-progress.service';
+import { AuthService } from '../services/auth.service';
 import { generateCourseHash } from '../utils/course-hash.util';
 
 type CourseStore = {
@@ -358,40 +366,51 @@ export const CourseStore = signalStore(
             };
         }),
     })),
-    withMethods((store, http = inject(HttpClient)) => ({
+    withMethods((store, http = inject(HttpClient), firestoreService = inject(FirestoreProgressService), authService = inject(AuthService)) => ({
         loadCourse: rxMethod<CourseMetadata>(
             pipe(
-                tap(() => {
-                    patchState(store, {
-                        isLoading: true,
-                        error: undefined,
-                    });
-                }),
-                switchMap((metadata) =>
-                    http.get<Course>(`/${metadata.id}.json`).pipe(
-                        tap((course) => {
-                            // Generate hash for current course data
+                switchMap((metadata) => {
+                    patchState(store, { isLoading: true, error: undefined });
+                    return from(
+                        http.get<Course>(`/${metadata.id}.json`).toPromise().then(async (course) => {
+                            if (!course) throw new Error('Course not found');
+
                             const currentHash = generateCourseHash(course);
+                            const user = authService.user();
 
-                            // Try to load progress from localStorage first
-                            let progress = loadProgressFromLocalStorage(metadata.id);
-
-                            // Migrate old progress if needed
-                            if (progress) {
-                                progress = migrateOldProgress(progress, course);
-                                // Synchronize progress with current course (adds missing questions)
-                                progress = synchronizeProgressWithCourse(progress, course);
+                            // 1. Load from localStorage
+                            let localProgress = loadProgressFromLocalStorage(metadata.id);
+                            if (localProgress) {
+                                localProgress = migrateOldProgress(localProgress, course);
+                                localProgress = synchronizeProgressWithCourse(localProgress, course);
                             }
 
-                            // Validate hash if progress exists
+                            // 2. Load from Firestore (authoritative for logged-in users)
+                            let progress: CourseProgress | null = null;
+                            if (user) {
+                                const firestoreProgress = await firestoreService.loadProgress(user.uid, metadata.id);
+                                if (firestoreProgress) {
+                                    // Prefer Firestore — pick whichever was active more recently
+                                    const firestoreTime = firestoreProgress.lastActivityAt?.getTime() ?? 0;
+                                    const localTime = localProgress?.lastActivityAt?.getTime() ?? 0;
+                                    progress = firestoreTime >= localTime ? firestoreProgress : localProgress;
+                                    progress = synchronizeProgressWithCourse(progress!, course);
+                                } else if (localProgress) {
+                                    // First login on this device — upload local progress to Firestore
+                                    progress = localProgress;
+                                    await firestoreService.saveProgress(user.uid, progress);
+                                }
+                            } else {
+                                progress = localProgress;
+                            }
+
+                            // 3. Hash validation
                             if (progress) {
                                 if (!progress.courseDataHash) {
-                                    // Old progress without hash - update it
-                                    console.warn('Progress loaded without hash, updating...');
                                     progress.courseDataHash = currentHash;
                                     saveProgressToLocalStorage(progress);
+                                    if (user) await firestoreService.saveProgress(user.uid, progress);
                                 } else if (progress.courseDataHash !== currentHash) {
-                                    // Hash mismatch - course has changed
                                     const proceed = confirm(
                                         '⚠️ Warnung: Die Kursdaten haben sich geändert!\n\n' +
                                         'Dein gespeicherter Fortschritt passt nicht zur aktuellen Version des Kurses. ' +
@@ -399,46 +418,23 @@ export const CourseStore = signalStore(
                                         'Möchtest du trotzdem deinen alten Fortschritt laden?\n' +
                                         '(Empfohlen: "Abbrechen" um mit leerem Fortschritt zu beginnen)'
                                     );
-
                                     if (!proceed) {
-                                        // User chose to start fresh
-                                        console.log('User chose to reset progress due to course changes');
                                         clearProgressFromLocalStorage(metadata.id);
+                                        if (user) await firestoreService.clearProgress(user.uid, metadata.id);
                                         progress = null;
                                     } else {
-                                        // User chose to keep old progress, update hash
-                                        console.warn('User chose to keep outdated progress');
                                         progress.courseDataHash = currentHash;
                                         saveProgressToLocalStorage(progress);
+                                        if (user) await firestoreService.saveProgress(user.uid, progress);
                                     }
                                 }
                             }
 
-                            // If not in localStorage, check if we have it in the store
-                            if (!progress) {
-                                const existingProgress = store.progress();
-                                const isSameCourse = existingProgress?.courseId === metadata.id;
-                                if (isSameCourse && existingProgress) {
-                                    // Migrate old progress if needed
-                                    let migratedProgress = migrateOldProgress(existingProgress, course);
-                                    // Synchronize progress with current course (adds missing questions)
-                                    migratedProgress = synchronizeProgressWithCourse(migratedProgress, course);
-
-                                    // Validate hash for store progress too
-                                    if (migratedProgress.courseDataHash !== currentHash) {
-                                        console.warn('Store progress hash mismatch, resetting');
-                                        progress = null;
-                                    } else {
-                                        progress = migratedProgress;
-                                    }
-                                }
-                            }
-
-                            // If still no progress, initialize new
+                            // 4. Initialize fresh if still nothing
                             if (!progress) {
                                 progress = initializeCourseProgress(course, metadata);
-                                // Save the newly initialized progress to localStorage
                                 saveProgressToLocalStorage(progress);
+                                if (user) await firestoreService.saveProgress(user.uid, progress);
                             }
 
                             patchState(store, {
@@ -446,12 +442,13 @@ export const CourseStore = signalStore(
                                 currentCourseMetadata: metadata,
                                 progress,
                                 isLoading: false,
-                                error: undefined
+                                error: undefined,
                             });
-                        }),
-                        catchError((error) => {
+                        })
+                    ).pipe(
+                        catchError((error: unknown) => {
                             patchState(store, {
-                                error: `Failed to load course: ${error.message}`,
+                                error: `Failed to load course: ${error instanceof Error ? error.message : String(error)}`,
                                 isLoading: false,
                                 course: undefined,
                                 currentCourseMetadata: undefined,
@@ -459,32 +456,59 @@ export const CourseStore = signalStore(
                             });
                             return of(null);
                         })
-                    )
-                )
+                    );
+                })
             )
         ),
-        updateProgress: (updatedProgress: CourseProgress) => {
+        updateProgress: async (updatedProgress: CourseProgress) => {
             const recalculated = calculateOverallMetrics(updatedProgress);
             patchState(store, { progress: recalculated });
-            // Save to localStorage
             saveProgressToLocalStorage(recalculated);
+            const user = authService.user();
+            if (user) {
+                await firestoreService.saveProgress(user.uid, recalculated);
+            }
         },
-        clearProgress: (courseId: string) => {
-            // Clear progress from localStorage
+        clearProgress: async (courseId: string) => {
             clearProgressFromLocalStorage(courseId);
-            // If this is the current course, reset the store
+            const user = authService.user();
+            if (user) {
+                await firestoreService.clearProgress(user.uid, courseId);
+            }
             const currentCourse = store.currentCourseMetadata();
             if (currentCourse?.id === courseId) {
                 patchState(store, { progress: undefined });
             }
         },
-        reset: () => {
-            // Clear localStorage for current course if any
+        reset: async () => {
             const currentCourse = store.currentCourseMetadata();
             if (currentCourse?.id) {
                 clearProgressFromLocalStorage(currentCourse.id);
+                const user = authService.user();
+                if (user) {
+                    await firestoreService.clearProgress(user.uid, currentCourse.id);
+                }
             }
             patchState(store, initialState);
-        }
+        },
+    })),
+    withHooks((store, firestoreService = inject(FirestoreProgressService), authService = inject(AuthService)) => ({
+        onInit() {
+            let previousUserId: string | null | undefined = undefined;
+            effect(() => {
+                const user = authService.user();
+                const wasLoggedOut = previousUserId === null;
+                const nowLoggedIn = !!user;
+                previousUserId = user?.uid ?? null;
+
+                // User just logged in — push any in-memory progress to Firestore
+                if (wasLoggedOut && nowLoggedIn && user) {
+                    const progress = store.progress();
+                    if (progress) {
+                        firestoreService.saveProgress(user.uid, progress).catch(console.error);
+                    }
+                }
+            });
+        },
     }))
 )

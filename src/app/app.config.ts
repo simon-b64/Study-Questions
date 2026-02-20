@@ -3,6 +3,7 @@ import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { provideAppCheck, initializeAppCheck, ReCaptchaV3Provider } from '@angular/fire/app-check';
 
 import { routes } from './app.routes';
@@ -31,6 +32,7 @@ function firebaseProviders(): (Provider | EnvironmentProviders)[] {
     const providers: (Provider | EnvironmentProviders)[] = [
         provideFirebaseApp(() => initializeApp(firebaseConfig!)),
         provideAuth(() => getAuth()),
+        provideFirestore(() => getFirestore()),
     ];
     if (firebaseConfig!.recaptchaSiteKey) {
         providers.push(
