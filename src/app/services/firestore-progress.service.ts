@@ -22,8 +22,7 @@ type FirestoreGroupProgress = Omit<QuestionGroupProgress, 'startedAt' | 'lastAct
     questionsProgress: FirestoreQuestionProgress[];
 };
 
-type FirestoreCourseProgress = Omit<CourseProgress, 'createdAt' | 'lastActivityAt' | 'groupsProgress'> & {
-    createdAt: Timestamp;
+type FirestoreCourseProgress = Omit<CourseProgress, 'createdAt' | 'lastActivityAt' | 'groupsProgress'> & {    createdAt: Timestamp;
     lastActivityAt?: Timestamp;
     groupsProgress: FirestoreGroupProgress[];
 };
@@ -61,7 +60,6 @@ function serializeProgress(progress: CourseProgress): FirestoreCourseProgress {
     return defined<FirestoreCourseProgress>({
         courseId: progress.courseId,
         courseName: progress.courseName,
-        courseDataHash: progress.courseDataHash,
         totalQuestions: progress.totalQuestions,
         totalQuestionGroups: progress.totalQuestionGroups,
         overallCompletionPercentage: progress.overallCompletionPercentage,

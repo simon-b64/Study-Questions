@@ -13,7 +13,6 @@ import { rxMethod } from '@ngrx/signals/rxjs-interop';
 import { catchError, from, of, pipe, switchMap } from 'rxjs';
 import { FirestoreProgressService } from '../services/firestore-progress.service';
 import { AuthService } from '../services/auth.service';
-import { generateCourseHash } from '../utils/course-hash.util';
 
 type CourseStore = {
     currentCourseMetadata: CourseMetadata | undefined;
@@ -83,63 +82,6 @@ function clearProgressFromLocalStorage(courseId: string): void {
     } catch (error) {
         console.error('Failed to clear progress from localStorage:', error);
     }
-}
-
-// Migration utility function - exported for use in components
-export function migrateOldProgress(progress: any, course: Course): CourseProgress {
-    // Check if migration is needed (old progress has questionIndex instead of questionId)
-    const needsMigration = progress.groupsProgress?.some((group: any) =>
-        group.questionsProgress?.some((qp: any) => 'questionIndex' in qp && !('questionId' in qp))
-    );
-
-    if (!needsMigration) {
-        return progress;
-    }
-
-    console.log('Migrating old progress data from index-based to ID-based...');
-
-    // Migrate each group's progress
-    const migratedGroupsProgress = progress.groupsProgress.map((groupProgress: any, groupIndex: number) => {
-        const courseGroup = course.questionGroups[groupIndex];
-        if (!courseGroup) {
-            console.warn(`No course group found at index ${groupIndex}`);
-            return groupProgress;
-        }
-
-        // Migrate question progress from index to ID
-        const migratedQuestionsProgress = groupProgress.questionsProgress.map((qp: any) => {
-            // If already has questionId, keep it
-            if ('questionId' in qp) {
-                return qp;
-            }
-
-            // Convert questionIndex to questionId
-            const questionIndex = qp.questionIndex;
-            const question = courseGroup.question[questionIndex];
-
-            if (!question || !question.id) {
-                console.warn(`Cannot migrate progress for question at index ${questionIndex} in group ${groupIndex}`);
-                return null;
-            }
-
-            // Create new progress object with questionId
-            const { questionIndex: _, ...rest } = qp; // Remove questionIndex
-            return {
-                ...rest,
-                questionId: question.id
-            };
-        }).filter((qp: any) => qp !== null); // Remove any failed migrations
-
-        return {
-            ...groupProgress,
-            questionsProgress: migratedQuestionsProgress
-        };
-    });
-
-    return {
-        ...progress,
-        groupsProgress: migratedGroupsProgress
-    };
 }
 
 // Synchronize progress with current course data - adds missing questions and cleans up orphaned ones
@@ -282,7 +224,6 @@ function initializeCourseProgress(course: Course, metadata: CourseMetadata): Cou
     return {
         courseId: metadata.id,
         courseName: metadata.name,
-        courseDataHash: generateCourseHash(course),
         totalQuestions,
         totalQuestionGroups: course.questionGroups.length,
         groupsProgress,
@@ -375,13 +316,11 @@ export const CourseStore = signalStore(
                         http.get<Course>(`/${metadata.id}.json`).toPromise().then(async (course) => {
                             if (!course) throw new Error('Course not found');
 
-                            const currentHash = generateCourseHash(course);
                             const user = authService.user();
 
                             // 1. Load from localStorage
                             let localProgress = loadProgressFromLocalStorage(metadata.id);
                             if (localProgress) {
-                                localProgress = migrateOldProgress(localProgress, course);
                                 localProgress = synchronizeProgressWithCourse(localProgress, course);
                             }
 
@@ -390,7 +329,7 @@ export const CourseStore = signalStore(
                             if (user) {
                                 const firestoreProgress = await firestoreService.loadProgress(user.uid, metadata.id);
                                 if (firestoreProgress) {
-                                    // Prefer Firestore — pick whichever was active more recently
+                                    // Pick whichever was active more recently
                                     const firestoreTime = firestoreProgress.lastActivityAt?.getTime() ?? 0;
                                     const localTime = localProgress?.lastActivityAt?.getTime() ?? 0;
                                     progress = firestoreTime >= localTime ? firestoreProgress : localProgress;
@@ -404,33 +343,7 @@ export const CourseStore = signalStore(
                                 progress = localProgress;
                             }
 
-                            // 3. Hash validation
-                            if (progress) {
-                                if (!progress.courseDataHash) {
-                                    progress.courseDataHash = currentHash;
-                                    saveProgressToLocalStorage(progress);
-                                    if (user) await firestoreService.saveProgress(user.uid, progress);
-                                } else if (progress.courseDataHash !== currentHash) {
-                                    const proceed = confirm(
-                                        '⚠️ Warnung: Die Kursdaten haben sich geändert!\n\n' +
-                                        'Dein gespeicherter Fortschritt passt nicht zur aktuellen Version des Kurses. ' +
-                                        'Dies kann passieren, wenn Fragen hinzugefügt, entfernt oder geändert wurden.\n\n' +
-                                        'Möchtest du trotzdem deinen alten Fortschritt laden?\n' +
-                                        '(Empfohlen: "Abbrechen" um mit leerem Fortschritt zu beginnen)'
-                                    );
-                                    if (!proceed) {
-                                        clearProgressFromLocalStorage(metadata.id);
-                                        if (user) await firestoreService.clearProgress(user.uid, metadata.id);
-                                        progress = null;
-                                    } else {
-                                        progress.courseDataHash = currentHash;
-                                        saveProgressToLocalStorage(progress);
-                                        if (user) await firestoreService.saveProgress(user.uid, progress);
-                                    }
-                                }
-                            }
-
-                            // 4. Initialize fresh if still nothing
+                            // 3. Initialize fresh if still nothing
                             if (!progress) {
                                 progress = initializeCourseProgress(course, metadata);
                                 saveProgressToLocalStorage(progress);
