@@ -5,7 +5,8 @@
         "projectId": "",
         "storageBucket": "",
         "messagingSenderId": "",
-        "appId": ""
+        "appId": "",
+        "recaptchaSiteKey": ""
     }
 }
 
