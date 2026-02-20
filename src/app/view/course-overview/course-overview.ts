@@ -1,8 +1,9 @@
-import { Component, ChangeDetectionStrategy, inject, OnInit, signal, computed } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, OnInit, signal, computed, effect } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CourseStore } from '../../store/course-store';
 import { CourseMetadata } from '../../model/questions';
 import { getCourseName } from '../../utils/course-name.util';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
     selector: 'app-course-overview',
@@ -18,6 +19,10 @@ export class CourseOverviewView implements OnInit {
     private readonly route = inject(ActivatedRoute);
     private readonly router = inject(Router);
     private readonly courseStore = inject(CourseStore);
+    private readonly authService = inject(AuthService);
+
+    // Set in ngOnInit, consumed by the constructor effect
+    private readonly pendingMetadata = signal<CourseMetadata | null>(null);
 
     // Quick session configuration
     protected readonly quickSessionLimit = signal<number>(20);
@@ -31,6 +36,16 @@ export class CourseOverviewView implements OnInit {
     protected readonly courseName = computed(() => this.courseStore.currentCourseMetadata()?.name);
     protected readonly progressStats = this.courseStore.progressStats;
 
+    constructor() {
+        // Wait for auth state to be known before calling loadCourse.
+        // pendingMetadata is set by ngOnInit; the effect fires once auth is resolved.
+        effect(() => {
+            const metadata = this.pendingMetadata();
+            if (!metadata || this.authService.isLoading()) return;
+            this.courseStore.loadCourse(metadata);
+        });
+    }
+
     ngOnInit(): void {
         const courseId = this.route.snapshot.paramMap.get('courseId');
 
@@ -39,18 +54,10 @@ export class CourseOverviewView implements OnInit {
             return;
         }
 
-        // Only load course if it's not already loaded or if it's a different course
-        const currentCourse = this.courseStore.currentCourseMetadata();
-        if (!currentCourse || currentCourse.id !== courseId) {
-            // Create course metadata from the route parameter
-            const courseMetadata: CourseMetadata = {
-                id: courseId,
-                name: this.getCourseName(courseId)
-            };
-
-            // Load the course data
-            this.courseStore.loadCourse(courseMetadata);
-        }
+        this.pendingMetadata.set({
+            id: courseId,
+            name: this.getCourseName(courseId),
+        });
     }
 
     private getCourseName(courseId: string): string {
@@ -207,9 +214,3 @@ export class CourseOverviewView implements OnInit {
         await this.router.navigate(['/'])
     }
 }
-
-
-
-
-
-

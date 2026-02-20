@@ -1,4 +1,4 @@
-import { computed, effect, inject } from '@angular/core';
+import { computed, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {
     Course,
@@ -8,11 +8,12 @@ import {
     QuestionGroupProgress,
     QuestionProgress
 } from '../model/questions';
-import { patchState, signalStore, withComputed, withHooks, withMethods, withState } from '@ngrx/signals';
+import { patchState, signalStore, withComputed, withMethods, withState } from '@ngrx/signals';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
 import { catchError, from, of, pipe, switchMap } from 'rxjs';
 import { FirestoreProgressService } from '../services/firestore-progress.service';
 import { AuthService } from '../services/auth.service';
+import { SyncConflictService } from '../services/sync-conflict.service';
 
 type CourseStore = {
     currentCourseMetadata: CourseMetadata | undefined;
@@ -307,7 +308,7 @@ export const CourseStore = signalStore(
             };
         }),
     })),
-    withMethods((store, http = inject(HttpClient), firestoreService = inject(FirestoreProgressService), authService = inject(AuthService)) => ({
+    withMethods((store, http = inject(HttpClient), firestoreService = inject(FirestoreProgressService), authService = inject(AuthService), syncConflictService = inject(SyncConflictService)) => ({
         loadCourse: rxMethod<CourseMetadata>(
             pipe(
                 switchMap((metadata) => {
@@ -317,33 +318,76 @@ export const CourseStore = signalStore(
                             if (!course) throw new Error('Course not found');
 
                             const user = authService.user();
+                            let progress: CourseProgress | null;
 
-                            // 1. Load from localStorage
+                            // Load local progress (always — used as cache and fallback)
                             let localProgress = loadProgressFromLocalStorage(metadata.id);
                             if (localProgress) {
                                 localProgress = synchronizeProgressWithCourse(localProgress, course);
                             }
 
-                            // 2. Load from Firestore (authoritative for logged-in users)
-                            let progress: CourseProgress | null = null;
-                            if (user) {
-                                const firestoreProgress = await firestoreService.loadProgress(user.uid, metadata.id);
-                                if (firestoreProgress) {
-                                    // Pick whichever was active more recently
-                                    const firestoreTime = firestoreProgress.lastActivityAt?.getTime() ?? 0;
-                                    const localTime = localProgress?.lastActivityAt?.getTime() ?? 0;
-                                    progress = firestoreTime >= localTime ? firestoreProgress : localProgress;
-                                    progress = synchronizeProgressWithCourse(progress!, course);
-                                } else if (localProgress) {
-                                    // First login on this device — upload local progress to Firestore
-                                    progress = localProgress;
-                                    await firestoreService.saveProgress(user.uid, progress);
-                                }
-                            } else {
+                            if (!user) {
+                                // ── GUEST MODE ─────────────────────────────────────────
+                                // localStorage only, no Firestore interaction at all
                                 progress = localProgress;
+                            } else {
+                                // ── AUTHENTICATED MODE ──────────────────────────────────
+                                // Firestore is the source of truth.
+                                // localStorage is kept in sync as an offline cache.
+                                let firestoreProgress: CourseProgress | null = null;
+                                let firestoreAvailable = true;
+
+                                try {
+                                    firestoreProgress = await firestoreService.loadProgress(user.uid, metadata.id);
+                                } catch {
+                                    firestoreAvailable = false;
+                                    console.warn('Firestore unavailable — falling back to localStorage');
+                                }
+
+                                if (!firestoreAvailable) {
+                                    // Firestore unreachable — use local as-is, writes will go to
+                                    // localStorage only until Firestore becomes available again
+                                    progress = localProgress;
+                                } else if (!firestoreProgress && !localProgress) {
+                                    // Neither side has data — initialize fresh, push to both
+                                    progress = initializeCourseProgress(course, metadata);
+                                    saveProgressToLocalStorage(progress);
+                                    await firestoreService.saveProgress(user.uid, progress);
+                                } else if (!firestoreProgress) {
+                                    // Only local data exists — push it up to Firestore silently
+                                    progress = localProgress!;
+                                    await firestoreService.saveProgress(user.uid, progress);
+                                } else if (!localProgress) {
+                                    // Only Firestore data — pull it down to localStorage
+                                    progress = synchronizeProgressWithCourse(firestoreProgress, course);
+                                    saveProgressToLocalStorage(progress);
+                                } else {
+                                    // Both sides have data — compare timestamps
+                                    const firestoreTime = firestoreProgress.lastActivityAt?.getTime() ?? 0;
+                                    const localTime = localProgress.lastActivityAt?.getTime() ?? 0;
+
+                                    if (localTime > firestoreTime) {
+                                        // Local is newer — push to Firestore silently
+                                        progress = localProgress;
+                                        await firestoreService.saveProgress(user.uid, progress);
+                                    } else if (firestoreTime > localTime) {
+                                        // Firestore is newer — ask the user
+                                        const choice = await syncConflictService.askUser();
+                                        if (choice === 'cloud') {
+                                            progress = synchronizeProgressWithCourse(firestoreProgress, course);
+                                            saveProgressToLocalStorage(progress);
+                                        } else {
+                                            progress = localProgress;
+                                            await firestoreService.saveProgress(user.uid, progress);
+                                        }
+                                    } else {
+                                        // Same timestamp — already in sync, use Firestore copy
+                                        progress = firestoreProgress;
+                                    }
+                                }
                             }
 
-                            // 3. Initialize fresh if still nothing
+                            // Last resort — initialize fresh if still nothing
                             if (!progress) {
                                 progress = initializeCourseProgress(course, metadata);
                                 saveProgressToLocalStorage(progress);
@@ -376,10 +420,14 @@ export const CourseStore = signalStore(
         updateProgress: async (updatedProgress: CourseProgress) => {
             const recalculated = calculateOverallMetrics(updatedProgress);
             patchState(store, { progress: recalculated });
+            // Always keep localStorage up to date as an offline cache
             saveProgressToLocalStorage(recalculated);
             const user = authService.user();
             if (user) {
-                await firestoreService.saveProgress(user.uid, recalculated);
+                // Fire-and-forget — if Firestore is unreachable the local copy is still fresh
+                firestoreService.saveProgress(user.uid, recalculated).catch(err =>
+                    console.warn('Failed to sync progress to Firestore:', err)
+                );
             }
         },
         clearProgress: async (courseId: string) => {
@@ -403,25 +451,6 @@ export const CourseStore = signalStore(
                 }
             }
             patchState(store, initialState);
-        },
-    })),
-    withHooks((store, firestoreService = inject(FirestoreProgressService), authService = inject(AuthService)) => ({
-        onInit() {
-            let previousUserId: string | null | undefined = undefined;
-            effect(() => {
-                const user = authService.user();
-                const wasLoggedOut = previousUserId === null;
-                const nowLoggedIn = !!user;
-                previousUserId = user?.uid ?? null;
-
-                // User just logged in — push any in-memory progress to Firestore
-                if (wasLoggedOut && nowLoggedIn && user) {
-                    const progress = store.progress();
-                    if (progress) {
-                        firestoreService.saveProgress(user.uid, progress).catch(console.error);
-                    }
-                }
-            });
         },
     }))
 )
