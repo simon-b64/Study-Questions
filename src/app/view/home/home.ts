@@ -1,6 +1,7 @@
-import { Component, ChangeDetectionStrategy, signal, inject } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { CourseMetadata } from '../../model/questions';
+import { COURSE_NAMES } from '../../utils/course-name.util';
 
 @Component({
     selector: 'app-home',
@@ -12,13 +13,9 @@ import { CourseMetadata } from '../../model/questions';
 export class HomeView {
     private readonly router = inject(Router);
 
-    protected readonly courses = signal<CourseMetadata[]>([
-        {
-            id: 'daten-informatikrecht',
-            name: 'Daten und Informatikrecht',
-            description: 'Rechtliche Grundlagen im Bereich Daten und Informatik'
-        }
-    ]);
+    protected readonly courses: readonly CourseMetadata[] = Object.entries(COURSE_NAMES).map(
+        ([id, name]) => ({ id, name })
+    );
 
     protected navigateToCourse(courseId: string): void {
         this.router.navigate(['/course', courseId]);

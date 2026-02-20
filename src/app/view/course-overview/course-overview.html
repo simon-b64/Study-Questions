@@ -1,5 +1,5 @@
 <div class="container py-5">
-    @if (courseStore.isLoading()) {
+    @if (isLoading()) {
         <div class="d-flex justify-content-center align-items-center loading-container">
             <div class="text-center">
                 <div class="spinner-border text-primary" role="status">
@@ -8,20 +8,20 @@
                 <p class="mt-3 text-muted">Lade Kurs...</p>
             </div>
         </div>
-    } @else if (courseStore.error()) {
+    } @else if (error()) {
         <div class="row">
             <div class="col">
                 <div class="alert alert-danger" role="alert">
                     <h4 class="alert-heading">Fehler beim Laden</h4>
-                    <p>{{ courseStore.error() }}</p>
+                    <p>{{ error() }}</p>
                     <hr>
-                    <button class="btn btn-primary" (click)="router.navigate(['/'])">
+                    <button class="btn btn-primary" (click)="navigateHome()">
                         Zurück zur Startseite
                     </button>
                 </div>
             </div>
         </div>
-    } @else if (courseStore.course() && courseStore.progress()) {
+    } @else if (course() && progress()) {
         <!-- Header -->
         <div class="row mb-4">
             <div class="col">
@@ -31,13 +31,13 @@
                             <a [routerLink]="['/']">Home</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            {{ courseStore.currentCourseMetadata()?.name }}
+                            {{ courseName() }}
                         </li>
                     </ol>
                 </nav>
 
                 <!-- Course Title -->
-                <h1 class="display-5 mb-3">{{ courseStore.currentCourseMetadata()?.name }}</h1>
+                <h1 class="display-5 mb-3">{{ courseName() }}</h1>
 
                 <!-- Action Buttons Row -->
                 <div class="d-flex flex-column flex-sm-row flex-wrap gap-2 align-items-stretch align-items-sm-center">
@@ -125,16 +125,16 @@
                             <div class="d-flex justify-content-between align-items-center mb-2">
                                 <span class="fw-bold">Abschlussrate</span>
                                 <span class="badge bg-primary fs-6">
-                                    {{ courseStore.progressStats()?.completion || 0 }}%
+                                    {{ progressStats()?.completion || 0 }}%
                                 </span>
                             </div>
                             <div class="progress progress-thick" role="progressbar"
-                                [attr.aria-valuenow]="courseStore.progressStats()?.completion || 0" aria-valuemin="0"
+                                [attr.aria-valuenow]="progressStats()?.completion || 0" aria-valuemin="0"
                                 aria-valuemax="100">
                                 <div class="progress-bar bg-success progress-bar-striped"
-                                    [style.width.%]="courseStore.progressStats()?.completion || 0">
-                                    {{ courseStore.progressStats()?.mastered || 0 }} / {{
-                                    courseStore.progressStats()?.total || 0 }} gemeistert
+                                    [style.width.%]="progressStats()?.completion || 0">
+                                    {{ progressStats()?.mastered || 0 }} / {{
+                                    progressStats()?.total || 0 }} gemeistert
                                 </div>
                             </div>
                         </div>
@@ -143,14 +143,14 @@
                             <div class="d-flex justify-content-between align-items-center mb-2">
                                 <span class="fw-bold">Gesamtgenauigkeit</span>
                                 <span class="badge bg-info fs-6">
-                                    {{ courseStore.progressStats()?.accuracy || 0 }}%
+                                    {{ progressStats()?.accuracy || 0 }}%
                                 </span>
                             </div>
                             <div class="progress progress-medium" role="progressbar"
-                                [attr.aria-valuenow]="courseStore.progressStats()?.accuracy || 0" aria-valuemin="0"
+                                [attr.aria-valuenow]="progressStats()?.accuracy || 0" aria-valuemin="0"
                                 aria-valuemax="100">
                                 <div class="progress-bar bg-info"
-                                    [style.width.%]="courseStore.progressStats()?.accuracy || 0">
+                                    [style.width.%]="progressStats()?.accuracy || 0">
                                 </div>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                                 <div class="card border-success h-100">
                                     <div class="card-body text-center">
                                         <div class="display-6 text-success mb-2">
-                                            {{ courseStore.progressStats()?.mastered || 0 }}
+                                            {{ progressStats()?.mastered || 0 }}
                                         </div>
                                         <h6 class="card-subtitle text-success">
                                             <i class="bi bi-check-circle-fill me-1"></i>Gemeistert
@@ -173,7 +173,7 @@
                                 <div class="card border-info h-100">
                                     <div class="card-body text-center">
                                         <div class="display-6 text-info mb-2">
-                                            {{ courseStore.progressStats()?.reviewing || 0 }}
+                                            {{ progressStats()?.reviewing || 0 }}
                                         </div>
                                         <h6 class="card-subtitle text-info">
                                             <i class="bi bi-arrow-repeat me-1"></i>Wiederholung
@@ -186,7 +186,7 @@
                                 <div class="card border-warning h-100">
                                     <div class="card-body text-center">
                                         <div class="display-6 text-warning mb-2">
-                                            {{ courseStore.progressStats()?.learning || 0 }}
+                                            {{ progressStats()?.learning || 0 }}
                                         </div>
                                         <h6 class="card-subtitle text-warning">
                                             <i class="bi bi-book me-1"></i>Im Lernen
@@ -199,7 +199,7 @@
                                 <div class="card border-secondary h-100">
                                     <div class="card-body text-center">
                                         <div class="display-6 text-secondary mb-2">
-                                            {{ courseStore.progressStats()?.notStarted || 0 }}
+                                            {{ progressStats()?.notStarted || 0 }}
                                         </div>
                                         <h6 class="card-subtitle text-secondary">
                                             <i class="bi bi-circle me-1"></i>Nicht begonnen
@@ -220,7 +220,7 @@
             </div>
         </div>
         <div class="row g-4">
-            @for (groupProgress of courseStore.progress()?.groupsProgress; track groupProgress.groupName) {
+            @for (groupProgress of progress()?.groupsProgress; track groupProgress.groupName) {
                 <div class="col-12 col-lg-6">
                     <div class="card h-100 shadow-sm">
                         <div class="card-header">

@@ -1,13 +1,13 @@
-import { Component, ChangeDetectionStrategy, inject, OnInit, signal } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, OnInit, signal, computed } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import { CourseStore, migrateOldProgress } from '../../store/course-store';
 import { CourseMetadata } from '../../model/questions';
 import { generateCourseHash } from '../../utils/course-hash.util';
+import { getCourseName } from '../../utils/course-name.util';
 
 @Component({
     selector: 'app-course-overview',
-    imports: [RouterLink, CommonModule],
+    imports: [RouterLink],
     templateUrl: './course-overview.html',
     styleUrl: './course-overview.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -17,12 +17,20 @@ import { generateCourseHash } from '../../utils/course-hash.util';
 })
 export class CourseOverviewView implements OnInit {
     private readonly route = inject(ActivatedRoute);
-    protected readonly router = inject(Router);
-    protected readonly courseStore = inject(CourseStore);
+    private readonly router = inject(Router);
+    private readonly courseStore = inject(CourseStore);
 
     // Quick session configuration
     protected readonly quickSessionLimit = signal<number>(20);
     protected readonly isDropdownOpen = signal<boolean>(false);
+
+    // Template-facing store signals
+    protected readonly isLoading = this.courseStore.isLoading;
+    protected readonly error = this.courseStore.error;
+    protected readonly course = this.courseStore.course;
+    protected readonly progress = this.courseStore.progress;
+    protected readonly courseName = computed(() => this.courseStore.currentCourseMetadata()?.name);
+    protected readonly progressStats = this.courseStore.progressStats;
 
     ngOnInit(): void {
         const courseId = this.route.snapshot.paramMap.get('courseId');
@@ -47,11 +55,7 @@ export class CourseOverviewView implements OnInit {
     }
 
     private getCourseName(courseId: string): string {
-        // Map course IDs to their display names
-        const courseNames: Record<string, string> = {
-            'daten-informatikrecht': 'Daten und Informatikrecht'
-        };
-        return courseNames[courseId] || courseId;
+        return getCourseName(courseId);
     }
 
     protected startQuestions(groupName?: string): void {
@@ -230,6 +234,10 @@ export class CourseOverviewView implements OnInit {
 
         // Trigger file selection
         input.click();
+    }
+
+    protected async navigateHome(): Promise<void> {
+        await this.router.navigate(['/'])
     }
 }
 

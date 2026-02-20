@@ -1,4 +1,9 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, InjectionToken } from '@angular/core';
+
+const CURRENT_YEAR = new InjectionToken<number>('CURRENT_YEAR', {
+    providedIn: 'root',
+    factory: () => new Date().getFullYear(),
+});
 
 @Component({
     selector: 'app-footer',
@@ -8,5 +13,5 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Footer {
-    protected readonly currentYear = new Date().getFullYear();
+    protected readonly currentYear = inject(CURRENT_YEAR);
 }

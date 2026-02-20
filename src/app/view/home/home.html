@@ -7,7 +7,7 @@
     </div>
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        @for (course of courses(); track course.id) {
+        @for (course of courses; track course.id) {
             <div class="col">
                 <div class="card h-100 course-card"
                      role="button"
@@ -30,7 +30,7 @@
         }
     </div>
 
-    @if (courses().length === 0) {
+    @if (courses.length === 0) {
         <div class="row">
             <div class="col">
                 <div class="alert alert-info" role="alert">
