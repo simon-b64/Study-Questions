@@ -23779,6 +23779,655 @@
                     "id": "q-1e6030c5ccc7"
                 }
             ]
+        },
+        {
+            "name": "Altfragen",
+            "questions": [
+                {
+                    "id": "q-a8f3b2e9c14d",
+                    "question": "Embryonen-Bild von Bob Goldstein lizensiert unter \"CC BY-ND 4.0\".",
+                    "hint": "ND steht für \"NoDerivatives\" (Keine Bearbeitung) und BY für \"Attribution\" (Namensnennung). Da das Kürzel \"NC\" (Non-Commercial) fehlt, ist kommerzielle Nutzung erlaubt.",
+                    "answers": [
+                        {
+                            "text": "Das Werk darf bearbeitet werden.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Das Werk darf kommerziell verwertet werden.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Das Werk darf für beliebige Zwecke vervielfältigt werden.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Die Lizenz CC BY-ND 4.0 fordert die Namensnennung (BY) und verbietet die Weitergabe veränderter Versionen (ND). Vervielfältigung und kommerzielle Nutzung sind jedoch ausdrücklich gestattet."
+                },
+                {
+                    "id": "q-7d9e1a3c5b8f",
+                    "question": "Eine inhaltliche Umsetzung durch innerstaatliches Recht der Mitgliedstaaten ist...",
+                    "hint": "Unterscheide zwischen EU-Verordnungen (direkt anwendbar wie ein nationales Gesetz) und EU-Richtlinien (geben nur Ziele vor).",
+                    "answers": [
+                        {
+                            "text": "bei EU-Recht ganz generell immer untersagt.",
+                            "correct": false
+                        },
+                        {
+                            "text": "innerhalb der Umsetzungsfrist stets erforderlich und verpflichtend bei EU-Richtlinien.",
+                            "correct": true
+                        },
+                        {
+                            "text": "bei EU-Richtlinien nicht gestattet (die EU-Richtlinie ist ja ohnehin direkt anwendbar).",
+                            "correct": false
+                        },
+                        {
+                            "text": "innerhalb der Umsetzungsfrist stets erforderlich und verpflichtend bei EU-Verordnungen.",
+                            "correct": false
+                        }
+                    ],
+                    "reason": "EU-Richtlinien (Directives) sind nicht sofort für jeden Bürger bindend, sondern müssen von den Mitgliedsstaaten zwingend innerhalb einer vorgegebenen Frist in nationales Recht umgesetzt werden."
+                },
+                {
+                    "id": "q-f4c28a0e7b91",
+                    "question": "Welche Pflichten treffen einen Betreiber eines wesentlichen Dienstes nach dem NIS-G?",
+                    "hint": "Die Meldung muss an das Notfallteam (CSIRT) erfolgen, nicht an den Bundeskanzler. Zeit ist bei Vorfällen entscheidend.",
+                    "answers": [
+                        {
+                            "text": "Er muss getroffene Sicherheitsmaßnahmen an den Bundeskanzler melden.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Er muss Sicherheitsvorfälle an das zuständige Computer-Notfallteam melden.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Er muss Sicherheitsmaßnahmen treffen, die von der NIS-Verordnung genauer spezifiziert werden.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Er muss bei einem Sicherheitsvorfall zunächst alle Informationen sammeln, die damit in Zusammenhang stehen könnten und erst dann eine vollständige Meldung abgeben.",
+                            "correct": false
+                        }
+                    ],
+                    "reason": "Betreiber wesentlicher Dienste müssen Sicherheitsmaßnahmen gemäß NIS-V implementieren und erhebliche Sicherheitsvorfälle unverzüglich an das CSIRT (z.B. CERT.at) melden, anstatt erst langwierig Informationen zu sammeln."
+                },
+                {
+                    "id": "q-9b3f6d2e8a1c",
+                    "question": "Welche der folgenden Aspekte, die vom NIS-G normiert werden, betreffen ausschließlich die Organisation der öffentlichen Verwaltung?",
+                    "hint": "Gesucht ist die Aufgabe, die behördenintern stattfindet und nicht direkt die Pflichten oder Kontrollen der zivilen Unternehmen betrifft.",
+                    "answers": [
+                        {
+                            "text": "Behörden kontrollieren Betreiber wesentlicher Dienste.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Das NIS-G erlegt Betreibern wesentlicher Dienste Meldepflichten auf.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Betreiber wesentlicher Dienste müssen Sicherheitsvorkehrungen treffen.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Der Bundesminister für Inneres muss ein Lagebild zu aktuellen Cyber-Risiken führen.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Das Führen eines Cyber-Lagebildes durch das BMI ist eine rein behördeninterne strukturelle Aufgabe. Die anderen Antworten regeln Beziehungen und Pflichten in Bezug auf externe Betreiber."
+                },
+                {
+                    "id": "q-3c1a9f5d4e7b",
+                    "question": "Vegan Wrap Recipe mit Text \"By continuing past this page, you agree to our terms of use\" Auf welche Art werden die Nutzungsbedingungen vom \"Vegan Wrap Recipe\" dargestellt:",
+                    "hint": "Der Nutzer klickt nicht auf eine Checkbox wie \"Ich stimme zu\", sondern akzeptiert die Bedingungen implizit durch das einfache Weitersurfen.",
+                    "answers": [
+                        {
+                            "text": "Clickwrap",
+                            "correct": false
+                        },
+                        {
+                            "text": "Browsewrap",
+                            "correct": true
+                        },
+                        {
+                            "text": "Scrollwrap",
+                            "correct": false
+                        },
+                        {
+                            "text": "Shrinkwrap",
+                            "correct": false
+                        }
+                    ],
+                    "reason": "Bei einem sogenannten Browsewrap-Vertrag wird rechtlich argumentiert, dass die Zustimmung zu den AGB schon allein durch die passive Weiternutzung (Browsing) der Website nach einem bloßen Hinweis erfolgt."
+                },
+                {
+                    "id": "q-d6e2f1a8b4c9",
+                    "question": "Grundrechte...",
+                    "hint": "Grundrechte sind fundamentale Rechte in der Verfassung. Überlege, wen sie vor wem schützen sollen.",
+                    "answers": [
+                        {
+                            "text": "schützen im Kern den Einzelmenschen vor der Staatsmacht.",
+                            "correct": true
+                        },
+                        {
+                            "text": "stehen in Österreich immer im Rang einfacher Bundesgesetze.",
+                            "correct": false
+                        },
+                        {
+                            "text": "schützen im Kern den Einzelmenschen vor anderen Einzelmenschen.",
+                            "correct": false
+                        },
+                        {
+                            "text": "sind Ausfluss des liberalen Grundprinzips der österreichischen Verfassung.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Grundrechte haben Verfassungsrang, sind das Herzstück des liberalen Grundprinzips (Schutz der persönlichen Freiheit) und dienen historisch und dogmatisch vor allem als Abwehrrechte gegen staatliche Eingriffe."
+                },
+                {
+                    "id": "q-5e8b3a7c1f0d",
+                    "question": "Die UNO und die NATO...",
+                    "hint": "Achte auf die Begriffe: IGO steht für Intergovernmental Organization (zwischen Regierungen), INGO für internationale Nichtregierungsorganisationen.",
+                    "answers": [
+                        {
+                            "text": "beruhen auf privatrechtlichen Gründungsverträgen.",
+                            "correct": false
+                        },
+                        {
+                            "text": "beruhen auf völkerrechtlichen Gründungsverträgen.",
+                            "correct": true
+                        },
+                        {
+                            "text": "sind sogenannte International Governmental Organisations (IGOs).",
+                            "correct": true
+                        },
+                        {
+                            "text": "sind sogenannte International Non Governmental Organisations (INGOs).",
+                            "correct": false
+                        }
+                    ],
+                    "reason": "UNO und NATO sind Zusammenschlüsse von Nationalstaaten. Sie wurden durch völkerrechtliche Verträge gegründet und sind klassische zwischenstaatliche Organisationen (IGOs)."
+                },
+                {
+                    "id": "q-b7c4a1e9d2f5",
+                    "question": "Ein mehrstufiges Mahnverfahren...",
+                    "hint": "Das Vertragsverletzungsverfahren der EU wird aktiv, wenn Staaten ihre Hausaufgaben aus Brüssel nicht erledigen.",
+                    "answers": [
+                        {
+                            "text": "leitet der Bundespräsident ein, wenn ihm EU-Recht nicht passt.",
+                            "correct": false
+                        },
+                        {
+                            "text": "spielt eine Rolle bei der Gesetzesbegutachtung auf Bundesebene in Österreich.",
+                            "correct": false
+                        },
+                        {
+                            "text": "braucht es vor einer Beschwerde an den österreichischen Verfassungsgerichtshof.",
+                            "correct": false
+                        },
+                        {
+                            "text": "spielt eine Rolle bei nicht ordnungsgemäßer nationaler Umsetzung von EU-Richtlinien.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Das Vertragsverletzungsverfahren (Art. 258 AEUV) beinhaltet ein Mahnverfahren durch die EU-Kommission, wenn Mitgliedsstaaten EU-Richtlinien nicht rechtzeitig oder fehlerhaft umsetzen."
+                },
+                {
+                    "id": "q-1a8c5f3e7d9b",
+                    "question": "Welche der folgenden Maßnahmen werden vom NIS-G normiert, um ein hohes Sicherheitsniveau zu erreichen?",
+                    "hint": "Das NIS-G ist ein Verwaltungsgesetz zur Prävention, kein Strafgesetzbuch. Es richtet sich an Betreiber und Behörden.",
+                    "answers": [
+                        {
+                            "text": "Strafen für Cyber-Angreifer werden eingeführt.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Strafverfolgung von Cyber-Angreifern wird erleichtert.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Private Akteure werden zu Sicherheitsmaßnahmen verpflichtet.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Zusammenarbeit zwischen Mitgliedsstaaten der EU wird gestärkt.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Das NIS-G reguliert nicht das Strafrecht, sondern setzt präventive Sicherheitsstandards für kritische Infrastrukturen (private Akteure) fest und implementiert Strukturen für die EU-weite Kooperation."
+                },
+                {
+                    "id": "q-8f5d1b3e4c9a",
+                    "question": "Das Competence Center of Quality Assurance im Bundesministerium für Inneres erkennt einen Bug im Kraftfahrzeugregister, wodurch falsche Daten an abfragende Behörden übermittelt wird (Hinweis: Es handelt sich um einen Integrity-Breach). Womöglich sind durch diesen Bug auch die Applikation \"European car and driving licence information system\" (EUCARIS) sowie ausländische Behörden betroffen. Was ist zu unternehmen?",
+                    "hint": "Gemäß Art. 33 DSGVO (Data Breach) hat die Meldung bei der Behörde absolute Priorität. Warten auf eine Fehlerbehebung ist keine Option.",
+                    "answers": [
+                        {
+                            "text": "Die Datenschutzbehörde ist unverzüglich zu informieren.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Der Fehler muss zuerst behoben werden, anschließend ist die Datenschutzbehörde zu informieren.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Der Datenschutzbeauftragte ist unverzüglich zu informieren. Dieser muss binnen 72h in den Dienst treten.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Auch wenn der Fehler nicht behoben werden kann, muss die Datenschutzbehörde nach spätestens 3 Werktagen informiert werden.",
+                            "correct": false
+                        }
+                    ],
+                    "reason": "Bei einer Verletzung des Schutzes personenbezogener Daten mit Risiken für Betroffene muss der Verantwortliche die Datenschutzbehörde gemäß Art. 33 DSGVO unverzüglich (möglichst binnen 72 Stunden) informieren."
+                },
+                {
+                    "id": "q-c2e5a7b1d8f4",
+                    "question": "Rechtsoasenphänomene entstehen durch...",
+                    "hint": "Warum können sich Cyberkriminelle so oft im Ausland verstecken? Es fehlt an internationalen Abkommen und Exekutivbefugnissen.",
+                    "answers": [
+                        {
+                            "text": "das Vetorecht im UN-Sicherheitsrat.",
+                            "correct": false
+                        },
+                        {
+                            "text": "gravierende Unterschiede im nationalen Recht verschiedener Staaten.",
+                            "correct": true
+                        },
+                        {
+                            "text": "den Umstand, dass Staatsbürger:innen immer nur ihr Heimatrecht einhalten müssen.",
+                            "correct": false
+                        },
+                        {
+                            "text": "den Umstand, dass eine IGO mit internationalen, verbindlichen Polizeibefugnissen fehlt.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Rechtsoasen sind Länder mit schwachen Gesetzen, die von Kriminellen ausgenutzt werden. Die fehlende Harmonisierung (Unterschiede im nationalen Recht) und das Nichtvorhandensein einer Weltpolizei begünstigen dies."
+                },
+                {
+                    "id": "q-f9d2c6a4b1e8",
+                    "question": "Welche der folgenden Aufgaben nimmt der Bundeskanzler gemäß NIS-G wahr?",
+                    "hint": "Während das BMI (Innenministerium) operativ arbeitet und Bescheide erlässt, kümmert sich das Bundeskanzleramt (BKA) um die große strategische Ausrichtung.",
+                    "answers": [
+                        {
+                            "text": "Erlassen der NIS-Verordnung",
+                            "correct": false
+                        },
+                        {
+                            "text": "Entgegennahme von NIS-Meldungen",
+                            "correct": false
+                        },
+                        {
+                            "text": "Ermittlung der Betreiber wesentlicher Dienste",
+                            "correct": false
+                        },
+                        {
+                            "text": "Koordination und internationale Kooperation auf strategischer Ebene",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Das NIS-G trennt die Zuständigkeiten: Das BKA fungiert als zentrale strategische Anlaufstelle und koordiniert die internationale Zusammenarbeit, während das BMI operative Aufgaben übernimmt."
+                },
+                {
+                    "id": "q-a4c8e1d5f2b7",
+                    "question": "Welche der folgenden Aussagen zum \"Spring-Framework v6.1.13\" treffen zu?",
+                    "hint": "Spring nutzt die Apache License 2.0. Diese ist entwicklerfreundlich und nicht so streng (\"ansteckend\") wie die GPL.",
+                    "answers": [
+                        {
+                            "text": "Das \"Spring-Framework v6.1.13\" ist copyleft lizensiert.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Das \"Spring-Framework v6.1.13\" ist permissive lizensiert.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Das \"Spring-Framework v6.1.13\" ist ein Werk der Public Domain (PD).",
+                            "correct": false
+                        },
+                        {
+                            "text": "Das \"Spring-Framework v6.1.13\" kann mit GPL-lizensierten Werken kombiniert werden, sofern die abgeleiteten Werke korrekt lizenziert sind.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Spring steht unter der Apache 2.0 Lizenz. Dies ist eine freizügige (permissive) Open-Source-Lizenz ohne strenges Copyleft, weshalb der Code auch mit strenger lizenziertem Code (wie GPLv3) kompatibel ist."
+                },
+                {
+                    "id": "q-e3f6d9b2a1c4",
+                    "question": "Welche der folgenden Institutionen nehmen in Österreich Zuständigkeiten nach dem NIS-G wahr?",
+                    "hint": "Gesucht sind die zentralen Akteure auf Bundesebene und das zuständige Notfallteam.",
+                    "answers": [
+                        {
+                            "text": "CERT.at",
+                            "correct": true
+                        },
+                        {
+                            "text": "Bundeskanzler",
+                            "correct": true
+                        },
+                        {
+                            "text": "Bundesminister für Inneres",
+                            "correct": true
+                        },
+                        {
+                            "text": "Ämter der Landesregierungen",
+                            "correct": false
+                        }
+                    ],
+                    "reason": "Das BMI übernimmt die operativen und behördlichen Agenden, das BKA ist strategische Anlaufstelle und CERT.at operiert als maßgebliches nationales Computer-Notfallteam (CSIRT)."
+                },
+                {
+                    "id": "q-b1a7d4e5f8c3",
+                    "question": "Ein Unternehmen möchte den Network-Traffic analysieren um systematisch die Internetnutzung der Angestellten zu überwachen. Das Ziel ist die \"High-Performer\" und \"Low-Performer\" zu identifizieren. Ist eine Datenschutzfolgeabschätzung (DSFA) erforderlich?",
+                    "hint": "Die DSGVO verlangt eine DSFA bei hohem Risiko, insbesondere bei systematischer Profilbildung und Leistungsbewertung von Beschäftigten.",
+                    "answers": [
+                        {
+                            "text": "Für Verarbeitungsvorgänge, die eine Bewertung oder Einstufung natürlicher Personen zum Ziel haben, ist eine Datenschutzfolgeabschätzung (DSFA) erforderlich. Daher ist die DSFA erforderlich.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Für Datenverarbeitungen zur Verleihung von Preisen und Ehrenzeichen oder ähnlicher Auszeichnungen, ist keine Datenschutzfolgeabschätzung (DSFA) erforderlich. Daher ist die DSFA nicht erforderlich.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Für Verarbeitungsvorgänge, welche die Beobachtung, Überwachung oder Kontrolle von betroffenen Personen mittels Videoüberwachung zum Ziel haben, ist eine Datenschutzfolgeabschätzung (DSFA) erforderlich. Daher ist die DSFA erforderlich.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Für die Verarbeitung und Evidenthaltung personenbezogener Daten für Lohn-, Gehalts-, Entgeltsverrechnung und Einhaltung von Aufzeichnungs-, Auskunfts- und Meldepflichten, soweit dies auf Grund von Gesetzen oder Normen kollektiver Rechtsgestaltung oder arbeitsvertraglicher Verpflichtungen jeweils erforderlich ist; ist keine Datenschutzfolgeabschätzung (DSFA) erforderlich. Daher ist die DSFA nicht erforderlich.",
+                            "correct": false
+                        }
+                    ],
+                    "reason": "Gemäß Art. 35 DSGVO ist eine DSFA verpflichtend, wenn eine systematische und umfassende Bewertung persönlicher Aspekte (Profiling) erfolgt, wozu das systematische Überwachen zur Leistungseinstufung am Arbeitsplatz definitiv zählt."
+                },
+                {
+                    "id": "q-8a7b9c1d2e3f",
+                    "question": "Welche der folgenden Aussagen sind richtig?",
+                    "hint": "Denk an Art. 15 B-VG (die Generalklausel zugunsten der Länder) und die Versteinerungstheorie des VfGH.",
+                    "answers": [
+                        {
+                            "text": "Die Kompetenz, die Zuständigkeiten zuzuweisen, liegt bei den Ländern.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Alle jene Zuständigkeiten, die nicht explizit geregelt sind, liegen beim Bund.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Der VfGH lässt eine (intrasystematische) Fortentwicklung der Begrifflichkeiten der Kompetenzverteilung zu.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Die Bundesverfassung teilt Zuständigkeiten zwischen Bund und Ländern auf.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Die Bundesverfassung (B-VG) teilt die Kompetenzen auf. Was nicht ausdrücklich dem Bund zugewiesen ist, verbleibt im Wirkungsbereich der Länder (Generalklausel, Art 15 B-VG). Der VfGH interpretiert Kompetenztatbestände zwar historisch (Versteinerungstheorie), lässt aber intrasystematische Fortentwicklungen zu."
+                },
+                {
+                    "id": "q-5f4e3d2c1b0a",
+                    "question": "Charakterisieren Sie das österreichische Wahlrecht zum Nationalrat (NR)!",
+                    "hint": "Das Wahlrecht in Österreich ist unter anderem persönlich und ein Verhältniswahlrecht. Die österreichische Staatsbürgerschaft ist zwingend erforderlich.",
+                    "answers": [
+                        {
+                            "text": "Das aktive Wahlrecht zum NR darf von jedermann ausgeübt werden, der in Österreich seinen Wohnsitz hat.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Das Wahlrecht zum NR ist ein Mehrheitswahlrecht.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Das aktive Wahlrecht zum NR erlaubt, dass jemand anders die Stimme als Stellvertreter abgibt, etwa im Krankheitsfall.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Für das passive Wahlrecht zum NR gelten andere Voraussetzungen als für das aktive Wahlrecht.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Die NR-Wahl erfolgt nach dem Verhältniswahlrecht und muss zwingend persönlich ausgeübt werden (keine Stellvertretung). Aktives (ab 16) und passives (ab 18) Wahlrecht haben unterschiedliche Altersgrenzen. Ausländer dürfen nicht zum NR wählen, die Staatsbürgerschaft ist Voraussetzung."
+                },
+                {
+                    "id": "q-1a2b3c4d5e6f",
+                    "question": "Charakterisieren Sie einen Bescheid!",
+                    "hint": "Bescheide sind die klassische hoheitliche Handlungsform von Verwaltungsbehörden gegenüber Einzelnen. Sie ergehen nie 'einfach so', sondern streng nach Verfahrensregeln.",
+                    "answers": [
+                        {
+                            "text": "Ein Bescheid ist ein hoheitlicher Rechtsakt.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Ein Bescheid muss sich auf ein Gesetz oder eine Verordnung stützen.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Ein Bescheid ergeht ohne formelles Verfahren.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Gegen einen Bescheid kann regelmäßig mittels Beschwerde an ein Verwaltungsgericht vorgegangen werden",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Ein Bescheid ist ein individueller, hoheitlicher Verwaltungsakt, der aufgrund der Gesetze (Legalitätsprinzip) zwingend nach einem formalen Verwaltungsverfahren (meist AVG) erlassen wird. Dagegen steht in der Regel die Bescheidbeschwerde an das VwG offen."
+                },
+                {
+                    "id": "q-9f8e7d6c5b4a",
+                    "question": "Welche der folgenden Aussagen sind richtig?",
+                    "hint": "Unterscheide zwischen Menschenrechten (für alle) und Bürgerrechten (nur für Staatsbürger). Zudem existieren Gesetzesvorbehalte.",
+                    "answers": [
+                        {
+                            "text": "Grundrechte gelten unumschränkt.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Grundrechte sind in Österreich nicht niedergeschrieben.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Manche Grundrechte kommen jedermann zu, manche nicht.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Grundrechte sind durch Verfassungsrecht gewährleistet.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Grundrechte sind verfassungsgesetzlich normiert (z.B. im StGG oder der EMRK). Es gibt Menschenrechte (gelten für jeden) und Bürgerrechte (nur für Staatsbürger). Sie gelten fast nie absolut, sondern können durch Gesetze bei öffentlichem Interesse verhältnismäßig eingeschränkt werden."
+                },
+                {
+                    "id": "q-b2c3d4e5f6a1",
+                    "question": "Welche der folgenden Aussagen sind richtig?",
+                    "hint": "Politiker müssen sich in einer Demokratie mehr Kritik gefallen lassen als Privatpersonen. Das Zensurverbot verbietet primär die Vorzensur, nicht aber nachträgliche Strafen/Verbote.",
+                    "answers": [
+                        {
+                            "text": "Die Meinungsfreiheit kann per Gesetz zu bestimmten Zwecken eingeschränkt werden.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Dass gewisse Filme/Druckwerke in Österreich verboten sind, widerspricht dem Zensurverbot.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Ob eine konkrete Äußerung von der Meinungsfreiheit gedeckt ist, richtet sich nach den jeweiligen Umständen der Äußerung, wie z.B. ob sie eine politisch exponierte Person oder eine Privatperson betrifft.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Die Meinungsfreiheit kann per Gesetz eingeschränkt werden, unabhängig von den damit verfolgten Zwecken.",
+                            "correct": false
+                        }
+                    ],
+                    "reason": "Die Meinungsfreiheit kann nach Art 10 Abs 2 EMRK durch Gesetz eingeschränkt werden, aber nur für bestimmte legitime Zwecke (z.B. Schutz der Ehre, Jugendschutz). Politiker müssen schärfere Kritik dulden. Das österreichische Zensurverbot meint das Verbot der behördlichen Vorzensur, weshalb nachträgliche Beschränkungen zulässig sein können."
+                },
+                {
+                    "id": "q-d1e2f3a4b5c6",
+                    "question": "Welche der folgenden Kontrollmöglichkeiten stehen dem Nationalrat gegenüber der Bundesregierung und ihren Mitgliedern zur Verfügung?",
+                    "hint": "Der Nationalrat verfügt über sehr umfassende Kontrollrechte (politisch wie rechtlich), um die Arbeit der Exekutive zu überwachen.",
+                    "answers": [
+                        {
+                            "text": "Interpellationsrecht, das Recht Fragen zu stellen.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Enquêterecht, das Recht Untersuchungsausschüsse einzusetzen.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Resolutionsrecht, das Recht Wünsche zu äußern.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Recht auf Ministeranklage beim VfGH gegen ein Mitglied der Bundesregierung.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Alle genannten Instrumente sind in der Bundesverfassung verankerte parlamentarische Kontrollrechte des Nationalrats, um die Bundesregierung politisch und rechtlich zur Verantwortung zu ziehen."
+                },
+                {
+                    "id": "q-f6a5b4c3d2e1",
+                    "question": "\"Das Recht hat der Politik zu folgen und nicht die Politik dem Recht.\"\nNehmen Sie Stellung zu diesem Satz.",
+                    "hint": "Im Rechtsstaat bindet die Verfassung die Politik (Grenzen). Gleichzeitig ist das Parlament (Politik) der Gesetzgeber, der das Recht nach seinen Vorstellungen gestaltet.",
+                    "answers": [
+                        {
+                            "text": "Die Politik hat ein uneingeschränktes Primat über das Recht.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Die Politik erzeugt Recht, um ihre Ziele zu erreichen.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Das Recht regelt, wie und innerhalb welcher Grenzen Politik gemacht wird.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Recht und Politik sind vollkommen voneinander getrennt.",
+                            "correct": false
+                        }
+                    ],
+                    "reason": "Im modernen Verfassungsstaat ist die Politik durch das Recht gebunden (Legalitätsprinzip, Grundrechte). Gleichzeitig nutzt die Politik das Recht als Instrument, um ihre Gestaltungsziele (Gesetzgebung) umzusetzen. Es gibt weder eine strikte Trennung noch ein völlig uneingeschränktes Primat der Politik."
+                },
+                {
+                    "id": "q-c2b1a0d9e8f7",
+                    "question": "Welche der folgenden Aussagen sind richtig?",
+                    "hint": "Gesetze sind oft unscharf formuliert. Um ihren Sinn zu ermitteln, nutzt man verschiedene Methoden (Wortlaut, Systematik, Historie, Zweck), die flexibel miteinander kombiniert werden.",
+                    "answers": [
+                        {
+                            "text": "Methoden der Rechtsauslegung stehen in einer feststehenden Hierarchie zueinander.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Rechtsinterpretation ist ein anderer Begriff für Rechtsauslegung.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Rechtstexte sind immer eindeutig formuliert.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Rechtsauslegung erfolgt mittels mehrerer Methoden.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Da Rechtstexte oft interpretationsbedürftig sind, bedient man sich mehrerer Auslegungsmethoden (Synonym: Rechtsinterpretation). Zwischen diesen Methoden (Wortlaut, systematisch, historisch, teleologisch) gibt es in der österreichischen Rechtsordnung keine starre, unveränderliche Hierarchie."
+                },
+                {
+                    "id": "q-e8d7c6b5a4f3",
+                    "question": "Das neu errichtete Bundesministerium für Künstliche Intelligenz und Deregulierung (BMKID) sieht sich mit einer Beschwerde des Österreichischen Behindertenrates konfrontiert, da die Ministeriums-Website bmkid.gv.at zahlreiche Barrieren aufweist. Sie werden mit der Aufgabe betraut, die Website gemäß den Anforderungen der Web Content Accessibility Guidelines (WCAG) 2.1 auf Konformitätsstufe AA barrierefrei zu gestalten.\nAuf welche der folgenden Prinzipien der Barrierefreiheit müssen Sie in diesem Zusammenhang besonders achten?",
+                    "hint": "Die WCAG bauen auf vier Prinzipien auf: Wahrnehmbarkeit, Bedienbarkeit, Verständlichkeit und Robustheit (POUR). Die anderen Begriffe gehören zur IT-Security.",
+                    "answers": [
+                        {
+                            "text": "Integrität",
+                            "correct": false
+                        },
+                        {
+                            "text": "Verfügbarkeit",
+                            "correct": false
+                        },
+                        {
+                            "text": "Vertraulichkeit",
+                            "correct": false
+                        },
+                        {
+                            "text": "Wahrnehmbarkeit",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Die vier Grundprinzipien der Barrierefreiheit nach den WCAG lauten Wahrnehmbarkeit (Perceivable), Bedienbarkeit (Operable), Verständlichkeit (Understandable) und Robustheit (Robust). Integrität, Verfügbarkeit und Vertraulichkeit sind hingegen die klassischen Schutzziele der Informationssicherheit (CIA-Triade)."
+                },
+                {
+                    "id": "q-0a1b2c3d4e5f",
+                    "question": "Welche der folgenden Aussagen sind richtig?",
+                    "hint": "Nach dem B-VG darf die Verwaltung nur 'auf Grund der Gesetze' handeln. Ausnahmen gibt es etwa bei strafgesetzwidrigen Weisungen oder wenn Amtsverschwiegenheit Auskünfte verbietet.",
+                    "answers": [
+                        {
+                            "text": "Das Legalitätsprinzip bindet die Verwaltung.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Die Verwaltung muss einem Auskunftsbegehren immer nachkommen.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Eine Weisung ist von einem Verwaltungsorgan immer zu befolgen.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Das Legalitätsprinzip bindet den Gesetzgeber.",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Das Legalitätsprinzip (Art 18 B-VG) besagt, dass die Verwaltung nur auf Grund der Gesetze handeln darf. Es richtet sich in Form des Determinierungsgebots auch an den Gesetzgeber (Gesetze müssen ausreichend bestimmt sein). Auskunftsbegehren oder Weisungen gelten nicht absolut (z.B. Ablehnung wegen Amtsverschwiegenheit oder bei strafgesetzwidrigen Weisungen)."
+                },
+                {
+                    "id": "q-1c2b3a4d5e6f",
+                    "question": "Wofür ist der VfGH zuständig?",
+                    "hint": "Seit der Verwaltungsgerichtsbarkeits-Novelle 2014 geht man gegen Bescheide der Behörden in der Regel primär zu den Verwaltungsgerichten, nicht direkt zum Verfassungsgerichtshof.",
+                    "answers": [
+                        {
+                            "text": "Für Beschwerden gegen Bescheide",
+                            "correct": false
+                        },
+                        {
+                            "text": "Für Beschwerden gegen eine Entscheidung eines Verwaltungsgerichts",
+                            "correct": true
+                        },
+                        {
+                            "text": "Für Wahlanfechtungen",
+                            "correct": true
+                        },
+                        {
+                            "text": "Für Kontrolle von generellen Normen (Gesetze und Verordnungen)",
+                            "correct": true
+                        }
+                    ],
+                    "reason": "Der VfGH ist zuständig für die Prüfung von Gesetzen und Verordnungen (Art 139, 140 B-VG), Wahlanfechtungen (Art 141 B-VG) und Erkenntnisbeschwerden gegen Entscheidungen der Verwaltungsgerichte (Art 144 B-VG). Beschwerden direkt gegen Bescheide von Verwaltungsbehörden sind an das Verwaltungsgericht zu richten."
+                },
+                {
+                    "id": "q-9f8e7d6c5b4a-2",
+                    "question": "Welche der folgenden Aussagen sind richtig?",
+                    "hint": "Die österreichischen Bundesländer haben eine 'relative Verfassungsautonomie'. Sie dürfen eigene Verfassungen haben, solange diese dem Bund nicht widersprechen.",
+                    "answers": [
+                        {
+                            "text": "All jene Bereiche, die nicht von der Bundesverfassung geregelt werden, können von den Landesverfassungen geregelt werden.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Landesverfassungsrecht muss im Einklang mit Bundesverfassungsrecht stehen.",
+                            "correct": true
+                        },
+                        {
+                            "text": "Landesverfassungsrecht ist unabhängig vom Bundesverfassungsrecht.",
+                            "correct": false
+                        },
+                        {
+                            "text": "Verfassungsrecht wird in Österreich ausschließlich auf Bundesebene erzeugt.",
+                            "correct": false
+                        }
+                    ],
+                    "reason": "Gemäß Art. 99 Abs. 1 B-VG haben die Länder das Recht, sich eigene Landesverfassungen zu geben (relative Verfassungsautonomie). Bedingung ist jedoch das Homogenitätsprinzip: Die Landesverfassung darf der Bundesverfassung nicht widersprechen, sie ist also nicht völlig unabhängig."
+                }
+            ]
         }
     ]
 }

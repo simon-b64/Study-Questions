@@ -23,7 +23,7 @@ export interface Question {
 }
 
 export interface Answer {
-    text: string; // Muss "Ja" oder "Nein" sein
+    text: string;
     correct: boolean;
 }
 
