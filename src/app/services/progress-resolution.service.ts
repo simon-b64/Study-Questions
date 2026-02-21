@@ -36,7 +36,10 @@ export class ProgressResolutionService {
 
         if (firestoreAvailable) {
             try {
-                firestoreProgress = await this.firestoreService.loadProgress(user.uid, metadata.id);
+                // Pass a fresh skeleton so deserializeProgress can map raw Firestore
+                // data onto the current course structure and recalculate derived fields.
+                const skeleton = initializeCourseProgress(course, metadata);
+                firestoreProgress = await this.firestoreService.loadProgress(user.uid, metadata.id, skeleton);
             } catch {
                 firestoreAvailable = false;
                 console.warn('Firestore unavailable — falling back to localStorage');
@@ -65,9 +68,9 @@ export class ProgressResolutionService {
         }
 
         if (!localProgress) {
-            const synced = synchronizeProgressWithCourse(firestoreProgress, course);
-            this.localStorage.save(synced);
-            return [course, synced];
+            // firestoreProgress already merged & recalculated by deserializeProgress
+            this.localStorage.save(firestoreProgress);
+            return [course, firestoreProgress];
         }
 
         const firestoreTime = firestoreProgress.lastActivityAt?.getTime() ?? 0;
@@ -81,9 +84,9 @@ export class ProgressResolutionService {
         if (firestoreTime > localTime) {
             const choice = await this.syncConflictService.askUser();
             if (choice === 'cloud') {
-                const synced = synchronizeProgressWithCourse(firestoreProgress, course);
-                this.localStorage.save(synced);
-                return [course, synced];
+                // firestoreProgress already merged & recalculated by deserializeProgress
+                this.localStorage.save(firestoreProgress);
+                return [course, firestoreProgress];
             } else {
                 await this.firestoreService.saveProgress(user.uid, localProgress);
                 return [course, localProgress];

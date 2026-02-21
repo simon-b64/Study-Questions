@@ -7,22 +7,37 @@ import {
     deleteDoc,
     Timestamp,
 } from '@angular/fire/firestore';
-import { CourseProgress, QuestionGroupProgress, QuestionProgress } from '../model/questions';
+import { CourseProgress, QuestionProgress } from '../model/questions';
+import { calculateOverallMetrics } from '../utils/course-progress.utils';
 
-// Firestore-safe representation: Date fields replaced with Timestamp
-type FirestoreQuestionProgress = Omit<QuestionProgress, 'lastAttemptedAt' | 'firstCorrectAt' | 'masteredAt'> & {
+// Only raw, user-generated data — no calculated/derived fields
+type FirestoreQuestionProgress = Pick<QuestionProgress,
+    | 'questionId'
+    | 'totalAttempts'
+    | 'correctAttempts'
+    | 'incorrectAttempts'
+    | 'consecutiveCorrect'
+    | 'consecutiveIncorrect'
+    | 'masteryLevel'
+    | 'hintUsedCount'
+> & {
     lastAttemptedAt?: Timestamp;
     firstCorrectAt?: Timestamp;
     masteredAt?: Timestamp;
 };
 
-type FirestoreGroupProgress = Omit<QuestionGroupProgress, 'startedAt' | 'lastActivityAt' | 'questionsProgress'> & {
+type FirestoreGroupProgress = {
+    groupName: string;
+    questionsProgress: FirestoreQuestionProgress[];
     startedAt?: Timestamp;
     lastActivityAt?: Timestamp;
-    questionsProgress: FirestoreQuestionProgress[];
 };
 
-type FirestoreCourseProgress = Omit<CourseProgress, 'createdAt' | 'lastActivityAt' | 'groupsProgress'> & {    createdAt: Timestamp;
+type FirestoreCourseProgress = {
+    courseId: string;
+    currentStreak: number;
+    longestStreak: number;
+    createdAt: Timestamp;
     lastActivityAt?: Timestamp;
     groupsProgress: FirestoreGroupProgress[];
 };
@@ -37,20 +52,20 @@ function defined<T extends object>(obj: T): T {
 function serializeProgress(progress: CourseProgress): FirestoreCourseProgress {
     const groupsProgress: FirestoreGroupProgress[] = progress.groupsProgress.map(group => {
         const questionsProgress: FirestoreQuestionProgress[] = group.questionsProgress.map(q => defined({
-            ...q,
+            questionId: q.questionId,
+            totalAttempts: q.totalAttempts,
+            correctAttempts: q.correctAttempts,
+            incorrectAttempts: q.incorrectAttempts,
+            consecutiveCorrect: q.consecutiveCorrect,
+            consecutiveIncorrect: q.consecutiveIncorrect,
+            masteryLevel: q.masteryLevel,
+            hintUsedCount: q.hintUsedCount,
             lastAttemptedAt: q.lastAttemptedAt ? Timestamp.fromDate(q.lastAttemptedAt) : undefined,
             firstCorrectAt: q.firstCorrectAt ? Timestamp.fromDate(q.firstCorrectAt) : undefined,
             masteredAt: q.masteredAt ? Timestamp.fromDate(q.masteredAt) : undefined,
         }));
         return defined<FirestoreGroupProgress>({
             groupName: group.groupName,
-            totalQuestions: group.totalQuestions,
-            notStartedCount: group.notStartedCount,
-            learningCount: group.learningCount,
-            reviewingCount: group.reviewingCount,
-            masteredCount: group.masteredCount,
-            completionPercentage: group.completionPercentage,
-            averageAccuracy: group.averageAccuracy,
             questionsProgress,
             startedAt: group.startedAt ? Timestamp.fromDate(group.startedAt) : undefined,
             lastActivityAt: group.lastActivityAt ? Timestamp.fromDate(group.lastActivityAt) : undefined,
@@ -59,40 +74,55 @@ function serializeProgress(progress: CourseProgress): FirestoreCourseProgress {
 
     return defined<FirestoreCourseProgress>({
         courseId: progress.courseId,
-        courseName: progress.courseName,
-        totalQuestions: progress.totalQuestions,
-        totalQuestionGroups: progress.totalQuestionGroups,
-        overallCompletionPercentage: progress.overallCompletionPercentage,
-        overallAccuracy: progress.overallAccuracy,
-        notStartedCount: progress.notStartedCount,
-        learningCount: progress.learningCount,
-        reviewingCount: progress.reviewingCount,
-        masteredCount: progress.masteredCount,
         currentStreak: progress.currentStreak,
         longestStreak: progress.longestStreak,
-        groupsProgress,
         createdAt: Timestamp.fromDate(progress.createdAt),
         lastActivityAt: progress.lastActivityAt ? Timestamp.fromDate(progress.lastActivityAt) : undefined,
+        groupsProgress,
     });
 }
 
-function deserializeProgress(data: FirestoreCourseProgress): CourseProgress {
-    return {
-        ...data,
+function deserializeProgress(data: FirestoreCourseProgress, existing: CourseProgress): CourseProgress {
+    // Restore raw fields onto the existing (course-synchronized) skeleton, then recalculate
+    const groupsProgress = existing.groupsProgress.map((existingGroup, i) => {
+        const storedGroup = data.groupsProgress[i];
+        if (!storedGroup) return existingGroup;
+
+        const questionsProgress = existingGroup.questionsProgress.map(existingQ => {
+            const storedQ = storedGroup.questionsProgress.find(q => q.questionId === existingQ.questionId);
+            if (!storedQ) return existingQ;
+            return {
+                ...existingQ,
+                totalAttempts: storedQ.totalAttempts,
+                correctAttempts: storedQ.correctAttempts,
+                incorrectAttempts: storedQ.incorrectAttempts,
+                consecutiveCorrect: storedQ.consecutiveCorrect,
+                consecutiveIncorrect: storedQ.consecutiveIncorrect,
+                masteryLevel: storedQ.masteryLevel,
+                hintUsedCount: storedQ.hintUsedCount,
+                lastAttemptedAt: storedQ.lastAttemptedAt?.toDate(),
+                firstCorrectAt: storedQ.firstCorrectAt?.toDate(),
+                masteredAt: storedQ.masteredAt?.toDate(),
+            };
+        });
+
+        return {
+            ...existingGroup,
+            questionsProgress,
+            startedAt: storedGroup.startedAt?.toDate(),
+            lastActivityAt: storedGroup.lastActivityAt?.toDate(),
+        };
+    });
+
+    return calculateOverallMetrics({
+        ...existing,
+        courseId: data.courseId,
+        currentStreak: data.currentStreak,
+        longestStreak: data.longestStreak,
         createdAt: data.createdAt.toDate(),
         lastActivityAt: data.lastActivityAt?.toDate(),
-        groupsProgress: data.groupsProgress.map(group => ({
-            ...group,
-            startedAt: group.startedAt?.toDate(),
-            lastActivityAt: group.lastActivityAt?.toDate(),
-            questionsProgress: group.questionsProgress.map(q => ({
-                ...q,
-                lastAttemptedAt: q.lastAttemptedAt?.toDate(),
-                firstCorrectAt: q.firstCorrectAt?.toDate(),
-                masteredAt: q.masteredAt?.toDate(),
-            })),
-        })),
-    };
+        groupsProgress,
+    });
 }
 
 @Injectable({ providedIn: 'root' })
@@ -111,11 +141,11 @@ export class FirestoreProgressService {
         await setDoc(ref, serializeProgress(progress));
     }
 
-    async loadProgress(userId: string, courseId: string): Promise<CourseProgress | null> {
+    async loadProgress(userId: string, courseId: string, existing: CourseProgress): Promise<CourseProgress | null> {
         const ref = doc(this.firestore, `users/${userId}/progress/${courseId}`);
         const snapshot = await getDoc(ref);
         if (!snapshot.exists()) return null;
-        return deserializeProgress(snapshot.data() as FirestoreCourseProgress);
+        return deserializeProgress(snapshot.data() as FirestoreCourseProgress, existing);
     }
 
     async clearProgress(userId: string, courseId: string): Promise<void> {
@@ -123,4 +153,3 @@ export class FirestoreProgressService {
         await deleteDoc(ref);
     }
 }
-
