@@ -152,10 +152,10 @@
                                                 </ul>
 
                                                 <!-- Show missed correct answers -->
-                                                @if (getMissedCorrectAnswers().length > 0) {
+                                                @if (missedCorrectAnswers().length > 0) {
                                                     <h6 class="mb-2 mt-3"><strong>Nicht gewählt (aber richtig):</strong></h6>
                                                     <ul class="mb-0">
-                                                        @for (answer of getMissedCorrectAnswers(); track answer.text) {
+                                                        @for (answer of missedCorrectAnswers(); track answer.text) {
                                                             <li class="text-warning">
                                                                 <i class="bi bi-exclamation-circle-fill me-1"></i>
                                                                 <span>{{ answer.text }}</span>
@@ -244,7 +244,7 @@
                     <h4 class="alert-heading">Keine Fragen verfügbar</h4>
                     <p>Es konnten keine Fragen geladen werden.</p>
                     <hr>
-                    <button class="btn btn-primary" (click)="router.navigate(['/'])">
+                    <button class="btn btn-primary" (click)="finishSession()">
                         Zurück zur Startseite
                     </button>
                 </div>

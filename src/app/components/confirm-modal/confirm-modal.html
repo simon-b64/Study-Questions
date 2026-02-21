@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h5 class="modal-title">{{ title }}</h5>
+    <button type="button" class="btn-close" (click)="modal.dismiss()" aria-label="Abbrechen"></button>
+</div>
+<div class="modal-body">
+    <p class="mb-0">{{ message }}</p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss()">
+        {{ cancelLabel ?? 'Abbrechen' }}
+    </button>
+    <button type="button"
+            [class]="'btn ' + (confirmClass ?? 'btn-primary')"
+            (click)="modal.close(true)">
+        {{ confirmLabel ?? 'Bestätigen' }}
+    </button>
+</div>

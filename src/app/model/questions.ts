@@ -11,7 +11,7 @@ export interface Course {
 
 export interface QuestionGroup {
     name: string; // Hier kannst du das Thema der Folien eintragen
-    question: Question[];
+    questions: Question[];
 }
 
 export interface Question {
@@ -48,7 +48,6 @@ export interface QuestionProgress {
     firstCorrectAt?: Date;                 // Timestamp when first answered correctly
     masteredAt?: Date;                     // Timestamp when mastered (3+ consecutive correct)
     hintUsedCount: number;                 // How many times hint was viewed
-    averageTimeSpent?: number;             // Average time spent on this question (in seconds)
 }
 
 export interface QuestionGroupProgress {
@@ -70,7 +69,6 @@ export interface QuestionGroupProgress {
 export interface CourseProgress {
     courseId: string;                      // Course identifier
     courseName: string;                    // Course display name
-    courseDataHash: string;                // Hash of the course question data to detect changes
     totalQuestions: number;                // Total questions across all groups
     totalQuestionGroups: number;           // Total number of question groups
     groupsProgress: QuestionGroupProgress[]; // Progress for each group
@@ -80,7 +78,6 @@ export interface CourseProgress {
     // Overall course metrics (calculated)
     overallCompletionPercentage: number;   // % of all questions mastered
     overallAccuracy: number;               // Accuracy across all attempts
-    totalStudyTime: number;                // Total time spent (in minutes)
     notStartedCount: number;               // Total questions not started
     learningCount: number;                 // Total questions being learned
     reviewingCount: number;                // Total questions in review

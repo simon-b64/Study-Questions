@@ -1,9 +1,19 @@
-import { Component, ChangeDetectionStrategy, inject, OnInit, signal, computed, effect } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import { CourseStore } from '../../store/course-store';
-import { Question, Answer, MasteryLevel, QuestionProgress, CourseProgress, CourseMetadata } from '../../model/questions';
-
+import {
+    Answer,
+    Course,
+    CourseProgress,
+    MasteryLevel,
+    Question,
+    QuestionGroupProgress,
+    QuestionProgress
+} from '../../model/questions';
+import { getCourseName } from '../../utils/course-name.util';
+import { AuthStore } from '../../store/auth-store';
+import { ConfirmService } from '../../services/confirm.service';
+import { setupAuthAwareCourseLoad } from '../../utils/auth-aware-course-load.util';
 // Constants for mastery level calculation
 const MASTERY_THRESHOLD = 3; // Consecutive correct answers needed for mastery
 
@@ -27,23 +37,27 @@ interface SessionStats {
     totalAnswered: number;
     correctAnswers: number;
     incorrectAnswers: number;
-    sessionStartTime: Date;
 }
 
 @Component({
     selector: 'app-question-view',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './question-view.html',
     styleUrl: './question-view.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class QuestionView implements OnInit {
     private readonly route = inject(ActivatedRoute);
-    protected readonly router = inject(Router);
-    protected readonly courseStore = inject(CourseStore);
+    private readonly router = inject(Router);
+    private readonly courseStore = inject(CourseStore);
+    private readonly confirmService = inject(ConfirmService);
 
-    // Store route parameters for use in effect
     private routeParams: { groupName: string | null; questionLimit?: number } | null = null;
+
+    private readonly pendingMetadata = setupAuthAwareCourseLoad(
+        this.courseStore,
+        inject(AuthStore),
+    );
 
     // State signals
     protected readonly questionsQueue = signal<QuestionWithContext[]>([]);
@@ -54,16 +68,16 @@ export class QuestionView implements OnInit {
         totalAnswered: 0,
         correctAnswers: 0,
         incorrectAnswers: 0,
-        sessionStartTime: new Date()
     });
+
+    // Template-facing store signals
+    protected readonly isLoading = this.courseStore.isLoading;
 
     constructor() {
         // Watch for course data to become available
         effect(() => {
             const course = this.courseStore.course();
             const progress = this.courseStore.progress();
-
-            // Initialize questions when both course and progress are available
             if (course && progress && this.routeParams && this.questionsQueue().length === 0) {
                 this.initializeQuestionQueue(this.routeParams.groupName, this.routeParams.questionLimit);
             }
@@ -114,32 +128,12 @@ export class QuestionView implements OnInit {
             return;
         }
 
-        // Store route params for effect to use
         this.routeParams = { groupName, questionLimit };
 
-        // Load course if not already loaded or if it's a different course
-        const currentCourse = this.courseStore.currentCourseMetadata();
-        if (!currentCourse || currentCourse.id !== courseId) {
-            // Create course metadata from the route parameter
-            const courseMetadata: CourseMetadata = {
-                id: courseId,
-                name: this.getCourseName(courseId)
-            };
-
-            // Load the course data - effect will initialize questions when ready
-            this.courseStore.loadCourse(courseMetadata);
-        } else if (this.courseStore.course() && this.courseStore.progress()) {
-            // Data already loaded, initialize immediately
-            this.initializeQuestionQueue(groupName, questionLimit);
-        }
-    }
-
-    private getCourseName(courseId: string): string {
-        // Map course IDs to their display names
-        const courseNames: Record<string, string> = {
-            'daten-informatikrecht': 'Daten und Informatikrecht'
-        };
-        return courseNames[courseId] || courseId;
+        this.pendingMetadata.set({
+            id: courseId,
+            name: getCourseName(courseId),
+        });
     }
 
     private parseRouteParameters(): { courseId: string | null; groupName: string | null; questionLimit?: number } {
@@ -169,16 +163,15 @@ export class QuestionView implements OnInit {
         this.questionsQueue.set(limitedQuestions);
     }
 
-    private collectQuestions(course: any, progress: any, groupName: string | null): QuestionWithContext[] {
+    private collectQuestions(course: Course, progress: CourseProgress, groupName: string | null): QuestionWithContext[] {
         const allQuestions: QuestionWithContext[] = [];
 
-        course.questionGroups.forEach((group: any, groupIndex: number) => {
-            // If groupName is specified, only include that group
+        course.questionGroups.forEach((group, groupIndex) => {
             if (groupName && group.name !== groupName) return;
 
             const groupProgress = progress.groupsProgress[groupIndex];
 
-            group.question.forEach((question: Question) => {
+            group.questions.forEach((question) => {
                 const questionProgress = this.findQuestionProgress(groupProgress, question.id);
 
                 if (questionProgress) {
@@ -195,10 +188,8 @@ export class QuestionView implements OnInit {
         return allQuestions;
     }
 
-    private findQuestionProgress(groupProgress: any, questionId: string): QuestionProgress | null {
-        const questionProgress = groupProgress.questionsProgress.find(
-            (qp: QuestionProgress) => qp.questionId === questionId
-        );
+    private findQuestionProgress(groupProgress: QuestionGroupProgress, questionId: string): QuestionProgress | null {
+        const questionProgress = groupProgress.questionsProgress.find(qp => qp.questionId === questionId);
 
         if (!questionProgress) {
             console.warn(`No progress found for question ${questionId}`);
@@ -236,11 +227,12 @@ export class QuestionView implements OnInit {
                 return PRIORITY_RANGES.NOT_STARTED.min +
                        Math.random() * (PRIORITY_RANGES.NOT_STARTED.max - PRIORITY_RANGES.NOT_STARTED.min);
 
-            case MasteryLevel.LEARNING:
+            case MasteryLevel.LEARNING: {
                 // More incorrect attempts = higher priority
                 const incorrectRatio = progress.incorrectAttempts / Math.max(progress.totalAttempts, 1);
                 return PRIORITY_RANGES.LEARNING.min + (1 - incorrectRatio) *
                        (PRIORITY_RANGES.LEARNING.max - PRIORITY_RANGES.LEARNING.min);
+            }
 
             case MasteryLevel.REVIEWING:
                 // Fewer consecutive correct = higher priority within this band
@@ -275,15 +267,14 @@ export class QuestionView implements OnInit {
         return this.selectedAnswers().includes(index);
     }
 
-    protected getMissedCorrectAnswers(): Answer[] {
+    protected readonly missedCorrectAnswers = computed<Answer[]>(() => {
         const current = this.currentQuestion();
         if (!current) return [];
-
         const selected = this.selectedAnswers();
         return current.question.answers.filter((answer, index) =>
             answer.correct && !selected.includes(index)
         );
-    }
+    });
 
     protected submitAnswer(): void {
         if (this.selectedAnswers().length === 0 || this.showResult()) return;
@@ -336,10 +327,8 @@ export class QuestionView implements OnInit {
         this.courseStore.updateProgress(updatedProgress);
     }
 
-    private findQuestionProgressIndex(groupProgress: any, questionId: string): number {
-        return groupProgress.questionsProgress.findIndex(
-            (qp: QuestionProgress) => qp.questionId === questionId
-        );
+    private findQuestionProgressIndex(groupProgress: QuestionGroupProgress, questionId: string): number {
+        return groupProgress.questionsProgress.findIndex(qp => qp.questionId === questionId);
     }
 
     private buildUpdatedQuestionProgress(
@@ -374,16 +363,16 @@ export class QuestionView implements OnInit {
     }
 
     private buildUpdatedGroupProgress(
-        groupProgress: any,
+        groupProgress: QuestionGroupProgress,
         questionProgressIndex: number,
         updatedQuestionProgress: QuestionProgress
-    ): any {
-        const updatedGroupProgress = {
+    ): QuestionGroupProgress {
+        const updatedGroupProgress: QuestionGroupProgress = {
             ...groupProgress,
-            questionsProgress: groupProgress.questionsProgress.map((qp: QuestionProgress, idx: number) =>
+            questionsProgress: groupProgress.questionsProgress.map((qp, idx) =>
                 idx === questionProgressIndex ? updatedQuestionProgress : qp
             ),
-            lastActivityAt: new Date()
+            lastActivityAt: new Date(),
         };
 
         if (!groupProgress.startedAt) {
@@ -396,7 +385,7 @@ export class QuestionView implements OnInit {
     private buildUpdatedCourseProgress(
         progress: CourseProgress,
         groupIndex: number,
-        updatedGroupProgress: any,
+        updatedGroupProgress: QuestionGroupProgress,
         isCorrect: boolean
     ): CourseProgress {
         const newStreak = isCorrect ? progress.currentStreak + 1 : 0;
@@ -453,9 +442,13 @@ export class QuestionView implements OnInit {
         }
     }
 
-    protected exitSession(): void {
-        if (confirm('Möchtest du die Lernsession wirklich beenden? Dein Fortschritt wird gespeichert.')) {
-            this.finishSession();
-        }
+    protected async exitSession(): Promise<void> {
+        const confirmed = await this.confirmService.confirm({
+            title: 'Session beenden',
+            message: 'Möchtest du die Lernsession wirklich beenden? Dein Fortschritt wird gespeichert.',
+            confirmLabel: 'Beenden',
+            confirmClass: 'btn-warning',
+        });
+        if (confirmed) this.finishSession();
     }
 }

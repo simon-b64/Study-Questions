@@ -1,10 +1,11 @@
 import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
+import { AuthButtonComponent } from '../auth-button/auth-button';
 
 @Component({
     selector: 'app-navbar',
-    imports: [RouterLink, RouterLinkActive, NgbCollapse],
+    imports: [RouterLink, RouterLinkActive, NgbCollapse, AuthButtonComponent],
     templateUrl: './navbar.html',
     styleUrl: './navbar.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

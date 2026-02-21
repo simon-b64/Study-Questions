@@ -42,3 +42,9 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Runtime config — real values are injected via Docker env vars, never committed
+# The placeholder public/config.json (all empty strings) IS committed
+# If you fill it in locally for dev, add it here:
+public/config.json
+

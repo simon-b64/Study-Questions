@@ -1,0 +1,56 @@
+@if (isAvailable) {
+    @if (isLoading()) {
+        <div class="spinner-border spinner-border-sm text-secondary"
+             role="status"
+             aria-label="Loading authentication state">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    } @else if (isLoggedIn()) {
+        <div ngbDropdown class="d-flex align-items-center">
+            <button
+                class="btn btn-link nav-link d-flex align-items-center gap-2 p-0"
+                id="userMenu"
+                ngbDropdownToggle
+                aria-label="User menu"
+            >
+                @if (user()?.photoURL) {
+                    <!-- NgOptimizedImage not applicable: dynamic Firebase Storage CDN URL -->
+                    <img
+                        [src]="user()!.photoURL!"
+                        [alt]="user()?.displayName ?? 'User avatar'"
+                        width="32"
+                        height="32"
+                        class="rounded-circle"
+                        referrerpolicy="no-referrer"
+                    />
+                } @else {
+                    <span class="avatar-placeholder rounded-circle d-flex align-items-center justify-content-center"
+                          aria-hidden="true">
+                        {{ user()?.displayName?.charAt(0) ?? '?' }}
+                    </span>
+                }
+                <span class="d-none d-lg-inline text-body">{{ user()?.displayName }}</span>
+            </button>
+            <div ngbDropdownMenu aria-labelledby="userMenu" class="dropdown-menu-end">
+                <div class="dropdown-item-text">
+                    <div class="fw-semibold">{{ user()?.displayName }}</div>
+                    <div class="small text-muted">{{ user()?.email }}</div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <button ngbDropdownItem (click)="logout()">
+                    <i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>
+                    Sign out
+                </button>
+            </div>
+        </div>
+    } @else {
+        <button
+            class="btn btn-outline-primary btn-sm d-flex align-items-center gap-2"
+            (click)="login()"
+            aria-label="Sign in"
+        >
+            <i class="bi bi-person-circle" aria-hidden="true"></i>
+            <span class="d-none d-sm-inline">Sign in</span>
+        </button>
+    }
+}

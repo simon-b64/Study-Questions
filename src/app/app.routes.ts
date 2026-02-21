@@ -1,28 +1,25 @@
 import { Routes } from '@angular/router';
-import { HomeView } from './view/home/home';
-import { CourseOverviewView } from './view/course-overview/course-overview';
-import { QuestionView } from './view/question-view/question-view';
 
 export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        component: HomeView
+        loadComponent: () => import('./view/home/home').then(m => m.HomeView),
     },
     {
         path: 'course/:courseId',
-        component: CourseOverviewView
+        loadComponent: () => import('./view/course-overview/course-overview').then(m => m.CourseOverviewView),
     },
     {
         path: 'course/:courseId/questions',
-        component: QuestionView
+        loadComponent: () => import('./view/question-view/question-view').then(m => m.QuestionView),
     },
     {
         path: 'course/:courseId/questions/:groupName',
-        component: QuestionView
+        loadComponent: () => import('./view/question-view/question-view').then(m => m.QuestionView),
     },
     {
         path: '**',
-        redirectTo: ''
-    }
+        redirectTo: '',
+    },
 ];
