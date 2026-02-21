@@ -1,4 +1,5 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, EnvironmentProviders, InjectionToken, Provider } from '@angular/core';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, EnvironmentProviders, ErrorHandler, InjectionToken, Provider } from '@angular/core';
+import { GlobalErrorHandler } from './services/global-error-handler';
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -43,6 +44,7 @@ export function createAppConfig(cfg: FirebaseConfig | null): ApplicationConfig {
     return {
         providers: [
             provideBrowserGlobalErrorListeners(),
+            { provide: ErrorHandler, useClass: GlobalErrorHandler },
             provideRouter(routes),
             provideHttpClient(),
             ...firebaseProviders(cfg),

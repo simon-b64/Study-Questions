@@ -20,6 +20,6 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        redirectTo: '',
+        loadComponent: () => import('./view/not-found/not-found').then(m => m.NotFoundView),
     },
 ];
