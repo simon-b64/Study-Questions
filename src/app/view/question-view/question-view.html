@@ -152,10 +152,10 @@
                                                 </ul>
 
                                                 <!-- Show missed correct answers -->
-                                                @if (getMissedCorrectAnswers().length > 0) {
+                                                @if (missedCorrectAnswers().length > 0) {
                                                     <h6 class="mb-2 mt-3"><strong>Nicht gewählt (aber richtig):</strong></h6>
                                                     <ul class="mb-0">
-                                                        @for (answer of getMissedCorrectAnswers(); track answer.text) {
+                                                        @for (answer of missedCorrectAnswers(); track answer.text) {
                                                             <li class="text-warning">
                                                                 <i class="bi bi-exclamation-circle-fill me-1"></i>
                                                                 <span>{{ answer.text }}</span>

@@ -4,7 +4,6 @@ import { CourseStore } from '../../store/course-store';
 import {
     Answer,
     Course,
-    CourseMetadata,
     CourseProgress,
     MasteryLevel,
     Question,
@@ -12,7 +11,9 @@ import {
     QuestionProgress
 } from '../../model/questions';
 import { getCourseName } from '../../utils/course-name.util';
-import { AuthService } from '../../services/auth.service';
+import { AuthStore } from '../../store/auth-store';
+import { ConfirmService } from '../../services/confirm.service';
+import { setupAuthAwareCourseLoad } from '../../utils/auth-aware-course-load.util';
 // Constants for mastery level calculation
 const MASTERY_THRESHOLD = 3; // Consecutive correct answers needed for mastery
 
@@ -36,7 +37,6 @@ interface SessionStats {
     totalAnswered: number;
     correctAnswers: number;
     incorrectAnswers: number;
-    sessionStartTime: Date;
 }
 
 @Component({
@@ -50,13 +50,14 @@ export class QuestionView implements OnInit {
     private readonly route = inject(ActivatedRoute);
     private readonly router = inject(Router);
     private readonly courseStore = inject(CourseStore);
-    private readonly authService = inject(AuthService);
+    private readonly confirmService = inject(ConfirmService);
 
-    // Store route parameters for use in effect
     private routeParams: { groupName: string | null; questionLimit?: number } | null = null;
 
-    // Set in ngOnInit, consumed by the constructor effect
-    private readonly pendingMetadata = signal<CourseMetadata | null>(null);
+    private readonly pendingMetadata = setupAuthAwareCourseLoad(
+        this.courseStore,
+        inject(AuthStore),
+    );
 
     // State signals
     protected readonly questionsQueue = signal<QuestionWithContext[]>([]);
@@ -67,29 +68,16 @@ export class QuestionView implements OnInit {
         totalAnswered: 0,
         correctAnswers: 0,
         incorrectAnswers: 0,
-        sessionStartTime: new Date(),
     });
 
     // Template-facing store signals
     protected readonly isLoading = this.courseStore.isLoading;
-    protected readonly courseError = this.courseStore.error;
-    protected readonly courseName = computed(() => this.courseStore.currentCourseMetadata()?.name);
 
     constructor() {
-        // Wait for auth state to be known before calling loadCourse.
-        // pendingMetadata is set by ngOnInit; the effect fires once auth is resolved.
-        effect(() => {
-            const metadata = this.pendingMetadata();
-            if (!metadata || this.authService.isLoading()) return;
-            this.courseStore.loadCourse(metadata);
-        });
-
         // Watch for course data to become available
         effect(() => {
             const course = this.courseStore.course();
             const progress = this.courseStore.progress();
-
-            // Initialize questions when both course and progress are available
             if (course && progress && this.routeParams && this.questionsQueue().length === 0) {
                 this.initializeQuestionQueue(this.routeParams.groupName, this.routeParams.questionLimit);
             }
@@ -144,12 +132,8 @@ export class QuestionView implements OnInit {
 
         this.pendingMetadata.set({
             id: courseId,
-            name: this.getCourseName(courseId),
+            name: getCourseName(courseId),
         });
-    }
-
-    private getCourseName(courseId: string): string {
-        return getCourseName(courseId);
     }
 
     private parseRouteParameters(): { courseId: string | null; groupName: string | null; questionLimit?: number } {
@@ -187,7 +171,7 @@ export class QuestionView implements OnInit {
 
             const groupProgress = progress.groupsProgress[groupIndex];
 
-            group.question.forEach((question) => {
+            group.questions.forEach((question) => {
                 const questionProgress = this.findQuestionProgress(groupProgress, question.id);
 
                 if (questionProgress) {
@@ -243,11 +227,12 @@ export class QuestionView implements OnInit {
                 return PRIORITY_RANGES.NOT_STARTED.min +
                        Math.random() * (PRIORITY_RANGES.NOT_STARTED.max - PRIORITY_RANGES.NOT_STARTED.min);
 
-            case MasteryLevel.LEARNING:
+            case MasteryLevel.LEARNING: {
                 // More incorrect attempts = higher priority
                 const incorrectRatio = progress.incorrectAttempts / Math.max(progress.totalAttempts, 1);
                 return PRIORITY_RANGES.LEARNING.min + (1 - incorrectRatio) *
                        (PRIORITY_RANGES.LEARNING.max - PRIORITY_RANGES.LEARNING.min);
+            }
 
             case MasteryLevel.REVIEWING:
                 // Fewer consecutive correct = higher priority within this band
@@ -282,15 +267,14 @@ export class QuestionView implements OnInit {
         return this.selectedAnswers().includes(index);
     }
 
-    protected getMissedCorrectAnswers(): Answer[] {
+    protected readonly missedCorrectAnswers = computed<Answer[]>(() => {
         const current = this.currentQuestion();
         if (!current) return [];
-
         const selected = this.selectedAnswers();
         return current.question.answers.filter((answer, index) =>
             answer.correct && !selected.includes(index)
         );
-    }
+    });
 
     protected submitAnswer(): void {
         if (this.selectedAnswers().length === 0 || this.showResult()) return;
@@ -458,9 +442,13 @@ export class QuestionView implements OnInit {
         }
     }
 
-    protected exitSession(): void {
-        if (confirm('Möchtest du die Lernsession wirklich beenden? Dein Fortschritt wird gespeichert.')) {
-            this.finishSession();
-        }
+    protected async exitSession(): Promise<void> {
+        const confirmed = await this.confirmService.confirm({
+            title: 'Session beenden',
+            message: 'Möchtest du die Lernsession wirklich beenden? Dein Fortschritt wird gespeichert.',
+            confirmLabel: 'Beenden',
+            confirmClass: 'btn-warning',
+        });
+        if (confirmed) this.finishSession();
     }
 }

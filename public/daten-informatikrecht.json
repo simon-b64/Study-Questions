@@ -2,7 +2,7 @@
     "questionGroups": [
         {
             "name": "Datenschutz",
-            "question": [
+            "questions": [
                 {
                     "question": "Ist die IP-Adresse ein personenbezogenes Datum?",
                     "hint": "Denke an die Identifizierbarkeit über den Provider.",
@@ -6359,7 +6359,7 @@
         },
         {
             "name": "Öffentlich-rechtliche Grundlagen",
-            "question": [
+            "questions": [
                 {
                     "question": "Sind empirische (deskriptive) Sätze wahr oder falsch?",
                     "hint": "Denken Sie an die Überprüfbarkeit an der Realität.",
@@ -12700,7 +12700,7 @@
         },
         {
             "name": "Digitale Barrierefreiheit",
-            "question": [
+            "questions": [
                 {
                     "question": "Bedeutet digitale Barrierefreiheit, dass Websites nur für Menschen mit Behinderungen nutzbar sein müssen?",
                     "hint": "Denken Sie an die Definition von 'inklusiv'.",
@@ -18993,7 +18993,7 @@
         },
         {
             "name": "Lizenzen",
-            "question": [
+            "questions": [
                 {
                     "question": "Ist für den urheberrechtlichen Schutz eines Werkes eine formelle Registrierung notwendig?",
                     "hint": "Denke an das Prinzip, wann der Schutz entsteht.",

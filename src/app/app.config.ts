@@ -1,4 +1,4 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, EnvironmentProviders, Provider } from '@angular/core';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, EnvironmentProviders, InjectionToken, Provider } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -18,26 +18,20 @@ export interface FirebaseConfig {
     recaptchaSiteKey?: string;
 }
 
-// Populated before bootstrapApplication() is called in main.ts
-let firebaseConfig: FirebaseConfig | null = null;
-export function setFirebaseConfig(cfg: FirebaseConfig): void {
-    firebaseConfig = cfg;
-}
-function isFirebaseConfigured(): boolean {
-    return !!firebaseConfig?.apiKey;
-}
+export const FIREBASE_CONFIG = new InjectionToken<FirebaseConfig>('FIREBASE_CONFIG');
 
-function firebaseProviders(): (Provider | EnvironmentProviders)[] {
-    if (!isFirebaseConfigured()) return [];
+function firebaseProviders(cfg: FirebaseConfig | null): (Provider | EnvironmentProviders)[] {
+    if (!cfg?.apiKey) return [];
     const providers: (Provider | EnvironmentProviders)[] = [
-        provideFirebaseApp(() => initializeApp(firebaseConfig!)),
+        { provide: FIREBASE_CONFIG, useValue: cfg },
+        provideFirebaseApp(() => initializeApp(cfg)),
         provideAuth(() => getAuth()),
         provideFirestore(() => getFirestore()),
     ];
-    if (firebaseConfig!.recaptchaSiteKey) {
+    if (cfg.recaptchaSiteKey) {
         providers.push(
             provideAppCheck(() => initializeAppCheck(undefined, {
-                provider: new ReCaptchaV3Provider(firebaseConfig!.recaptchaSiteKey!),
+                provider: new ReCaptchaV3Provider(cfg.recaptchaSiteKey!),
                 isTokenAutoRefreshEnabled: true,
             }))
         );
@@ -45,13 +39,13 @@ function firebaseProviders(): (Provider | EnvironmentProviders)[] {
     return providers;
 }
 
-export function createAppConfig(): ApplicationConfig {
+export function createAppConfig(cfg: FirebaseConfig | null): ApplicationConfig {
     return {
         providers: [
             provideBrowserGlobalErrorListeners(),
             provideRouter(routes),
             provideHttpClient(),
-            ...firebaseProviders(),
+            ...firebaseProviders(cfg),
         ]
     };
 }

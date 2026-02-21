@@ -64,7 +64,6 @@ function serializeProgress(progress: CourseProgress): FirestoreCourseProgress {
         totalQuestionGroups: progress.totalQuestionGroups,
         overallCompletionPercentage: progress.overallCompletionPercentage,
         overallAccuracy: progress.overallAccuracy,
-        totalStudyTime: progress.totalStudyTime,
         notStartedCount: progress.notStartedCount,
         learningCount: progress.learningCount,
         reviewingCount: progress.reviewingCount,
@@ -98,39 +97,30 @@ function deserializeProgress(data: FirestoreCourseProgress): CourseProgress {
 
 @Injectable({ providedIn: 'root' })
 export class FirestoreProgressService {
-    private readonly firestore = inject(Firestore, { optional: true });
+    private readonly _firestore = inject(Firestore, { optional: true });
+
+    readonly isAvailable = this._firestore !== null;
+
+    private get firestore(): Firestore {
+        if (!this._firestore) throw new Error('Firestore is not configured.');
+        return this._firestore;
+    }
 
     async saveProgress(userId: string, progress: CourseProgress): Promise<void> {
-        if (!this.firestore) return;
-        try {
-            const ref = doc(this.firestore, `users/${userId}/progress/${progress.courseId}`);
-            await setDoc(ref, serializeProgress(progress));
-        } catch (error) {
-            console.error('Failed to save progress to Firestore:', error);
-        }
+        const ref = doc(this.firestore, `users/${userId}/progress/${progress.courseId}`);
+        await setDoc(ref, serializeProgress(progress));
     }
 
     async loadProgress(userId: string, courseId: string): Promise<CourseProgress | null> {
-        if (!this.firestore) return null;
-        try {
-            const ref = doc(this.firestore, `users/${userId}/progress/${courseId}`);
-            const snapshot = await getDoc(ref);
-            if (!snapshot.exists()) return null;
-            return deserializeProgress(snapshot.data() as FirestoreCourseProgress);
-        } catch (error) {
-            console.error('Failed to load progress from Firestore:', error);
-            return null;
-        }
+        const ref = doc(this.firestore, `users/${userId}/progress/${courseId}`);
+        const snapshot = await getDoc(ref);
+        if (!snapshot.exists()) return null;
+        return deserializeProgress(snapshot.data() as FirestoreCourseProgress);
     }
 
     async clearProgress(userId: string, courseId: string): Promise<void> {
-        if (!this.firestore) return;
-        try {
-            const ref = doc(this.firestore, `users/${userId}/progress/${courseId}`);
-            await deleteDoc(ref);
-        } catch (error) {
-            console.error('Failed to clear progress from Firestore:', error);
-        }
+        const ref = doc(this.firestore, `users/${userId}/progress/${courseId}`);
+        await deleteDoc(ref);
     }
 }
 

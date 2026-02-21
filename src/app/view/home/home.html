@@ -9,13 +9,9 @@
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         @for (course of courses; track course.id) {
             <div class="col">
-                <div class="card h-100 course-card"
-                     role="button"
-                     tabindex="0"
-                     (click)="navigateToCourse(course.id)"
-                     (keydown.enter)="navigateToCourse(course.id)"
-                     (keydown.space)="navigateToCourse(course.id); $event.preventDefault()"
-                     [attr.aria-label]="'Öffne Kurs: ' + course.name">
+                <a [routerLink]="['/course', course.id]"
+                   class="card h-100 course-card text-decoration-none"
+                   [attr.aria-label]="'Öffne Kurs: ' + course.name">
                     <div class="card-body">
                         <h5 class="card-title">{{ course.name }}</h5>
                         @if (course.description) {
@@ -25,7 +21,7 @@
                     <div class="card-footer bg-transparent border-top-0">
                         <small class="text-primary">Zum Kurs →</small>
                     </div>
-                </div>
+                </a>
             </div>
         }
     </div>

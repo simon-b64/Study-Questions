@@ -1,22 +1,28 @@
-import { Injectable, inject, signal, computed } from '@angular/core';
-import { Auth, GoogleAuthProvider, signInWithPopup, signOut, authState, User } from '@angular/fire/auth';
-import { toSignal } from '@angular/core/rxjs-interop';
+import { Injectable, inject } from '@angular/core';
+import { Auth, GoogleAuthProvider, signInWithPopup, signOut, authState } from '@angular/fire/auth';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { AuthStore } from '../store/auth-store';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class AuthService {
-    private readonly auth = inject(Auth, { optional: true });
+    private readonly auth = inject(Auth, {optional: true});
+    private readonly authStore = inject(AuthStore);
 
-    // undefined = auth state not yet known (loading)
-    // null      = known to be logged out
-    // User      = known to be logged in
-    readonly user = this.auth
-        ? toSignal<User | null | undefined>(authState(this.auth), { initialValue: undefined })
-        : signal<User | null>(null).asReadonly();
-
-    readonly isLoading = computed(() => this.user() === undefined);
-    readonly isLoggedIn = computed(() => this.user() != null);
+    readonly user = this.authStore.user;
+    readonly isLoading = this.authStore.isLoading;
+    readonly isLoggedIn = this.authStore.isLoggedIn;
 
     readonly isAvailable = this.auth !== null;
+
+    constructor() {
+        if (this.auth) {
+            authState(this.auth).pipe(takeUntilDestroyed()).subscribe(user => {
+                this.authStore.updateUser(user);
+            });
+        } else {
+            this.authStore.updateUser(null);
+        }
+    }
 
     async loginWithGoogle(): Promise<void> {
         if (!this.auth) return Promise.reject('Firebase is not configured.');
