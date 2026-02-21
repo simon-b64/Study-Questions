@@ -51,12 +51,13 @@ export class QuestionView implements OnInit {
     private readonly router = inject(Router);
     private readonly courseStore = inject(CourseStore);
     private readonly confirmService = inject(ConfirmService);
+    private readonly authStore = inject(AuthStore);
 
     private routeParams: { groupName: string | null; questionLimit?: number } | null = null;
 
     private readonly pendingMetadata = setupAuthAwareCourseLoad(
         this.courseStore,
-        inject(AuthStore),
+        this.authStore,
     );
 
     // State signals
@@ -70,8 +71,11 @@ export class QuestionView implements OnInit {
         incorrectAnswers: 0,
     });
 
-    // Template-facing store signals
-    protected readonly isLoading = this.courseStore.isLoading;
+    // Show spinner immediately: while auth is still resolving, while waiting
+    // for loadCourse to be called, or while the course store is loading.
+    protected readonly isLoading = computed(
+        () => this.authStore.isLoading() || this.courseStore.isLoading() || (!this.courseStore.course() && !this.courseStore.error()),
+    );
 
     constructor() {
         // Watch for course data to become available

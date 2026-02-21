@@ -22,15 +22,20 @@ export class CourseOverviewView implements OnInit {
     private readonly courseStore = inject(CourseStore);
     private readonly confirmService = inject(ConfirmService);
     private readonly importExport = inject(ProgressImportExportService);
+    private readonly authStore = inject(AuthStore);
 
     private readonly pendingMetadata = setupAuthAwareCourseLoad(
         this.courseStore,
-        inject(AuthStore),
+        this.authStore,
     );
 
     protected readonly quickSessionLimit = signal<number>(20);
 
-    protected readonly isLoading = this.courseStore.isLoading;
+    // Show spinner immediately: while auth is still resolving, while waiting
+    // for loadCourse to be called, or while the course store is loading.
+    protected readonly isLoading = computed(
+        () => this.authStore.isLoading() || this.courseStore.isLoading() || (!this.courseStore.course() && !this.courseStore.error()),
+    );
     protected readonly error = this.courseStore.error;
     protected readonly course = this.courseStore.course;
     protected readonly progress = this.courseStore.progress;
