@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, effect, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 import { CourseStore } from '../../store/course-store';
 import {
     Answer,
@@ -41,7 +42,7 @@ interface SessionStats {
 
 @Component({
     selector: 'app-question-view',
-    imports: [],
+    imports: [NgbCollapse],
     templateUrl: './question-view.html',
     styleUrl: './question-view.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -65,6 +66,7 @@ export class QuestionView implements OnInit {
     protected readonly currentQuestionIndex = signal<number>(0);
     protected readonly selectedAnswers = signal<number[]>([]);
     protected readonly showResult = signal<boolean>(false);
+    protected readonly hintVisible = signal<boolean>(false);
     protected readonly sessionStats = signal<SessionStats>({
         totalAnswered: 0,
         correctAnswers: 0,
@@ -435,6 +437,7 @@ export class QuestionView implements OnInit {
         this.currentQuestionIndex.set(this.currentQuestionIndex() + 1);
         this.selectedAnswers.set([]);
         this.showResult.set(false);
+        this.hintVisible.set(false);
     }
 
     protected finishSession(): void {

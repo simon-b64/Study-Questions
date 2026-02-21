@@ -42,3 +42,58 @@
     }
 }
 
+// ── Hint disclosure ────────────────────────────────────────────────────────────
+.hint-wrapper {
+    border: 1px solid var(--bs-border-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+
+    &.hint-expanded {
+        border-color: var(--bs-info-border-subtle, #9eeaf9);
+    }
+}
+
+.hint-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.6rem 0.875rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--bs-info-text-emphasis, #055160);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: left;
+    transition: background 0.15s ease;
+
+    .hint-expanded & {
+        background: var(--bs-info-bg-subtle, #cff4fc);
+        border-bottom: 1px solid var(--bs-info-border-subtle, #9eeaf9);
+    }
+
+    &:hover {
+        background: var(--bs-info-bg-subtle, #cff4fc);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--bs-info, #0dcaf0);
+        outline-offset: -2px;
+    }
+
+    span {
+        flex: 1;
+    }
+
+    .hint-chevron {
+        transition: transform 0.25s ease;
+    }
+}
+
+.hint-content {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9rem;
+    color: var(--bs-secondary-color);
+}

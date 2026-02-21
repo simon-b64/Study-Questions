@@ -82,10 +82,21 @@
                         </div>
                         <!-- Hint (before answering) -->
                         @if (!showResult() && currentQuestion()!.question.hint) {
-                            <div class="alert alert-info d-flex align-items-start">
-                                <i class="bi bi-lightbulb me-2 mt-1"></i>
-                                <div>
-                                    <strong>Hinweis:</strong> {{ currentQuestion()!.question.hint }}
+                            <div class="hint-wrapper" [class.hint-expanded]="hintVisible()">
+                                <button
+                                    class="hint-toggle"
+                                    type="button"
+                                    [attr.aria-expanded]="hintVisible()"
+                                    aria-controls="hint-panel"
+                                    (click)="hintVisible.set(!hintVisible())">
+                                    <i class="bi bi-lightbulb" aria-hidden="true"></i>
+                                    <span>{{ hintVisible() ? 'Hinweis verbergen' : 'Hinweis anzeigen' }}</span>
+                                    <i class="bi hint-chevron" [class.bi-chevron-down]="!hintVisible()" [class.bi-chevron-up]="hintVisible()" aria-hidden="true"></i>
+                                </button>
+                                <div id="hint-panel" [ngbCollapse]="!hintVisible()">
+                                    <div class="hint-content" role="note">
+                                        {{ currentQuestion()!.question.hint }}
+                                    </div>
                                 </div>
                             </div>
                         }
