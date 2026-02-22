@@ -51,31 +51,31 @@
                         <h3 class="card-title mb-4">{{ currentQuestion()!.question.question }}</h3>
                         <!-- Answer Options -->
                         <div class="d-grid gap-3 mb-4">
-                            @for (answer of currentQuestion()!.question.answers; track $index) {
+                            @for (shuffled of currentQuestion()!.shuffledAnswers; track shuffled.originalIndex; let i = $index) {
                                 <button
                                     class="btn btn-lg text-start answer-button"
-                                    [class.btn-outline-primary]="!isAnswerSelected($index) && !showResult()"
-                                    [class.btn-primary]="isAnswerSelected($index) && !showResult()"
-                                    [class.btn-success]="showResult() && answer.correct"
-                                    [class.btn-danger]="showResult() && isAnswerSelected($index) && !answer.correct"
-                                    [class.btn-outline-secondary]="showResult() && !isAnswerSelected($index) && !answer.correct"
+                                    [class.btn-outline-primary]="!isAnswerSelected(i) && !showResult()"
+                                    [class.btn-primary]="isAnswerSelected(i) && !showResult()"
+                                    [class.btn-success]="showResult() && shuffled.answer.correct"
+                                    [class.btn-danger]="showResult() && isAnswerSelected(i) && !shuffled.answer.correct"
+                                    [class.btn-outline-secondary]="showResult() && !isAnswerSelected(i) && !shuffled.answer.correct"
                                     [disabled]="showResult()"
-                                    (click)="selectAnswer($index)"
-                                    [attr.aria-pressed]="isAnswerSelected($index)"
-                                    [attr.aria-label]="'Antwort: ' + answer.text">
+                                    (click)="selectAnswer(i)"
+                                    [attr.aria-pressed]="isAnswerSelected(i)"
+                                    [attr.aria-label]="'Antwort: ' + shuffled.answer.text">
                                     <div class="d-flex align-items-center">
                                         <span class="me-3 fs-5">
                                             @if (!showResult()) {
-                                                <i class="bi" [class.bi-square]="!isAnswerSelected($index)" [class.bi-x-square]="isAnswerSelected($index)"></i>
-                                            } @else if (answer.correct) {
+                                                <i class="bi" [class.bi-square]="!isAnswerSelected(i)" [class.bi-x-square]="isAnswerSelected(i)"></i>
+                                            } @else if (shuffled.answer.correct) {
                                                 <i class="bi bi-check-circle-fill"></i>
-                                            } @else if (isAnswerSelected($index) && !answer.correct) {
+                                            } @else if (isAnswerSelected(i) && !shuffled.answer.correct) {
                                                 <i class="bi bi-x-circle-fill"></i>
                                             } @else {
                                                 <i class="bi bi-circle"></i>
                                             }
                                         </span>
-                                        <span class="flex-grow-1">{{ answer.text }}</span>
+                                        <span class="flex-grow-1">{{ shuffled.answer.text }}</span>
                                     </div>
                                 </button>
                             }
@@ -145,16 +145,16 @@
                                             <div class="mt-3">
                                                 <h6 class="mb-2"><strong>Deine Auswahl:</strong></h6>
                                                 <ul class="mb-2">
-                                                    @for (answer of currentQuestion()!.question.answers; track $index) {
-                                                        @if (isAnswerSelected($index)) {
+                                                    @for (shuffled of currentQuestion()!.shuffledAnswers; track shuffled.originalIndex; let i = $index) {
+                                                        @if (isAnswerSelected(i)) {
                                                             <li>
-                                                                @if (answer.correct) {
+                                                                @if (shuffled.answer.correct) {
                                                                     <i class="bi bi-check-circle-fill text-success me-1"></i>
-                                                                    <span>{{ answer.text }}</span>
+                                                                    <span>{{ shuffled.answer.text }}</span>
                                                                     <span class="badge bg-success ms-2">Richtig</span>
                                                                 } @else {
                                                                     <i class="bi bi-x-circle-fill text-danger me-1"></i>
-                                                                    <span>{{ answer.text }}</span>
+                                                                    <span>{{ shuffled.answer.text }}</span>
                                                                     <span class="badge bg-danger ms-2">Falsch gewählt</span>
                                                                 }
                                                             </li>

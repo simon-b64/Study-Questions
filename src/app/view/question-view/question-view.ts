@@ -27,11 +27,17 @@ const PRIORITY_RANGES = {
     FALLBACK: 40
 } as const;
 
+interface ShuffledAnswer {
+    answer: Answer;
+    originalIndex: number;
+}
+
 interface QuestionWithContext {
     question: Question;
     groupName: string;
     groupIndex: number;
     progress: QuestionProgress;
+    shuffledAnswers: ShuffledAnswer[];
 }
 
 interface SessionStats {
@@ -106,18 +112,13 @@ export class QuestionView implements OnInit {
         const current = this.currentQuestion();
         if (selected.length === 0 || !current) return false;
 
-        // Get all correct answer indices
-        const correctIndices = current.question.answers
-            .map((answer, index) => answer.correct ? index : -1)
-            .filter(index => index !== -1);
+        // Map shuffled display indices to original answer objects
+        const selectedAnswers = selected.map(i => current.shuffledAnswers[i].answer);
+        const correctAnswers = current.question.answers.filter(a => a.correct);
 
-        // Check if selected answers match correct answers exactly
-        if (selected.length !== correctIndices.length) return false;
+        if (selectedAnswers.length !== correctAnswers.length) return false;
 
-        const sortedSelected = [...selected].sort((a, b) => a - b);
-        const sortedCorrect = [...correctIndices].sort((a, b) => a - b);
-
-        return sortedSelected.every((val, idx) => val === sortedCorrect[idx]);
+        return selectedAnswers.every(a => a.correct);
     });
 
     protected readonly sessionAccuracy = computed(() => {
@@ -185,13 +186,38 @@ export class QuestionView implements OnInit {
                         question,
                         groupName: group.name,
                         groupIndex,
-                        progress: questionProgress
+                        progress: questionProgress,
+                        shuffledAnswers: this.shuffleAnswers(question.answers),
                     });
                 }
             });
         });
 
         return allQuestions;
+    }
+
+    private shuffleAnswers(answers: Answer[]): ShuffledAnswer[] {
+        const isJaNein = answers.length === 2 &&
+            answers.some(a => a.text.toLowerCase() === 'ja') &&
+            answers.some(a => a.text.toLowerCase() === 'nein');
+
+        if (isJaNein) {
+            // Always: Ja first, Nein second
+            const jaIndex = answers.findIndex(a => a.text.toLowerCase() === 'ja');
+            const neinIndex = answers.findIndex(a => a.text.toLowerCase() === 'nein');
+            return [
+                { answer: answers[jaIndex], originalIndex: jaIndex },
+                { answer: answers[neinIndex], originalIndex: neinIndex },
+            ];
+        }
+
+        // Fisher-Yates shuffle
+        const indexed: ShuffledAnswer[] = answers.map((answer, originalIndex) => ({ answer, originalIndex }));
+        for (let i = indexed.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [indexed[i], indexed[j]] = [indexed[j], indexed[i]];
+        }
+        return indexed;
     }
 
     private findQuestionProgress(groupProgress: QuestionGroupProgress, questionId: string): QuestionProgress | null {
@@ -277,9 +303,9 @@ export class QuestionView implements OnInit {
         const current = this.currentQuestion();
         if (!current) return [];
         const selected = this.selectedAnswers();
-        return current.question.answers.filter((answer, index) =>
-            answer.correct && !selected.includes(index)
-        );
+        return current.shuffledAnswers
+            .filter((sa, index) => sa.answer.correct && !selected.includes(index))
+            .map(sa => sa.answer);
     });
 
     protected submitAnswer(): void {
