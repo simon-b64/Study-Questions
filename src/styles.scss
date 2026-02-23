@@ -2,3 +2,11 @@
 
 /* Importing Bootstrap SCSS file. */
 @forward 'bootstrap/scss/bootstrap';
+
+/* Global mobile font scaling */
+@media (max-width: 575.98px) {
+    html {
+        font-size: 14px;
+    }
+}
+
