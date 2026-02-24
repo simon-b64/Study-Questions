@@ -24913,7 +24913,7 @@
                     "reason": "Seit einem EuGH-Urteil und entsprechenden ePrivacy-Richtlinien ist für Cookies, die nicht technisch zwingend für den Betrieb der Seite erforderlich sind (wie Tracking, Analytics), immer eine vorherige aktive Einwilligung (Opt-In) nötig."
                 },
                 {
-                    "id": "q-1a2b3c4d5e6f",
+                    "id": "q-1acb6048d3ab",
                     "question": "Was ist der Kernanspruch an digitale Barrierefreiheit bei Websites und Apps?",
                     "hint": "Es geht um Inklusion ohne externe Hindernisse.",
                     "answers": [
@@ -25177,7 +25177,7 @@
                     "reason": "Zwar gibt es Ausnahmen für bestimmte Inhalte im Bildungsbereich, wesentliche administrative Online-Funktionen (wie z.B. die Schulanmeldung) müssen jedoch zwingend für alle Eltern barrierefrei zugänglich sein."
                 },
                 {
-                    "id": "q-7c8d9e0f1a2b",
+                    "id": "q-c4e860e59bb4",
                     "question": "Ab wann gilt das Barrierefreiheitsgesetz (BaFG) für die Privatwirtschaft verpflichtend?",
                     "hint": "Das Gesetz tritt Mitte eines Jahres in Kraft, das in der nahen Zukunft liegt.",
                     "answers": [
@@ -25297,7 +25297,7 @@
                     "reason": "Screenreader-Nutzer navigieren oft über die Überschriftenstruktur. Wenn Ebenen übersprungen werden (z.B. von H2 auf H4), entsteht Verwirrung über die Struktur des Inhalts."
                 },
                 {
-                    "id": "q-7d8e9f0a1b2c",
+                    "id": "q-0a40c444b86e",
                     "question": "Was benötigen informative Bilder im HTML-Code zwingend?",
                     "hint": "Es ist ein Attribut, das Screenreadern den Inhalt des Bildes erklärt.",
                     "answers": [
@@ -25345,7 +25345,7 @@
                     "reason": "Formularfelder (`<input>`) müssen zwingend mit einem `<label>` verknüpft sein (z.B. über die `id`), damit Assistenztechnologien ansagen können, was der Nutzer in das Feld eintragen soll."
                 },
                 {
-                    "id": "q-9f0a1b2c3d4e",
+                    "id": "q-dc31cce6e329",
                     "question": "Bis zu wie viel Prozent muss eine Website zoombar sein, ohne dass Inhalt oder Funktion verloren gehen?",
                     "hint": "Es ist die doppelte Standardgröße.",
                     "answers": [
@@ -25369,7 +25369,7 @@
                     "reason": "Nach den WCAG-Richtlinien (1.4.4 Textgröße ändern) muss Text bis auf 200 % vergrößert werden können, ohne dass Assistenztechnologie bemüht wird und ohne dass Inhalt oder Funktionalität verloren gehen."
                 },
                 {
-                    "id": "q-5a6b7c8d9e0f",
+                    "id": "q-095a4b0117f2",
                     "question": "Tastaturnutzung: Was darf man beim Designen von Fokus-Zuständen (Focus States) im CSS niemals tun?",
                     "hint": "Die visuelle Hilfe für Tastaturnutzer darf nicht einfach gelöscht werden, nur weil es 'schöner' aussieht.",
                     "answers": [
@@ -25417,7 +25417,7 @@
                     "reason": "Das Immaterialgüterrecht (Geistiges Eigentum) fächert sich klassisch in diese fünf Bereiche auf, die jeweils unterschiedliche Schöpfungen abdecken (z.B. Patente für Technik, Marken für Kennzeichen)."
                 },
                 {
-                    "id": "q-1a2b3c4d5e6f",
+                    "id": "q-a7971dd4ed1f",
                     "question": "Was ist der historische Unterschied zwischen dem Anglo-Amerikanischen und dem Französischen/Kontinentalen Urheberrechts-Konzept?",
                     "hint": "Das eine System schützt eher die wirtschaftliche Investition (\"Copyright\"), das andere die persönliche Bindung des Künstlers an sein Werk.",
                     "answers": [
@@ -25969,7 +25969,7 @@
                     "reason": "Das Patentrecht unterscheidet danach, was genau geschützt wird: Entweder ein konkretes Erzeugnis (Sachpatent) oder die Art und Weise, wie man etwas herstellt oder anwendet (Verfahrenspatent)."
                 },
                 {
-                    "id": "q-1a2b3c4d5e6f",
+                    "id": "q-651031c3a3d5",
                     "question": "Unter welcher Bedingung ist Software in Österreich/Europa patentierbar?",
                     "hint": "Die Software muss über das bloße Rechnen hinaus in die physische Welt eingreifen.",
                     "answers": [
@@ -26401,7 +26401,7 @@
                     "reason": "Konventionelle Normen (wie Sitten, Anstand, Höflichkeit) sind nicht staatlich erzwingbar. Ein Verstoß wird 'nur' durch gesellschaftliche Reaktionen (z.B. Missbilligung, Ächtung) bestraft."
                 },
                 {
-                    "id": "q-3a4b5c6d7e8f",
+                    "id": "q-5d267d4d2ee3",
                     "question": "Was sind Rechtsnormen und wie unterscheiden sie sich von konventionellen Normen?",
                     "hint": "Der entscheidende Unterschied liegt in der Autorität, die dahintersteht, und den harten Mitteln zur Durchsetzung.",
                     "answers": [
@@ -26425,7 +26425,7 @@
                     "reason": "Rechtsnormen zeichnen sich dadurch aus, dass sie vom Staat erlassen und notfalls mit staatlicher Gewalt (Zwang, Strafe) monopolisiert durchgesetzt werden."
                 },
                 {
-                    "id": "q-7c8d9e0f1a2b",
+                    "id": "q-0823cf629555",
                     "question": "Aus welchen zwei Teilen besteht eine vollständige Zwangsnorm (Verhaltensrecht)?",
                     "hint": "Eine Regel bringt nichts, wenn nicht klar ist, was passiert, wenn man sie bricht.",
                     "answers": [
@@ -26473,7 +26473,7 @@
                     "reason": "Zwangsnormvollzugsnormen sind organisatorische und verfahrensrechtliche Bestimmungen (z.B. die Strafprozessordnung oder das AVG), die festlegen, welche Instanz (Gericht/Behörde) wie vorzugehen hat, um das materielle Recht durchzusetzen."
                 },
                 {
-                    "id": "q-5a6b7c8d9e0f",
+                    "id": "q-1e20b74c3811",
                     "question": "Was sind Erzeugungsnormen?",
                     "hint": "Sie bilden die Basis dafür, wie neue Gesetze überhaupt erst in die Welt kommen.",
                     "answers": [
@@ -26497,7 +26497,7 @@
                     "reason": "Erzeugungsnormen ermächtigen staatliche Organe (z.B. das Parlament) zur Setzung von Rechtsnormen und definieren das Verfahren dazu (z.B. den Gesetzgebungsprozess, Quoren)."
                 },
                 {
-                    "id": "q-2c3b4a5d6e7f",
+                    "id": "q-d629a8476db2",
                     "question": "Welche drei Probleme entstehen im Naturzustand (ohne Normen) und müssen durch das Recht gelöst werden?",
                     "hint": "Denke daran, wie knappe Güter aufgeteilt werden, wie man zusammenarbeitet und wie man Chaos (z.B. im Verkehr) vermeidet.",
                     "answers": [
@@ -26617,7 +26617,7 @@
                     "reason": "Im Gegensatz zum sehr strengen Pareto-Kriterium erlaubt Kaldor-Hicks (Kosten-Nutzen-Analyse) auch Maßnahmen, bei denen jemand schlechter gestellt wird, vorausgesetzt der kollektive Gesamtnutzen (Wohlfahrt) steigt unterm Strich."
                 },
                 {
-                    "id": "q-3c4d5e6f7a8b",
+                    "id": "q-9be10da65c56",
                     "question": "Was besagt das Coase-Theorem in der ökonomischen Analyse des Rechts?",
                     "hint": "Es geht um die freie Verhandlung zwischen Parteien (z.B. Umweltverschmutzer und Anrainer) und die Kosten dieser Verhandlungen.",
                     "answers": [
@@ -26641,7 +26641,7 @@
                     "reason": "Ronald Coase zeigte, dass bei fehlenden Transaktionskosten die Marktteilnehmer externe Effekte selbst weghandeln können. Da es in der Realität aber Transaktionskosten gibt, muss der Gesetzgeber Rechte von vornherein effizient zuweisen."
                 },
                 {
-                    "id": "q-9a0b1c2d3e4f",
+                    "id": "q-814c808b0396",
                     "question": "Was versteht man unter der 'Tragedy of the Commons' (Tragödie der Allmende)?",
                     "hint": "Was allen gehört, darauf passt oft niemand auf.",
                     "answers": [
@@ -26665,7 +26665,7 @@
                     "reason": "Wenn ein Gut (wie Meeres-Fischgründe, saubere Luft oder öffentliche Weiden) keinen klar definierten Eigentümer hat, tendieren rationale Akteure dazu, es auszubeuten, bis es zerstört ist. Rechtliche Lösungen sind Eigentumsrechte oder Quoten."
                 },
                 {
-                    "id": "q-5e6f7a8b9c0d",
+                    "id": "q-056fa8f3e269",
                     "question": "Was ist das Hauptproblem der utilitaristischen Sichtweise ('Das größte Glück der größten Zahl') auf das Gemeinwohl?",
                     "hint": "Wenn 99 Leute glücklich sind, weil sie eine einzelne Person ausbeuten, ist der Gesamtnutzen hoch, aber es ist trotzdem massiv ungerecht.",
                     "answers": [
@@ -26689,7 +26689,7 @@
                     "reason": "Der Utilitarismus zielt rein auf die Summe des Nutzens ab. Ohne starke Grundrechte könnte diese Logik rechtfertigen, Individuen oder Minderheiten massiv zu benachteiligen oder gar zu opfern, wenn es nur der breiten Masse nützt."
                 },
                 {
-                    "id": "q-1b2c3d4e5f6a",
+                    "id": "q-308225549270",
                     "question": "Worin liegt der Unterschied zwischen formeller und materieller Gerechtigkeit?",
                     "hint": "Das eine verlangt nur, dass Regeln konsequent angewandt werden, das andere fragt kritisch nach dem Inhalt der Regeln.",
                     "answers": [
@@ -26713,7 +26713,7 @@
                     "reason": "'Gleiches gleich behandeln' (formell) ist leer, wenn man nicht weiß, worin die Gleichheit überhaupt besteht. Die materielle Gerechtigkeit (z.B. Bedürfnis, Leistung, Alter) definiert erst die Maßstäbe dafür."
                 },
                 {
-                    "id": "q-7d8e9f0a1b2c",
+                    "id": "q-1667a342b1cf",
                     "question": "Welche vier klassischen Arten der Gerechtigkeit (nach Aristoteles und in der Moderne) werden unterschieden?",
                     "hint": "Denke an das Verteilen von Gütern, das Tauschen von Waren, die Legitimation von Politik und den Schadensausgleich.",
                     "answers": [
@@ -26737,7 +26737,7 @@
                     "reason": "Dies ist die klassische Kategorisierung in der Rechtstheorie: Zuteilung von Gütern (iustitia distributiva), Äquivalenz beim Tausch (iustitia commutativa), legitime Herrschaft (politisch) und Ausgleich von Unrecht (iustitia correctiva)."
                 },
                 {
-                    "id": "q-3e4f5a6b7c8d",
+                    "id": "q-80e25d1d37cd",
                     "question": "Welche Aspekte umfasst die 'Soziale Gerechtigkeit' in modernen Verfassungsstaaten typischerweise?",
                     "hint": "Es geht um ein breites Spektrum, das von der Freiheit über Mitbestimmung bis zur materiellen Sicherheit reicht.",
                     "answers": [
@@ -26761,7 +26761,7 @@
                     "reason": "Moderne soziale Gerechtigkeit ist ein mehrdimensionales Konzept. Sie erschöpft sich nicht in rein materieller Umverteilung, sondern inkludiert Freiheitsrechte, Rechtsgleichheit und fundamentale Partizipationsmöglichkeiten."
                 },
                 {
-                    "id": "q-9f0a1b2c3d4e",
+                    "id": "q-81ac2c7877dd",
                     "question": "Was zeichnet zielorientierte (teleologische) Argumente in der Rechtspolitik aus?",
                     "hint": "Das griechische Wort 'Telos' bedeutet Zweck oder Ziel. Man schaut also in die Zukunft auf das Ergebnis.",
                     "answers": [
@@ -26785,7 +26785,7 @@
                     "reason": "Teleologische Argumente rechtfertigen eine Norm dadurch, dass sie ein nützliches oder gewünschtes politisches/soziales Ziel fördert (z.B. ein neues Gesetz wird erlassen, weil das Ziel 'Wirtschaftswachstum' erreicht werden soll)."
                 },
                 {
-                    "id": "q-5a6b7c8d9e0f",
+                    "id": "q-0f002701b809",
                     "question": "Was zeichnet prinzipienorientierte (deontologische) Argumente in der Rechtspolitik aus?",
                     "hint": "Manche Dinge tut man nicht, egal wie nützlich sie kurzfristig sein mögen.",
                     "answers": [
@@ -26809,7 +26809,7 @@
                     "reason": "Deontologische Ethik (Pflichtenethik) argumentiert mit festen Prinzipien wie Menschenwürde oder Freiheit. Eine Maßnahme (wie z.B. Folter zur Informationsgewinnung) ist demnach falsch, selbst wenn sie in einem speziellen Fall 'nützlich' wäre."
                 },
                 {
-                    "id": "q-1c2d3e4f5a6b",
+                    "id": "q-988fc708d095",
                     "question": "Welche Funktion haben Prinzipien (z.B. Menschenrechte), wenn sie in Konflikt mit politischen Zielen (z.B. Sicherheit, Wohlstand) geraten?",
                     "hint": "Sie wirken wie eine unüberwindbare rote Linie für den Staat.",
                     "answers": [
@@ -26833,7 +26833,7 @@
                     "reason": "Prinzipien wie Grundrechte dienen als 'Trumpfkarten' (wie es der Rechtsphilosoph Ronald Dworkin nannte) gegen kollektive Ziele. Sie schützen das Individuum davor, für das Allgemeinwohl (das Ziel) instrumentalisiert oder geopfert zu werden."
                 },
                 {
-                    "id": "q-1a2b3c4d5e6f",
+                    "id": "q-b9874bd5bba4",
                     "question": "Nenne die drei Elemente des Staates nach der Drei-Elemente-Lehre (Georg Jellinek).",
                     "hint": "Es braucht ein Territorium, Menschen darauf und eine funktionierende Herrschaftsmacht.",
                     "answers": [
@@ -26857,7 +26857,7 @@
                     "reason": "Der Staatsrechtler Georg Jellinek definierte den Staat völkerrechtlich durch das Zusammentreffen dieser drei wesentlichen Merkmale. Fehlt eines, spricht man nicht von einem Staat."
                 },
                 {
-                    "id": "q-7b8c9d0e1f2a",
+                    "id": "q-9044da7e251e",
                     "question": "Wie definiert Max Weber den Staat (soziologischer Staatsbegriff)?",
                     "hint": "Er fokussiert sich auf das alleinige Recht zur Gewaltausübung durch den Staat.",
                     "answers": [
@@ -26881,7 +26881,7 @@
                     "reason": "Max Webers Definition ist soziologisch geprägt. Für ihn ist das staatliche Gewaltmonopol das entscheidende Merkmal: Nur der Staat (z.B. durch Polizei) darf physischen Zwang legitim ausüben."
                 },
                 {
-                    "id": "q-3f4a5b6c7d8e",
+                    "id": "q-404abf463e16",
                     "question": "Was besagt der rechtspositivistische Staatsbegriff (Hans Kelsen) über das Verhältnis von Staat und Recht?",
                     "hint": "Kelsens 'Reine Rechtslehre' trennt Soziologie und Recht strikt. Für ihn ist der Staat keine 'Gruppe von Menschen'.",
                     "answers": [
@@ -26905,7 +26905,7 @@
                     "reason": "Für Hans Kelsen existiert der Staat nicht als soziologisches Machtgebilde, sondern lediglich als rechtliche Konstruktion (Personifikation der Rechtsordnung). Der Staat ist das Recht."
                 },
                 {
-                    "id": "q-9e0f1a2b3c4d",
+                    "id": "q-6ec8501af2a9",
                     "question": "Was versteht man unter dem Begriff \"Kompetenz-Kompetenz\" im Kontext der Staatsgewalt?",
                     "hint": "Wer darf bestimmen, wer welche Regeln aufstellen darf?",
                     "answers": [
@@ -26929,7 +26929,7 @@
                     "reason": "Ein souveräner Staat ist niemandem untergeordnet. Er kann seine Aufgaben und Zuständigkeiten (Kompetenzen) aus eigener Machtvollkommenheit selbst regeln und verteilen (z.B. an Bundesländer)."
                 },
                 {
-                    "id": "q-5d6e7f8a9b0c",
+                    "id": "q-ee5a06ce2e26",
                     "question": "Was bedeutet innere Souveränität?",
                     "hint": "Es beschreibt die Machtverteilung nach innen, nicht das Verhältnis zu anderen Ländern.",
                     "answers": [
@@ -26953,7 +26953,7 @@
                     "reason": "Innere Souveränität bedeutet, dass es auf dem Staatsgebiet keine höhere Macht als den Staat selbst gibt, der verbindliche Regeln setzen und diese auch erzwingen kann."
                 },
                 {
-                    "id": "q-1c2a3b4d5e6f",
+                    "id": "q-badb6a18aabf",
                     "question": "Warum gilt das Fürstentum Sealand (eine ehemalige Flak-Plattform) völkerrechtlich nicht als Staat?",
                     "hint": "Die Drei-Elemente-Lehre ist hier nicht vollständig erfüllt.",
                     "answers": [
@@ -26977,7 +26977,7 @@
                     "reason": "Eine künstliche Bohrinsel/Plattform im Meer gilt völkerrechtlich nicht als natürliches 'Staatsgebiet'. Zudem fehlt es an der notwendigen diplomatischen Anerkennung durch die bestehende Staatengemeinschaft."
                 },
                 {
-                    "id": "q-7f8a9b0c1d2e",
+                    "id": "q-bf6080288145",
                     "question": "Nenne die drei Gewalten der horizontalen Gewaltenteilung.",
                     "hint": "Wer macht die Gesetze, wer führt sie aus und wer spricht Recht?",
                     "answers": [
@@ -27001,7 +27001,7 @@
                     "reason": "Dies ist das klassische staatstheoretische Modell (nach Montesquieu) zur Verhinderung von Machtmissbrauch, indem die staatliche Macht auf drei voneinander unabhängige Säulen verteilt wird."
                 },
                 {
-                    "id": "q-3c4d5e6f7a8b",
+                    "id": "q-315a26ee013c",
                     "question": "Was ist der rechtliche Unterschied zwischen einem Staatenbund und einem Bundesstaat?",
                     "hint": "Wo liegt die letztgültige, oberste Souveränität? Bei den einzelnen Mitgliedern oder bei der übergeordneten Einheit?",
                     "answers": [
@@ -27025,7 +27025,7 @@
                     "reason": "Im Staatenbund (wie z.B. historisch der Deutsche Bund) behalten die Mitgliedsstaaten ihre volle Souveränität. Im Bundesstaat (wie Österreich oder Deutschland) entsteht ein neuer Gesamtstaat, der die primäre Souveränität besitzt."
                 },
                 {
-                    "id": "q-9b0c1d2e3f4a",
+                    "id": "q-53c27a0529d6",
                     "question": "Was unterscheidet einen Einheitsstaat von einem Bundesstaat?",
                     "hint": "Gibt es mächtige Bundesländer mit eigenen Parlamenten und eigener Gesetzgebung?",
                     "answers": [
@@ -27049,7 +27049,7 @@
                     "reason": "In einem zentralistischen Einheitsstaat (wie Frankreich) gibt es keine Gliedstaaten (Bundesländer) mit eigener Verfassungsautonomie oder Gesetzgebungskompetenz, sondern nur weisungsgebundene Verwaltungssprengel (Präfekturen)."
                 },
                 {
-                    "id": "q-5e6f7a8b9c0d",
+                    "id": "q-eb3abe28cd37",
                     "question": "Was ist der primäre Zweck eines Ordnungsstaates (Rechtszweck)?",
                     "hint": "Warum geben Menschen laut Thomas Hobbes ihre absolute Freiheit auf und unterwerfen sich einem Herrscher?",
                     "answers": [
@@ -27073,7 +27073,7 @@
                     "reason": "Die grundlegendste und historisch älteste Funktion des Staates ist die Herstellung inneren Friedens durch das Gewaltmonopol. Er soll das Chaos (den Krieg 'jeder gegen jeden') beenden und für körperliche Sicherheit sorgen."
                 },
                 {
-                    "id": "q-1f2a3b4c5d6e",
+                    "id": "q-5fd83fd9e814",
                     "question": "Worin liegt der Unterschied zwischen Staatsform und Regierungssystem?",
                     "hint": "Wer steht formal an der Spitze vs. Wie wird die Macht im politischen Alltag tatsächlich ausgeübt?",
                     "answers": [
@@ -27097,7 +27097,7 @@
                     "reason": "Diese Unterscheidung ist essenziell: Eine Republik (Staatsform) kann demokratisch oder autokratisch sein. Umgekehrt kann eine Monarchie (Staatsform) durchaus ein parlamentarisch-demokratisches Regierungssystem haben (z.B. Großbritannien, Schweden)."
                 },
                 {
-                    "id": "q-7c8d9e0f1a2b",
+                    "id": "q-eb7e2587c591",
                     "question": "Was kennzeichnet ein parlamentarisches Regierungssystem?",
                     "hint": "Wie stark hängt das Überleben der Regierung vom Wohlwollen des Parlaments ab?",
                     "answers": [
@@ -27121,7 +27121,7 @@
                     "reason": "Im parlamentarischen System (wie z.B. in Deutschland) sind Regierung und Parlamentsmehrheit eng miteinander verschränkt. Das Parlament kann die Regierung jederzeit durch ein Misstrauensvotum stürzen."
                 },
                 {
-                    "id": "q-3d4e5f6a7b8c",
+                    "id": "q-a6f46be54fbe",
                     "question": "Was kennzeichnet ein präsidentielles Regierungssystem?",
                     "hint": "Denke an die USA und die strikte personelle und machtpolitische Trennung zwischen Weißem Haus und Kongress.",
                     "answers": [
@@ -27145,7 +27145,7 @@
                     "reason": "Im präsidentiellen System (z.B. USA) wird der Präsident unabhängig vom Parlament gewählt. Das Parlament kann die Regierung (den Präsidenten) nicht einfach aus politischen Gründen (Misstrauensvotum) absetzen."
                 },
                 {
-                    "id": "q-9a0b1c2d3e4f",
+                    "id": "q-c3e844d10ece",
                     "question": "Was ist der Unterschied zwischen Konkurrenzdemokratie und Konkordanzdemokratie?",
                     "hint": "'Gewinner nimmt alles' (Mehrheit) vs. Zusammenarbeit und Kompromisse suchen.",
                     "answers": [
@@ -27169,7 +27169,7 @@
                     "reason": "Während im Konkurrenzmodell (oft im angloamerikanischen Raum) die knappe Mehrheit uneingeschränkt regiert, versucht die Konkordanzdemokratie (typisch für die Schweiz oder historisch für Österreich durch große Koalitionen) Minderheiten und verschiedene gesellschaftliche Gruppen in die Entscheidungen einzubinden."
                 },
                 {
-                    "id": "q-5f6a7b8c9d0e",
+                    "id": "q-4dc0f93e6dbe",
                     "question": "Nenne die 5 Charakteristika der österreichischen Staatsorganisation (Bauprinzipien + Regierungssystem).",
                     "hint": "Wie ist Österreich rechtlich und politisch in der Bundesverfassung grundgelegt?",
                     "answers": [
@@ -27217,7 +27217,7 @@
                     "reason": "Der 'Pouvoir constituant' ist die ur-schöpferische, verfassungsgebende Gewalt (meist das Volk), die an keine bisherigen Regeln gebunden ist und das Fundament für einen neuen Staat legt."
                 },
                 {
-                    "id": "q-1d2e3f4a5b6c",
+                    "id": "q-8cb44152af73",
                     "question": "Was versteht man unter dem Pouvoir constitué?",
                     "hint": "Das Gegenteil vom 'Pouvoir constituant'. Diese Macht existiert bereits in einem funktionierenden System.",
                     "answers": [
@@ -27241,7 +27241,7 @@
                     "reason": "Der 'Pouvoir constitué' ist die bereits verfasste Gewalt. Parlamente, Gerichte und Behörden sind Geschöpfe der Verfassung und dürfen sich nur innerhalb des ihnen gesetzlich zugewiesenen Rahmens bewegen."
                 },
                 {
-                    "id": "q-9f8e7d6c5b4a",
+                    "id": "q-fd03d79215b1",
                     "question": "Was ist die Grundnorm nach Hans Kelsen (Reine Rechtslehre)?",
                     "hint": "Kelsen brauchte einen logischen Trick, um das Rechtssystem in sich abzuschließen, ohne auf Moral oder Religion zurückzugreifen.",
                     "answers": [
@@ -27265,7 +27265,7 @@
                     "reason": "Da man laut Kelsen aus einer bloßen Tatsache ('Sein') keine Pflicht ('Sollen') ableiten kann, muss man sich an der Spitze des Stufenbaus eine Grundnorm 'denken', die besagt: 'Man soll sich an die historische Erstverfassung halten'."
                 },
                 {
-                    "id": "q-3b4c5d6e7f8a",
+                    "id": "q-66334875aba7",
                     "question": "Was versteht man unter einer Delegationsnorm (im Kontext des Stufenbaus)?",
                     "hint": "Es geht um die Weitergabe von Befugnissen (Ermächtigung).",
                     "answers": [
@@ -27289,7 +27289,7 @@
                     "reason": "Der Stufenbau der Rechtsordnung funktioniert durch Delegationszusammenhänge. Eine höhere Norm (z.B. ein Gesetz) ermächtigt (delegiert) ein Organ dazu, eine niedrigere Norm (z.B. eine Verordnung) zu erlassen."
                 },
                 {
-                    "id": "q-7c8d9e0f1a2b",
+                    "id": "q-31c07885caf7",
                     "question": "Welche Mehrheit/Quorum ist im Nationalrat für ein einfaches Bundesgesetz notwendig?",
                     "hint": "Es ist die geringste Hürde im Parlament.",
                     "answers": [
@@ -27313,7 +27313,7 @@
                     "reason": "Für gewöhnliche Gesetze reicht es nach Art 31 B-VG aus, wenn ein Drittel der Abgeordneten im Saal ist und die absolute Mehrheit der anwesenden Personen (mehr als die Hälfte) dafür stimmt."
                 },
                 {
-                    "id": "q-2a3b4c5d6e7f",
+                    "id": "q-059bf9d37d6a",
                     "question": "Welche Mehrheit/Quorum ist im Nationalrat für ein Verfassungsgesetz notwendig?",
                     "hint": "Verfassungsrecht ist viel schwieriger zu ändern als einfaches Recht.",
                     "answers": [
@@ -27337,7 +27337,7 @@
                     "reason": "Um den Text der Verfassung abzuändern, fordert Art 44 B-VG erhöhte Quoren (mindestens die Hälfte anwesend, Zweidrittelmehrheit) sowie den ausdrücklichen Hinweis, dass es sich um eine Verfassungsbestimmung handelt."
                 },
                 {
-                    "id": "q-9f0e1d2c3b4a",
+                    "id": "q-281ef0aaba78",
                     "question": "Wann ist zwingend eine Volksabstimmung durchzuführen?",
                     "hint": "Sie ist nicht bei jedem kleinen Gesetz nötig, sondern nur bei drastischen Eingriffen in die Grundfesten des Staates.",
                     "answers": [
@@ -27361,7 +27361,7 @@
                     "reason": "Eine obligatorische (zwingende) Volksabstimmung schreibt Art 44 Abs 3 B-VG nur bei einer Gesamtänderung der Bundesverfassung vor (z.B. beim EU-Beitritt 1995, der das demokratische und rechtsstaatliche Bauprinzip stark veränderte)."
                 },
                 {
-                    "id": "q-5d6e7f8a9b0c",
+                    "id": "q-e85eaf3add8b",
                     "question": "Definiere den Begriff Subsumtion.",
                     "hint": "Es ist der logische Denkprozess eines Juristen, um Gesetz und Realität abzugleichen.",
                     "answers": [
@@ -27385,7 +27385,7 @@
                     "reason": "Die Subsumtion ist das klassische juristische Handwerkszeug: Man nimmt den Sachverhalt (Was ist passiert?) und ordnet ihn unter den gesetzlichen Tatbestand (Was steht im Gesetz?) ein. Passt beides zusammen, tritt die Rechtsfolge ein."
                 },
                 {
-                    "id": "q-1c2a3b4d5e6f",
+                    "id": "q-2d3be9336b08",
                     "question": "Was besagt das Verbot des \"non liquet\" für Richter?",
                     "hint": "\"Non liquet\" ist lateinisch und bedeutet so viel wie \"es ist nicht klar\".",
                     "answers": [
@@ -27409,7 +27409,7 @@
                     "reason": "Rechtsverweigerung ist verboten. Ein Zivilrichter kann eine Klage nicht mit der Begründung abweisen, dass das Gesetz in diesem Punkt schlecht geschrieben sei. Er muss durch Auslegungsmethoden zu einer Lösung kommen."
                 },
                 {
-                    "id": "q-7e8f9a0b1c2d",
+                    "id": "q-f9ba654fd10f",
                     "question": "Nenne die vier klassischen Methoden der Rechtsauslegung.",
                     "hint": "Man kann nach dem Wortlaut, dem Aufbau, der Geschichte oder dem Zweck eines Gesetzes fragen.",
                     "answers": [
@@ -27433,7 +27433,7 @@
                     "reason": "Diese vier Methoden (Canones der Auslegung nach Savigny) sind das Standard-Set, um den Sinn eines Gesetzes zu ermitteln, wenn dieser nicht auf den ersten Blick klar ist."
                 },
                 {
-                    "id": "q-3f4a5b6c7d8e",
+                    "id": "q-980c4e82c429",
                     "question": "Was ist die Wortlautschranke?",
                     "hint": "Es ist die Grenze zwischen bloßem Interpretieren und dem Erfinden von neuen Gesetzen.",
                     "answers": [
@@ -27457,7 +27457,7 @@
                     "reason": "Solange man sich innerhalb des (äußersten) Sinns der verwendeten Wörter bewegt, legt man aus. Überschreitet man diese Schranke, weil das Gesetz eine planwidrige Lücke hat, wendet man Analogie an (was strengeren Regeln unterliegt)."
                 },
                 {
-                    "id": "q-9b0c1d2e3f4a",
+                    "id": "q-7abf6457d5da",
                     "question": "Erkläre den Grundsatz Lex posterior derogat legi anteriori.",
                     "hint": "Das Wort 'posterior' bedeutet später/jünger.",
                     "answers": [
@@ -27481,7 +27481,7 @@
                     "reason": "Dies ist eine klassische Derogationsregel (Außerkraftsetzung). Wenn der Gesetzgeber eine neue Regelung auf derselben Stufe erlässt, die der alten widerspricht, geht das neuere Recht vor."
                 },
                 {
-                    "id": "q-5e6f7a8b9c0d",
+                    "id": "q-b737da9c3715",
                     "question": "Erkläre den Grundsatz Lex specialis derogat legi generali.",
                     "hint": "Das Wort 'specialis' weist auf eine spezifische Ausnahme hin.",
                     "answers": [
@@ -27505,7 +27505,7 @@
                     "reason": "Wenn es eine allgemeine Regel gibt, aber für eine ganz bestimmte Sonder-Situation eine eigene, spezifischere Regel erlassen wurde, wird in diesem Sonderfall die spezielle Norm angewandt (Spezialitätsprinzip)."
                 },
                 {
-                    "id": "q-1a2b3c4d5e6f",
+                    "id": "q-31c74e282b21",
                     "question": "Worauf stützt sich die subjektiv-historische Interpretation?",
                     "hint": "Man versucht, in den Kopf der Leute zu schauen, die das Gesetz damals geschrieben haben.",
                     "answers": [
@@ -27529,7 +27529,7 @@
                     "reason": "Um ein unklares Gesetz zu verstehen, sucht man in den 'Gesetzesmaterialien' (den Entwürfen und Debatten vor der Beschlussfassung) danach, was sich die Politiker damals eigentlich dabei gedacht haben."
                 },
                 {
-                    "id": "q-7b8c9d0e1f2a",
+                    "id": "q-1f8062777340",
                     "question": "Was untersucht die teleologische Interpretation?",
                     "hint": "Das griechische Wort 'Telos' bedeutet Zweck/Ziel.",
                     "answers": [
@@ -27553,7 +27553,7 @@
                     "reason": "Die objektive Teleologie fragt nicht danach, was der historische Gesetzgeber dachte, sondern welchen vernünftigen Zweck die Norm nach heutigem Verständnis objektiv erfüllen soll."
                 },
                 {
-                    "id": "q-3f4a5b6c7d8e",
+                    "id": "q-32ccd60ad035",
                     "question": "Was besagt die Versteinerungstheorie (Interpretation durch den VfGH)?",
                     "hint": "Es geht um alte Begriffe in der Verfassung und wie die Zuständigkeit zwischen Bund und Ländern geklärt wird.",
                     "answers": [
@@ -27577,7 +27577,7 @@
                     "reason": "Die Bundesverfassung von 1920/1925 teilt die Kompetenzen zwischen Bund und Ländern durch Begriffe (wie 'Gewerbe' oder 'Wasserrecht') auf, ohne diese näher zu definieren. Der VfGH friert (versteinert) die Bedeutung dieser Begriffe auf den historischen Stand von 1925 ein, um klare Grenzen zu ziehen."
                 },
                 {
-                    "id": "q-9e0f1a2b3c4d",
+                    "id": "q-ed63b0a62c36",
                     "question": "Was besagt die Herzog-Mantel-Theorie?",
                     "hint": "Eine Verordnung ist nur der Mantel, das Gesetz ist der Herzog. Was passiert mit dem Mantel, wenn der Herzog stirbt?",
                     "answers": [
@@ -27601,7 +27601,7 @@
                     "reason": "Da jede Verordnung nach dem Legalitätsprinzip zwingend auf einem Gesetz beruhen muss, hängt sie völlig von dessen Existenz ab. Fällt das ermächtigende Gesetz weg, wird die Verordnung gesetzlos und somit verfassungswidrig."
                 },
                 {
-                    "id": "q-5d6e7f8a9b0c",
+                    "id": "q-52d920a0ba88",
                     "question": "Wann ist ein Lückenschluss (z.B. durch Analogie) erlaubt?",
                     "hint": "Man darf Gesetze nicht einfach nach Belieben erweitern. Es muss sich um ein offensichtliches Versehen des Parlaments handeln.",
                     "answers": [
@@ -27625,7 +27625,7 @@
                     "reason": "Eine Analogie wendet eine Regel auf einen ähnlichen, nicht geregelten Fall an. Das ist nur zulässig, wenn der Gesetzgeber diese Lücke unabsichtlich übersehen hat (planwidrige Unvollständigkeit). Hat er absichtlich geschwiegen, darf man ihm nichts in den Mund legen."
                 },
                 {
-                    "id": "q-1c2a3b4d5e6f",
+                    "id": "q-162841f5e7aa",
                     "question": "Was ist ein Größenschluss (argumentum a maiori ad minus)?",
                     "hint": "Die Logik besagt: Wer das Ganze trinken darf, darf auch einen Schluck trinken.",
                     "answers": [
@@ -27649,7 +27649,7 @@
                     "reason": "Der Größenschluss ist eine Form der logischen Argumentation. Erlaube ich den maximalen Eingriff, muss ein viel schwächerer Eingriff logischerweise ebenfalls abgedeckt und gestattet sein."
                 },
                 {
-                    "id": "q-7f8a9b0c1d2e",
+                    "id": "q-10e1fa5c432e",
                     "question": "Warum ist die Unterscheidung zwischen Öffentlichem Recht und Privatrecht wichtig?",
                     "hint": "Es bestimmt, bei welcher Tür du im Justizpalast anklopfen musst.",
                     "answers": [
@@ -27673,7 +27673,7 @@
                     "reason": "Die Zweiteilung der österreichischen Rechtsordnung ist massgeblich für den Rechtsschutzweg. Klagt mein Nachbar, gehe ich zum Bezirksgericht (Privatrecht). Entzieht mir die Polizei den Führerschein, muss ich zur BH bzw. dem Verwaltungsgericht (Öffentliches Recht)."
                 },
                 {
-                    "id": "q-3c4d5e6f7a8b",
+                    "id": "q-da195788fc51",
                     "question": "Was besagt die Subjektstheorie (zur Abgrenzung Öffentliches/Privates Recht)?",
                     "hint": "Es kommt darauf an, wie die beteiligten Personen zueinander stehen (auf Augenhöhe oder von oben herab).",
                     "answers": [
@@ -27697,7 +27697,7 @@
                     "reason": "Nach der in Österreich herrschenden Subjektstheorie (Interessentheorie und Subordinationstheorie kombiniert) ist ein Rechtsverhältnis dem öffentlichen Recht zuzuordnen, wenn der Staat hoheitlich (mit Imperium/Zwang) von oben nach unten agiert (z.B. Strafmandat)."
                 },
                 {
-                    "id": "q-9b0c1d2e3f4a",
+                    "id": "q-70be33fa424c",
                     "question": "Was ist zwingendes Recht (ius cogens) im Privatrecht?",
                     "hint": "Es sind Grenzen der Vertragsfreiheit, um Schwächere zu schützen.",
                     "answers": [
@@ -27721,7 +27721,7 @@
                     "reason": "Im Gegensatz zum 'dispositiven Recht', das nur greift, wenn die Parteien nichts anderes vereinbart haben, stellt das 'zwingende Recht' absolute rote Linien dar, die vertraglich nicht umgangen werden können (Schutzfunktion)."
                 },
                 {
-                    "id": "q-1a2b3c4d5e6f",
+                    "id": "q-6a6d75d148e9",
                     "question": "Wie werden Grundrechte im österreichischen Verfassungsrecht definiert?",
                     "hint": "Es handelt sich um Abwehrrechte, die auf der höchsten rechtlichen Ebene verankert sind.",
                     "answers": [
@@ -27745,7 +27745,7 @@
                     "reason": "Grundrechte sind durch den Verfassungsgesetzgeber eingeräumte subjektive Rechte. Der Einzelne kann sich direkt auf sie berufen (z.B. vor dem VfGH), um sich gegen staatliche Eingriffe zu wehren."
                 },
                 {
-                    "id": "q-7b8c9d0e1f2a",
+                    "id": "q-92824aa1abc0",
                     "question": "Nenne die drei wichtigsten Rechtsquellen für Grundrechte in Österreich (Rechtszersplitterung).",
                     "hint": "Es gibt kein einheitliches 'Grundrechtekatalog-Gesetz' in Österreich, sondern historisch gewachsene Einzelquellen.",
                     "answers": [
@@ -27769,7 +27769,7 @@
                     "reason": "Die österreichischen Grundrechte sind stark zersplittert. Das alte Staatsgrundgesetz (StGG) von 1867 gilt großteils noch heute, ergänzt durch in den Verfassungsrang gehobene völkerrechtliche Verträge wie die Europäische Menschenrechtskonvention (EMRK) und Bestimmungen im B-VG."
                 },
                 {
-                    "id": "q-3f4a5b6c7d8e",
+                    "id": "q-23be6ba04e1d",
                     "question": "Was ist der Unterschied zwischen Menschenrechten und Bürgerrechten?",
                     "hint": "Das eine gilt für absolut jeden, das andere knüpft an einen speziellen Pass an.",
                     "answers": [
@@ -27793,7 +27793,7 @@
                     "reason": "Menschenrechte (z.B. Recht auf Leben, Folterverbot) gelten universell für jeden Menschen auf österreichischem Boden. Bürgerrechte (z.B. Wahlrecht, Erwerbsfreiheit) sind hingegen an die Staatsbürgerschaft geknüpft."
                 },
                 {
-                    "id": "q-9e0f1a2b3c4d",
+                    "id": "q-48dec7463079",
                     "question": "Können sich juristische Personen (z.B. eine GmbH oder AG) auf Grundrechte berufen?",
                     "hint": "Eine GmbH kann nicht gefoltert werden, aber ihr kann das Bankkonto enteignet werden.",
                     "answers": [
@@ -27817,7 +27817,7 @@
                     "reason": "Juristische Personen sind Träger von Grundrechten, soweit dies logisch möglich ist. Sie genießen z.B. das Recht auf Unversehrtheit des Eigentums oder den Gleichheitssatz, können aber naturgegeben nicht das Recht auf Leben oder familiäre Privatsphäre beanspruchen."
                 },
                 {
-                    "id": "q-5d6e7f8a9b0c",
+                    "id": "q-453357003744",
                     "question": "In welche drei Kategorien werden Grundrechte inhaltlich eingeteilt?",
                     "hint": "Denke an Abwehr gegen den Staat, Mitbestimmung im Staat und Forderungen an den Staat.",
                     "answers": [
@@ -27841,7 +27841,7 @@
                     "reason": "Die Grundrechtsdogmatik unterscheidet zwischen Abwehrrechten ('Lass mich in Ruhe', status negativus), Rechten zur Mitgestaltung (Wahlen, status activus) und Rechten auf staatliche Leistung (status positivus)."
                 },
                 {
-                    "id": "q-1c2a3b4d5e6f",
+                    "id": "q-007531e3f71e",
                     "question": "Warum sind soziale Grundrechte (z.B. ein einklagbares Recht auf Arbeit oder eine Wohnung) in Österreich kaum in der Verfassung verankert?",
                     "hint": "Wenn der Verfassungsgerichtshof entscheiden müsste, wer eine Gratis-Wohnung bekommt, würde das das Budget sprengen.",
                     "answers": [
@@ -27865,7 +27865,7 @@
                     "reason": "Die Verfassung garantiert in Österreich primär Abwehrrechte. Soziale Rechte sind schwer justiziabel: Wenn jemand sein 'Recht auf eine Wohnung' einklagt, müsste ein Gericht den Staat zwingen, Geld auszugeben. Dies soll aber dem Parlament (Budgetrecht) vorbehalten bleiben."
                 },
                 {
-                    "id": "q-7f8a9b0c1d2e",
+                    "id": "q-1fa769490302",
                     "question": "Was versteht man unter der Fiskalgeltung der Grundrechte?",
                     "hint": "Gilt der Gleichheitssatz auch, wenn der Staat nicht als Behörde auftritt, sondern wie ein normales Unternehmen Bleistifte kauft?",
                     "answers": [
@@ -27889,7 +27889,7 @@
                     "reason": "Auch in der Privatwirtschaftsverwaltung (z.B. wenn der Staat Subventionen verteilt oder Verträge schließt) darf der Staat nicht willkürlich handeln. Er bleibt an Grundrechte (insbesondere den Gleichheitssatz) gebunden (Fiskalgeltung)."
                 },
                 {
-                    "id": "q-3c4d5e6f7a8b",
+                    "id": "q-f709348aac0c",
                     "question": "Was ist der Unterschied zwischen unmittelbarer und mittelbarer Drittwirkung von Grundrechten?",
                     "hint": "Strahlen die Grundrechte direkt auf private Verträge (z.B. Arbeitsverträge) durch?",
                     "answers": [
@@ -27913,7 +27913,7 @@
                     "reason": "Grundrechte richten sich primär gegen den Staat. In Österreich wird eine unmittelbare Drittwirkung (zwei Private klagen einander direkt auf Basis eines Grundrechts) abgelehnt. Aber Zivilgerichte müssen Grundrechte berücksichtigen, wenn sie unbestimmte Gesetzesbegriffe (z.B. 'Sittenwidrigkeit' in Verträgen) auslegen (mittelbare Drittwirkung)."
                 },
                 {
-                    "id": "q-9b0c1d2e3f4a",
+                    "id": "q-bf32f36297b4",
                     "question": "Was ist ein Gesetzesvorbehalt?",
                     "hint": "Die Verfassung gibt ein Recht, erlaubt aber im gleichen Satz, es durch 'einfache Gesetze' wieder etwas einzuschränken.",
                     "answers": [
@@ -27937,7 +27937,7 @@
                     "reason": "Die meisten Grundrechte gelten nicht absolut. Die Verfassung fügt einen 'Vorbehalt' an (z.B. 'Das Hausrecht ist unverletzlich... Einschränkungen dürfen nur durch Gesetz erfolgen'). So kann der Nationalrat (z.B. für Hausdurchsuchungen) per einfachem Gesetz eingreifen."
                 },
                 {
-                    "id": "q-5e6f7a8b9c0d",
+                    "id": "q-182a9905b17c",
                     "question": "Worin unterscheiden sich formeller und materieller Gesetzesvorbehalt?",
                     "hint": "Das eine sagt nur 'WIE' eingeschränkt werden darf, das andere gibt auch konkrete Gründe (das 'WARUM') vor.",
                     "answers": [
@@ -27961,7 +27961,7 @@
                     "reason": "Ein formeller Vorbehalt ('innerhalb der gesetzlichen Schranken') gibt dem Gesetzgeber viel Spielraum. Ein materieller Vorbehalt (oft in der EMRK) ist strenger: Das Gesetz darf nur erlassen werden, wenn es einem konkreten, legitimen Zweck dient (z.B. Gesundheitsschutz)."
                 },
                 {
-                    "id": "q-1f2a3b4c5d6e",
+                    "id": "q-247e8b5064ae",
                     "question": "Welche vier Schritte prüft der VfGH bei der Verhältnismäßigkeitsprüfung eines Grundrechtseingriffs?",
                     "hint": "Ist das Gesetz wirklich nötig und sinnvoll, oder schießt man hier mit Kanonen auf Spatzen?",
                     "answers": [
@@ -27985,7 +27985,7 @@
                     "reason": "Um zu verhindern, dass der Staat Grundrechte übermäßig einschränkt, muss jede gesetzliche Einschränkung diese vier strengen Stufen der Verhältnismäßigkeit bestehen. Fällt ein Eingriff bei auch nur einem Punkt durch, ist das Gesetz verfassungswidrig."
                 },
                 {
-                    "id": "q-7c8d9e0f1a2b",
+                    "id": "q-3b7995cc3c9f",
                     "question": "Welche Rechtsquellen garantieren die Meinungsfreiheit in Österreich?",
                     "hint": "Sie ist sowohl in einem alten österreichischen Gesetz als auch in einem europäischen Menschenrechtsvertrag verankert.",
                     "answers": [
@@ -28009,7 +28009,7 @@
                     "reason": "Die Kommunikations- und Meinungsfreiheit ist zentral in Art 13 des österreichischen StGG von 1867 und im modernen Art 10 der EMRK völkerrechtlich und verfassungsrechtlich verankert."
                 },
                 {
-                    "id": "q-3d4e5f6a7b8c",
+                    "id": "q-6bb3c7705ad9",
                     "question": "Umfasst die Meinungsfreiheit auch kommerzielle Werbung?",
                     "hint": "Fallen Plakate, die etwas verkaufen wollen, auch unter freie Meinungsäußerung?",
                     "answers": [
@@ -28033,7 +28033,7 @@
                     "reason": "Der EGMR (Europäische Gerichtshof für Menschenrechte) hat klargestellt, dass auch 'kommerzielle Kommunikation' (Werbung) unter Art 10 EMRK fällt. Der Staat hat hierbei aber einen größeren Ermessensspielraum bei Verboten (z.B. Tabakwerbung) als bei der politischen Debatte."
                 },
                 {
-                    "id": "q-9a0b1c2d3e4f",
+                    "id": "q-abe0cd4c3006",
                     "question": "Was besagt das Zensurverbot (Art 13 StGG)?",
                     "hint": "Es richtet sich vor allem gegen eine staatliche Kontrollbehörde, die Texte VOR dem Druck absegnen muss.",
                     "answers": [
@@ -28057,7 +28057,7 @@
                     "reason": "Das historische Zensurverbot schützt davor, dass der Staat Zeitungen vor dem Druck präventiv kontrolliert und zensiert (Konzessions- oder Vorzensurverbot). Verletzt ein gedruckter Text danach aber z.B. das Strafrecht (Wiederbetätigung, Verleumdung), darf er im Nachhinein beschlagnahmt werden (Nachzensur)."
                 },
                 {
-                    "id": "q-5f6a7b8c9d0e",
+                    "id": "q-074953dd2f3d",
                     "question": "Wie wird der Konflikt zwischen Meinungsfreiheit und dem Schutz der Ehre/Privatsphäre (z.B. bei Politikern) gelöst?",
                     "hint": "Wer in der Öffentlichkeit steht, muss ein dickeres Fell haben.",
                     "answers": [
@@ -28081,7 +28081,7 @@
                     "reason": "Hier prallen zwei Grundrechte aufeinander (Art 10 vs. Art 8 EMRK). Der EGMR und der VfGH judizieren, dass Politiker und Prominente ('public figures') harte und provokante Kritik aushalten müssen, da sie sich freiwillig in den Diskurs begeben haben. Bei reinen Privatpersonen ist die Schwelle zur Ehrenbeleidigung viel schneller erreicht."
                 },
                 {
-                    "id": "q-1b2c3d4e5f6a",
+                    "id": "q-753ad7dd8e5d",
                     "question": "Darf der Staat für Rundfunk und Fernsehen eine Genehmigungspflicht (Konzessionssystem) einführen?",
                     "hint": "Überlege, ob jeder einfach so einen Radiosender betreiben darf wie eine Zeitung.",
                     "answers": [
@@ -28105,7 +28105,7 @@
                     "reason": "Während Zeitungen konzessionsfrei gedruckt werden dürfen, hat die EMRK für elektronische Medien (Rundfunk, TV) einen ausdrücklichen Vorbehalt eingebaut. Da Sendefrequenzen historisch knapp waren, darf der Staat hier Genehmigungsverfahren vorsehen."
                 },
                 {
-                    "id": "q-7d8e9f0a1b2c",
+                    "id": "q-8413899301cc",
                     "question": "Welche inhaltlichen Anforderungen stellt das Bundesverfassungsgesetz über die Sicherung der Unabhängigkeit des Rundfunks (BVG Rundfunk) an den öffentlichen Rundfunk?",
                     "hint": "Als staatlich finanzierter Sender muss sich der ORF an bestimmte ethische und journalistische Grundregeln halten.",
                     "answers": [
@@ -28129,7 +28129,7 @@
                     "reason": "Das BVG Rundfunk verpflichtet den Gesetzgeber (und damit insb. den ORF), bei der Rundfunkgestaltung für eine objektive und unparteiliche Berichterstattung zu sorgen, in der verschiedene gesellschaftliche Gruppen Gehör finden (Pluralismus)."
                 },
                 {
-                    "id": "q-3e4f5a6b7c8d",
+                    "id": "q-07f2d31a2b86",
                     "question": "Was ist das Redaktionsgeheimnis?",
                     "hint": "Es schützt die Informanten (Whistleblower) der Journalisten.",
                     "answers": [
@@ -28153,7 +28153,7 @@
                     "reason": "Das Redaktionsgeheimnis ist ein essenzieller Bestandteil der Pressefreiheit (Art 10 EMRK). Es garantiert, dass Journalisten Informanten nicht vor Gericht oder der Polizei preisgeben müssen, was für eine funktionierende demokratische Kontrolle ('Watchdog'-Funktion der Medien) unerlässlich ist."
                 },
                 {
-                    "id": "q-9a8b7c6d5e4f",
+                    "id": "q-34a11a3bfa49",
                     "question": "Wodurch zeichnet sich die 2. B-VG-Novelle von 1929 aus und wie veränderte sie das Regierungssystem?",
                     "hint": "Denk an die Rolle des Bundespräsidenten und wie er ins Amt kommt.",
                     "answers": [
@@ -28177,7 +28177,7 @@
                     "reason": "1929 wurde die Verfassung autoritärer umgebaut, um einen „Gegenpol“ zum starken Parlament zu schaffen. Der Bundespräsident bekam weitreichende Kompetenzen, die ihn theoretisch sehr mächtig machen (semi-präsidentiell), auch wenn sie in der Praxis meist zurückhaltend genutzt werden."
                 },
                 {
-                    "id": "q-1d2e3f4a5b6c",
+                    "id": "q-654fb9e94217",
                     "question": "Was besagt der Grundsatz der materiellen Rechtskontinuität bei der Gründung der Zweiten Republik 1945?",
                     "hint": "Hat man nach dem Zweiten Weltkrieg komplett bei Null angefangen?",
                     "answers": [
@@ -28201,7 +28201,7 @@
                     "reason": "Österreich verstand sich als erstes Opfer Hitlers (Opferthese) und knüpfte rechtlich genau dort an, wo die Demokratie 1933 (Ausschaltung des Parlaments durch Dollfuß) aufgehört hatte. Das alte B-VG wurde einfach reaktiviert."
                 },
                 {
-                    "id": "q-7c8d9e0f1a2b",
+                    "id": "q-d24f1ea88f67",
                     "question": "Welche historische Zäsur im österreichischen Verfassungsrecht ereignete sich 1995 und welche Konsequenz hatte dies?",
                     "hint": "Es ging um eine Entscheidung, die Vorrang vor österreichischem Recht hat und tief in die Verfassung einschnitt.",
                     "answers": [
@@ -28225,7 +28225,7 @@
                     "reason": "Da der Beitritt zur Europäischen Union massiv in die Souveränität, die Gesetzgebung und die Verfassungsprinzipien Österreichs (z.B. demokratisches Prinzip) eingriff, war eine Gesamtänderung der Verfassung nötig."
                 },
                 {
-                    "id": "q-3b4c5d6e7f8a",
+                    "id": "q-a96f08824dad",
                     "question": "Was versteht man unter dem Begriff „Verfassungszersplitterung“ in Österreich?",
                     "hint": "Ist die österreichische Verfassung ein einzelnes, schönes rotes Buch?",
                     "answers": [
@@ -28249,7 +28249,7 @@
                     "reason": "Anders als in den USA oder Deutschland (Grundgesetz) ist die Verfassung in Österreich nicht in einem einzigen Dokument gesammelt. Man muss oft in verschiedenen Gesetzen suchen, was die Materie sehr komplex macht."
                 },
                 {
-                    "id": "q-5a6b7c8d9e0f",
+                    "id": "q-352cf5b587fd",
                     "question": "Welche Quoren sind im Nationalrat für einen Beschluss von Verfassungsrecht (Art 44 Abs 1 B-VG) erforderlich?",
                     "hint": "Die Hürden sind deutlich höher als bei einem normalen Gesetz.",
                     "answers": [
@@ -28345,7 +28345,7 @@
                     "reason": "Eine Gesamtänderung liegt dann vor, wenn die rechtsstaatliche, demokratische oder föderale Grundarchitektur Österreichs (die sogenannten Baugesetze) im Kern verändert wird."
                 },
                 {
-                    "id": "q-1c2a3b4d5e6f",
+                    "id": "q-5997d7a03f19",
                     "question": "Nenne die sechs Baugesetze (leitenden Grundsätze) der österreichischen Bundesverfassung.",
                     "hint": "Wie definiert sich Österreich staatspolitisch selbst?",
                     "answers": [
@@ -28417,7 +28417,7 @@
                     "reason": "Das demokratische Prinzip besagt, dass das Recht vom Volk ausgeht. Dies geschieht in Österreich aber primär repräsentativ durch die Wahl des Nationalrats. Instrumente der direkten Demokratie (Volksbegehren) gibt es zwar, sie spielen aber eine untergeordnete Rolle."
                 },
                 {
-                    "id": "q-5e6f7a8b9c0d",
+                    "id": "q-03d2ff9125fe",
                     "question": "Was sind die Kernmerkmale des Republikanischen Prinzips (insb. in Abgrenzung zur Monarchie)?",
                     "hint": "Es geht um den Chef des Staates und warum er kein König ist.",
                     "answers": [
@@ -28441,7 +28441,7 @@
                     "reason": "Eine Republik lehnt das monarchische Erbprinzip ab. Der Bundespräsident wird vom Volk gewählt, seine Amtszeit ist strikt auf sechs Jahre (mit einer Möglichkeit zur Wiederwahl) begrenzt, und er kann bei Verfehlungen angeklagt oder abgesetzt werden."
                 },
                 {
-                    "id": "q-1f2a3b4c5d6e",
+                    "id": "q-8fd505533b50",
                     "question": "Wer besitzt im österreichischen Bundesstaat die Kompetenz-Kompetenz?",
                     "hint": "Wer darf das Kuchenstück 'Macht' zwischen Bund und Ländern aufteilen?",
                     "answers": [
@@ -28465,7 +28465,7 @@
                     "reason": "In einem souveränen Bundesstaat liegt die Kompetenz, die Kompetenzen zu verteilen, beim zentralen Verfassungsgesetzgeber. Er bestimmt durch das B-VG (Art 10 bis 15), wer was machen darf."
                 },
                 {
-                    "id": "q-7b8c9d0e1f2a",
+                    "id": "q-3a8076ba9d98",
                     "question": "Was bedeutet mittelbare Bundesverwaltung im Kontext des bundesstaatlichen Prinzips?",
                     "hint": "Der Bund erlässt Gesetze, hat aber zu wenig eigene Behörden, um sie vor Ort auszuführen. Wer hilft ihm?",
                     "answers": [
@@ -28489,7 +28489,7 @@
                     "reason": "Aus Effizienzgründen und um den Ländern einen gewissen Einfluss zu sichern, baut der Bund für viele Materien keine eigenen Unterbehörden (wie z.B. bei der Polizei oder Finanz) auf. Er nutzt die Bezirkshauptmannschaften der Länder zur Vollziehung, wobei der Landeshauptmann weisungsgebunden ist."
                 },
                 {
-                    "id": "q-3c4d5e6f7a8b",
+                    "id": "q-87198e3f0a3a",
                     "question": "Was besagt das Legalitätsprinzip (Art 18 B-VG) als Kernstück des Rechtsstaatlichen Prinzips?",
                     "hint": "Darf die Polizei oder ein Ministerium einfach tun, was es für richtig hält?",
                     "answers": [
@@ -28513,7 +28513,7 @@
                     "reason": "Das Legalitätsprinzip ist der stärkste Schutz gegen staatliche Willkür. Es zwingt die Behörden, ihr Handeln (z.B. einen Strafbescheid) präzise auf ein vom Parlament beschlossenes Gesetz stützen zu können."
                 },
                 {
-                    "id": "q-9a0b1c2d3e4f",
+                    "id": "q-91e3131abf4e",
                     "question": "Was besagt Art 94 B-VG im Hinblick auf das Gewaltentrennende Prinzip?",
                     "hint": "Zwei wichtige staatliche Säulen dürfen sich organisatorisch nicht vermischen.",
                     "answers": [
@@ -28537,7 +28537,7 @@
                     "reason": "Um Machtmissbrauch zu verhindern, verlangt Art 94 B-VG, dass Gerichte (Judikative) und Verwaltungsbehörden (Exekutive) organisatorisch komplett getrennt sein müssen. Ein Richter darf nicht gleichzeitig weisungsgebundener Beamter sein."
                 },
                 {
-                    "id": "q-5e6f7a8b9c0d",
+                    "id": "q-8ce5efb40e8a",
                     "question": "Gibt es in Österreich bundesunmittelbares Gebiet?",
                     "hint": "Gibt es z.B. einen eigenen 'Capital District' wie Washington D.C., der zu keinem Bundesland gehört?",
                     "answers": [
@@ -28561,7 +28561,7 @@
                     "reason": "Das österreichische Staatsgebiet ist restlos in Bundesländer aufgeteilt. Wien ist zwar die Bundeshauptstadt, aber gleichzeitig ein reguläres Bundesland mit eigenem Landtag."
                 },
                 {
-                    "id": "q-1b2c3d4e5f6a",
+                    "id": "q-a8c1123ccfa2",
                     "question": "Wie können Grenzen innerhalb Österreichs (zwischen Bundesländern) geändert werden?",
                     "hint": "Es darf nicht diktiert werden, man muss sich absprechen.",
                     "answers": [
@@ -28585,7 +28585,7 @@
                     "reason": "Die territoriale Integrität der Länder ist geschützt. Willkürliche Grenzverschiebungen von oben herab sind unzulässig. Es bedarf eines Konsenses (übereinstimmende Gesetze) zwischen den Bundes- und Landesparlamenten."
                 },
                 {
-                    "id": "q-1a2b3c4d5e6f",
+                    "id": "q-f03374b229fe",
                     "question": "Woraus setzt sich das Bundesgebiet der Republik Österreich zusammen (Art 3 Abs 1 B-VG)?",
                     "hint": "Gibt es Gebiete, die nur dem Bund gehören, wie etwa Washington D.C. in den USA?",
                     "answers": [
@@ -28609,7 +28609,7 @@
                     "reason": "Die Verfassung legt fest, dass jeder Teil des Staatsgebietes zwingend zu einem der neun Bundesländer gehört. Ein Gebiet, das direkt und ausschließlich vom Bund verwaltet wird (bundesunmittelbar), existiert in Österreich nicht."
                 },
                 {
-                    "id": "q-7b8c9d0e1f2a",
+                    "id": "q-b9e1cdf5abd0",
                     "question": "Welche völkerrechtlichen Verträge bestimmen maßgeblich den Grenzverlauf Österreichs?",
                     "hint": "Denke an die großen Friedensverträge nach dem Ersten Weltkrieg und nach dem Zweiten Weltkrieg.",
                     "answers": [
@@ -28633,7 +28633,7 @@
                     "reason": "Die Grenzen Österreichs wurden nach dem Zerfall der Habsburgermonarchie in St. Germain und dem Venediger Protokoll (Burgenland) gezogen. Der Staatsvertrag 1955 fixierte diese Grenzen dann endgültig auf den Stand vom 1.1.1938."
                 },
                 {
-                    "id": "q-3f4a5b6c7d8e",
+                    "id": "q-2fdd604d54f8",
                     "question": "Wie können Grenzänderungen innerhalb des Bundesgebietes (zwischen Bundesländern) vorgenommen werden (Art 3 Abs 3 B-VG)?",
                     "hint": "Kann der Nationalrat einfach beschließen, dass ein Bezirk nun zu einem anderen Bundesland gehört?",
                     "answers": [
@@ -28657,7 +28657,7 @@
                     "reason": "Um den Föderalismus und die Integrität der Länder zu schützen, darf der Bund Grenzen nicht einseitig verschieben. Es braucht den Konsens (übereinstimmende Gesetze) beider Ebenen."
                 },
                 {
-                    "id": "q-9e0f1a2b3c4d",
+                    "id": "q-dc6a591f323d",
                     "question": "Was besagt Art 4 B-VG hinsichtlich der Wirtschaft im Bundesgebiet?",
                     "hint": "Darf Tirol Zölle für Waren aus Wien einheben?",
                     "answers": [
@@ -28681,7 +28681,7 @@
                     "reason": "Die Republik ist nach innen wirtschaftlich völlig ungeteilt. Binnenzölle oder Handelsbeschränkungen zwischen den Bundesländern sind verfassungswidrig."
                 },
                 {
-                    "id": "q-5d6e7f8a9b0c",
+                    "id": "q-be1bbaced60c",
                     "question": "Gibt es eine eigene „Landesstaatsbürgerschaft“ unabhängig vom Bund?",
                     "hint": "Wie wird man Bürger von Salzburg oder Wien?",
                     "answers": [
@@ -28705,7 +28705,7 @@
                     "reason": "In Österreich gibt es nur die Bundes-Staatsbürgerschaft. Das Landesbürgerrecht ist lediglich ein abgeleiteter Status, der sich aus der Staatsbürgerschaft und dem Hauptwohnsitz im Bundesland ergibt."
                 },
                 {
-                    "id": "q-1c2a3b4d5e6f",
+                    "id": "q-312c031fb0d3",
                     "question": "Welche rechtliche Konsequenz hat der Status als Landesbürger?",
                     "hint": "Es geht um die politische Mitbestimmung in dem Bundesland, in dem man lebt.",
                     "answers": [
@@ -28729,7 +28729,7 @@
                     "reason": "Nach Art 95 B-VG dürfen nur die Landesbürger (also österreichische Staatsbürger mit Hauptwohnsitz in diesem Land) den Landtag wählen."
                 },
                 {
-                    "id": "q-7f8a9b0c1d2e",
+                    "id": "q-9b519c729ddb",
                     "question": "Wie ist die ordentliche Gerichtsbarkeit im Bundesstaat organisiert?",
                     "hint": "Gibt es Gerichte, die von den Bundesländern betrieben werden?",
                     "answers": [
@@ -28753,7 +28753,7 @@
                     "reason": "Anders als in Deutschland (wo Länder eigene Gerichte haben) ist die ordentliche Gerichtsbarkeit (Zivil- und Strafrecht) in Österreich reine Bundessache (Art 82 B-VG). Richter sind Bundesbedienstete."
                 },
                 {
-                    "id": "q-3c4d5e6f7a8b",
+                    "id": "q-8762e964d60f",
                     "question": "Wie löst die Bundesverfassung das Problem der Überlagerung der Staatsgewalt von Bund und Ländern (Doppelgleisigkeit)?",
                     "hint": "Wer macht was, wer führt es aus, und wer zahlt es?",
                     "answers": [
@@ -28777,7 +28777,7 @@
                     "reason": "Die Verfassung sorgt durch diese drei Instrumente dafür, dass sich Bund und Länder nicht in die Quere kommen: Klare Aufteilung der Zuständigkeiten, Nutzung der Landesbehörden durch den Bund (Effizienz) und klare Regelung der Geldflüsse."
                 },
                 {
-                    "id": "q-9b0c1d2e3f4a",
+                    "id": "q-e10a1c9b127b",
                     "question": "Was sind Gliedstaatsverträge (Art 15a B-VG) und welchen Zweck haben sie?",
                     "hint": "Es sind Abkommen wie zwischen souveränen Staaten, aber nur intern in Österreich.",
                     "answers": [
@@ -28801,7 +28801,7 @@
                     "reason": "Da die Kompetenzen oft zersplittert sind (z.B. Jugendschutz ist Ländersache, Strafrecht ist Bundessache), können Bund und Länder nach Art 15a B-VG Verträge schließen, um einheitliche Standards zu schaffen."
                 },
                 {
-                    "id": "q-5e6f7a8b9c0d",
+                    "id": "q-219c91c30cec",
                     "question": "Was darf Gegenstand einer Vereinbarung nach Art 15a B-VG sein?",
                     "hint": "Geht es um den Kauf von Grundstücken oder um staatliche Herrschaftsausübung?",
                     "answers": [
@@ -28825,7 +28825,7 @@
                     "reason": "Art 15a B-VG ist ein Instrument des öffentlichen Rechts. Er dient der Koordination von Gesetzgebung und Vollziehung. Wollen Bund und ein Land lediglich gemeinsam ein Grundstück kaufen, tun sie das über das normale Zivilrecht."
                 },
                 {
-                    "id": "q-1f2a3b4c5d6e",
+                    "id": "q-e1aaeac98864",
                     "question": "Wer ist zur Entscheidung bei Streitigkeiten aus Art 15a-Vereinbarungen zuständig?",
                     "hint": "Welches Gericht klärt Streitereien zwischen Staatsorganen?",
                     "answers": [
@@ -28849,7 +28849,7 @@
                     "reason": "Gemäß Art 138a B-VG ist der VfGH berufen, darüber zu entscheiden, ob eine Vereinbarung nach Art 15a vorliegt und ob die daraus resultierenden Pflichten erfüllt wurden."
                 },
                 {
-                    "id": "q-7c8d9e0f1a2b",
+                    "id": "q-90330f47a2fb",
                     "question": "Was regelt Art 8 B-VG zur Staatssprache?",
                     "hint": "Welche Sprache wird bei den Behörden gesprochen und gibt es Ausnahmen?",
                     "answers": [
@@ -28873,7 +28873,7 @@
                     "reason": "Die Verfassung legt Deutsch als Amtssprache fest, schützt aber im gleichen Atemzug ausdrücklich die Rechte anerkannter autochthoner Minderheiten in Österreich."
                 },
                 {
-                    "id": "q-3d4e5f6a7b8c",
+                    "id": "q-f8e6f986e902",
                     "question": "In welchen Gebieten sind Slowenisch und Kroatisch zusätzlich zum Deutschen als Amtssprache zugelassen (Art 7 Z 3 StV Wien)?",
                     "hint": "Denke an den Süden und Osten Österreichs.",
                     "answers": [
@@ -28897,7 +28897,7 @@
                     "reason": "Der Staatsvertrag von Wien 1955 (im Verfassungsrang) sichert der slowenischen und kroatischen Minderheit in diesen drei spezifischen Bundesländern das Recht zu, ihre Muttersprache als zusätzliche Amtssprache bei Behörden zu verwenden."
                 },
                 {
-                    "id": "q-9a0b1c2d3e4f",
+                    "id": "q-4f3f8beff471",
                     "question": "Was bedeutet der Grundsatz der Exklusivität bei der Kompetenzverteilung?",
                     "hint": "Kann der Bund UND das Land gleichzeitig für genau denselben Gesetzestext zuständig sein?",
                     "answers": [
@@ -28921,7 +28921,7 @@
                     "reason": "Das B-VG teilt die Befugnisse trennscharf auf. Eine Kompetenz kann nicht gleichzeitig beim Bund und beim Land liegen. (Achtung: Faktische Überschneidungen entstehen, weil eine Sache unter verschiedenen Gesichtspunkten geregelt wird, z.B. Naturschutz vs. Baurecht)."
                 },
                 {
-                    "id": "q-5f6a7b8c9d0e",
+                    "id": "q-d1d5183c3161",
                     "question": "Wer besitzt die Kompetenz-Kompetenz (die Befugnis, Zuständigkeiten zu verteilen)?",
                     "hint": "Wer darf die Regeln des Staates umschreiben?",
                     "answers": [
@@ -28945,7 +28945,7 @@
                     "reason": "Die Befugnis, zu bestimmen, ob der Bund oder die Länder für etwas zuständig sind, liegt auf höchster Ebene, nämlich beim Bundesverfassungsgesetzgeber (Nationalrat mit 2/3 Mehrheit)."
                 },
                 {
-                    "id": "q-1b2c3d4e5f6a",
+                    "id": "q-c41e1244da28",
                     "question": "Was besagt die Generalklausel der Kompetenzverteilung (Art 15 Abs 1 B-VG)?",
                     "hint": "Was passiert mit einem Thema, das im Gesetz schlichtweg nirgends erwähnt wird?",
                     "answers": [
@@ -28969,7 +28969,7 @@
                     "reason": "Die Verfassung zählt in Art 10 bis 12 auf, was der Bund tun darf (Enumerationsprinzip). Um Lücken zu vermeiden, sagt Art 15: Alles andere (der Rest) gehört automatisch den Ländern."
                 },
                 {
-                    "id": "q-7d8e9f0a1b2c",
+                    "id": "q-91685a61bca8",
                     "question": "Was versteht man unter der Annex-Kompetenz?",
                     "hint": "Wer den Hauptwohnsitz bauen darf, darf auch das Gartenhäuschen (Verfahren) dazu bauen.",
                     "answers": [
@@ -28993,7 +28993,7 @@
                     "reason": "Wenn der Bund oder ein Land die Erlaubnis hat, ein Sachgebiet (Hauptmaterie) zu regeln, hat er auch implizit (als 'Annex') das Recht, die dazugehörigen Strafen oder Verfahrensvorschriften zu erlassen, um das Gesetz durchsetzbar zu machen."
                 },
                 {
-                    "id": "q-3e4f5a6b7c8d",
+                    "id": "q-a667998515b3",
                     "question": "Was besagt die Versteinerungstheorie bei der Auslegung von Kompetenztatbeständen?",
                     "hint": "Die Begriffe in der Verfassung werden gewissermaßen 'eingefroren'.",
                     "answers": [
@@ -29017,7 +29017,7 @@
                     "reason": "Um zu wissen, was der Verfassungsgeber 1920/1925 meinte, als er z.B. „Gewerbe“ in den Kompetenzkatalog aufnahm, schaut der VfGH nach, was damals gesetzlich unter diesen Begriff fiel. So wird verhindert, dass sich Kompetenzen schleichend verschieben."
                 },
                 {
-                    "id": "q-9f0a1b2c3d4e",
+                    "id": "q-c277f5eb537d",
                     "question": "Wie können neue Sachgebiete (die es 1925 noch nicht gab, z.B. Atomkraft) laut Versteinerungstheorie zugeordnet werden?",
                     "hint": "Man sucht nach Verwandtschaften im System.",
                     "answers": [
@@ -29041,7 +29041,7 @@
                     "reason": "Die Versteinerungstheorie ist nicht blind. Neue Erfindungen (wie Gentechnik oder E-Commerce) werden dogmatisch analysiert und jenem Kompetenztatbestand von 1925 zugeordnet, dessen innerem System sie wesensmäßig am nächsten kommen."
                 },
                 {
-                    "id": "q-5a6b7c8d9e0f",
+                    "id": "q-41d9a8800ba2",
                     "question": "Wer trägt nach § 2 F-VG grundsätzlich den Aufwand für eine staatliche Aufgabe (Konnexitätsprinzip)?",
                     "hint": "Wer bestellt, der zahlt.",
                     "answers": [
@@ -29065,7 +29065,7 @@
                     "reason": "Das Finanz-Verfassungsgesetz normiert das Prinzip „Wer anschafft, zahlt“ (Konnexität). Wer rechtlich verpflichtet ist, eine Aufgabe durchzuführen, muss auch die Kosten dafür tragen, es sei denn, der Finanzausgleich regelt es explizit anders."
                 },
                 {
-                    "id": "q-1c2d3e4f5a6b",
+                    "id": "q-daf67126a1b9",
                     "question": "Wer entscheidet über die Verteilung der Besteuerungsrechte und Abgabenerträge (Finanzausgleich)?",
                     "hint": "Es ist nicht die Verfassung selbst, sondern ein Gesetz, das alle paar Jahre hart verhandelt wird.",
                     "answers": [
@@ -29089,7 +29089,7 @@
                     "reason": "Das Finanz-Verfassungsgesetz (F-VG) überträgt die 'Kompetenz-Kompetenz' im Bereich des Abgabenwesens an den einfachen Bundesgesetzgeber. Dieser erlässt periodisch das Finanzausgleichsgesetz, um das Geldvolumen zwischen Bund, Ländern und Gemeinden aufzuteilen."
                 },
                 {
-                    "id": "q-9a8b7c6d5e4f",
+                    "id": "q-b7ed8a80b585",
                     "question": "Wie lange dauert eine Gesetzgebungsperiode des Nationalrates (Art 27 Abs 1 B-VG)?",
                     "hint": "Denke an die Zeitspanne zwischen regulären Nationalratswahlen in Österreich.",
                     "answers": [
@@ -29113,7 +29113,7 @@
                     "reason": "Die reguläre Legislaturperiode des österreichischen Nationalrates wurde 2007 durch eine Verfassungsänderung von vier auf fünf Jahre verlängert."
                 },
                 {
-                    "id": "q-1d2e3f4a5b6c",
+                    "id": "q-919a9054052b",
                     "question": "Auf welche drei Arten kann der Nationalrat vorzeitig aufgelöst werden?",
                     "hint": "Entweder das Parlament macht es selbst, der Bundespräsident greift ein, oder es passiert automatisch bei einer gescheiterten Volksabstimmung.",
                     "answers": [
@@ -29137,7 +29137,7 @@
                     "reason": "Meistens löst sich der NR vorzeitig selbst auf (Neuwahlen). Alternativ kann der Bundespräsident den NR auflösen (allerdings nur einmal aus demselben Anlass). Als drastischer Sonderfall gilt die automatische Auflösung, falls das Parlament den Bundespräsidenten absetzen will, das Volk aber bei der Abstimmung zum Präsidenten hält."
                 },
                 {
-                    "id": "q-7c8d9e0f1a2b",
+                    "id": "q-1366564ac254",
                     "question": "Nenne die sechs Wahlrechtsgrundsätze für die Wahl zum Nationalrat.",
                     "hint": "Die Grundsätze stellen sicher, dass jeder wählen darf, jede Stimme gleich viel zählt und niemand beobachtet oder gezwungen wird.",
                     "answers": [
@@ -29161,7 +29161,7 @@
                     "reason": "Das allgemeine (alle Bürger ab 16), gleiche (jeder Zählwert ist ident), unmittelbare (keine Wahlmänner), persönliche (keine Stellvertretung), geheime und freie Wahlrecht (ohne Zwang) ist der Kern der österreichischen Demokratie."
                 },
                 {
-                    "id": "q-3b4c5d6e7f8a",
+                    "id": "q-c7eee412b27e",
                     "question": "Welches Wahlsystem gilt für den Nationalrat und welche Hürde sieht die Nationalrats-Wahlordnung (NRWO) vor?",
                     "hint": "Es ist kein 'Winner-takes-all'-System wie in den USA oder Großbritannien.",
                     "answers": [
@@ -29185,7 +29185,7 @@
                     "reason": "Die Mandate werden im Verhältnis zu den abgegebenen Stimmen vergeben. Um eine Zersplitterung des Parlaments zu verhindern, muss eine Partei bundesweit mindestens 4% der Stimmen oder ein Regionalmandat erreichen, um in den Nationalrat einzuziehen."
                 },
                 {
-                    "id": "q-5a6b7c8d9e0f",
+                    "id": "q-8e439f218b87",
                     "question": "Wer hat das Recht zur Gesetzesinitiative im Bund (wer darf Gesetzesvorschläge einbringen)?",
                     "hint": "Es sind vier Gruppen: Abgeordnete, die Regierung, die Ländervertretung und das Volk selbst.",
                     "answers": [
@@ -29209,7 +29209,7 @@
                     "reason": "Gesetzesvorschläge kommen meist von der Regierung (Regierungsvorlagen) oder von Abgeordneten (Initiativanträge). Aber auch der Bundesrat und die Bevölkerung (Volksbegehren mit über 100.000 Unterschriften) können den Nationalrat zwingen, sich mit einem Thema zu befassen."
                 },
                 {
-                    "id": "q-2f3a4b5c6d7e",
+                    "id": "q-747e3a880805",
                     "question": "Welches Quorum ist im Nationalrat für einen einfachen Gesetzesbeschluss (sofern nichts anderes bestimmt ist) erforderlich?",
                     "hint": "Es ist die geringste mögliche parlamentarische Hürde.",
                     "answers": [
@@ -29233,7 +29233,7 @@
                     "reason": "Für gewöhnliche Gesetze reicht es nach Art 31 B-VG aus, wenn ein Drittel der Abgeordneten im Saal ist und die Mehrheit der anwesenden Personen dafür stimmt."
                 },
                 {
-                    "id": "q-8e9f0a1b2c3d",
+                    "id": "q-0d45766b05d8",
                     "question": "Welche Art von Veto hat der Bundesrat im Gesetzgebungsverfahren im Regelfall?",
                     "hint": "Sein Einspruch kann den Prozess verzögern, aber letztendlich nicht endgültig stoppen.",
                     "answers": [
@@ -29257,7 +29257,7 @@
                     "reason": "Der Bundesrat (als Vertreter der Länder) ist in der Gesetzgebung relativ schwach. Lehnt er ein Gesetz ab, wandert es zurück an den Nationalrat. Wenn dieser das Gesetz einfach noch einmal (Beharrungsbeschluss) verabschiedet, tritt es trotz des Widerstands der Länder in Kraft."
                 },
                 {
-                    "id": "q-4d5e6f7a8b9c",
+                    "id": "q-d17e138c7fca",
                     "question": "In welchen Fällen hat der Bundesrat ein absolutes Veto (Zustimmung zwingend erforderlich)?",
                     "hint": "Nur wenn es den Ländern direkt an den Kragen geht oder die Rechte des Bundesrates selbst beschnitten werden.",
                     "answers": [
@@ -29281,7 +29281,7 @@
                     "reason": "Als absolute Ausnahme von seiner sonstigen Schwäche muss der Bundesrat zustimmen (absolutes Veto), wenn der Bund den Ländern verfassungsrechtlich Zuständigkeiten wegnehmen will."
                 },
                 {
-                    "id": "q-1c2a3b4d5e6f",
+                    "id": "q-62a196c86ce2",
                     "question": "Welche Rolle spielt der Bundespräsident im Gesetzgebungsverfahren (Beurkundung)?",
                     "hint": "Er unterschreibt am Ende, aber prüft er dabei auch den Inhalt?",
                     "answers": [
@@ -29305,7 +29305,7 @@
                     "reason": "Der Bundespräsident prüft primär den formalen Ablauf (Quoren, Abstimmung). Ob er auch ein materielles Prüfungsrecht hat (also das Gesetz inhaltlich bewerten darf), ist in der Lehre umstritten, wird aber bei eklatanten Grundrechtsverstößen oft bejaht."
                 },
                 {
-                    "id": "q-6f7a8b9c0d1e",
+                    "id": "q-0189ee751992",
                     "question": "Was ist das Interpellationsrecht (Fragerecht)?",
                     "hint": "Das Parlament kontrolliert die Regierung, indem es Antworten verlangt.",
                     "answers": [
@@ -29329,7 +29329,7 @@
                     "reason": "Dieses parlamentarische Kontrollrecht dient der Informationsbeschaffung. Minister müssen auf parlamentarische Anfragen (z.B. in Fragestunden) Auskunft über die Amtsführung in ihren Ministerien geben."
                 },
                 {
-                    "id": "q-9c0d1e2f3a4b",
+                    "id": "q-c81df59ebc87",
                     "question": "Was ist das Resolutionsrecht des Nationalrates?",
                     "hint": "Es ist ein politischer Appell an die Regierung, hat aber vor Gericht keine direkte Wirkung.",
                     "answers": [
@@ -29353,7 +29353,7 @@
                     "reason": "Durch eine Resolution (Entschließung) bekundet der Nationalrat seinen politischen Willen, wie die Regierung handeln sollte. Ignoriert die Regierung dies, droht zwar keine juristische Strafe, aber potenziell ein politisches Misstrauensvotum."
                 },
                 {
-                    "id": "q-5e6f7a8b9c0d",
+                    "id": "q-adb372624417",
                     "question": "Was ist ein Untersuchungsausschuss und wer kann ihn einsetzen?",
                     "hint": "Es ist ein scharfes Schwert zur Aufdeckung von Skandalen. Man braucht dafür seit 2014 nicht einmal mehr die Mehrheit im Parlament.",
                     "answers": [
@@ -29377,7 +29377,7 @@
                     "reason": "Untersuchungsausschüsse (U-Ausschüsse) dienen der Aufklärung politischer Affären. Die Reform 2014 war essenziell: Da die Regierung meist die Mehrheit im Parlament hat, konnte sie U-Ausschüsse früher leicht blockieren. Heute ist es ein Minderheitsrecht (1/4)."
                 },
                 {
-                    "id": "q-1f2a3b4c5d6e",
+                    "id": "q-193fd2d005ee",
                     "question": "Welche Konsequenz hat ein Misstrauensvotum (Art 74 B-VG) durch den Nationalrat?",
                     "hint": "Das Parlament entzieht der Regierung das Vertrauen.",
                     "answers": [
@@ -29401,7 +29401,7 @@
                     "reason": "Das Misstrauensvotum ist die schärfste Waffe des Parlaments in einer parlamentarischen Demokratie. Wenn das Parlament das Vertrauen entzieht, muss der Präsident die Regierung zwingend entlassen (so geschehen 2019 bei der Regierung Kurz I)."
                 },
                 {
-                    "id": "q-7b8c9d0e1f2a",
+                    "id": "q-70fce2613d23",
                     "question": "Wie setzt sich der Bundesrat zusammen?",
                     "hint": "Wer wählt die Mitglieder dieser Kammer?",
                     "answers": [
@@ -29425,7 +29425,7 @@
                     "reason": "Der Bundesrat vertritt die Länderinteressen im Bund. Seine Mitglieder werden nicht direkt vom Volk gewählt, sondern nach Landtagswahlen von den jeweiligen Landtagen delegiert (Partialerneuerung)."
                 },
                 {
-                    "id": "q-3c4d5e6f7a8b",
+                    "id": "q-0c487bbe6aa7",
                     "question": "Was ist die Bundesversammlung und was ist ihre wichtigste praktische Aufgabe?",
                     "hint": "Wenn die zwei großen Kammern zusammenkommen.",
                     "answers": [
@@ -29449,7 +29449,7 @@
                     "reason": "Die Bundesversammlung tritt nur selten zusammen. Neben der feierlichen Angelobung des Staatsoberhauptes hätte sie noch Aufgaben bei Kriegserklärungen oder der Anklage des Bundespräsidenten vor dem VfGH."
                 },
                 {
-                    "id": "q-9a0b1c2d3e4f",
+                    "id": "q-4596702bd514",
                     "question": "Welches System schreibt die Bundesverfassung für die Landtage zwingend vor?",
                     "hint": "Gibt es auf Länderebene auch ein Zwei-Kammer-System wie im Bund?",
                     "answers": [
@@ -29473,7 +29473,7 @@
                     "reason": "Während der Bund mit Nationalrat und Bundesrat ein Zweikammersystem (Bikameralismus) hat, besteht die Legislative auf Ebene der Bundesländer ausnahmslos nur aus einer einzigen Kammer: dem jeweiligen Landtag."
                 },
                 {
-                    "id": "q-5f6a7b8c9d0e",
+                    "id": "q-ec2af073a92e",
                     "question": "Hat die Bundesregierung ein Veto-Recht gegen Landesgesetze?",
                     "hint": "Kann der Bund den Ländern Gesetze einfach verbieten?",
                     "answers": [
@@ -29497,7 +29497,7 @@
                     "reason": "Das Verhältnis hier ähnelt spiegelverkehrt jenem zwischen Bundesrat und Nationalrat. Die Bundesregierung hat bei Landesgesetzen im Regelfall nur ein aufschiebendes Veto, das der Landtag überstimmen kann. Die Souveränität der Länder bleibt gewahrt."
                 },
                 {
-                    "id": "q-1b2c3d4e5f6a",
+                    "id": "q-a72120848ae0",
                     "question": "Was bedeutet das „Freie Mandat“ (Art 56 B-VG)?",
                     "hint": "Müssen Abgeordnete immer das tun, was ihr Parteichef sagt?",
                     "answers": [
@@ -29521,7 +29521,7 @@
                     "reason": "Ein Abgeordneter ist nur seinem Gewissen verpflichtet (freies Mandat) und kann nicht rechtlich gezwungen werden, einer Parteilinie zu folgen. Stimmt er gegen seine Partei, drohen ihm vielleicht politische Konsequenzen (Ausschluss aus dem Klub), aber niemals der rechtliche Verlust seines Mandats."
                 },
                 {
-                    "id": "q-7d8e9f0a1b2c",
+                    "id": "q-e3a0d6732d6a",
                     "question": "Was umfasst die berufliche Immunität eines Abgeordneten?",
                     "hint": "Es schützt das Kernstück der parlamentarischen Arbeit: die Meinungsäußerung und das Abstimmen im Plenum.",
                     "answers": [
@@ -29545,7 +29545,7 @@
                     "reason": "Die berufliche Immunität (Sachimmunität) soll eine freie Debatte im Nationalrat garantieren. Was ein Politiker am Rednerpult sagt, kann nicht von Zivilgerichten belangt werden. Der Präsident des Nationalrats kann jedoch Ordnungsrufe erteilen."
                 },
                 {
-                    "id": "q-3e4f5a6b7c8d",
+                    "id": "q-ee25267ce3f4",
                     "question": "Was umfasst die außerberufliche Immunität?",
                     "hint": "Was passiert, wenn ein Politiker am Wochenende privat betrunken Auto fährt?",
                     "answers": [
@@ -29569,7 +29569,7 @@
                     "reason": "Die außerberufliche Immunität soll verhindern, dass die Justiz genutzt wird, um politisch unliebsame Abgeordnete durch fadenscheinige Ermittlungen auszuschalten. Das Parlament muss (außer bei offensichtlich unpolitischen Taten oder Ergreifung auf frischer Tat) zustimmen ('ausliefern'), bevor die Staatsanwaltschaft tätig werden darf."
                 },
                 {
-                    "id": "q-9f0a1b2c3d4e",
+                    "id": "q-a2fac0de2962",
                     "question": "Was ist die Inkompatibilität (Unvereinbarkeit) bei Abgeordneten?",
                     "hint": "Manche Ämter vertragen sich nicht miteinander, weil es sonst Interessenkonflikte gäbe.",
                     "answers": [
@@ -29593,7 +29593,7 @@
                     "reason": "Das Unvereinbarkeitsgesetz verhindert Machtkonzentration und schützt die Gewaltentrennung. Ein Bundespräsident, Richter oder Mitglied des EU-Parlaments darf nicht gleichzeitig im Nationalrat sitzen. Bemerkenswert: Die Kombination von Ministeramt und Nationalratsmandat ist in Österreich jedoch erlaubt."
                 },
                 {
-                    "id": "q-1a2b3c4d5e6f",
+                    "id": "q-9f4aa66385b4",
                     "question": "Wie wird der Begriff \"Verwaltung\" im österreichischen Verfassungsrecht definiert?",
                     "hint": "Man definiert es nicht durch das, was es ist, sondern durch das, was es nicht ist.",
                     "answers": [
@@ -29617,7 +29617,7 @@
                     "reason": "Die österreichische Bundesverfassung kennt keinen positiven Verwaltungsbegriff. Man wendet stattdessen die Subtraktionsmethode an (organisatorischer Verwaltungsbegriff): Alles, was staatlich ist, aber nicht von Parlamenten (Legislative) oder Richtern (Judikative) gemacht wird, ist Verwaltung."
                 },
                 {
-                    "id": "q-7b8c9d0e1f2a",
+                    "id": "q-47916a1b89a4",
                     "question": "Was ist der Unterschied zwischen einem „Organ“ und einem „Organwalter“?",
                     "hint": "Das eine ist die abstrakte Funktion, das andere ist der Mensch aus Fleisch und Blut.",
                     "answers": [
@@ -29641,7 +29641,7 @@
                     "reason": "Die rechtliche Trennung ist wichtig. Das Amt (z.B. „Der Bundesminister für Inneres“) ist das Organ, dem Kompetenzen zugewiesen sind. Wer dieses Amt gerade innehat (die natürliche Person), ist lediglich der Organwalter auf Zeit."
                 },
                 {
-                    "id": "q-3f4a5b6c7d8e",
+                    "id": "q-8d8cc6a17d0e",
                     "question": "Worin unterscheiden sich Hoheitsverwaltung und Privatwirtschaftsverwaltung (Art 17 B-VG)?",
                     "hint": "Im einen Fall tritt der Staat von oben herab mit Befehlsgewalt auf, im anderen Fall kauft er einfach wie ein normales Unternehmen ein.",
                     "answers": [
@@ -29665,7 +29665,7 @@
                     "reason": "Erlässt die Behörde einen Strafbescheid oder hebt Steuern ein, agiert sie hoheitlich (Öffentliches Recht). Kauft die selbe Behörde aber Kopierpapier oder stellt Personal mit normalen Dienstverträgen ein, agiert sie im Bereich der Privatwirtschaftsverwaltung (Zivilrecht)."
                 },
                 {
-                    "id": "q-9e0f1a2b3c4d",
+                    "id": "q-603bedc7fdcd",
                     "question": "Was besagt das Legalitätsprinzip gemäß Art 18 B-VG?",
                     "hint": "Darf die Polizei oder das Finanzamt einfach kreativ eigene Regeln erfinden?",
                     "answers": [
@@ -29689,7 +29689,7 @@
                     "reason": "Das Legalitätsprinzip ist der wichtigste Schutzmechanismus des Bürgers. Jedes staatliche Handeln (jeder Bescheid, jede Strafe) muss lückenlos auf eine Ermächtigung in einem formellen Gesetz des Parlaments zurückzuführen sein."
                 },
                 {
-                    "id": "q-5d6e7f8a9b0c",
+                    "id": "q-203d87f62723",
                     "question": "Was versteht man unter der „doppelten Bindung“ des Legalitätsprinzips?",
                     "hint": "Es bindet nicht nur die Behörden bei der Ausführung, sondern zwingt auch das Parlament zu genauer Arbeit.",
                     "answers": [
@@ -29713,7 +29713,7 @@
                     "reason": "Die Verwaltung darf ohne Gesetz nicht handeln (Vollziehungsbindung). Das Parlament darf aber auch keine „Blanko-Schecks“ ausstellen (z.B. „Die Polizei darf tun, was nötig ist“), sondern muss Gesetze so präzise formulieren, dass das Handeln der Verwaltung vorhersehbar bleibt (Determinierungsgebot)."
                 },
                 {
-                    "id": "q-1c2a3b4d5e6f",
+                    "id": "q-3ebc221a8234",
                     "question": "Was besagt das Weisungsprinzip (Art 20 B-VG)?",
                     "hint": "Wie in einer strengen Firmenhierarchie oder beim Militär.",
                     "answers": [
@@ -29737,7 +29737,7 @@
                     "reason": "Im Gegensatz zu Richtern (die weisungsfrei und unabhängig sind), ist die Verwaltung strikt hierarchisch aufgebaut. Ein Vorgesetzter (bis hinauf zum Minister) kann einem untergeordneten Beamten per Weisung vorgeben, wie er einen Fall zu entscheiden hat."
                 },
                 {
-                    "id": "q-7f8a9b0c1d2e",
+                    "id": "q-f3b333de08dd",
                     "question": "Was ist das Remonstrationsrecht im Kontext von Weisungen?",
                     "hint": "Was kann ein Beamter tun, wenn er glaubt, dass der Befehl seines Chefs gegen das Gesetz verstößt?",
                     "answers": [
@@ -29761,7 +29761,7 @@
                     "reason": "Das Remonstrationsrecht schützt den Beamten. Er muss rechtswidrige Weisungen aufzeigen (Remonstration). Wiederholt der Vorgesetzte die Weisung schriftlich, muss der Beamte sie ausführen, ist aber ab diesem Moment von der rechtlichen Verantwortung für das Handeln befreit."
                 },
                 {
-                    "id": "q-3c4d5e6f7a8b",
+                    "id": "q-6e0422e0a241",
                     "question": "Wer haftet bei der Amtshaftung (Art 23 Abs 1 B-VG) wem gegenüber?",
                     "hint": "Wenn der Polizist fälschlicherweise dein Auto zerkratzt, wen verklagst du?",
                     "answers": [
@@ -29785,7 +29785,7 @@
                     "reason": "Im Amtshaftungsrecht (AHG) gilt die ausschließliche Staatshaftung. Der Bürger klagt nicht den fehlerhaft handelnden Beamten persönlich, sondern immer den dahinterstehenden Rechtsträger (also z.B. die Republik Österreich)."
                 },
                 {
-                    "id": "q-9b0c1d2e3f4a",
+                    "id": "q-9e4567aaf694",
                     "question": "Wann greift die Organhaftung (Regress) gem. Art 23 Abs 3 B-VG?",
                     "hint": "Wann holt sich der Staat das Geld, das er dem Bürger zahlen musste, vom eigenen Beamten zurück?",
                     "answers": [
@@ -29809,7 +29809,7 @@
                     "reason": "Wenn die Republik nach dem AHG an den Bürger zahlen muss, kann sie sich am Beamten im Regressweg (Organhaftung) schadlos halten. Dies gilt aber nur bei schweren Fehlern (Vorsatz, grobe Fahrlässigkeit), um Beamte bei kleinen Alltagsfehlern nicht zu ruinieren."
                 },
                 {
-                    "id": "q-5e6f7a8b9c0d",
+                    "id": "q-bc595eafbe32",
                     "question": "Welche Rechtsform der Verwaltung ist ein individueller, förmlicher Außenakt, der auf einem Gesetz beruhen muss?",
                     "hint": "Es ist das typische amtliche Papier, das du mit der Post bekommst, wenn z.B. ein Baugesuch bewilligt wird.",
                     "answers": [
@@ -29833,7 +29833,7 @@
                     "reason": "Der Bescheid ist die klassische hoheitliche Handlungsform der Verwaltung. Er regelt eine konkrete Rechtsangelegenheit für individuell bestimmte Personen (z.B. Erteilung eines Führerscheins, Baubewilligung) auf Basis der Gesetze nach einem bestimmten Verfahren (meist AVG)."
                 },
                 {
-                    "id": "q-1f2a3b4c5d6e",
+                    "id": "q-d27f0107d6cf",
                     "question": "Was ist eine Verordnung (VO)?",
                     "hint": "Die Regierung oder ein Minister verfasst detaillierte Regeln für alle Bürger, ohne das Parlament zu bemühen.",
                     "answers": [
@@ -29857,7 +29857,7 @@
                     "reason": "Verordnungen sind rechtlich betrachtet Befehle der Verwaltung an die Allgemeinheit (generell-abstrakt, z.B. eine Geschwindigkeitsbeschränkung auf einer Bundesstraße). Da sie die Gesetze nur vollziehen, müssen sie zwingend auf einem Gesetz beruhen."
                 },
                 {
-                    "id": "q-7c8d9e0f1a2b",
+                    "id": "q-643eec30eba8",
                     "question": "Was ist ein AuvBZ und wann darf er angewendet werden?",
                     "hint": "Es gibt keine Zeit für Papierkram, die Polizei muss sofort handeln.",
                     "answers": [
@@ -29881,7 +29881,7 @@
                     "reason": "Bei einem AuvBZ (Akte unmittelbarer verwaltungsbehördlicher Befehls- und Zwangsgewalt) entfällt das normale Verfahren, weil schnelles Eingreifen nötig ist (z.B. ein Polizist erteilt einen Wegweisungsbefehl oder nimmt jemanden fest). Gegen einen AuvBZ kann man sich mit einer Maßnahmenbeschwerde an das Verwaltungsgericht wehren."
                 },
                 {
-                    "id": "q-3d4e5f6a7b8c",
+                    "id": "q-5db9caa7c8ac",
                     "question": "Nenne drei Kompetenzen des Bundespräsidenten, die er meist auf Vorschlag der Bundesregierung ausübt.",
                     "hint": "Denke an Minister, Gesetze, Militär und Diplomatie.",
                     "answers": [
@@ -29905,7 +29905,7 @@
                     "reason": "Der Bundespräsident ist das Staatsoberhaupt. Er hat weitreichende formelle Befugnisse, ist jedoch bei den meisten Akten an den Vorschlag der Bundesregierung gebunden und bedarf der Gegenzeichnung."
                 },
                 {
-                    "id": "q-9a0b1c2d3e4f",
+                    "id": "q-3a3611fef909",
                     "question": "Wie kann der Bundespräsident politisch zur Verantwortung gezogen (abgesetzt) werden?",
                     "hint": "Da er direkt vom Volk gewählt wurde, kann ihn das Parlament nicht einfach so absetzen.",
                     "answers": [
@@ -29929,7 +29929,7 @@
                     "reason": "Da das Amt hohe Legitimität besitzt (Volkswahl), sieht Art 60 Abs 6 B-VG hohe Hürden vor: Die Bundesversammlung muss die Volksabstimmung zur Absetzung verlangen. Scheitert diese Abstimmung (das Volk stützt den Präsidenten), gilt der Nationalrat als automatisch aufgelöst."
                 },
                 {
-                    "id": "q-5f6a7b8c9d0e",
+                    "id": "q-8fde18666a71",
                     "question": "Hat der Bundeskanzler ein Weisungsrecht gegenüber den anderen Bundesministern?",
                     "hint": "Ist er in Österreich wirklich der absolute Chef im Kabinett wie in Deutschland (Richtlinienkompetenz)?",
                     "answers": [
@@ -29953,7 +29953,7 @@
                     "reason": "Anders als in Deutschland (Kanzlerdemokratie) hat der österreichische Bundeskanzler keine inhaltliche Richtlinienkompetenz. Minister sind in ihrem Ministerium die oberste weisungsfreie Instanz. Politisch kann der Kanzler aber dem Bundespräsidenten vorschlagen, einen unliebsamen Minister zu entlassen."
                 },
                 {
-                    "id": "q-1b2c3d4e5f6a",
+                    "id": "q-9fa877e11c96",
                     "question": "Was versteht man unter mittelbarer Bundesverwaltung (Art 102 B-VG)?",
                     "hint": "Der Bund bedient sich fremder Behörden, um seine eigenen Gesetze auszuführen.",
                     "answers": [
@@ -29977,7 +29977,7 @@
                     "reason": "Die mittelbare Bundesverwaltung (z.B. im Gewerberecht oder Wasserrecht) ist eine österreichische Besonderheit. Der Bund nutzt die bestehende Struktur der Bezirksverwaltungsbehörden (die eigentlich Landeseinrichtungen sind) für seine Angelegenheiten."
                 },
                 {
-                    "id": "q-7d8e9f0a1b2c",
+                    "id": "q-94e3538dbb25",
                     "question": "Wem gegenüber ist der Landeshauptmann in der mittelbaren Bundesverwaltung weisungsgebunden?",
                     "hint": "Wenn der Landeshauptmann Bundesrecht ausführt, muss er auch auf den Bund hören.",
                     "answers": [
@@ -30001,7 +30001,7 @@
                     "reason": "In Angelegenheiten der mittelbaren Bundesverwaltung agiert der Landeshauptmann quasi als Bundesorgan und muss die Weisungen der Regierung in Wien (des jeweiligen Ministers) befolgen (Art 103 B-VG)."
                 },
                 {
-                    "id": "q-3e4f5a6b7c8d",
+                    "id": "q-13dd343fd71a",
                     "question": "Von wem wird die Landesregierung gewählt?",
                     "hint": "Wer bildet die Volksvertretung im Bundesland?",
                     "answers": [
@@ -30025,7 +30025,7 @@
                     "reason": "Das parlamentarische Regierungssystem spiegelt sich auch in den Ländern wider: Nach der Landtagswahl wählt der neugebildete Landtag den Landeshauptmann und die Mitglieder der Landesregierung."
                 },
                 {
-                    "id": "q-9f0a1b2c3d4e",
+                    "id": "q-5d933331a2c0",
                     "question": "Was bedeutet die „subsidiäre Allzuständigkeit“ der Bezirksverwaltungsbehörden (Bezirkshauptmannschaften / Magistrate)?",
                     "hint": "Wenn niemand sonst zuständig ist, landet die Akte immer bei ihnen.",
                     "answers": [
@@ -30049,7 +30049,7 @@
                     "reason": "Die BH (bzw. in Statutarstädten der Magistrat) ist die allgemeine staatliche Anlaufstelle für den Bürger in erster Instanz. Erst wenn ein Gesetz explizit sagt, dass z.B. die Polizei, das Finanzamt oder eine andere Sonderbehörde zuständig ist, ist die BH unzuständig."
                 },
                 {
-                    "id": "q-5a6b7c8d9e0f",
+                    "id": "q-0f6ebc33cdc0",
                     "question": "In welche zwei Wirkungsbereiche teilt sich die Aufgabenbesorgung der österreichischen Gemeinde?",
                     "hint": "Einerseits macht sie ihre eigenen Angelegenheiten, andererseits arbeitet sie für den großen Staat mit.",
                     "answers": [
@@ -30073,7 +30073,7 @@
                     "reason": "Art 118 B-VG verankert die kommunale Selbstverwaltung. Die Gemeinde hat eigene lokale Themen, entscheidet hier völlig frei von staatlichen Weisungen. Wenn sie aber Bundes- oder Landesgesetze (z.B. Wahlen abhalten) mitvollzieht, ist sie an die Weisungen von BH/Bund gebunden."
                 },
                 {
-                    "id": "q-1c2d3e4f5a6b",
+                    "id": "q-375afc42025a",
                     "question": "Was kennzeichnet den eigenen Wirkungsbereich der Gemeinde?",
                     "hint": "Es betrifft typische lokale Dinge, bei denen der Bund nicht dreinreden darf.",
                     "answers": [
@@ -30097,7 +30097,7 @@
                     "reason": "Beispiele für den eigenen Wirkungsbereich sind die örtliche Baupolizei, Veranstaltungspolizei oder die Bestellung von Gemeindebediensteten. Hier gilt die Autonomie der Gemeinde."
                 },
                 {
-                    "id": "q-7e8f9a0b1c2d",
+                    "id": "q-de94adb57d76",
                     "question": "Nenne die drei Hauptorgane der Gemeinde.",
                     "hint": "Wer beschließt etwas (Parlament), wer bereitet es vor und wer steht ganz oben (Chef)?",
                     "answers": [
@@ -30121,7 +30121,7 @@
                     "reason": "Der Gemeinderat wird von der lokalen Bevölkerung gewählt und ist das beschließende Organ. Der Gemeindevorstand ist das kollegiale Beratungsorgan und der Bürgermeister vertritt die Gemeinde nach außen und leitet das Gemeindeamt."
                 },
                 {
-                    "id": "q-3f4a5b6c7d8e",
+                    "id": "q-b62bb2c7571d",
                     "question": "Was sind Beispiele für nichtterritoriale Selbstverwaltung?",
                     "hint": "Gruppen, die sich nicht über ein geografisches Gebiet definieren, sondern über einen Berufsstand oder Status.",
                     "answers": [
@@ -30145,7 +30145,7 @@
                     "reason": "Neben der territorialen Selbstverwaltung (Gemeinden) gibt es auch die berufliche oder sachliche Selbstverwaltung. Der Staat lagert hier Aufgaben (z.B. Vertretung von Arbeitnehmern oder Studenten) an vom Staat geschaffene Selbstverwaltungskörper aus, die in ihrem Bereich weisungsfrei (autonom) agieren können."
                 },
                 {
-                    "id": "q-9e0f1a2b3c4d",
+                    "id": "q-41e29ae31e9c",
                     "question": "Welche drei Gerichtsbarkeiten stehen in Österreich der Verwaltung gegenüber (Kontrolle)?",
                     "hint": "An welche drei verschiedenen Höchstgerichte kann man sich im Staat wenden?",
                     "answers": [
@@ -30169,7 +30169,7 @@
                     "reason": "Das österreichische Justizsystem ist dreigliedrig. Gegen Fehler der Verwaltung wendet man sich primär an die Verwaltungsgerichte. Geht es um Grundrechtsverletzungen, geht man zum VfGH. Geht es um privatrechtliche Ansprüche oder Strafverfahren, ist die ordentliche Justiz (OGH) zuständig."
                 },
                 {
-                    "id": "q-1a2b3c4d5e6f",
+                    "id": "q-54b3c0246e1b",
                     "question": "Wem obliegt die Vollziehung der ordentlichen Gerichtsbarkeit (Zivil- und Strafrecht) kompetenzrechtlich?",
                     "hint": "Gibt es Landesgerichte, die wirklich den Bundesländern gehören?",
                     "answers": [
@@ -30193,7 +30193,7 @@
                     "reason": "Art 82 Abs 1 B-VG legt fest, dass alle ordentlichen Gerichte (auch wenn sie „Landesgericht“ heißen) organisatorisch Bundesbehörden sind. Die Justiz ist in Österreich reine Bundessache."
                 },
                 {
-                    "id": "q-7b8c9d0e1f2a",
+                    "id": "q-dbfe18b02e0b",
                     "question": "Was besagt der Grundsatz der Gewaltentrennung in Bezug auf die Justiz (Art 94 B-VG)?",
                     "hint": "Justiz und Verwaltung sollen sich nicht vermischen, mit einer modernen Ausnahme.",
                     "answers": [
@@ -30217,7 +30217,7 @@
                     "reason": "Um Machtmissbrauch zu verhindern, verlangt die Verfassung eine strikte Trennung von Richtern und weisungsgebundenen Beamten. Nur durch eine spezielle Verfassungsnovelle wurde ein kleiner Übergang für Spezialfälle geschaffen."
                 },
                 {
-                    "id": "q-3f4a5b6c7d8e",
+                    "id": "q-aae94882394b",
                     "question": "Welche Garantien der richterlichen Unabhängigkeit kennt das B-VG (Art 87 & 88)?",
                     "hint": "Warum kann ein Minister einem Richter nicht einfach kündigen oder ihn versetzen?",
                     "answers": [
@@ -30241,7 +30241,7 @@
                     "reason": "Damit Richter ohne politischen Druck entscheiden können, dürfen sie keine Befehle (Weisungen) annehmen und können nicht einfach als Strafe entlassen oder an ein anderes Gericht versetzt werden."
                 },
                 {
-                    "id": "q-9e0f1a2b3c4d",
+                    "id": "q-bbb16c1a28dd",
                     "question": "Was bedeutet das Grundrecht auf den „gesetzlichen Richter“ (Art 83 Abs 2 B-VG)?",
                     "hint": "Man darf sich seinen Richter nicht aussuchen, aber der Staat darf das auch nicht.",
                     "answers": [
@@ -30265,7 +30265,7 @@
                     "reason": "Dieses Grundrecht verhindert die Einrichtung von „Ausnahmegerichten“ oder dass der Gerichtspräsident einen heiklen Fall einem ihm genehmen Richter zuschiebt. Die feste Geschäftsverteilung regelt im Vorfeld, wer zuständig ist."
                 },
                 {
-                    "id": "q-5d6e7f8a9b0c",
+                    "id": "q-9c00c444e6a6",
                     "question": "Was kennzeichnet den Anklageprozess im Strafverfahren (Art 90 Abs 2 B-VG)?",
                     "hint": "Der Richter darf nicht gleichzeitig derjenige sein, der die Anklage erhebt.",
                     "answers": [
@@ -30289,7 +30289,7 @@
                     "reason": "Österreich hat den mittelalterlichen Inquisitionsprozess (wo der Richter gleichzeitig Ermittler war) abgeschafft. Heute klagt die Staatsanwaltschaft an, und ein neutraler Richter entscheidet. Niemand muss sich selbst belasten."
                 },
                 {
-                    "id": "q-1c2a3b4d5e6f",
+                    "id": "q-c9e215650384",
                     "question": "Sind Staatsanwälte weisungsfrei?",
                     "hint": "Sie gehören zur Gerichtsbarkeit, sind aber keine Richter.",
                     "answers": [
@@ -30313,7 +30313,7 @@
                     "reason": "Obwohl Staatsanwälte Organe der Gerichtsbarkeit sind, sind sie weisungsgebunden. Der Justizminister trägt die oberste politische Verantwortung und kann (unter strengen Transparenzregeln) Weisungen in Ermittlungsverfahren erteilen."
                 },
                 {
-                    "id": "q-7f8a9b0c1d2e",
+                    "id": "q-168de50cfea8",
                     "question": "Wie setzt sich der Verfassungsgerichtshof (VfGH) zusammen?",
                     "hint": "Es ist ein großes Kollegium, und niemand macht es hauptberuflich.",
                     "answers": [
@@ -30337,7 +30337,7 @@
                     "reason": "Der VfGH besteht aus 14 ständigen Mitgliedern und 6 Ersatzmitgliedern. Eine Besonderheit in Österreich ist, dass Verfassungsrichter nicht hauptberuflich tätig sind, sondern nebenbei Professoren, Anwälte oder Beamte bleiben."
                 },
                 {
-                    "id": "q-3c4d5e6f7a8b",
+                    "id": "q-90f38f304794",
                     "question": "Wer schlägt die Mitglieder des VfGH zur Ernennung durch den Bundespräsidenten vor (Art 147 B-VG)?",
                     "hint": "Damit der VfGH nicht einseitig wird, dürfen drei verschiedene Verfassungsorgane Vorschläge machen.",
                     "answers": [
@@ -30361,7 +30361,7 @@
                     "reason": "Die Regierung schlägt den Präsidenten, Vize und 6 Mitglieder vor. Der Nationalrat schlägt 3 vor, der Bundesrat ebenfalls 3. Dieses System der „Checks and Balances“ soll die Unabhängigkeit des Höchstgerichts sichern."
                 },
                 {
-                    "id": "q-9b0c1d2e3f4a",
+                    "id": "q-c0886098791a",
                     "question": "Was ist die Kausalgerichtsbarkeit des VfGH (Art 137 B-VG)?",
                     "hint": "Wenn du Geld vom Staat willst, aber weder die Zivilgerichte noch die Verwaltung zuständig sind.",
                     "answers": [
@@ -30385,7 +30385,7 @@
                     "reason": "Art 137 B-VG ist eine Auffangzuständigkeit. Wenn jemand einen finanziellen Anspruch gegen die Republik hat (z.B. ein Bundesland fordert Geld vom Bund aus einer Vereinbarung), aber kein normales Gericht dafür zuständig ist, springt der VfGH ein."
                 },
                 {
-                    "id": "q-5e6f7a8b9c0d",
+                    "id": "q-91846f4c0793",
                     "question": "Was prüft der VfGH im Rahmen der Kompetenzgerichtsbarkeit (Art 138 B-VG)?",
                     "hint": "Zwei Behörden streiten sich darum, wer einen Fall bearbeiten darf (oder wer ihn abwälzen kann).",
                     "answers": [
@@ -30409,7 +30409,7 @@
                     "reason": "Wenn unklar ist, ob z.B. eine Bezirkshauptmannschaft oder ein Zivilgericht für eine Klage zuständig ist (und beide es ablehnen = negativer Konflikt), entscheidet der VfGH bindend, wer rechtlich den Hut aufhat."
                 },
                 {
-                    "id": "q-1f2a3b4c5d6e",
+                    "id": "q-1779c8ed17bb",
                     "question": "Wer ist bei der Verordnungsprüfung (Art 139 B-VG) antragsberechtigt (abstrakte Normenkontrolle)?",
                     "hint": "Von Gerichten über Ministerien bis hin zum normalen Bürger gibt es viele Antragsteller.",
                     "answers": [
@@ -30433,7 +30433,7 @@
                     "reason": "Die abstrakte Normenkontrolle erlaubt es verschiedenen staatlichen Organen (wie der Regierung oder der Volksanwaltschaft), potenziell gesetzwidrige Verordnungen überprüfen zu lassen. Seit 1975 dürfen dies auch direkt betroffene Bürger."
                 },
                 {
-                    "id": "q-7c8d9e0f1a2b",
+                    "id": "q-5655997bb3a4",
                     "question": "Unter welchen Voraussetzungen kann eine Einzelperson einen Individualantrag auf Gesetzes- oder Verordnungsprüfung stellen?",
                     "hint": "Man kann nicht einfach klagen, weil einem ein Gesetz nicht gefällt. Es muss einen selbst sofort treffen.",
                     "answers": [
@@ -30457,7 +30457,7 @@
                     "reason": "Der Individualantrag ist streng geregelt. Er ist subsidiär: Wenn man zuerst einen Bescheid provozieren könnte (z.B. einen Strafzettel kassieren) und dagegen Einspruch erhebt, muss man diesen Weg (den Instanzenzug) gehen."
                 },
                 {
-                    "id": "q-3d4e5f6a7b8c",
+                    "id": "q-bc09580eac07",
                     "question": "Welches Quorum benötigt eine parlamentarische Minderheit im NR oder BR, um ein Bundesgesetz beim VfGH anzufechten (Art 140 B-VG)?",
                     "hint": "Die Opposition kann die Regierung vor das Verfassungsgericht zerren, wenn sie groß genug ist.",
                     "answers": [
@@ -30481,7 +30481,7 @@
                     "reason": "Um den Minderheitenschutz zu stärken, können 1/3 der Nationalratsabgeordneten (oder 1/3 der Bundesräte) ein beschlossenes Gesetz zur Prüfung an den VfGH schicken (abstrakte Normenkontrolle)."
                 },
                 {
-                    "id": "q-9a0b1c2d3e4f",
+                    "id": "q-ee65f419e82e",
                     "question": "Was ist Gegenstand der Wahlgerichtsbarkeit des VfGH (Art 141 B-VG)?",
                     "hint": "Wann hebt das Gericht eine Wahl wie z.B. die Bundespräsidentenwahl (2016) auf?",
                     "answers": [
@@ -30505,7 +30505,7 @@
                     "reason": "Der VfGH kontrolliert Wahlen zu Vertretungskörpern. Er hebt eine Wahl aber nicht bei jedem noch so kleinen formalen Fehler (z.B. ein falscher Stempel) auf, sondern nur, wenn dieser Fehler das Resultat verfälscht haben könnte (Relevanztheorie)."
                 },
                 {
-                    "id": "q-5f6a7b8c9d0e",
+                    "id": "q-d677466b51e6",
                     "question": "Was ist die Sonderverwaltungsgerichtsbarkeit (Art 144 B-VG)?",
                     "hint": "Der letzte Schritt, wenn man vor dem Verwaltungsgericht verloren hat und sich in den Grundrechten verletzt fühlt.",
                     "answers": [
@@ -30529,7 +30529,7 @@
                     "reason": "Art 144 B-VG eröffnet den Weg zum VfGH. Bürger können Erkenntnisse der VwG anfechten, wenn sie glauben, dass das Gericht die Verfassung (Grundrechte) missachtet hat."
                 },
                 {
-                    "id": "q-1b2c3d4e5f6a",
+                    "id": "q-7f5cc31d576a",
                     "question": "Was prüft der VfGH bei einer Beschwerde gemäß Art 144 B-VG (Abgrenzung zum VwGH)?",
                     "hint": "Er schaut nicht auf kleine Rechenfehler oder einfache Gesetze, er hat das große Ganze im Blick.",
                     "answers": [
@@ -30553,7 +30553,7 @@
                     "reason": "Der VfGH ist keine Superrevisionsinstanz für einfache Gesetzesverletzungen (dafür ist der VwGH da). Er greift nur ein, wenn ein VwG willkürlich gehandelt hat, ein Grundrecht (wie Eigentum oder Gleichheit) verletzt wurde oder das Urteil auf einem verfassungswidrigen Gesetz beruhte."
                 },
                 {
-                    "id": "q-7d8e9f0a1b2c",
+                    "id": "q-c1b5dec5017e",
                     "question": "Wie ist die Verwaltungsgerichtsbarkeit in Österreich seit 2014 aufgebaut (2 Stufen)?",
                     "hint": "Man geht zuerst zum Gericht des Landes/Bundes und dann zur Höchstinstanz.",
                     "answers": [
@@ -30577,7 +30577,7 @@
                     "reason": "Mit der großen Verwaltungsgerichtsbarkeits-Novelle 2014 wurde der Instanzenzug innerhalb der Behörden abgeschafft. Gegen einen Bescheid geht man nun an ein VwG der ersten Stufe. Erst danach kann man (unter strengen Vorgaben) Revision an den VwGH erheben."
                 },
                 {
-                    "id": "q-3e4f5a6b7c8d",
+                    "id": "q-4c315368ed6f",
                     "question": "Welche drei Beschwerdearten an die Verwaltungsgerichte (VwG) gibt es gemäß Art 130 Abs 1 B-VG?",
                     "hint": "Man kann sich gegen einen Brief, gegen Polizeigewalt oder gegen Nichtstun wehren.",
                     "answers": [
@@ -30601,7 +30601,7 @@
                     "reason": "Art 130 B-VG normiert die Zuständigkeit der Verwaltungsgerichte. Sie erkennen über Beschwerden gegen Bescheide, über Beschwerden gegen behördliche Zwangsakte (AuvBZ) und wenn eine Behörde ihre Pflicht zur Entscheidung verletzt."
                 },
                 {
-                    "id": "q-9f0a1b2c3d4e",
+                    "id": "q-1533170f553c",
                     "question": "Entscheiden die Verwaltungsgerichte (VwG) in der Regel kassatorisch (aufhebend) oder meritorisch (in der Sache selbst)?",
                     "hint": "Schicken sie den Fall einfach zurück an die Behörde oder machen sie den Job gleich selbst fertig?",
                     "answers": [
@@ -30625,7 +30625,7 @@
                     "reason": "Im Gegensatz zum VfGH oder VwGH, die fehlerhafte Akte oft nur aufheben (kassieren), sind die VwG der ersten Instanz (LVwG, BVwG) dazu verpflichtet, den Fall in der Sache selbst zu entscheiden (z.B. den Führerschein selbst wieder auszufolgen)."
                 },
                 {
-                    "id": "q-5a6b7c8d9e0f",
+                    "id": "q-dc7eadd939a3",
                     "question": "Was ist eine Säumnisbeschwerde und wann ist sie zulässig?",
                     "hint": "Das Amt legt deinen Akt auf den Stapel und rührt sich ewig nicht.",
                     "answers": [
@@ -30649,7 +30649,7 @@
                     "reason": "Behörden haben eine Entscheidungspflicht. Wenn eine Verwaltungsbehörde schlichtweg ignoriert oder vergisst, einen Bescheid zu erlassen (meistens ab Ablauf von 6 Monaten), kann man das VwG anrufen, damit dieses anstelle der säumigen Behörde entscheidet."
                 },
                 {
-                    "id": "q-1c2d3e4f5a6b",
+                    "id": "q-5ad45cd777ab",
                     "question": "Wann ist eine Revision an den Verwaltungsgerichtshof (VwGH) zulässig (Art 133 Abs 4 B-VG)?",
                     "hint": "Der VwGH ist kein Gericht für Alltagsstreitigkeiten. Es muss um Prinzipien gehen.",
                     "answers": [
@@ -30673,7 +30673,7 @@
                     "reason": "Der VwGH als Höchstgericht soll die Rechtseinheitlichkeit in Österreich wahren. Eine Revision ist (im Gegensatz zur Beschwerde an das VwG) nicht bei jedem Fall offen, sondern nur, wenn ein echtes rechtliches Leitentscheidungs-Problem vorliegt."
                 },
                 {
-                    "id": "q-7e8f9a0b1c2d",
+                    "id": "q-91392a4ad3b0",
                     "question": "Welchem Staatsorgan untersteht der Rechnungshof (RH)?",
                     "hint": "Er ist der Wachhund, der auf das Geld aufpasst. Wer beschließt das Budget?",
                     "answers": [
@@ -30697,7 +30697,7 @@
                     "reason": "Der Rechnungshof ist ein parlamentarisches Hilfsorgan. Da das Parlament das Budgetrecht hat, kontrolliert der Rechnungshof für das Parlament, ob die Regierung das Steuergeld korrekt und effizient ausgibt."
                 },
                 {
-                    "id": "q-3f4a5b6c7d8e",
+                    "id": "q-fc53cdd1b6e7",
                     "question": "Nach welchen Kriterien prüft der Rechnungshof die Gebarung (Art 126b B-VG)?",
                     "hint": "Er sucht nicht nur nach illegaler Unterschlagung, sondern auch nach dummer Verschwendung.",
                     "answers": [
@@ -30721,7 +30721,7 @@
                     "reason": "Die Kontrolle des Rechnungshofes geht über reine Buchhaltung hinaus. Er prüft auch die „Performance“: Hat der Staat zu teuer eingekauft? Wurden Projekte effizient abgewickelt? Wurde das gewünschte Ziel erreicht?"
                 },
                 {
-                    "id": "q-9e0f1a2b3c4d",
+                    "id": "q-ebe5cf6aa8ca",
                     "question": "Was ist die Aufgabe der Volksanwaltschaft (Art 148a B-VG)?",
                     "hint": "Ein Organ, bei dem sich Bürger beschweren können, wenn sich Beamte schlecht benehmen, auch wenn das Gesetz formal nicht gebrochen wurde.",
                     "answers": [
