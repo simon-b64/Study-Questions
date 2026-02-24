@@ -106,6 +106,18 @@
                 </div>
             </div>
         </div>
+        <!-- Course Warning -->
+        @if (course()?.warning) {
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="alert alert-warning d-flex align-items-start gap-2 mb-0" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-1" aria-hidden="true"></i>
+                        <div>{{ course()!.warning }}</div>
+                    </div>
+                </div>
+            </div>
+        }
+
         <!-- Overall Progress Section -->
         <div class="row mb-4">
             <div class="col-12">

@@ -1,4 +1,5 @@
 {
+    "warning": "Aufgrund doppelter IDs kam es bei einigen Fragen zu Fehlern im System. Wir haben dies am 24.02.2026 behoben. Da die Fragen nun neue, eindeutige Kennungen haben, konnte der alte Fortschritt der Fragen in den betroffenen Gruppen leider nicht übernommen werden. Vielen Dank für Ihr Verständnis.",
     "questionGroups": [
         {
             "name": "Datenschutz",

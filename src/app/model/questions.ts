@@ -7,6 +7,7 @@ export interface CourseMetadata {
 
 export interface Course {
     questionGroups: QuestionGroup[];
+    warning: string | undefined;
 }
 
 export interface QuestionGroup {
