@@ -13,7 +13,7 @@
 
     &:not(:disabled):hover {
         transform: translateX(4px);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px rgba(var(--bs-body-color-rgb), 0.15);
     }
 
     &:disabled {
@@ -24,33 +24,6 @@
     &.btn-danger {
         font-weight: 500;
     }
-}
-
-.card-footer {
-    .btn {
-        white-space: nowrap;
-
-        @media (max-width: 575.98px) {
-            padding-left: 1rem;
-            padding-right: 1rem;
-            flex: 1;
-        }
-    }
-
-    .d-flex {
-        @media (max-width: 575.98px) {
-            flex-wrap: wrap;
-        }
-    }
-}
-
-.progress-thin {
-    height: 8px;
-}
-
-.progress-mastery {
-    width: 150px;
-    height: 8px;
 }
 
 .card {
@@ -123,3 +96,5 @@
     font-size: 0.9rem;
     color: var(--bs-secondary-color);
 }
+
+

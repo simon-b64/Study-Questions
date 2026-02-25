@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <!-- Progress Bar -->
-                <div class="progress mb-3 progress-thin">
+                <div class="progress mb-3" style="height: 8px">
                     <div class="progress-bar bg-primary"
                          [style.width.%]="((currentQuestionIndex() + 1) / questionsQueue().length) * 100"
                          role="progressbar"
@@ -33,9 +33,9 @@
             <div class="col-12 col-lg-10 offset-lg-1">
                 <div class="card shadow-lg border-0">
                     <!-- Topic Badge -->
-                    <div class="card-header bg-white border-bottom">
+                    <div class="card-header bg-body border-bottom">
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="badge bg-light text-dark">
+                            <span class="badge bg-body-secondary text-body border">
                                 <i class="bi bi-tag me-1"></i>{{ currentQuestion()!.groupName }}
                             </span>
                             @if (currentQuestion()!.progress.masteryLevel !== 'NOT_STARTED') {
@@ -114,13 +114,13 @@
                                     </div>
                                     <!-- Mastery Progress -->
                                     @if (currentQuestion()!.progress.consecutiveCorrect + 1 < 3) {
-                                        <div class="alert alert-light border">
+                                        <div class="alert bg-body-tertiary border">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <small class="text-muted">
                                                     <i class="bi bi-trophy me-1"></i>
                                                     Noch {{ 3 - (currentQuestion()!.progress.consecutiveCorrect + 1) }} richtige Antwort(en) bis "Gemeistert"
                                                 </small>
-                                                <div class="progress progress-mastery">
+                                                <div class="progress" style="width: 150px; height: 8px">
                                                     <div class="progress-bar bg-success"
                                                          [style.width.%]="((currentQuestion()!.progress.consecutiveCorrect + 1) / 3) * 100">
                                                     </div>
@@ -177,7 +177,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="alert alert-light border">
+                                    <div class="alert bg-body-tertiary border">
                                         <i class="bi bi-info-circle me-2"></i>
                                         <small class="text-muted">
                                             Diese Frage wird bald wieder erscheinen, damit du sie üben kannst.
@@ -188,8 +188,8 @@
                         }
                     </div>
                     <!-- Actions -->
-                    <div class="card-footer bg-white border-top">
-                        <div class="d-flex justify-content-between gap-2">
+                    <div class="card-footer bg-body border-top">
+                        <div class="d-flex flex-column flex-sm-row justify-content-between gap-2">
                             @if (!showResult()) {
                                 <button
                                     class="btn btn-outline-secondary btn-lg"
@@ -197,23 +197,22 @@
                                     Abbrechen
                                 </button>
                                 <button
-                                    class="btn btn-primary btn-lg px-3 px-sm-5"
+                                    class="btn btn-primary btn-lg"
                                     [disabled]="selectedAnswers().length === 0"
                                     (click)="submitAnswer()">
                                     <i class="bi bi-check-lg me-2"></i>Antwort bestätigen
                                 </button>
                             } @else {
-                                <div></div>
                                 @if (hasMoreQuestions()) {
                                     <button
-                                        class="btn btn-primary btn-lg px-3 px-sm-5"
+                                        class="btn btn-primary btn-lg ms-sm-auto"
                                         (click)="nextQuestion()">
                                         Nächste Frage
                                         <i class="bi bi-arrow-right ms-2"></i>
                                     </button>
                                 } @else {
                                     <button
-                                        class="btn btn-success btn-lg px-5"
+                                        class="btn btn-success btn-lg ms-sm-auto"
                                         (click)="finishSession()">
                                         <i class="bi bi-check-circle me-2"></i>Session beenden
                                     </button>
@@ -227,7 +226,7 @@
         <!-- Session Stats -->
         <div class="row mt-4">
             <div class="col-12 col-lg-10 offset-lg-1">
-                <div class="card bg-light border-0">
+                <div class="card bg-body-tertiary border-0">
                     <div class="card-body">
                         <div class="row text-center">
                             <div class="col-4">

@@ -67,7 +67,7 @@
 
                     <!-- Quick Session Button Group with Dropdown -->
                     <div class="btn-group" role="group" ngbDropdown>
-                        <button class="btn btn-success btn-sm btn-md-regular"
+                        <button class="btn btn-success"
                                 (click)="startQuickSession()"
                                 title="Schnelle Session mit begrenzter Fragenzahl starten">
                             <i class="bi bi-lightning-fill me-1 me-sm-2"></i>
@@ -75,7 +75,7 @@
                             <span class="d-inline d-sm-none">Quick ({{ quickSessionLimit() }})</span>
                         </button>
                         <button type="button"
-                                class="btn btn-success dropdown-toggle dropdown-toggle-split btn-sm btn-md-regular"
+                                class="btn btn-success dropdown-toggle dropdown-toggle-split"
                                 ngbDropdownToggle
                                 aria-label="Fragenzahl konfigurieren">
                             <span class="visually-hidden">Fragenzahl anpassen</span>
@@ -98,7 +98,7 @@
                         </ul>
                     </div>
 
-                    <button class="btn btn-primary btn-sm btn-md-regular" (click)="startQuestions()">
+                    <button class="btn btn-primary" (click)="startQuestions()">
                         <i class="bi bi-play-circle-fill me-1 me-sm-2"></i>
                         <span class="d-none d-sm-inline">Alle Fragen starten</span>
                         <span class="d-inline d-sm-none">Alle</span>
@@ -136,7 +136,7 @@
                                     {{ progressStats()?.completion || 0 }}%
                                 </span>
                             </div>
-                            <div class="progress progress-thick" role="progressbar"
+                            <div class="progress" style="height: 30px" role="progressbar"
                                 [attr.aria-valuenow]="progressStats()?.completion || 0" aria-valuemin="0"
                                 aria-valuemax="100">
                                 <div class="progress-bar bg-success progress-bar-striped"
@@ -154,7 +154,7 @@
                                     {{ progressStats()?.accuracy || 0 }}%
                                 </span>
                             </div>
-                            <div class="progress progress-medium" role="progressbar"
+                            <div class="progress" style="height: 25px" role="progressbar"
                                 [attr.aria-valuenow]="progressStats()?.accuracy || 0" aria-valuemin="0"
                                 aria-valuemax="100">
                                 <div class="progress-bar bg-info"
@@ -244,7 +244,7 @@
                                         {{ groupProgress.completionPercentage.toFixed(0) }}%
                                     </span>
                                 </div>
-                                <div class="progress progress-standard" role="progressbar"
+                                <div class="progress" style="height: 20px" role="progressbar"
                                     [attr.aria-valuenow]="groupProgress.completionPercentage" aria-valuemin="0"
                                     aria-valuemax="100"
                                     [attr.aria-label]="'Fortschritt für ' + groupProgress.groupName">
@@ -262,7 +262,7 @@
                                             {{ groupProgress.averageAccuracy.toFixed(0) }}%
                                         </span>
                                     </div>
-                                    <div class="progress progress-thin" role="progressbar"
+                                    <div class="progress" style="height: 15px" role="progressbar"
                                         [attr.aria-valuenow]="groupProgress.averageAccuracy" aria-valuemin="0"
                                         aria-valuemax="100"
                                         [attr.aria-label]="'Genauigkeit für ' + groupProgress.groupName">
@@ -273,29 +273,29 @@
                                 </div>
                             }
                             <!-- Status Distribution -->
-                            <div class="row g-2 text-center small">
-                                <div class="col-3">
+                            <div class="row g-2 text-center">
+                                <div class="col-6 col-sm-3">
                                     <div class="border rounded p-2">
                                         <div class="text-success fw-bold">{{ groupProgress.masteredCount }}</div>
-                                        <div class="text-muted text-xs">Gemeistert</div>
+                                        <small class="text-muted">Gemeistert</small>
                                     </div>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-sm-3">
                                     <div class="border rounded p-2">
                                         <div class="text-info fw-bold">{{ groupProgress.reviewingCount }}</div>
-                                        <div class="text-muted text-xs">Wiederholung</div>
+                                        <small class="text-muted">Wiederholung</small>
                                     </div>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-sm-3">
                                     <div class="border rounded p-2">
                                         <div class="text-warning fw-bold">{{ groupProgress.learningCount }}</div>
-                                        <div class="text-muted text-xs">Lernen</div>
+                                        <small class="text-muted">Lernen</small>
                                     </div>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-sm-3">
                                     <div class="border rounded p-2">
                                         <div class="text-secondary fw-bold">{{ groupProgress.notStartedCount }}</div>
-                                        <div class="text-muted text-xs">Nicht begonnen</div>
+                                        <small class="text-muted">Nicht begonnen</small>
                                     </div>
                                 </div>
                             </div>
@@ -314,7 +314,7 @@
         <!-- Legend -->
         <div class="row mt-4">
             <div class="col-12">
-                <div class="card bg-light">
+                <div class="card bg-body-tertiary">
                     <div class="card-body">
                         <h6 class="card-title">
                             <i class="bi bi-info-circle me-2"></i>Lernstatus-Legende

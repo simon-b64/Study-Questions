@@ -1,10 +1,10 @@
 .footer {
     a {
-        color: #6c757d;
+        color: var(--bs-secondary-color);
         transition: color 0.2s ease-in-out;
 
         &:hover {
-            color: #0d6efd;
+            color: var(--bs-link-hover-color);
         }
     }
 
