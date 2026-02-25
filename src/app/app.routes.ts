@@ -19,6 +19,14 @@ export const routes: Routes = [
         loadComponent: () => import('./view/question-view/question-view').then(m => m.QuestionView),
     },
     {
+        path: 'privacy-policy',
+        loadComponent: () => import('./view/privacy-policy/privacy-policy').then(m => m.PrivacyPolicyView),
+    },
+    {
+        path: 'terms-of-service',
+        loadComponent: () => import('./view/terms-of-service/terms-of-service').then(m => m.TermsOfServiceView),
+    },
+    {
         path: '**',
         loadComponent: () => import('./view/not-found/not-found').then(m => m.NotFoundView),
     },

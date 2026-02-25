@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy, inject, InjectionToken } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 const CURRENT_YEAR = new InjectionToken<number>('CURRENT_YEAR', {
     providedIn: 'root',
@@ -7,7 +8,7 @@ const CURRENT_YEAR = new InjectionToken<number>('CURRENT_YEAR', {
 
 @Component({
     selector: 'app-footer',
-    imports: [],
+    imports: [RouterLink],
     templateUrl: './footer.html',
     styleUrl: './footer.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

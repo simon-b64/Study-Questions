@@ -1,0 +1,26 @@
+@if (visible()) {
+    <div class="consent-banner bg-body-tertiary border-top shadow-sm py-3"
+         role="region"
+         aria-label="Hinweis zur Speichernutzung"
+         aria-live="polite">
+        <div class="container">
+            <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2 gap-sm-3">
+                <p class="mb-0 flex-grow-1 small text-body-secondary">
+                    <i class="bi bi-shield-lock-fill me-2 text-primary" aria-hidden="true"></i>
+                    Diese App verwendet <strong>lokalen Speicher</strong> ausschließlich für wesentliche
+                    Sicherheits- und Authentifizierungszwecke (um dich angemeldet zu halten und deine
+                    Einstellungen zu speichern). Ohne Anmeldung wird dein Lernfortschritt lokal gespeichert.
+                    Es werden keine Tracking- oder Werbe-Cookies verwendet.
+                    Weitere Informationen in unserer
+                    <a routerLink="/privacy-policy" class="text-decoration-underline link-secondary">Datenschutzerklärung</a>.
+                </p>
+                <button type="button"
+                        class="btn btn-primary btn-sm w-100 w-sm-auto flex-shrink-0"
+                        (click)="dismiss()"
+                        aria-label="Hinweis zur Speichernutzung schließen">
+                    Verstanden
+                </button>
+            </div>
+        </div>
+    </div>
+}
