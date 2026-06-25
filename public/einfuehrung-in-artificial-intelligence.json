@@ -1,0 +1,4907 @@
+{
+  "warning": "Automatisch generierte Fragen aus Mochi (Altfragensammlung), Anki (Theoriefragen) und PDF (Masterplan). Bitte auf Korrektheit prüfen. Bilderreferenzen entfernt.",
+  "questionGroups": [
+    {
+      "name": "Altfragen - Teil 1 MPC-Fragen",
+      "questions": [
+        {
+          "question": "(2021-10), (2024-01) Multi-Layer Perzeptron Netzwerke sind für Bildverarbeitung maßgeschneidert",
+          "hint": "Exam question from: 2021-10, 2024-01",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-e674f423a3bb"
+        },
+        {
+          "question": "(2023-12) Ein rationaler Poker-Spieleragent verliert niemals.",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-0e398f3dc31c"
+        },
+        {
+          "question": "(2023-09) Die logische Äquivalenz kann mit einem single-layer neuralen Netz realisiert werden.",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch, nicht linear separierbar",
+          "id": "q-4d4032ed348a"
+        },
+        {
+          "question": "(2021-10) Simulated Annealing entspricht stochastischem Hill-Climbing",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig (unsicher)",
+          "id": "q-48e538c49460"
+        },
+        {
+          "question": "(2023-12) Tiefe neuronale Netze werden gegenüber breiten neuronalen Netzen bevorzugt.",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-62ae2e13f33d"
+        },
+        {
+          "question": "(2021-06) In einer stochastischen Umgebung wird der nächste Zustand nur durch die ausgeführte Aktion beeinflusst.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-0d1741a3a3e8"
+        },
+        {
+          "question": "(2023-12) Ein Agent, der nur Teilinformationen über den Zustand wahrnimmt, kann nicht rational sein.",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-240a5ac48100"
+        },
+        {
+          "question": "(2021-06) In Reinforcement Learning werden Belohnungen und Bestrafungen verwendet.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-a475b3b1a159"
+        },
+        {
+          "question": "(2021-12) Die Aktionen eines rationalen Agenten sind ausschließlich von seiner Wahrnehmungs- folge und eingebautem Wissen abhängig.",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch -> sie wollen auch, das Performanzkriterium maximieren",
+          "id": "q-3698ddb82337"
+        },
+        {
+          "question": "(2021-12), (2024-01) Die Induktive Lernmethode versucht mit einem Trainingsset eine Funktion h zu finden, welche die echte Funktion f approximiert (h ≈ f )",
+          "hint": "Exam question from: 2021-12, 2024-01",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-a64e46112464"
+        },
+        {
+          "question": "(2022-10) Bei Deep Learning ist es wichtig, dass große Datenmengen für das Training des neuronalen Netzwerkes zur Verfügung stehen.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-4e19c0c94844"
+        },
+        {
+          "question": "(2024-01) Lokale Suchmethoden können keine optimalen Lösungen finden.",
+          "hint": "Exam question from: 2024-01",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-5e87f47ecb34"
+        },
+        {
+          "question": "(2023-12) Der von Unifoorm cost search zurückgegebene Pfad kann sich ändern, wenn wir zu den Kosten jedes Schritts eine positive Konstante C addieren.",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-f69d66143729"
+        },
+        {
+          "question": "(2024-01) IDS ist bei beliebigen (nicht-negativen) Kosten optimal.",
+          "hint": "Exam question from: 2024-01",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-010a910b5893"
+        },
+        {
+          "question": "(2021-12), (2024-01) Hill-Climbing mit zufälligem Neustart kann lokale Maxima überwinden.",
+          "hint": "Exam question from: 2021-12, 2024-01",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-0c3b5cc3ea15"
+        },
+        {
+          "question": "(2021-10), (2024-01) Reinforcement learning ist eine Mischung aus unsupervised und supervised learning",
+          "hint": "Exam question from: 2021-10, 2024-01",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-338846ddd769"
+        },
+        {
+          "question": "(2023-09) Es wird angenommen, dass rationale Agenten allwissend sind.",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-d675633b3c17"
+        },
+        {
+          "question": "(2021-02) Eine Pokerpartie ist eine diskrete Umgebung.",
+          "hint": "Exam question from: 2021-02",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-82d95d1c8fe1"
+        },
+        {
+          "question": "(2021-12) Der Problemgenerator eines lernenden Agenten erkennt, wenn sich der Agent in einer Problemsituation befindet.",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-312270a32d15"
+        },
+        {
+          "question": "(2022-10) (1) Local Beam Search erweitert genetische Algorithmen mit der \"Crossover\" Funktion. (2) DFS ist vollständig, wenn jeder mögliche Zustand in endlich vielen Schritten erreicht werden kann. (3) Hill-Climbing mit zufälligem Neustart kann lokale Maxima überwinden.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "(1) Falsch (2) Falsch (3) Richtig",
+              "correct": true
+            },
+            {
+              "text": "(1) Richtig (2) Falsch (3) Richtig",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Richtig (3) Richtig",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Falsch (3) Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "(1) Falsch (2) Falsch (3) Richtig",
+          "id": "q-cfedcf42cef5"
+        },
+        {
+          "question": "(2022-10) (1) Ein rationaler Agent wählt nie eine Aktion, deren tatsächlicher Gewinn bezüglich seines Performanzkriteriums suboptimal ist. (2) Durch die Lockerung der Constraints eines Problems, kann man zulässige Heuristiken erhalten. (3) Induktives Lernen ist die Erweiterung von mathematischen Induktionsbeweisen auf allgemeine Daten. (4) Bei Deep Learning ist es wichtig, dass große Datenmengen für das Training des neuronalen Netzwerkes zur Verfügung stehen.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "(1) Falsch (2) Richtig (3) Falsch (4) Richtig",
+              "correct": true
+            },
+            {
+              "text": "(1) Richtig (2) Richtig (3) Falsch (4) Richtig",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Falsch (3) Falsch (4) Richtig",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Richtig (3) Richtig (4) Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "(1) Falsch (2) Richtig (3) Falsch (4) Richtig",
+          "id": "q-c92c43f56ff6"
+        },
+        {
+          "question": "(2021-02): Das Axiom der Stetigkeit lautet:",
+          "hint": "Exam question from: 2021-02",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-b79bf48a96ed"
+        },
+        {
+          "question": "(2023-12) Beim Local Beam Search-Algorithmus werden statt einem k Zustände verwaltet.",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-d0e7023c8fd8"
+        },
+        {
+          "question": "(2021-12) Ein nutzenbasierter Agent erreicht immer das Ziel mit dem größten Nutzen (falls es erreichbar ist)",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-3854f825e41b"
+        },
+        {
+          "question": "(2021-12) (1) Der Problemgenerator eines lernenden Agenten erkennt, wenn sich der Agent in einer Problemsituation befindet. (2) Iterative Deepening Search besucht in einem endlichen Suchraum für eine optimale Lösung so wenige Knoten wie möglich. (3) Die grundlegenden Komponenten eines rationalen Agenten sind Architektur, Programm und explizite Ziele. (4) Beim unsupervised Learning werden Belohnungen und Bestrafungen verwendet.",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "(1) Falsch (2) Richtig (3) Falsch (4) Falsch",
+              "correct": true
+            },
+            {
+              "text": "(1) Richtig (2) Richtig (3) Falsch (4) Falsch",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Falsch (3) Falsch (4) Falsch",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Richtig (3) Richtig (4) Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "(1) Falsch (2) Richtig (unsicher) (3) Falsch (4) Falsch",
+          "id": "q-b71534f2ae8f"
+        },
+        {
+          "question": "(2023-09) Wenn die Kosten jeder Kante gleich sind, ist BFS optimal.",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-c720b4e3ca9a"
+        },
+        {
+          "question": "(2021-12) Iterative Deepening Search besucht in einem endlichen Suchraum für eine optimale Lösung so wenige Knoten wie möglich.",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-a2d0ab7f2989"
+        },
+        {
+          "question": "(2021-10) Inductive Learning kann nicht zur Klassifizierung verwendet werden.",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-47c2078dee72"
+        },
+        {
+          "question": "(2023-09) Depth-first search ist optimal wenn der Suchbaum endlich ist.",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-35d9b4fcfcee"
+        },
+        {
+          "question": "(2023-12) Simulated Annealing kann nicht lokale Maxima überwinden.",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-ecf54e0d837f"
+        },
+        {
+          "question": "(2023-12) In einem endlichen Suchraum, der keinen Zielzustand enthält, untersucht der A*-Algorithmus (bei Graph-Search) immer alle erreichbaren Zustände.",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-1688a8d728c0"
+        },
+        {
+          "question": "(2023-09) Entscheidungsbäume können jede beliebige Funktion aus den Eingabeattributen darstellen-",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-9d9a95c0209b"
+        },
+        {
+          "question": "(2021-10) Jede beliebige Funktion der Eingangsparameter kann durch einen Decision Tree repräsentiert werden.",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-00b65e2edad9"
+        },
+        {
+          "question": "(2022-10) Hill-Climbing mit zufälligem Neustart kann lokale Maxima überwinden.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-d9cea9ebb10b"
+        },
+        {
+          "question": "(2024-01) Ein Schachspiel ist eine kontinuierliche Umgebung",
+          "hint": "Exam question from: 2024-01",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-7747e2cf94a6"
+        },
+        {
+          "question": "(2021-12) (i) Die Induktive Lernmethode versucht mit einem Trainingsset eine Funktion h zu finden, weLche die echte Funktion f approximiert (h ≈ f ) (ii) Ein nutzenbasierter Agent erreicht immer das Ziel mit dem größten Nutzen (falls es erreichbar ist) (iii) Hill-Climbing mit zufälligem Neustart kann lokale Maxima überwinden. (iv) Die Aktionen eines rationalen Agenten sind ausschließlich von seiner Wahrnehmungs- folge und eingebautem Wissen abhängig.",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "(1) Richtig (2) Falsch (3) Richtig (4) Richtig",
+              "correct": true
+            },
+            {
+              "text": "(1) Falsch (2) Falsch (3) Richtig (4) Richtig",
+              "correct": false
+            },
+            {
+              "text": "(1) Richtig (2) Richtig (3) Richtig (4) Richtig",
+              "correct": false
+            },
+            {
+              "text": "(1) Richtig (2) Falsch (3) Falsch (4) Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "(1) richtig (2) falsch (unsicher) (3) richtig (4) richtig",
+          "id": "q-20dd98d17c46"
+        },
+        {
+          "question": "(2021-10) Für Deep Learning werden Netzwerke mit 3 bis maximal 10 hidden Layers verwendet",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-0c4b3b713ea7"
+        },
+        {
+          "question": "(2023-12) Entscheidungsbäume sind ein Beispiel für Supervised Learning",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-f6f587d1b2a7"
+        },
+        {
+          "question": "(2022-10) Ein rationaler Agent wählt nie eine Aktion, deren tatsächlicher Gewinn bezüglich seines Performanzkriteriums suboptimal ist.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch -> der tatsächliche Gewinn kann im Vorhinein nur geschätzt werden.",
+          "id": "q-1d89d630a452"
+        },
+        {
+          "question": "(2024-01) Raionale Agenten haben immer alle Informationen",
+          "hint": "Exam question from: 2024-01",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-40b1255703c9"
+        },
+        {
+          "question": "(2022-10) Induktives Lernen ist die Erweiterung von mathematischen Induktionsbeweisen auf allgemeine Daten.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-cdd16fd49f29"
+        },
+        {
+          "question": "(2023-09) Random-restart hill climbing wird bei genügend Zeit immer das globale Optimum finden (falls endliche Zeit bzw. falls unendlich viel Zeit).",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "endliche Zeit: Falsch unendlich viel Zeit: Richtig",
+              "correct": true
+            },
+            {
+              "text": "Alternative 1: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "endliche Zeit: Falsch unendlich viel Zeit: Richtig",
+          "id": "q-be81964f76c7"
+        },
+        {
+          "question": "(2021-10) Ein Schachspiel ist eine kontinuierliche Umgebung",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-4460ef0524f4"
+        },
+        {
+          "question": "(2021-02) Local Beam Search entspricht einer lokal begrenzten Ausführung von k Random-Restart Suchen.",
+          "hint": "Exam question from: 2021-02",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-75d7b004cd5d"
+        },
+        {
+          "question": "(2021-10),(2023-09) Für konsistente Heurisitkfunktionen h ist der A*-Algorithmus optimal.",
+          "hint": "Exam question from: 2021-10, 2023-09",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-d4a87c63a01f"
+        },
+        {
+          "question": "(2022-10) Local Beam Search erweitert genetische Algorithmen mit der \"Crossover\" Funktion.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-5ebbec57580b"
+        },
+        {
+          "question": "(2021-06) Die Uniform Cost Search mit test at generation time bei der Erzeugung ist im Allgemeinen nicht vollständig.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig -> expansion time macht es vollständig!",
+          "id": "q-ce1b7df78354"
+        },
+        {
+          "question": "(2021-12) Beim unsupervised Learning werden Belohnungen und Bestrafungen verwendet.",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-cbdc8f0847ee"
+        },
+        {
+          "question": "(2022-10) Durch die Lockerung der Constraints eines Problems, kann man zulässige Heuristiken erhalten.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-6010c8bc3f75"
+        },
+        {
+          "question": "(2023-09) Ein Recurrent Neural Network hat keinen internen Zustand",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-80edefde5fb3"
+        },
+        {
+          "question": "(2023-09) (1) Depth-first search ist optimal wenn der Suchbaum endlich ist. (2) Random-restart hill climbing wird bei genügend Zeit immer das globale Optimum finden (falls endliche Zeit bzw. falls unendlich viel Zeit). (3) Für konsistente Heurisitkfunktionen h ist der A*-Algorithmus optimal. (4) Wenn die Kosten jeder Kante gleich sind, ist BFS optimal.",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "(1) Falsch (2) Falsch (3) Richtig (4) Richtig",
+              "correct": true
+            },
+            {
+              "text": "(1) Richtig (2) Falsch (3) Richtig (4) Richtig",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Richtig (3) Richtig (4) Richtig",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Falsch (3) Falsch (4) Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "(1) Falsch (2) Falsch/Richtig (3) Richtig (4) Richtig",
+          "id": "q-21204e6f1a53"
+        },
+        {
+          "question": "(2021-02) Ein rationaler Agent wählt nicht unbedingt immer die bestmögliche Aktion.",
+          "hint": "Exam question from: 2021-02",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-213b9deae9aa"
+        },
+        {
+          "question": "(2021-12) Die grundlegenden Komponenten eines rationalen Agenten sind Architektur, Programm und explizite Ziele.",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-ea392be0849f"
+        },
+        {
+          "question": "(2021-02) Neuronale Netze sind generell schlecht in der Objekterkennung",
+          "hint": "Exam question from: 2021-02",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-d5cb3e50c011"
+        },
+        {
+          "question": "(2023-09) (1) Ein Recurrent Neural Network hat keinen internen Zustand (2) Entscheidungsbäume können jede beliebige Funktion aus den Eingabeattributen darstellen- (3) Die logische Äquivalent kann mit einem single-layer neuralen Netz realisiert werden. (4) Es wird angenommen, dass rationale Agenten allwissend sind.",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "(1) Falsch (2) Richtig (3) Richtig (4) Falsch",
+              "correct": true
+            },
+            {
+              "text": "(1) Richtig (2) Richtig (3) Richtig (4) Falsch",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Falsch (3) Richtig (4) Falsch",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Richtig (3) Falsch (4) Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "(1) Falsch (2) Richtig (3) Richtig (4) Falsch",
+          "id": "q-d2dde6f678a3"
+        },
+        {
+          "question": "(2021-06) Boltzmann-Maschinen entsprechen zyklen-freien Neuronalen Netzwerken",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-e4e76df43db2"
+        },
+        {
+          "question": "(2022-10) DFS ist vollständig, wenn jeder mögliche Zustand in endlich vielen Schritten erreicht werden kann.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch -> Loops müssen berücksichtigt werden!",
+          "id": "q-f6b1c87464d3"
+        }
+      ]
+    },
+    {
+      "name": "Altfragen - Teil 1 Theoriefragen",
+      "questions": [
+        {
+          "question": "(2018-06) Nennen Sie die 4 Komponenten der Task Description eines Agents. Geben Sie ein Beispiel für jede Komponente.",
+          "hint": "Exam question from: 2018-06",
+          "answers": [
+            {
+              "text": "Beispiele anhand eines Taxiunternehmens: Performance - Safety, Zeit, maximaler Gewinn Environment - Straße, Verkehr Actuator - Motor, Bremse Sensor - Kamera, GPS, Tachometer",
+              "correct": true
+            },
+            {
+              "text": "Beispiele anhand eines Taxiunt...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Beispiele anhand eines Taxiunternehmens: Performance - Safety, Zeit, maximaler Gewinn Environment - Straße, Verkehr Actuator - Motor, Bremse Sensor - Kamera, GPS, Tachometer",
+          "id": "q-52009e0a6be8"
+        },
+        {
+          "question": "(2023-09) Erklären Sie die Begriffe Completeness, Optimality, Time complexity und Space complexity im Kontext von Suchalgorithmen.",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Keine Antwort",
+              "correct": true
+            }
+          ],
+          "reason": "",
+          "id": "q-b7cb9fc90d7c"
+        },
+        {
+          "question": "(2023-09) Nennen Sie die 4 Komponenten der PEAS Description eines Agents. Geben Sie ein Beispiel für jede Komponente.",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Beispiele anhand eines Taxiunternehmens: Performance - Safety, Zeit, maximaler Gewinn Environment - Straße, Verkehr Actuator - Motor, Bremse Sensor - Kamera, GPS, Tachometer",
+              "correct": true
+            },
+            {
+              "text": "Beispiele anhand eines Taxiunt...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Beispiele anhand eines Taxiunternehmens: Performance - Safety, Zeit, maximaler Gewinn Environment - Straße, Verkehr Actuator - Motor, Bremse Sensor - Kamera, GPS, Tachometer",
+          "id": "q-ce996a60a41c"
+        },
+        {
+          "question": "(2021-12) Erklären Sie die Begriffe Space Complexity, Admissible Heuristic, Overfitting, Hidden unit und Hopfield network!",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "**Space Complexity:** maximale Anzahl von Knoten im Speicher, Evaluationsmöglichkeit bei Suchalgorithmen",
+              "correct": true
+            },
+            {
+              "text": "**Space Complexity:** maximale...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "**Space Complexity:** maximale Anzahl von Knoten im Speicher, Evaluationsmöglichkeit bei Suchalgorithmen",
+          "id": "q-7c0e76d83b04"
+        },
+        {
+          "question": "(2021-06) Wie lautet die Perceptron Lernregel?",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "w_i <- w_i + a * g'(in) * Err * x_i",
+              "correct": true
+            },
+            {
+              "text": "Alternative 1: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "w_i <- w_i + a * g'(in) * Err * x_i",
+          "id": "q-4cf2b462b5fc"
+        },
+        {
+          "question": "durchzuschalten, erreicht ist. Sie beschreibt auch mit welcher Stärke dieser dann durchgeschalten wird.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "Keine Antwort",
+              "correct": true
+            }
+          ],
+          "reason": "",
+          "id": "q-d0ae772bdc72"
+        },
+        {
+          "question": "(2021-02) Erklären sie die Begriffe Uninformed Search, Overfitting, Aktivierungsfunktion, und Deep Learning.",
+          "hint": "Exam question from: 2021-02",
+          "answers": [
+            {
+              "text": "**Uninformed Search:** Suche eines Zielzustands in einem Baum/Graphen, ohne informationen in Vorhinein über den Suchraum zu haben. Mögliche Algorithmen: BFS, DFS, DLS, IDS, UCS **Overfitting:** ein zu",
+              "correct": true
+            },
+            {
+              "text": "**Uninformed Search:** Suche e...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "**Uninformed Search:** Suche eines Zielzustands in einem Baum/Graphen, ohne informationen in Vorhinein über den Suchraum zu haben. Mögliche Algorithmen: BFS, DFS, DLS, IDS, UCS **Overfitting:** ein zu angepasste Hypothesenfunktion an irrelevante Attribute eines einzelnen Testsets **Aktivierungsfunktion:** beschreibt den Threshhold, ab dem ein Neuron durchschaltet. z.B. sigmoid-function, RELU/softplus function, tanh **Deep-Learning:** sind neuronale Netzwerke mit vielen Hidden Layern, welche dazu dienen komplexe Strukturen/Muster zu erkennen. Voraussetzung: große Datenmengen, effiziente Hardware",
+          "id": "q-9c694a0193bf"
+        },
+        {
+          "question": "(2021-12), (2021-06) Erklären Sie das Konzept eines lernenden Agenten (inkl. Diagramm) und beschreiben Sie dessen Komponenten.",
+          "hint": "Exam question from: 2021-12, 2021-06",
+          "answers": [
+            {
+              "text": "Keine Antwort",
+              "correct": true
+            }
+          ],
+          "reason": "",
+          "id": "q-1f714ea55df5"
+        },
+        {
+          "question": "(2024-01) Beschreiben Sie kurz die Uniform-cost Suche (UCS) und die tiefenbeschränkte Suche (DLS). Geben Sie die worst-case Zeit- und Speicherkomplexitäten in big-O-Notation an. Sind diese Algorithmen immer vollständig/optimal?",
+          "hint": "Exam question from: 2024-01",
+          "answers": [
+            {
+              "text": "# Uniform-Cost-Suche (UCS): expandiert Knoten mit den wenigsten Kosten bis der Goalstate erreicht worden ist. Nutzt eine Priority Queue als Frontier **Time-Complexity:** O(b^(1+[C*/e])) **Space-Comple",
+              "correct": true
+            },
+            {
+              "text": "# Uniform-Cost-Suche (UCS): expandiert Knoten mit den wenigsten Kosten bis der Goalstate erreicht worden ist.",
+              "correct": false
+            },
+            {
+              "text": "# Uniform-Cost-Suche (UCS): ex...",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "# Uniform-Cost-Suche (UCS): expandiert Knoten mit den wenigsten Kosten bis der Goalstate erreicht worden ist. Nutzt eine Priority Queue als Frontier **Time-Complexity:** O(b^(1+[C*/e])) **Space-Complexity:** O(b^(1+[C*/e])) **Optimalität:** Ja **Completeness:** Ja (positive Stepcosts und der branching Faktor muss endlich sein)",
+          "id": "q-070843d78265"
+        },
+        {
+          "question": "(2022-10) Was versteht man unter long short-term memory und wofür ist es besonders geeignet?",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Long short-term Memory ist ein Baustein, die in Recurrent Neural Networks eingesetzt werden, um einen Speicher für längere Zeit zu bilden. Werden eingesetzt für Natural Language Processing, Handschrif",
+              "correct": true
+            },
+            {
+              "text": "Long short-term Memory ist nicht ein Baustein, die in Recurrent Neural Networks eingesetzt werden, um einen Speicher für längere Zeit zu bilden. Werden eingesetzt für Natural Language Processing, Hand",
+              "correct": false
+            },
+            {
+              "text": "Long short-term Memory ist ein Baustein, die in Recurrent Neural Networks eingesetzt werden, um einen Speicher für längere Zeit zu bilden.",
+              "correct": false
+            },
+            {
+              "text": "Long short-term Memory ist ein...",
+              "correct": false
+            }
+          ],
+          "reason": "Long short-term Memory ist ein Baustein, die in Recurrent Neural Networks eingesetzt werden, um einen Speicher für längere Zeit zu bilden. Werden eingesetzt für Natural Language Processing, Handschrifterkennung oder um Time-Lags zu überbrücken zwischen zwei Events.",
+          "id": "q-cbe3ba6a60b2"
+        },
+        {
+          "question": "(2021-06) Beschreiben Sie Simulated Annealing. Diskutieren Sie, für welche Probleme es eingesetzt wird, wie es ungefähr funktioniert, und was damit erreicht wird. Welchen Nachteil hat es im Allgemeinen?",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "**Einsatzbereich:** VLSI layout, airline scheduling **Funktionsweise:** Man versucht lokalen Maxima zu entkommen, indem man manche \"schlechte\" Bewegungen zulässt, jedoch graduell deren Größe/Frequenz ",
+              "correct": true
+            },
+            {
+              "text": "**Einsatzbereich:** VLSI layou...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "**Einsatzbereich:** VLSI layout, airline scheduling **Funktionsweise:** Man versucht lokalen Maxima zu entkommen, indem man manche \"schlechte\" Bewegungen zulässt, jedoch graduell deren Größe/Frequenz minimiert. Sprich zu Beginn werden häufiger Änderungen akzeptiert, als zum Schluss -> korrespondiert zum Abkühlungsprozess von Metallen im VLSI-Design **Was erreicht wird:** falls man langsam genug sich annähert, wird man mit WK=1 einen optimalen Zustand erreichen **Nachteil:**langsam genug kann jedoch auch schlechter als ein Random Walk sein (dauert zu lange).",
+          "id": "q-a7805787dd44"
+        },
+        {
+          "question": "(2021-10) Was versteht man unter Backpropagation? Wie lautet die Update-Regel für Gewichte im Netzinneren? Erläutern Sie zusätzlich alle in der Update-Regel vorkommenden Symbole!",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Unter Backpropagation versteht man die Fehlerrückführung von der Ausgabeschicht zu den Hidden Layers, um die Gewichte des Multi-Neuronalen-Netzwerks trainieren/anlernen zu können und die Fehler minimi",
+              "correct": true
+            },
+            {
+              "text": "Unter Backpropagation versteht...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "Unter Backpropagation versteht man die Fehlerrückführung von der Ausgabeschicht zu den Hidden Layers, um die Gewichte des Multi-Neuronalen-Netzwerks trainieren/anlernen zu können und die Fehler minimieren zu können. **Grundidee:** Ziel ist es, die Verlustfunktion zu minimieren, sprich den Gradienten der Verlustfunktion (Richtung des steilsten Anstiegs) zu ermitteln und dann in die Gegenrichtung (Richtung des steilsten Abstieges), also dem minimalsten Verlust, zu gehen -> Updateregeln werden dadurch hergeleitet",
+          "id": "q-6833a3a41c36"
+        },
+        {
+          "question": "(2021-06) Beschreiben Sie kurz die A∗-Suche und die Deph-First Suche (DFS). Geben Sie die worst- case Zeit- und Speicherkomplexitäten an. Sind diese Algorithmen immer vollständig bzw. optimal?",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "**A-Suche:** Informed Search, anhand einer Priority Queue wird der derzeit minimalste f(n)-Wert ausgewählt -> f(n) = g(n) + h(n), wobei g(n) der tatsächlich bis zum Knoten n absolvierte Weg, und h(n) ",
+              "correct": true
+            },
+            {
+              "text": "**A-Suche:** Informed Search, anhand einer Priority Queue wird nicht der derzeit minimalste f(n)-Wert ausgewählt -> f(n) = g(n) + h(n), wobei g(n) der tatsächlich bis zum Knoten n absolvierte Weg, und",
+              "correct": false
+            },
+            {
+              "text": "**A-Suche:** Informed Search, ...",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "**A-Suche:** Informed Search, anhand einer Priority Queue wird der derzeit minimalste f(n)-Wert ausgewählt -> f(n) = g(n) + h(n), wobei g(n) der tatsächlich bis zum Knoten n absolvierte Weg, und h(n) eine (zulässige) Heuristik zur Abschätzung des Weges zum Zielknoten ist. _Time Complexity + Space Complexity:_ exponentiell.",
+          "id": "q-6d98e69bf59d"
+        },
+        {
+          "question": "(2021-02) Erklären Sie das Konzept eines zielbasierten Agenten und zeichnen Sie ein Diagramm, welches den Aufbau des Agenten verdeutlicht. Inwiefern unterscheiden sich zielbasierte Agenten von nutzenbasierten Agenten?",
+          "hint": "Exam question from: 2021-02",
+          "answers": [
+            {
+              "text": "Zielbasierte Agente nehmen ihre Performance als Maximierungsfunktion, Nutzenbasierte Agenten ihren Nutzen. Dabei suchen und planen zielbasierte Agente Aktionen, um das Ziel zu erreichen.",
+              "correct": true
+            },
+            {
+              "text": "Zielbasierte Agente nehmen ihre Performance als Maximierungsfunktion, Nutzenbasierte Agenten ihren Nutzen.",
+              "correct": false
+            },
+            {
+              "text": "Zielbasierte Agente nehmen ihr...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Zielbasierte Agente nehmen ihre Performance als Maximierungsfunktion, Nutzenbasierte Agenten ihren Nutzen. Dabei suchen und planen zielbasierte Agente Aktionen, um das Ziel zu erreichen.",
+          "id": "q-b8435935f38b"
+        },
+        {
+          "question": "(2023-09) Erklären Sie das Konzept eines nutzenbasierten Agenten und zeichnen Sie ein Diagramm, welches den Aufbau des Agenten verdeutlicht!",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "- Goal assesment mit utlity function - Auflösen von Konflikten - Erwartete Utility wird für Entscheidungsfindung betrachtet",
+              "correct": true
+            },
+            {
+              "text": "- Goal assesment mit utlity function - Auflösen von Konflikten - Erwartete Utility wird nicht für Entscheidungsfindung betrachtet",
+              "correct": false
+            },
+            {
+              "text": "- Goal assesment mit utlity fu...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "- Goal assesment mit utlity function - Auflösen von Konflikten - Erwartete Utility wird für Entscheidungsfindung betrachtet",
+          "id": "q-f3d1fe1d3c3f"
+        },
+        {
+          "question": "(2021-06) Erklären Sie die Begriffe: rationaler Agent, Uninformed Search, Vollständigkeit, Decision Tree Pruning und Backpropagation Algorithmus.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "**rationaler Agent:** Ein Agent, der nur auf Grund seiner Wahrnehmungshistorie, seiner Maximierung der Performance und seines in-built Wissen handelt. **Uninformed Search:** Suche nach einem Zielzusta",
+              "correct": true
+            },
+            {
+              "text": "**rationaler Agent:** Ein Agen...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "**rationaler Agent:** Ein Agent, der nur auf Grund seiner Wahrnehmungshistorie, seiner Maximierung der Performance und seines in-built Wissen handelt. **Uninformed Search:** Suche nach einem Zielzustand in Trees/Graphen ohne vorliegende Information über Suchraum -> BFS, DFS, UCS, etc. **Vollständigkeit:** gibt an, ob ein Suchalgorithmus immer eine Lösung findet (sofern eine existiert). **Backpropagation:** Fehlerrückführung in Neuronalen Netzwerken um Fehler zu minimieren (auch in Hidden Layers) **Decision Tree pruning:** Eine Möglichkeit, um Overfitting zu verhindern -> splitten der irrelevanten Attribute, um zu verstehen was \"irrelevant ist\" nutzt man den Information gain und statistische Methoden",
+          "id": "q-ade98ccabbc4"
+        },
+        {
+          "question": "(2018-06) Beweisen oder widerlegen Sie, dass wenn beliebige Heuristiken h1 und h2 konsistent sind, dann ist h(n) = max{h1(n), h2(n)} auch monoton.",
+          "hint": "Exam question from: 2018-06",
+          "answers": [
+            {
+              "text": "Keine Antwort",
+              "correct": true
+            }
+          ],
+          "reason": "",
+          "id": "q-79093f337ddf"
+        },
+        {
+          "question": "(2024-01) Wann wird eine Heuristikfunktion als konsistent bezeichnet? Unter welcher bedingung für a,b => 0 ist die Heuristik h(n) = a * h1(n) + b * h2(n) sicher konsistent?",
+          "hint": "Exam question from: 2024-01",
+          "answers": [
+            {
+              "text": "Keine Antwort",
+              "correct": true
+            }
+          ],
+          "reason": "",
+          "id": "q-7895678d3738"
+        },
+        {
+          "question": "(2022-10) Beschreiben Sie das Funktionsprinzip von genetischen Algorithmen. Was besagt die Fitness-funktion. Unter welchen Bedingungen ist ein Crossover hilfreich?",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "**Genetic algorithm = Stochastische Local beam search + Nachfolger von Zustandspaaren** Funktionsweise: Zustände werden als Strings codiert, sodass es Strings der Form r1..rn gibt. Diese werden anhand",
+              "correct": true
+            },
+            {
+              "text": "**Genetic algorithm = Stochast...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "**Genetic algorithm = Stochastische Local beam search + Nachfolger von Zustandspaaren** Funktionsweise: Zustände werden als Strings codiert, sodass es Strings der Form r1..rn gibt. Diese werden anhand der Zielfunktion = Fitnessfunktion bewertet (höhere Fitnessfunktion, besserer Zustand). Dann werden anhand Wahrscheinlichkeiten (die proportional zur Fitnessfunktion sein können) die besten Paare ausgewählt, und zum Crossover geführt. (2 Strings je Paar, # der Paare abhängig vom Algorithmus). Ev. wird danach noch ein einzelner Wert mutiert.",
+          "id": "q-3f650b796def"
+        },
+        {
+          "question": "(2018-06), (2021-02) Beschreiben Sie die Funktionsweise von Hill-Climbing. Welches Problem kann bei einer einfachen Vorgehensweise auftreten und welche Lösung eignet sich dafür?",
+          "hint": "Exam question from: 2018-06, 2021-02",
+          "answers": [
+            {
+              "text": "**Funktionsweise:** Es wird eine Zustandslandschaft betrachtet, und an einem zufälligen Punkt gestartet. Es wird solange der nächste Nachbar ausgewählt, solang dieser Nachbar \"höher\", sprich einen grö",
+              "correct": true
+            },
+            {
+              "text": "**Funktionsweise:** Es wird eine Zustandslandschaft betrachtet, und an einem zufälligen Punkt gestartet.",
+              "correct": false
+            },
+            {
+              "text": "**Funktionsweise:** Es wird ei...",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "**Funktionsweise:** Es wird eine Zustandslandschaft betrachtet, und an einem zufälligen Punkt gestartet. Es wird solange der nächste Nachbar ausgewählt, solang dieser Nachbar \"höher\", sprich einen größeren Wert hat als der derzeitige Knoten **Problem:** bleibt oft in lokalen Maxima stecken **Lösung:** ist vollständig, falls unendlich oft an zufälligen Positionen neugestartet wird",
+          "id": "q-6641a63dfe87"
+        },
+        {
+          "question": "(2021-10) Erklären Sie das Funktionsprinzip der Iterative Deepening Search und benennen Sie ihre Eigenschaften bezüglich Completeness, Optimality, Time complexity und space complexity.",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "**IDS:** Es wird eine Tiefensuche durchgeführt, die jeweils ein Limit hat. Begonnen wird mit Limit l=0, dann mit l=1, l=2, etc. bis in einem l ein goal-state gefunden wurde oder der Suchbaum zu Ende i",
+              "correct": true
+            },
+            {
+              "text": "**IDS:** Es wird nicht eine Tiefensuche durchgeführt, die jeweils ein Limit hat. Begonnen wird mit Limit l=0, dann mit l=1, l=2, etc. bis in einem l ein goal-state gefunden wurde oder der Suchbaum zu ",
+              "correct": false
+            },
+            {
+              "text": "**IDS:** Es wird eine Tiefensuche durchgeführt, die jeweils ein Limit hat. Begonnen wird mit Limit l=0, dann mit l=1, l=2, etc.",
+              "correct": false
+            },
+            {
+              "text": "**IDS:** Es wird eine Tiefensu...",
+              "correct": false
+            }
+          ],
+          "reason": "**IDS:** Es wird eine Tiefensuche durchgeführt, die jeweils ein Limit hat. Begonnen wird mit Limit l=0, dann mit l=1, l=2, etc. bis in einem l ein goal-state gefunden wurde oder der Suchbaum zu Ende ist.",
+          "id": "q-5a652813a0c1"
+        },
+        {
+          "question": "(2018-06), (2021-12) Welche Funktionen können (in Abhängigkeit von der Anzahl der versteckten Ebenen i.e. hidden layers) in Single- und Multi-Layer Perzeptronnetzwerken dargestellt werden?",
+          "hint": "Exam question from: 2018-06, 2021-12",
+          "answers": [
+            {
+              "text": "Single-Layer (1 Layer, no hidden layer): Alle linearen separierbaren Funktionen Multi-Layer mit 2 Layer: Alle kontinuierlichen Funktionen mit beliebiger Genauigkeit Multi-Layer mit 3+ Layer: Alle Funk",
+              "correct": true
+            },
+            {
+              "text": "Single-Layer (1 Layer, no hidd...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Single-Layer (1 Layer, no hidden layer): Alle linearen separierbaren Funktionen Multi-Layer mit 2 Layer: Alle kontinuierlichen Funktionen mit beliebiger Genauigkeit Multi-Layer mit 3+ Layer: Alle Funktionen",
+          "id": "q-99dc706483ac"
+        },
+        {
+          "question": "(2021-06) Skizzieren Sie in einem Koordinatensystem drei verschiedene typische Ausprägungen, die Lernkurven annehmen können. Beschreiben Sie kurz, unter welchen Umständen diese auftreten.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "**Realizable:** Optimalfall **Redundant:** entsteht, wenn zu viele Attribute (die auf die eigentliche Problemstellung keine Auswirkungen haben) berücksichtigt werden. **Non-Realizable:** nicht realisi",
+              "correct": true
+            },
+            {
+              "text": "**Realizable:** Optimalfall **Redundant:** entsteht, wenn zu viele Attribute (die auf die eigentliche Problemstellung keine Auswirkungen haben) berücksichtigt werden.",
+              "correct": false
+            },
+            {
+              "text": "**Realizable:** Optimalfall **...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "**Realizable:** Optimalfall **Redundant:** entsteht, wenn zu viele Attribute (die auf die eigentliche Problemstellung keine Auswirkungen haben) berücksichtigt werden. **Non-Realizable:** nicht realisierbar, wenn entweder bestimmte Attribute fehlen oder ein zut restriktiver Hypothesenraum gewählt wurde (lineare Funktion statt komplexerer Funktion)",
+          "id": "q-5fafd13c2ea1"
+        },
+        {
+          "question": "(2018-06), (2021-10) Was ist Deep Learning und was wird benötigt um es anwenden zu können? Geben Sie Beispiele, wo DL gut funktioniert, und erklären Sie welche Schwächen es hat.",
+          "hint": "Exam question from: 2018-06, 2021-10",
+          "answers": [
+            {
+              "text": "**Deep Learning:** sind neuronale Netzwerke mit vielen Hidden Layern, welche dazu dienen komplexe Strukturen/Muster zu erkennen. **Voraussetzung:** große Datenmengen, effiziente Hardware **Einsatzbere",
+              "correct": true
+            },
+            {
+              "text": "**Deep Learning:** sind neuron...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "**Deep Learning:** sind neuronale Netzwerke mit vielen Hidden Layern, welche dazu dienen komplexe Strukturen/Muster zu erkennen. **Voraussetzung:** große Datenmengen, effiziente Hardware **Einsatzbereich:** Bilderkennung, bei nicht strukturierten Daten **Schwächen:** Layer/Gewichtung abstimmen ist oft kompliziert, System zu verifizieren bzw. Entscheidungen nachvollziehen oft nicht möglich.",
+          "id": "q-364d70244a60"
+        },
+        {
+          "question": "(2023-12) Welche Rolle spielt die Aktivierungsfunktion in neuronalen Netzen? Nennen Sie 3 Aktivierungsfunktionen aus der Vorlesung und zeichnen Sie die entsprechenden Graphen!",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Die **Aktivierungsfunktion** beschreibt, ab welchem Input der Threshold um einen Knoten durchzuschalten, erreicht ist. Sie beschreibt auch mit welcher Stärke dieser dann durchgeschalten wird.",
+              "correct": true
+            },
+            {
+              "text": "Die **Aktivierungsfunktion** beschreibt, ab welchem Input der Threshold um einen Knoten durchzuschalten, erreicht ist.",
+              "correct": false
+            },
+            {
+              "text": "Die **Aktivierungsfunktion** b...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Die **Aktivierungsfunktion** beschreibt, ab welchem Input der Threshold um einen Knoten durchzuschalten, erreicht ist. Sie beschreibt auch mit welcher Stärke dieser dann durchgeschalten wird.",
+          "id": "q-4a7b3b69ece0"
+        },
+        {
+          "question": "(2018-06), (2021-02) Beschreiben Sie kurz die Depth-First-Suche (DFS) und die Iterative-Deepening-Suche (IDS). Geben Sie die worst-case Zeit- und Speicherkomplexitäten in big-O Notation an. Sind diese Algorithmen immer vollständig bzw. optimal wenn der branching Faktor endlich ist?",
+          "hint": "Exam question from: 2018-06, 2021-02",
+          "answers": [
+            {
+              "text": "**DFS:** Tiefensuche, es wird immer der tiefste, noch unexpandete Knoten ausgewählt. **DFS-Properties:** TC: O(b^m), SC: O(bm), Complete: Nein, Optimal: Nein **IDS:** Tiefensuche mit Limit l (alle Kno",
+              "correct": true
+            },
+            {
+              "text": "**DFS:** Tiefensuche, es wird nicht immer der tiefste, noch unexpandete Knoten ausgewählt. **DFS-Properties:** TC: O(b^m), SC: O(bm), Complete: Nein, Optimal: Nein **IDS:** Tiefensuche mit Limit l (al",
+              "correct": false
+            },
+            {
+              "text": "**BFS:** Tiefensuche, es wird immer der tiefste, noch unexpandete Knoten ausgewählt. **DFS-Properties:** TC: O(b^m), SC: O(bm), Complete: Nein, Optimal: Nein **IDS:** Tiefensuche mit Limit l (alle Kno",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "**DFS:** Tiefensuche, es wird immer der tiefste, noch unexpandete Knoten ausgewählt. **DFS-Properties:** TC: O(b^m), SC: O(bm), Complete: Nein, Optimal: Nein **IDS:** Tiefensuche mit Limit l (alle Knoten außerhalb von l werden ignoriert), wobei Limit schrittweise erhöht wird, bis Ziel erreicht worden ist. **IDS-Properties:** TC: O(b^d), SC: O(bd), Complete: Ja (falls b finit ist), Optimal: Ja, aber nur wenn alle Schrittkosten gleich sind.",
+          "id": "q-2e6740de721e"
+        },
+        {
+          "question": "(2023-09) Wann dominiert eine zulässige Heuristik h1 eine andere zulässige Heuristik h2? Angenommen, h1 ist konsistent; ist dann h2 auch immer konsistent?",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Dominanz: h1(n) => h2(n) Angenommen, folgender Sachverhalt gilt. Zeichne folgendes Bild auf  Und finde ein Gegenbeispiel mit passenden Werten, sodass h1(n) => h2(n) und h1 konsistent ist, sprich das B",
+              "correct": true
+            },
+            {
+              "text": "Dominanz: h1(n) => h2(n) Angenommen, folgender Sachverhalt gilt.",
+              "correct": false
+            },
+            {
+              "text": "Dominanz: h1(n) => h2(n) Angen...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Dominanz: h1(n) => h2(n) Angenommen, folgender Sachverhalt gilt. Zeichne folgendes Bild auf  Und finde ein Gegenbeispiel mit passenden Werten, sodass h1(n) => h2(n) und h1 konsistent ist, sprich das Bild erfüllt, und h2 eben nicht konsistent ist, sprich das Bild nicht erfüllt.",
+          "id": "q-18973e5e82fe"
+        },
+        {
+          "question": "(2022-10): Erklären Sie kurz die folgenden Eigenschaften von Umgebungen: teilweise beobachtbar, deterministisch, statisch und diskret.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "**teilweise beobachtbar:** Sensoren detektieren nur manche Real-World Properties, nicht alle (=> Pokerspiel)",
+              "correct": true
+            },
+            {
+              "text": "**vollständig beobachtbar:** Sensoren detektieren nur manche Real-World Properties, nicht alle (=> Pokerspiel)",
+              "correct": false
+            },
+            {
+              "text": "**teilweise beobachtbar:** Sen...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "**teilweise beobachtbar:** Sensoren detektieren nur manche Real-World Properties, nicht alle (=> Pokerspiel)",
+          "id": "q-e581d7b0bd6f"
+        },
+        {
+          "question": "(2022-10) Was versteht man unter eine Lernkurve, bzw. welchen Zusammenhang beschreibt sie? Nennen Sie zwei Ursachen dafür, dass manche Lernkurven einen unvorteilhaften Verlauf vorweisen!",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Lernkurve beschreibt den % richtigen Anteil einer Hypothesenfunktion h auf ein Testset, abhängig von der Testset-Größe 2 Ursachen für einen unvorteilhaften Verlauf: - Realisierbarkeit der Zielfunktion",
+              "correct": true
+            },
+            {
+              "text": "Lernkurve beschreibt den % ric...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "Lernkurve beschreibt den % richtigen Anteil einer Hypothesenfunktion h auf ein Testset, abhängig von der Testset-Größe 2 Ursachen für einen unvorteilhaften Verlauf: - Realisierbarkeit der Zielfunktion: fehlende Attribute, restriktiver Hypothesenraum (z.B. lineare Funktion statt komplexer Funktion) - redundante Ausdrucksweise (zu viele, unwichtige Attribute werden berücksichtigt)",
+          "id": "q-3511b885d28b"
+        }
+      ]
+    },
+    {
+      "name": "Altfragen - Teil 2 MPC-Fragen",
+      "questions": [
+        {
+          "question": "(2021-12), (2023-09) In STRIPS wird angenommen, dass im Effekt nicht erwähnte Literale unverändert blei- ben.",
+          "hint": "Exam question from: 2021-12, 2023-09",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-b3fa7d5d28ce"
+        },
+        {
+          "question": "(2021-12) Ziele in ADL dürfen Quantoren enthalten.",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-ff5b514e3039"
+        },
+        {
+          "question": "(2023-09) (1) Jede konsistente Belegung von Werten einer Menge von Variablen in einem CSP ist eine Lösung für dieses CSP (2) CSPs mit nicht-linearen Constraints sind immer entscheidbar (3) Für ein CSP mit n Variablen mit jeweils d möglichen Werten gibt es maximal O(d^n) mögliche vollständige Zuordnungen.",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "(1) Falsch (2) Falsch (3) Richtig",
+              "correct": true
+            },
+            {
+              "text": "(1) Richtig (2) Falsch (3) Richtig",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Richtig (3) Richtig",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Falsch (3) Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "(1) Falsch (2) Falsch (3) Richtig",
+          "id": "q-a34028de4472"
+        },
+        {
+          "question": "(2021-02) In Partial Order Planning besagt der Constraint A ≺ B, dass A unmittelbar vor B aus- geführt werden muss.",
+          "hint": "Exam question from: 2021-02",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-26bee453e897"
+        },
+        {
+          "question": "(2021-12), (2022-10) Das Verhalten eines Agenten, welcher die Axiome der Nutzentheorie erfüllt, ändert sich nach einer affinen Transformation seiner Nutzenfunktion nicht.",
+          "hint": "Exam question from: 2021-12, 2022-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-b089ad6990bf"
+        },
+        {
+          "question": "(2022-10) (1) Ein Partial-Order Plan entsteht durch Linearisierung eines Total-Order-Plans (2) Ziele in ADL dürfen Disjunktionen enthalten. (3) Die Aussage \"wenn ein Flugzeug fliegt, bewegen sich alle seine Insassen entsprechend den Bewegungen des Flugzeugs\" ist ein Beispiel für das Ramifikationsproblem. (4) In STRIPS gilt die Open.World Assumption.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "(1) Falsch (2) Richtig (3) Richtig (4) Falsch",
+              "correct": true
+            },
+            {
+              "text": "(1) Richtig (2) Richtig (3) Richtig (4) Falsch",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Falsch (3) Richtig (4) Falsch",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Richtig (3) Falsch (4) Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "(1) Falsch (umgekehrt ist es richtig!) (2) Richtig (3) Richtig (4) Falsch",
+          "id": "q-8aeb649e721b"
+        },
+        {
+          "question": "(2021-12) Die Aussage \"wenn ein Auto vorwärts fährt, ändert sich seine Farbe nicht\" ist ein Beispiel welches das Frame Problem illustriert.",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-3b92f021346f"
+        },
+        {
+          "question": "(2021-10) Die Expected Utility EU (a|e), einer gegebenen Aktion a unter Evidenz e ist gegeben durch",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-0202a95c3fb5"
+        },
+        {
+          "question": "(2022-10) In STRIPS gilt die Open World Assumption.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-1cc04a46a32e"
+        },
+        {
+          "question": "(2023-12) Jeder Standard-Suchalgorithmus kann verwendet werden, um CSPs zu lösen.",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-f0710c8459df"
+        },
+        {
+          "question": "(2022-10), (2024-01) Ein Partial-Order Plan entsteht durch Linearisierung eines Total-Order-Plans",
+          "hint": "Exam question from: 2022-10, 2024-01",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch -> richtig wäre: Ein Total-Order-Plan entsteht durch Linearisierung eines Partial-Order-Plans",
+          "id": "q-e101bd22b591"
+        },
+        {
+          "question": "(2023-12) Literale in STRIPS sind grundiert und dürfen Funktionen enthalten.",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-a959be523802"
+        },
+        {
+          "question": "(2022-10) (3) Die Formel des erwarteten Nutzens EU(a|e) lautet",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-0dec713e4dfd"
+        },
+        {
+          "question": "(2023-09) Die Action Description Language erlaubt nur positive literale in States",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch -> STRIPS nur positiv",
+          "id": "q-18f5846745be"
+        },
+        {
+          "question": "(2021-02): Das Axiom der Stetigkeit lautet:",
+          "hint": "Exam question from: 2021-02",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-b79bf48a96ed"
+        },
+        {
+          "question": "(2021-10), (2023-09) Der POP-Algorithmus erzeugt nur konsistente Pläne.",
+          "hint": "Exam question from: 2021-10, 2023-09",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-c951dcde00e4"
+        },
+        {
+          "question": "(2023-09) Kommt in ADL ein Literal in einem Zustand nicht vor, so wird dieses als falsch angenommen.",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-2a5926f6d5e9"
+        },
+        {
+          "question": "(2021-02) ∃x Meets(x, bob) ist ein syntaktisch korrektes Ziel in STRIPS.",
+          "hint": "Exam question from: 2021-02",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-c35289535f5a"
+        },
+        {
+          "question": "(2021-10) In der schwachen AI-Hypothese wird angenommen, dass AI-Systeme Bewusstsein haben können",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-53887b420525"
+        },
+        {
+          "question": "(2021-06), (2024-01) Das Problem zu entscheiden ob ein Boole'sches CSP eine Lösung besitzt ist NP-Hart.",
+          "hint": "Exam question from: 2021-06, 2024-01",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-401e036670ce"
+        },
+        {
+          "question": "(2023-12) Beim POP-Algorithmus ist die Relation < für den initialen Plan leer.",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-5c4dd9ef153f"
+        },
+        {
+          "question": "(2021-06) Ein CSP darf unendlich viele Variablen enthalten.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-6cb6d49bbfd7"
+        },
+        {
+          "question": "(2024-01), (2021-02) Ein CSP darf nur binäre Constraints enthalten.",
+          "hint": "Exam question from: 2024-01, 2021-02",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-ecdd6bb96dbc"
+        },
+        {
+          "question": "(2024-01) Klassische Planungsumgebungen sind deterministisch",
+          "hint": "Exam question from: 2024-01",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-861502c61d2e"
+        },
+        {
+          "question": "(2022-10) Ziele in ADL dürfen Disjunktionen enthalten.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-7f06b9f2c238"
+        },
+        {
+          "question": "(2021-10) _∀y Loves(y, susie)_ ist ein syntaktisch korrektes Ziel in STRIPS.",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-6aa6468a610c"
+        },
+        {
+          "question": "(2023-09) Für ein CSP mit n Variablen mit jeweils d möglichen Werten gibt es maximal O(d^n) mögliche vollständige Zuordnungen.",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-077ac4d68113"
+        },
+        {
+          "question": "(2021-06) ADL lässt sowohl positive als auch negative Literale in Zuständen zu.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-296d89f58767"
+        },
+        {
+          "question": "(2021-12), (2024-01) Kein Constraint Satisfaction Problem ist in polynomieller Zeit lösbar.",
+          "hint": "Exam question from: 2021-12, 2024-01",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-4041a46c878c"
+        },
+        {
+          "question": "(2021-10) In ADL können Variablen Typen haben.",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-2e24f2903a5c"
+        },
+        {
+          "question": "(2023-09) CSPs mit nicht-linearen Constraints sind immer entscheidbar",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-6be8af0b26d6"
+        },
+        {
+          "question": "(2021-10) In Partial Order Planning gilt für alle Aktionen A, B, dass höchstens eine der Bedingungen A ≺ B oder B ≺ A zutrifft.",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-5203012ea680"
+        },
+        {
+          "question": "(2021-06) ∃x Has(jim, car) ∨ Has(jim, dog) ist ein syntaktisch korrektes Ziel in STRIPS.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-bb4edf3e0847"
+        },
+        {
+          "question": "(2021-10) Der Wert der perfekten Information (VPI) ist immer positiv.",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-40f246f0305a"
+        },
+        {
+          "question": "(2021-06) In STRIPS gilt die Closed-World Assumption.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-77fa3a86e2a3"
+        },
+        {
+          "question": "(2022-10) Die Aussage \"wenn ein Flugzeug fliegt, bewegen sich alle seine Insassen entsprechend den Bewegungen des Flugzeugs\" ist ein Beispiel für das Ramifikationsproblem.",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-f9edc6f399bd"
+        },
+        {
+          "question": "(2023-12) Lineare Constraints können mithilfe von linearen Programmiermethoden in polynomialer Zeit gelöst werden.",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-c820c38aebef"
+        },
+        {
+          "question": "(2021-02): Klassische Planungsumgebungen sind statisch",
+          "hint": "Exam question from: 2021-02",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-48de44d11277"
+        },
+        {
+          "question": "(2021-12), (2022-10) In STRIPS gilt die Open-World Assumption.",
+          "hint": "Exam question from: 2021-12, 2022-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch -> in STRIPS: closed-world (=nicht erwähnte literale sind falsch) , in ADL: open-world (nicht erwähnte literale sind unbekannt)",
+          "id": "q-618b7f4be3cb"
+        },
+        {
+          "question": "(2021-02), (2023-12), (2024-01) Im Gegensatz zu STRIPS unterstützt die ADL Gleichheit",
+          "hint": "Exam question from: 2021-02, 2023-12, 2024-01",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-242129806542"
+        },
+        {
+          "question": "(2021-12) (i) Kein Constraint Satisfaction Problem ist in polynomieller Zeit lösbar. (ii) Das Verhalten eines Agenten, welcher die Axiome der Nutzentheorie erfüllt, ändert sich nach einer affinen Transformation seiner Nutzenfunktion nicht. (iii) Die Aussage \"wenn ein Auto vorwärts fährt, ändert sich seine Farbe nicht\" ist ein Beispiel welches das Frame Problem illustriert.",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "(1) Falsch (2) Richtig (3) Richtig",
+              "correct": true
+            },
+            {
+              "text": "(1) Richtig (2) Richtig (3) Richtig",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Falsch (3) Richtig",
+              "correct": false
+            },
+            {
+              "text": "(1) Falsch (2) Richtig (3) Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "(i) Falsch (ii) Richtig (iii) Richtig",
+          "id": "q-a0cfc91a5d99"
+        },
+        {
+          "question": "(2023-09) Jede konsistente Belegung von Werten einer Menge von Variablen in einem CSP ist eine Lösung für dieses CSP",
+          "hint": "Exam question from: 2023-09",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-d56a5bbfb341"
+        },
+        {
+          "question": "(2023-12) Die Aufgabe festzustellen, ob ein CSP mit nichtlinearen Constraints eine Lösung besitzt ist ein entscheidbares Problem.",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-38f55ef276ae"
+        },
+        {
+          "question": "(2021-06) Planen kann auf das Satisfiability Problem reduziert werden.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-2a7bb495ccab"
+        },
+        {
+          "question": "(2021-06) Boole’sche CSPs sind NP-hart.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-f4f9ed8f8e4a"
+        },
+        {
+          "question": "(2021-06) Alle Varianten von Constraint-Satisfaction Problemen sind entscheidbar.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-db2b4eb4aa60"
+        },
+        {
+          "question": "(2022-10) Die Formel des erwarteten Nutzens EU(a|e) lautet",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-0867aa37357d"
+        },
+        {
+          "question": "(2022-10) Der Wert perfekter Information ist nicht additiv, d.h. im Allgemeinen gilt VPI(E_j,E_k) /= VPI(E_j) + VPI(E_k)",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-30da35219238"
+        },
+        {
+          "question": "(2021-12), (2023-12) Klassische Planungsumgebungen sind nicht vollständig beobachtbar.",
+          "hint": "Exam question from: 2021-12, 2023-12",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-7c2cafba8942"
+        },
+        {
+          "question": "(2021-02) Die Backtracking-Suche ist ein uninformierter Suchalgorithmus.",
+          "hint": "Exam question from: 2021-02",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": true
+            },
+            {
+              "text": "Richtig",
+              "correct": false
+            }
+          ],
+          "reason": "Falsch",
+          "id": "q-cdd42f9f82ae"
+        },
+        {
+          "question": "(2021-06) Lokale Suchalgorithmen können beim Lösen von CSPs hilfreich sein.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-ea980dfc3d1b"
+        },
+        {
+          "question": "(2021-12) (i) In STRIPS wird angenommen, dass im Effekt nicht erwähnte Literale unverändert blei- ben. (ii) Ziele in ADL dürfen Quantoren enthalten. (iii) Klassische Planungsumgebungen sind nicht vollständig beobachtbar. (iv) In STRIPS gilt die Open-World Assumption.",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "(1) Richtig (2) Richtig (3) Falsch (4) Falsch",
+              "correct": true
+            },
+            {
+              "text": "(1) Falsch (2) Richtig (3) Falsch (4) Falsch",
+              "correct": false
+            },
+            {
+              "text": "(1) Richtig (2) Falsch (3) Falsch (4) Falsch",
+              "correct": false
+            },
+            {
+              "text": "(1) Richtig (2) Richtig (3) Richtig (4) Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "(i) Richtig (ii) Richtig (iii) Falsch -> sind vollständig beobachtar (iv) Falsch -> Closed World Assumption is used",
+          "id": "q-17642073bece"
+        },
+        {
+          "question": "(2021-10) Die Axiome der Nutzentheorie implizieren die Existenz einer reellwertigen Nutzenfunk- tion",
+          "hint": "Exam question from: 2021-10",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Richtig",
+          "id": "q-5daf97888044"
+        }
+      ]
+    },
+    {
+      "name": "Altfragen - Teil 2 Theoriefragen",
+      "questions": [
+        {
+          "question": "(2023-09), (2024-01) Definieren Sie den Begriff einer Lotterie in der Entscheidungstheorie.",
+          "hint": "Exam question from: 2023-09, 2024-01",
+          "answers": [
+            {
+              "text": "**Definition:** Eine Lotterie L, mit den möglichen Ausgängen S_1, S_2,.. S_n welche mit der Wahrscheinlichkeit p_1, p_2, ... p_n auftreten wird geschrieben als _L = [p_1, S_1; p_2, S_2;...; p_n, S_n]_",
+              "correct": true
+            },
+            {
+              "text": "**Definition:** Eine Lotterie L, mit den möglichen Ausgängen S_1, S_2,.. S_n welche mit der Wahrscheinlichkeit p_1, p_2, ...",
+              "correct": false
+            },
+            {
+              "text": "**Definition:** Eine Lotterie ...",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "**Definition:** Eine Lotterie L, mit den möglichen Ausgängen S_1, S_2,.. S_n welche mit der Wahrscheinlichkeit p_1, p_2, ... p_n auftreten wird geschrieben als _L = [p_1, S_1; p_2, S_2;...; p_n, S_n]_ -> jeder State S_i ist ein atomarer Zustand oder eine andere Lotterie",
+          "id": "q-542fc5c6f82e"
+        },
+        {
+          "question": "(2023-12) Beschreiben Sie drei Eigenschaften des value of perfect information (VPI) mittels Angabe der entsprechenden Formeln!",
+          "hint": "Exam question from: 2023-12",
+          "answers": [
+            {
+              "text": "Keine Antwort",
+              "correct": true
+            }
+          ],
+          "reason": "",
+          "id": "q-74d0e5658703"
+        },
+        {
+          "question": "(2018-06): Erklären Sie, welche Knotenarten es in Decision Networks gibt und wofür diese verwendet werden.",
+          "hint": "Exam question from: 2018-06",
+          "answers": [
+            {
+              "text": "**Utility Nodes:** Repräsentieren die Utility Function des Agenten. Diese Knoten haben als Eltern alle Variablen, die die Utility beeinflulssen -> Diamantförmig. **Decision Nodes:** Repräsentieren Pun",
+              "correct": true
+            },
+            {
+              "text": "**Utility Nodes:** Repräsentie...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "**Utility Nodes:** Repräsentieren die Utility Function des Agenten. Diese Knoten haben als Eltern alle Variablen, die die Utility beeinflulssen -> Diamantförmig. **Decision Nodes:** Repräsentieren Punkte, an dem der Entscheidungsträger eine Entscheidung trifft. Diese kann die Chance Nodes beeinflussen -> Rechteckig. **Chance Nodes:** Repräsentieren Zufallsvariablen, können ihren Wert abhängig von einer stochastischen Verteilung haben -> oval",
+          "id": "q-47cc847c15bd"
+        },
+        {
+          "question": "(2021-06) Geben Sie die Formel für das Axiom der Stetigkeit aus der Nutzentheorie an.",
+          "hint": "Exam question from: 2021-06",
+          "answers": [
+            {
+              "text": "Falls eine Lotterie B ist zwischen A und C in der Präferenz liegt, gilt folgendes:",
+              "correct": true
+            },
+            {
+              "text": "Falls eine Lotterie B ist nicht zwischen A und C in der Präferenz liegt, gilt folgendes:",
+              "correct": false
+            },
+            {
+              "text": "Falls eine Lotterie B ist zwis...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Falls eine Lotterie B ist zwischen A und C in der Präferenz liegt, gilt folgendes:",
+          "id": "q-2edf4e56924a"
+        },
+        {
+          "question": "(2022-10) Was versteht man unter certainty equivalent in der Nutzentheorie?",
+          "hint": "Exam question from: 2022-10",
+          "answers": [
+            {
+              "text": "Das ist der Wert, den ein Agent akzeptieren würde anstatt eine Lotterie zu spielen.",
+              "correct": true
+            },
+            {
+              "text": "Das ist nicht der Wert, den ein Agent akzeptieren würde anstatt eine Lotterie zu spielen.",
+              "correct": false
+            },
+            {
+              "text": "Das ist der Wert, den ein Agen...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Das ist der Wert, den ein Agent akzeptieren würde anstatt eine Lotterie zu spielen.",
+          "id": "q-869a2a138a41"
+        },
+        {
+          "question": "(2021-12): Definiere die folgenden drei Heuristiken in Bezug auf das 3-COLOR-Problem: - Least-Constraining-Value - Minimum-Remaining-Values - Degree-Heuristik",
+          "hint": "Exam question from: 2021-12",
+          "answers": [
+            {
+              "text": "**Least-Constrainig-Value:** Sobald eine Variable ausgewählt wurde, beschreibt diese Heuristik die Zuweisung eines Wertes, der die wenigsten Möglichkeiten für seine Nachbarn ausschließt. **Minimum-Rem",
+              "correct": true
+            },
+            {
+              "text": "**Least-Constrainig-Value:** S...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "**Least-Constrainig-Value:** Sobald eine Variable ausgewählt wurde, beschreibt diese Heuristik die Zuweisung eines Wertes, der die wenigsten Möglichkeiten für seine Nachbarn ausschließt. **Minimum-Remaining-Values:** Es wird als nächstes die Variable ausgewählt, die am wenigsten legale Werte annehmen kann. Falls es eine Variable gibt, mit 0 verbleibenden Werten, wird diese ausgewählt und abgebrochen **Degree-Heurisitk:** Es wird die Variable ausgewählt, die am meisten Constraints (Kanten) zu anderen unausgewählten Variablen besitzt.",
+          "id": "q-12750728681f"
+        },
+        {
+          "question": "(2018-06) Welche drei Probleme gibt es beim Planen bezüglich dem Schlussfolgern über Handlungen? Erklären Sie dies kurz.",
+          "hint": "Exam question from: 2018-06",
+          "answers": [
+            {
+              "text": "**Frame Problem:** Wie werden Dinge repräsentiert, die nicht verändert werden während einer Aktion -> z.B. Farbe eines Autos beim Fahren. **Ramification Problem:** Wie werden Dinge repräsentiert, die ",
+              "correct": true
+            },
+            {
+              "text": "**Frame Problem:** Wie werden ...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "**Frame Problem:** Wie werden Dinge repräsentiert, die nicht verändert werden während einer Aktion -> z.B. Farbe eines Autos beim Fahren. **Ramification Problem:** Wie werden Dinge repräsentiert, die implizit vom Effekt betroffen sind. -> z.B. Personen im Flugzeug bewegen sich mit von A nach B wenn das Flugzeug von A nach B fliegt. **Qualification Problem:** Welche Vorbedingungen müssen erfüllt sein, dass eine Aktion erfolgreich ist. Bsp: Flugzeug fliegt von A nach B. Dann muss vorher erfüllt sein, dass Flugzeug in A ist.",
+          "id": "q-c2538105323c"
+        },
+        {
+          "question": "(2024-01) Wann spricht man beim Partial-Order Planning von einem Konflikt zwischen einer Aktion und einem kausalen Link A ->p B?",
+          "hint": "Exam question from: 2024-01",
+          "answers": [
+            {
+              "text": "Aktion C conflicts, falls C: - den Effekt ¬p hat - zwischen A und B kommen könnte",
+              "correct": true
+            },
+            {
+              "text": "Aktion C conflicts, falls C: - den Effekt ¬p hat nicht - zwischen A und B kommen könnte",
+              "correct": false
+            },
+            {
+              "text": "Aktion C conflicts, falls C: -...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Aktion C conflicts, falls C: - den Effekt ¬p hat - zwischen A und B kommen könnte",
+          "id": "q-a7277e183a02"
+        },
+        {
+          "question": "(2021-12), (2022-10): Definieren Sie die Begriffe einer vollständigen Zuordnung, einer konsistenten Zuordnung und einer Lösung des Constraint Satisfaction Problems.",
+          "hint": "Exam question from: 2021-12, 2022-10",
+          "answers": [
+            {
+              "text": "**konsistente/legal Zuordnung:** ist ein Assignment, dass gegen kein Constraint verstößt. **vollständige Zuordnung:** wenn jede Variable im Assignment erwähnt wird, ist es complete. **Lösung eines CSP",
+              "correct": true
+            },
+            {
+              "text": "**konsistente/legal Zuordnung:** ist nicht ein Assignment, dass gegen kein Constraint verstößt. **vollständige Zuordnung:** wenn jede Variable im Assignment erwähnt wird, ist es complete. **Lösung ein",
+              "correct": false
+            },
+            {
+              "text": "**konsistente/legal Zuordnung:** ist ein Assignment, dass gegen kein Constraint verstößt. **vollständige Zuordnung:** wenn jede Variable im Assignment erwähnt wird, ist es complete.",
+              "correct": false
+            },
+            {
+              "text": "**konsistente/legal Zuordnung:...",
+              "correct": false
+            }
+          ],
+          "reason": "**konsistente/legal Zuordnung:** ist ein Assignment, dass gegen kein Constraint verstößt. **vollständige Zuordnung:** wenn jede Variable im Assignment erwähnt wird, ist es complete. **Lösung eines CSP:** ist eine vollständige und legale Zuordnung, sprich es erwähnt alle Variablen (mit einem Wert der Domain) und erfüllt alle Constraints",
+          "id": "q-9ec9f0b90f73"
+        },
+        {
+          "question": "(2024-01) Beschrieben Sie zwei Methoden des Planens mittels State-Space",
+          "hint": "Exam question from: 2024-01",
+          "answers": [
+            {
+              "text": "**Progression Planing (Forward state-space search):** startet beim initialen State des Problems und versucht solange eine Sequenz von Actions, bis man den Goal state erreicht hat. Actions sind in eine",
+              "correct": true
+            },
+            {
+              "text": "**Progression Planing (Forward state-space search):** startet beim initialen State des Problems und versucht solange eine Sequenz von Actions, bis man den Goal state erreicht hat. Actions sind nicht i",
+              "correct": false
+            },
+            {
+              "text": "**Progression Planing (Forward state-space search):** startet beim initialen State des Problems und versucht solange eine Sequenz von Actions, bis man den Goal state erreicht hat.",
+              "correct": false
+            },
+            {
+              "text": "**Progression Planing (Forward...",
+              "correct": false
+            }
+          ],
+          "reason": "**Progression Planing (Forward state-space search):** startet beim initialen State des Problems und versucht solange eine Sequenz von Actions, bis man den Goal state erreicht hat. Actions sind in einem bestimmten State nur zulässig, wenn die entsprechenden Preconditions erfüllt sind.",
+          "id": "q-bae66d60a1f4"
+        },
+        {
+          "question": "(2021-02), (2021-10), (2023-09) Geben Sie die Definition des Axioms der Monotonie mittels Angabe der entsprechenden Formel.",
+          "hint": "Exam question from: 2021-02, 2021-10, 2023-09",
+          "answers": [
+            {
+              "text": "**Monotonie**: Angenommen 2 LOtterien haben dasselbe Ergebnis A und B. Wenn ein Agent A gegenüber B präferiert, dann muss der Agent präzise die Lotterie präferieren, die eine höhere Wahrscheinlichkeit",
+              "correct": true
+            },
+            {
+              "text": "**Monotonie**: Angenommen 2 LOtterien haben dasselbe Ergebnis A und B. Wenn ein Agent A gegenüber B präferiert, dann muss nicht der Agent präzise die Lotterie präferieren, die eine höhere Wahrscheinli",
+              "correct": false
+            },
+            {
+              "text": "**Monotonie**: Angenommen 2 LOtterien haben dasselbe Ergebnis A und B.",
+              "correct": false
+            },
+            {
+              "text": "**Monotonie**: Angenommen 2 LO...",
+              "correct": false
+            }
+          ],
+          "reason": "**Monotonie**: Angenommen 2 LOtterien haben dasselbe Ergebnis A und B. Wenn ein Agent A gegenüber B präferiert, dann muss der Agent präzise die Lotterie präferieren, die eine höhere Wahrscheinlichkeit für Ausgang A hat.",
+          "id": "q-78eadb94bf18"
+        },
+        {
+          "question": "(2018-06) Erklären Sie Backtracking-Search für CSP. Warum ist sie im Allgemeinem nicht besonder effizient?",
+          "hint": "Exam question from: 2018-06",
+          "answers": [
+            {
+              "text": "Bei Backtracking wird ausgehend von einem Zustand ohne Variablenbelegung der Wert für eine Variable festgelegt und davon ausgehend rekursiv der Wert einer weiteren, usw. Je nach Heuristik und Implemen",
+              "correct": true
+            },
+            {
+              "text": "Bei Backtracking wird nicht ausgehend von einem Zustand ohne Variablenbelegung der Wert für eine Variable festgelegt und davon ausgehend rekursiv der Wert einer weiteren, usw. Je nach Heuristik und Im",
+              "correct": false
+            },
+            {
+              "text": "Bei Backtracking wird ausgehen...",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "Bei Backtracking wird ausgehend von einem Zustand ohne Variablenbelegung der Wert für eine Variable festgelegt und davon ausgehend rekursiv der Wert einer weiteren, usw. Je nach Heuristik und Implementierung kann ein Fehler beim Expandieren festgestellt werden -> Backtracking. Laufzeit im schlimmsten Fall: exponentiell, findet jedoch Lösung am Ende, falls es eine gibt.",
+          "id": "q-0784c688e0ad"
+        },
+        {
+          "question": "(2022-10), (2024-01) Definieren Sie, durch die Angabe der Formel, die Axiome der Substituierbarkeit sowie der Dekomponierbarkeit der Nutzentheorie!",
+          "hint": "Exam question from: 2022-10, 2024-01",
+          "answers": [
+            {
+              "text": "**Substituierbarkeit** A-B => [p,A;1-p,C] ~ [p,B; 1-p,C]",
+              "correct": true
+            },
+            {
+              "text": "Alternative 1: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "**Substituierbarkeit** A-B => [p,A;1-p,C] ~ [p,B; 1-p,C]",
+          "id": "q-3b025d9a7359"
+        }
+      ]
+    },
+    {
+      "name": "Theoriefragen (aus Anki)",
+      "questions": [
+        {
+          "question": "What are the 4 components of the PEAS description of an agent? Provide an example for each.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "PEAS stands for: Performance Measure – Criteria for success (e.g., score in a game) Environment – Surroundings in which the agent operates (e.g., chessboard) Actuators – What the agent uses to act (e.",
+              "correct": true
+            },
+            {
+              "text": "PEAS stands for: Performance M...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "PEAS stands for: Performance Measure – Criteria for success (e.g., score in a game) Environment – Surroundings in which the agent operates (e.g., chessboard) Actuators – What the agent uses to act (e.g., robotic arms, mouse clicks) Sensors – What the agent uses to perceive (e.g., camera, input API) Example (self-driving car): Performance Measure: safety, time, fuel efficiency Environment: roads, traffic, pedestrians Actuators: steering, accelerator, brake Sensors: cameras, GPS, lidar",
+          "id": "q-f76bf1c580bd"
+        },
+        {
+          "question": "Explain the concept of a utility-based agent",
+          "hint": "Provide a concise answer covering all key points.",
+          "answers": [
+            {
+              "text": "assess goals with a utility functionresolve conflicting goalsuse expected utility for decision",
+              "correct": true
+            },
+            {
+              "text": "assess goals with a utility fu...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "assess goals with a utility functionresolve conflicting goalsuse expected utility for decision",
+          "id": "q-14caba9a2869"
+        },
+        {
+          "question": "Draw the structure of a utility-based agent.",
+          "hint": "Include all labeled components in your diagram.",
+          "answers": [
+            {
+              "text": "Keine Antwort",
+              "correct": true
+            }
+          ],
+          "reason": "",
+          "id": "q-a4bf40c075b9"
+        },
+        {
+          "question": "A Recurrent Neural Network has no internal state.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — A Recurrent Neural Network (RNN) has an internal state (like flip-flops), short term memory. RNNs are also used in NLP",
+          "id": "q-398406b602d7"
+        },
+        {
+          "question": "Decision trees can express any function of the input attributes.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — Decision trees can express any function of the input attributes, E.g., for Boolean functions, one truth table row \\(\\rightarrow\\) path from root to leaf. But they may not be the most efficient representation.",
+          "id": "q-cddd2c108071"
+        },
+        {
+          "question": "The logical equivalence function can be realised with a single-layer neural network.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — The logical equivalence function is not linearly separable. If you plot these points, the two \"1\"s lie on opposite corners of the square - no single line can separate them, so a single-layer neural network cannot represent it. A multi-layer network is needed.",
+          "id": "q-64b56a2ad67e"
+        },
+        {
+          "question": "It is assumed that rational agents are omniscient.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — percepts may lack relevant infos. Rational agents are not omniscient; they make decisions based on available information and their performance measure, but they do not know everything.",
+          "id": "q-025e9333bfb1"
+        },
+        {
+          "question": "Explain completeness, optimality, time complexity, and space complexity in the context of search algorithms.",
+          "hint": "Provide a concise answer covering all key points.",
+          "answers": [
+            {
+              "text": "Completeness: does the algorithm always find a solution if one exists (in the search space)? Optimality: does it always find a least-cost (i.e. best) solution? Time Complexity: number of nodes generat",
+              "correct": true
+            },
+            {
+              "text": "Completeness: does the algorit...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Keine der anderen Antworten ist korrekt.",
+              "correct": false
+            }
+          ],
+          "reason": "Completeness: does the algorithm always find a solution if one exists (in the search space)? Optimality: does it always find a least-cost (i.e. best) solution? Time Complexity: number of nodes generated/expanded. Space Complexity: maximum number of nodes in memory",
+          "id": "q-29e8f9451d02"
+        },
+        {
+          "question": "Depth-first search is optimal if the depth of the search tree is finite.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — Depth-first search is never optimal. It can get stuck in deep branches and miss shallower solutions. It is complete only if the search space is finite.",
+          "id": "q-36ab72ab06be"
+        },
+        {
+          "question": "Random-restart hill climbing will always find the global optimum given enough time",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — but maybe ambiguous. This algorithm is probabilistically complete, meaning that as the number of restarts approaches infinity, the probability of finding the global optimum approaches 1. So this is only correct if 'enough time' isn't bound by a finite limit.",
+          "id": "q-1c53f8bc671a"
+        },
+        {
+          "question": "If the costs of each edge are identical, BFS is optimal",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — with uniform (identical) edge costs, BFS finds the shallowest (fewest-step) solution, which is also the lowest-cost one.",
+          "id": "q-148661a71d6a"
+        },
+        {
+          "question": "each consistent assignment of values of a set of variables of a CSP is a solution of that CSP",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — A Constraint Satisfaction Problem (CSP) consists of: - Variables \\(X_1,\\dots,X_n\\) - Domains \\(D_i\\) for each \\(X_i\\) - Constraints restricting which combinations of values are allowed A solution is a complete assignment—every \\(X_i\\) gets a value in \\(D_i\\)—that satisfies all constraints. Thus, although a consistent assignment to some subset of variables doesn’t violate any constraints, it isn’t a full “solution” unless all variables are assigned.",
+          "id": "q-b469ae720ec0"
+        },
+        {
+          "question": "CSPs with nonlinear constraints are always decidable",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — If your CSP allows arbitrary polynomial equations over the integers, deciding solvability is undecidable.",
+          "id": "q-8b20652e6972"
+        },
+        {
+          "question": "For a CSP with n variables with respectively d possible values, what is the total number of complete assignments?",
+          "hint": "",
+          "answers": [
+            {
+              "text": "Each of the n variables can take d possible values, so the total number of complete assignments is \\(d^n\\), which is \\(O(d^n)\\).",
+              "correct": true
+            },
+            {
+              "text": "Each of the n variables can ta...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Each of the n variables can take d possible values, so the total number of complete assignments is \\(d^n\\), which is \\(O(d^n)\\).",
+          "id": "q-ac14f69279a9"
+        },
+        {
+          "question": "The Action Description Language (ADL) allows only positive literals in states",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — ADL extends STRIPS by allowing both positive and negative literals in states and preconditions, enabling more expressive representations.",
+          "id": "q-703107356ca4"
+        },
+        {
+          "question": "If a literal does not occur in a state in ADL, then it is assumed to be false",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — unmentioned literals in ADL are unknown (Open-World Assumption). In STRIPS however, they are assumed false (Closed-World Assumption).",
+          "id": "q-e2ef0f2d35f0"
+        },
+        {
+          "question": "The POP-Algorithm only produces consistent plans",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — Partial-Order Planning (POP) maintains consistency by resolving threats and only committing to ordering constraints that preserve plan validity.",
+          "id": "q-66e9d1bea8b5"
+        },
+        {
+          "question": "In STRIPS it is assumed that literals not mentioned in the effect remain unchanged",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — In STRIPS, the definition of its semantics incorporates what is known as the STRIPS assumption: every literal not mentioned in the effect remains unchanged. This is how STRIPS addresses the frame problem.",
+          "id": "q-4c9a8999d1a3"
+        },
+        {
+          "question": "What role does the activation function play in a neural network?",
+          "hint": "",
+          "answers": [
+            {
+              "text": "The activation function determines the output of a neuron based on its input. Without the activation function, the neuronal network would just represent a linear combination (a single layer linear mod",
+              "correct": true
+            },
+            {
+              "text": "The activation function determines the output of a neuron based on its input.",
+              "correct": false
+            },
+            {
+              "text": "The activation function determ...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "The activation function determines the output of a neuron based on its input. Without the activation function, the neuronal network would just represent a linear combination (a single layer linear model).",
+          "id": "q-70bfd46da5f8"
+        },
+        {
+          "question": "Name 3 activation functions from the lecture and draw their corresponding graphs.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "Keine Antwort",
+              "correct": true
+            }
+          ],
+          "reason": "",
+          "id": "q-27397158943c"
+        },
+        {
+          "question": "Deep neural networks are preferred over wide neural networks.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — Experiments have shown that when comparing networks of similar size, deeper and narrower architectures often perform better than shallow, wide ones.",
+          "id": "q-78a4339ced36"
+        },
+        {
+          "question": "An agent that senses only partial information about the state cannot be rational.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — Rationality means choosing the best action given the available information, even if incomplete. Rational \\(\\neq\\) omniscient.",
+          "id": "q-3c3d4faa6d2c"
+        },
+        {
+          "question": "Decision Trees are an example of Supervised learning.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — Decision trees are a type of supervised learning where a function is learned from labeled examples.",
+          "id": "q-819a1d0af14d"
+        },
+        {
+          "question": "A rational poker playing agent never loses.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — Rational agents can still lose in stochastic environments like poker; they aim to maximize expected success, not guarantee a win.",
+          "id": "q-8f4490ec3ac1"
+        },
+        {
+          "question": "Explain the notion: Time complexity",
+          "hint": "Provide a concise answer covering all key points.",
+          "answers": [
+            {
+              "text": "Time complexity refers to the number of nodes generated or expanded by a search strategy, often expressed in terms of problem parameters like branching factor and depth.",
+              "correct": true
+            },
+            {
+              "text": "Time complexity refers to the ...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Time complexity refers to the number of nodes generated or expanded by a search strategy, often expressed in terms of problem parameters like branching factor and depth.",
+          "id": "q-732c767dedba"
+        },
+        {
+          "question": "Explain the notion: Overfitting",
+          "hint": "Provide a concise answer covering all key points.",
+          "answers": [
+            {
+              "text": "Overfitting is when a hypothesis fits the training data too closely, including noise or irrelevant features, causing it to perform poorly on new, unseen examples.",
+              "correct": true
+            },
+            {
+              "text": "Overfitting is when a hypothes...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Overfitting is when a hypothesis fits the training data too closely, including noise or irrelevant features, causing it to perform poorly on new, unseen examples.",
+          "id": "q-790439866098"
+        },
+        {
+          "question": "Explain the notion: Hidden unit",
+          "hint": "Provide a concise answer covering all key points.",
+          "answers": [
+            {
+              "text": "A hidden unit is a processing node in a neural network that is neither an input nor output unit; it helps extract and transform features through weighted connections.",
+              "correct": true
+            },
+            {
+              "text": "A hidden unit is a processing ...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "A hidden unit is a processing node in a neural network that is neither an input nor output unit; it helps extract and transform features through weighted connections.",
+          "id": "q-c0495140157d"
+        },
+        {
+          "question": "Explain the notion: Hopfield network",
+          "hint": "Provide a concise answer covering all key points.",
+          "answers": [
+            {
+              "text": "A Hopfield network is a type of recurrent neural network where all units are both inputs and outputs, connections are bidirectional and symmetric (i.e., \\(w_{i,j} = w_{j,i}\\)), and the activation func",
+              "correct": true
+            },
+            {
+              "text": "A Hopfield network is a type o...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "A Hopfield network is a type of recurrent neural network where all units are both inputs and outputs, connections are bidirectional and symmetric (i.e., \\(w_{i,j} = w_{j,i}\\)), and the activation function is the sign function: \\(g(x) = \\text{sign}(x) = \\begin{cases}1 & \\text{if } x \\ge 0 \\\\ -1 & \\text{if } x &lt; 0 \\end{cases}\\) It supports associative memory through distributed representations.",
+          "id": "q-8f3df0e081b3"
+        },
+        {
+          "question": "The path returned by Uniform Cost Search may change when a positive constant is added to every step cost.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — The path returned by Uniform Cost Search may change when a positive constant is added to every step cost, because longer paths are penalized more heavily than shorter ones. Example: Starting point SIBIU, goal: BUCHAREST. Problem: SIBIU \\(\\rightarrow\\) BUCHAREST = 10, SIBIU \\(\\rightarrow\\) FAGARAS \\(\\rightarrow\\) BUCHAREST = 9. The latter is preferred as UCS expands the cheaper path (9) first. If we add C=3 to every step cost, the first (direct) path becomes 12, while the second path becomes 13, so the first path is now preferred.",
+          "id": "q-4b0f94308078"
+        },
+        {
+          "question": "In a finite search space containing no goal state, the A*-Alg will (using graph search) always explore all reachable states",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — In the absence of a goal, A* with graph search continues expanding nodes in order of lowest f-cost until the frontier is empty, meaning it will eventually explore all reachable states.",
+          "id": "q-4fe89f1d212d"
+        },
+        {
+          "question": "Simulated Annealing cannot escape local maxima",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — Simulated Annealing allows some 'bad' moves to escape local maxima, but gradually decreases their size and frequency by lowering the temperature over time.",
+          "id": "q-54d0079634df"
+        },
+        {
+          "question": "The Local Beam Search algorithm keeps track of k states rather than just one.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — Local Beam Search keeps k states, selects the top k successors from all their children, and shares information between them, unlike running k independent searches.",
+          "id": "q-55c971179e60"
+        },
+        {
+          "question": "Linear constraints can be solved with linear programming methods in polynomial time.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "True",
+          "id": "q-429ebbe0a14b"
+        },
+        {
+          "question": "Which search algorithms can be used to solve CSPs?",
+          "hint": "",
+          "answers": [
+            {
+              "text": "Any standard search algorithm",
+              "correct": true
+            },
+            {
+              "text": "Alternative 1: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Any standard search algorithm",
+          "id": "q-f72f0e568415"
+        },
+        {
+          "question": "The task to determine whether a CSP with non-linear constraints has a solution is a decidable problem?",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — In general, determining whether a CSP with non-linear (e.g., polynomial) constraints has a solution is undecidable",
+          "id": "q-e87bbaeff65d"
+        },
+        {
+          "question": "Literals in STRIPS are ground and may contain functions",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — In STRIPS, literals are ground (i.e., contain no variables), but they must not contain function symbols.",
+          "id": "q-6a7ea3b0e2d6"
+        },
+        {
+          "question": "Unlike STRIPS, The Action Description Language (ADL) supports equality",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — ADL extends STRIPS and supports equality tests in preconditions, which STRIPS does not allow.",
+          "id": "q-48e979f666b3"
+        },
+        {
+          "question": "Classical planning environments are not fully observable",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — Classical planning assumes environments that are fully observable, deterministic, finite, and static (changes occur only due to the agent's actions).",
+          "id": "q-700695315842"
+        },
+        {
+          "question": "In the POP algorithm, the relation ≺ is empty for the initial plan",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — The initial plan in POP includes Start and Finish, the ordering constraint Start ≺ Finish, no causal links, and all preconditions in Finish are marked as open.",
+          "id": "q-d38c0554754a"
+        },
+        {
+          "question": "What is the nonnegativity property of the Value of Perfect Information (VPI)?",
+          "hint": "",
+          "answers": [
+            {
+              "text": "The expected value of information is always nonnegative.\\[ \\text{VPI}_e(E_j) \\geq 0 \\text{ for all } e \\text{ and } E_j \\]",
+              "correct": true
+            },
+            {
+              "text": "The expected value of informat...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "The expected value of information is always nonnegative.\\[ \\text{VPI}_e(E_j) \\geq 0 \\text{ for all } e \\text{ and } E_j \\]",
+          "id": "q-0da8b78f2c2c"
+        },
+        {
+          "question": "What is the nonadditivity property of the Value of Perfect Information (VPI)?",
+          "hint": "",
+          "answers": [
+            {
+              "text": "VPI is nonadditive: the combined value of two pieces of evidence is not necessarily the sum of their individual values.\\[ \\text{VPI}_e(E_j, E_k) \\neq \\text{VPI}_e(E_j) + \\text{VPI}_e(E_k) \\]",
+              "correct": true
+            },
+            {
+              "text": "VPI is nonadditive: the combin...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "VPI is nonadditive: the combined value of two pieces of evidence is not necessarily the sum of their individual values.\\[ \\text{VPI}_e(E_j, E_k) \\neq \\text{VPI}_e(E_j) + \\text{VPI}_e(E_k) \\]",
+          "id": "q-4013fba90a89"
+        },
+        {
+          "question": "What is the order independence property of the Value of Perfect Information (VPI)?",
+          "hint": "",
+          "answers": [
+            {
+              "text": "VPI is order independent: the order in which evidence is considered does not change the value.\\[ \\text{VPI}_e(E_j, E_k) = \\text{VPI}_e(E_k, E_j) \\]",
+              "correct": true
+            },
+            {
+              "text": "VPI is order independent: the ...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "VPI is order independent: the order in which evidence is considered does not change the value.\\[ \\text{VPI}_e(E_j, E_k) = \\text{VPI}_e(E_k, E_j) \\]",
+          "id": "q-ed00777e8c78"
+        },
+        {
+          "question": "Name the 3 properties of the Value of Perfect Information (VPI).",
+          "hint": "",
+          "answers": [
+            {
+              "text": "Nein",
+              "correct": true
+            },
+            {
+              "text": "Ja",
+              "correct": false
+            }
+          ],
+          "reason": "NonnegativityNonadditivityOrder Independence",
+          "id": "q-1c724b1024fa"
+        },
+        {
+          "question": "A game of chess is a continuous environment",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — Chess is a discrete environment because it has a finite number of distinct states and actions. A continuous environment involves variables that can take on a range of real values without fixed steps — for example, robot navigation in physical space.",
+          "id": "q-56a09c65af3b"
+        },
+        {
+          "question": "Reinforcement learning is a mix of unsupervised learning and supervised learning",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — Reinforcement learning is a distinct paradigm where an agent learns by interacting with an environment and receiving rewards, not by using labeled examples (supervised) or discovering patterns in data without labels (unsupervised).",
+          "id": "q-f3e2dbd9e21b"
+        },
+        {
+          "question": "What is the goal of inductive learning?",
+          "hint": "",
+          "answers": [
+            {
+              "text": "Inductive learning tries to approximate a target function \\( f \\) with a hypothesis \\( h \\) that is induced from training data, such that \\( h \\approx f \\).",
+              "correct": true
+            },
+            {
+              "text": "Inductive learning tries to ap...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Inductive learning tries to approximate a target function \\( f \\) with a hypothesis \\( h \\) that is induced from training data, such that \\( h \\approx f \\).",
+          "id": "q-c9401e76b2c1"
+        },
+        {
+          "question": "Briefly describe Uniform-Cost Search (UCS) and give its worst-case time and space complexity.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "UCS expands the node with the least cost until a goal state is reached. It's like Dijkstra’s algorithm but stops when the goal is found.Worst-case time: \\( \\Theta\\left(b^{1 + \\left\\lfloor \\frac{C}{\\va",
+              "correct": true
+            },
+            {
+              "text": "UCS expands the node with the least cost until a goal state is reached.",
+              "correct": false
+            },
+            {
+              "text": "UCS expands the node with the ...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "UCS expands the node with the least cost until a goal state is reached. It's like Dijkstra’s algorithm but stops when the goal is found.Worst-case time: \\( \\Theta\\left(b^{1 + \\left\\lfloor \\frac{C}{\\varepsilon} \\right\\rfloor} \\right) \\)Worst-case space: \\( \\Theta\\left(b^{1 + \\left\\lfloor \\frac{C}{\\varepsilon} \\right\\rfloor} \\right) \\)Where:- \\(b\\) = max branching factor- \\(\\varepsilon\\) = min edge cost- \\(C\\) = cost of optimal solution",
+          "id": "q-0f466a21907f"
+        },
+        {
+          "question": "Briefly describe Depth-Limited Search (DLS) and give its worst-case time and space complexity.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "DLS performs depth-first search up to a predefined depth \\(l\\). Nodes deeper than \\(l\\) are not added to the frontier.Worst-case time: \\( O(b^l) \\)Worst-case space: \\( O(bl) \\)Where:- \\(b\\) = max bran",
+              "correct": true
+            },
+            {
+              "text": "DLS performs depth-first search up to a predefined depth \\(l\\).",
+              "correct": false
+            },
+            {
+              "text": "DLS performs depth-first searc...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "DLS performs depth-first search up to a predefined depth \\(l\\). Nodes deeper than \\(l\\) are not added to the frontier.Worst-case time: \\( O(b^l) \\)Worst-case space: \\( O(bl) \\)Where:- \\(b\\) = max branching factor- \\(l\\) = depth limit",
+          "id": "q-8b1159e89e56"
+        },
+        {
+          "question": "Random restart hill climbing can overcome local maxima",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — By restarting from random initial states, it increases the chance of escaping local maxima and eventually finding the global maximum.",
+          "id": "q-2cc1ea8875b2"
+        },
+        {
+          "question": "Iterative Deepening Search is for arbitrary (non-negative) costs optimal.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — IDS is optimal only when all step costs are equal; with arbitrary positive costs, Uniform Cost Search should be used instead.",
+          "id": "q-84181c8497b7"
+        },
+        {
+          "question": "Local Search methods can not find optimal solutions.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — Local search methods are not guaranteed to find optimal solutions, but in some cases they can. Techniques like simulated annealing and random restarts improve the chance of reaching the global optimum.",
+          "id": "q-b93aa793e080"
+        },
+        {
+          "question": "Multi-layer perceptron networks are tailored for image processing.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — MLPs can be used for image processing but are not well-suited for it. Convolutional Neural Networks (CNNs) are specifically designed for image data as they focus on adjacency (e.g., in images) and aim at feature detection.",
+          "id": "q-19310a6146df"
+        },
+        {
+          "question": "A CSP can only contain binary constraints",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — While many CSPs use binary constraints (between two variables), general CSPs can also include unary and higher-order (n-ary) constraints involving more than two variables.",
+          "id": "q-02e6d87c9a28"
+        },
+        {
+          "question": "No CSP can be solved in polynomial time.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — Some CSPs can be solved in polynomial time, such as linear constraints, tree-structured CSPs and CSPs with bounded treewidth. These allow efficient algorithms due to their restricted structure.",
+          "id": "q-3bbf5a509293"
+        },
+        {
+          "question": "Deciding whether a boolean CSP has a solution is NP-hard?",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — Boolean CSPs (where variables have only two values) generalize SAT problems, and deciding whether a solution exists is NP-complete, hence NP-hard.",
+          "id": "q-75d646eec592"
+        },
+        {
+          "question": "What is a lottery in decision theory?",
+          "hint": "",
+          "answers": [
+            {
+              "text": "A lottery is a set of outcomes \\( S_1, S_2, ..., S_n \\) that occur with probabilities \\( p_1, p_2, ..., p_n \\).It can be written as:\\[ L = [p_1, S_1; p_2, S_2; \\dots; p_n, S_n] \\]Each \\( S_i \\) is eit",
+              "correct": true
+            },
+            {
+              "text": "A lottery is a set of outcomes...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "A lottery is a set of outcomes \\( S_1, S_2, ..., S_n \\) that occur with probabilities \\( p_1, p_2, ..., p_n \\).It can be written as:\\[ L = [p_1, S_1; p_2, S_2; \\dots; p_n, S_n] \\]Each \\( S_i \\) is either an atomic outcome or another lottery.",
+          "id": "q-591fa89161e2"
+        },
+        {
+          "question": "What is the axiom of substitutability in decision theory?",
+          "hint": "",
+          "answers": [
+            {
+              "text": "If an agent is indifferent between outcomes A and B, then it is also indifferent between any two lotteries that differ only by substituting A for B.Formally:\\[ A \\sim B \\Rightarrow [p, A; 1-p, C] \\sim",
+              "correct": true
+            },
+            {
+              "text": "If an agent is indifferent bet...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "If an agent is indifferent between outcomes A and B, then it is also indifferent between any two lotteries that differ only by substituting A for B.Formally:\\[ A \\sim B \\Rightarrow [p, A; 1-p, C] \\sim [p, B; 1-p, C] \\]",
+          "id": "q-0c0a527d9952"
+        },
+        {
+          "question": "Classical planning environments are deterministic.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "True",
+              "correct": true
+            },
+            {
+              "text": "False",
+              "correct": false
+            }
+          ],
+          "reason": "True — Classical planning assumes deterministic environments where each action has a single predictable outcome.",
+          "id": "q-88348a3d2062"
+        },
+        {
+          "question": "A partial-order plan is created through linearization of a total-order plan.",
+          "hint": "",
+          "answers": [
+            {
+              "text": "False",
+              "correct": true
+            },
+            {
+              "text": "True",
+              "correct": false
+            }
+          ],
+          "reason": "False — A total-order plan is created by linearizing a partial-order plan, not the other way around.",
+          "id": "q-8d8a3b557bb2"
+        },
+        {
+          "question": "Describe two methods of planning via state space search.",
+          "hint": "Provide a concise answer covering all key points.",
+          "answers": [
+            {
+              "text": "Progression Planning: Forward state space search from the initial state to the goal.- Start with the problem's initial state and consider a sequence of actions until a goal state is reached.- An actio",
+              "correct": true
+            },
+            {
+              "text": "Progression Planning: Forward ...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "Progression Planning: Forward state space search from the initial state to the goal.- Start with the problem's initial state and consider a sequence of actions until a goal state is reached.- An action is only available in a state if all its preconditions are satisfied.Regression Planning: Backward state space search from the goal to the initial state.- Allows consideration of only relevant actions.- Actions are relevant if they help achieve the goal state.",
+          "id": "q-08ceea62843e"
+        },
+        {
+          "question": "What is a conflict between an action C and a causal link A →p B in partial-order planning?",
+          "hint": "",
+          "answers": [
+            {
+              "text": "A conflict occurs if:\\(\\bullet\\) Action \\(C\\) has the effect \\(\\neg p\\), and\\(\\bullet\\) \\(C\\) could be executed after \\(A\\) and before \\(B\\).This would threaten the causal link from \\(A\\) to \\(B\\).",
+              "correct": true
+            },
+            {
+              "text": "A conflict occurs if:\\(\\bullet...",
+              "correct": false
+            },
+            {
+              "text": "Alternative 2: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            },
+            {
+              "text": "Alternative 3: Diese Antwort beschreibt ein verwandtes, aber nicht korrektes Konzept.",
+              "correct": false
+            }
+          ],
+          "reason": "A conflict occurs if:\\(\\bullet\\) Action \\(C\\) has the effect \\(\\neg p\\), and\\(\\bullet\\) \\(C\\) could be executed after \\(A\\) and before \\(B\\).This would threaten the causal link from \\(A\\) to \\(B\\).",
+          "id": "q-6bb2f284086c"
+        }
+      ]
+    },
+    {
+      "name": "Prüfungsrelevante Fakten (aus Masterplan)",
+      "questions": [
+        {
+          "question": "Es ist nicht der Fall, dass Read this first The exam is closed-book and has no calculator.",
+          "hint": "Topic: General",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Read this first The exam is closed-book and has no calculator.",
+          "id": "q-af6ce459acf8"
+        },
+        {
+          "question": "Every calculation below is designed to be done by hand with small integers.",
+          "hint": "Topic: General",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "Every calculation below is designed to be done by hand with small integers.",
+          "id": "q-1935a444b712"
+        },
+        {
+          "question": "The exam is always two parts of 40 points each (80 total): Part 1 — Agents, Search, Machine Learning / Neural Networks.",
+          "hint": "Topic: General",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "The exam is always two parts of 40 points each (80 total): Part 1 — Agents, Search, Machine Learning / Neural Networks.",
+          "id": "q-9eefa13f7102"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Each part mixes (a) one or two constructive problems you must solve step by step, (b) several True/False blocks (wrong answers lose points!), and (c) short define / explain questions.",
+          "hint": "Topic: Csp",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Each part mixes (a) one or two constructive problems you must solve step by step, (b) several True/False blocks (wrong answers lose points!), and (c) short define / explain questions.",
+          "id": "q-517184d904e3"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Sections marked BONUS are from the 2026 exercises only (lower probability, but possible).",
+          "hint": "Topic: Csp",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Sections marked BONUS are from the 2026 exercises only (lower probability, but possible).",
+          "id": "q-307557629530"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass The Exam Blueprint — what to expect All three past exams (Sept 2023, Dec 2023, Jan 2024) are built from the same skeleton.",
+          "hint": "Topic: Csp",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "The Exam Blueprint — what to expect All three past exams (Sept 2023, Dec 2023, Jan 2024) are built from the same skeleton.",
+          "id": "q-467c54898e3e"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass If you can do everything in the table below, you pass comfortably.",
+          "hint": "Topic: Csp",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "If you can do everything in the table below, you pass comfortably.",
+          "id": "q-7572e6377a2e"
+        },
+        {
+          "question": "The “probability” column is how often the topic showed up across the 3 exams + 5 exercise sheets.",
+          "hint": "Topic: Csp",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "The “probability” column is how often the topic showed up across the 3 exams + 5 exercise sheets.",
+          "id": "q-bdc52ef1c24f"
+        },
+        {
+          "question": "Cover them last, but do cover them: a new exam can always pull one in.",
+          "hint": "Topic: Csp",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "Cover them last, but do cover them: a new exam can always pull one in.",
+          "id": "q-c5f0c3322797"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Petersburg paradox §7.2 How to play the True/False blocks (this is free money / free loss) Each block has 3–4 statements and is worth 6–8 pts.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Petersburg paradox §7.2 How to play the True/False blocks (this is free money / free loss) Each block has 3–4 statements and is worth 6–8 pts.",
+          "id": "q-9bda33783a5f"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Points cannot go below 0 within a block.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Points cannot go below 0 within a block.",
+          "id": "q-90bd030834a9"
+        },
+        {
+          "question": "So: only tick a box if you are confident.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "So: only tick a box if you are confident.",
+          "id": "q-f4572db0b82e"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass If you have no idea, leaving it blank is safer than guessing.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "If you have no idea, leaving it blank is safer than guessing.",
+          "id": "q-ec1d4941e42e"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Almost all true/false statements in this course are paraphrases of a handful of facts — this guide collects them in red “Memorize” boxes.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Almost all true/false statements in this course are paraphrases of a handful of facts — this guide collects them in red “Memorize” boxes.",
+          "id": "q-9be07a7dab1f"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass The 10 facts that have appeared as True/False most often 1.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "The 10 facts that have appeared as True/False most often 1.",
+          "id": "q-af06dcfdfb68"
+        },
+        {
+          "question": "An agent with only partial information can still be rational.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "An agent with only partial information can still be rational.",
+          "id": "q-cfd9acc76906"
+        },
+        {
+          "question": "Deep+narrow networks are generally preferred over shallow+wide.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "Deep+narrow networks are generally preferred over shallow+wide.",
+          "id": "q-d3292833297a"
+        },
+        {
+          "question": "Decision trees are True supervised learning and can express True any Boolean function of the inputs.",
+          "hint": "Topic: Ml",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "Decision trees are True supervised learning and can express True any Boolean function of the inputs.",
+          "id": "q-ab586d14a385"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass A single-layer perceptron False cannot represent XOR / equivalence (not linearly separable).",
+          "hint": "Topic: Nn",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "A single-layer perceptron False cannot represent XOR / equivalence (not linearly separable).",
+          "id": "q-f0b956fa3eea"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass DFS is False never optimal in general; BFS is optimal True only when all step costs are equal.",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "DFS is False never optimal in general; BFS is optimal True only when all step costs are equal.",
+          "id": "q-d855f794b974"
+        },
+        {
+          "question": "A∗(tree search) is optimal if h is admissible; A∗(graph search) is optimal if h is consistent.",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "A∗(tree search) is optimal if h is admissible; A∗(graph search) is optimal if h is consistent.",
+          "id": "q-113b059e67fe"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Simulated annealing True can escape local maxima.",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Simulated annealing True can escape local maxima.",
+          "id": "q-75473a0f3e3a"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Adding a constant C > 0 to every step cost does False not change the path UCS returns (it shifts all path costs, but longer paths gain more, so the argmin can change only if path lengths differ — see §2.4).",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Adding a constant C > 0 to every step cost does False not change the path UCS returns (it shifts all path costs, but longer paths gain more, so the argmin can change only if path lengths differ — see §2.4).",
+          "id": "q-9ea75a7c2cd7"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass STRIPS: only positive, function-free, ground literals in states; closed-world (unmentioned = false).",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "STRIPS: only positive, function-free, ground literals in states; closed-world (unmentioned = false).",
+          "id": "q-ad8d906c8550"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Classical planning environments are fully observable, deterministic, finite, static, discrete.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Classical planning environments are fully observable, deterministic, finite, static, discrete.",
+          "id": "q-f517d06871b1"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Do the certain problems first (NN, A∗, STRIPS, CSP-coloring) — they are worth the most and you can fully prepare them.",
+          "hint": "Topic: Csp",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Do the certain problems first (NN, A∗, STRIPS, CSP-coloring) — they are worth the most and you can fully prepare them.",
+          "id": "q-fe8e19466787"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Then the True/False blocks (tick only what you know).",
+          "hint": "Topic: Csp",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Then the True/False blocks (tick only what you know).",
+          "id": "q-b556608acdd7"
+        },
+        {
+          "question": "PEAS — you must be able to give this for any agent To specify a task environment, give its Performance measure, Environment, Actuators, Sensors.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "PEAS — you must be able to give this for any agent To specify a task environment, give its Performance measure, Environment, Actuators, Sensors.",
+          "id": "q-b0ea2ad5640d"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Environment properties (each is a True/False favourite) • Fully vs.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Environment properties (each is a True/False favourite) • Fully vs.",
+          "id": "q-eaf78365c01c"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Poker: partially observable + stochastic — so a rational poker agent can still lose.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Poker: partially observable + stochastic — so a rational poker agent can still lose.",
+          "id": "q-7f3ea120776d"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Agent types, simplest →most capable (1) Simple reflex — condition–action rules on current percept only.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Agent types, simplest →most capable (1) Simple reflex — condition–action rules on current percept only.",
+          "id": "q-cb5ebb37b6aa"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass not just whether a goal is reached but how good the outcome is and the best way to get there.",
+          "hint": "Topic: Decision",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "not just whether a goal is reached but how good the outcome is and the best way to get there.",
+          "id": "q-33272a8307ef"
+        },
+        {
+          "question": "Exam tip / common trap “A reflex agent can be rational in some environments” is True.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "Exam tip / common trap “A reflex agent can be rational in some environments” is True.",
+          "id": "q-19964bfd24a0"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass “No pure reflex agent can be rational in some environment” is also True (e.g.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "“No pure reflex agent can be rational in some environment” is also True (e.g.",
+          "id": "q-00a2dcecd9bb"
+        },
+        {
+          "question": "“Rational means omniscient” is False.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "“Rational means omniscient” is False.",
+          "id": "q-3006c8f8f427"
+        },
+        {
+          "question": "“Partial observability makes rationality impossible” is False.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "“Partial observability makes rationality impossible” is False.",
+          "id": "q-9f744f67a973"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass A solution is a path from initial to goal; an optimal solution has least path cost.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "A solution is a path from initial to goal; an optimal solution has least path cost.",
+          "id": "q-eb41abb89d25"
+        },
+        {
+          "question": "2.3 The four evaluation criteria Definitions (these are asked verbatim — learn the one-liners) Completeness: the algorithm is guaranteed to find a solution if one exists.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "2.3 The four evaluation criteria Definitions (these are asked verbatim — learn the one-liners) Completeness: the algorithm is guaranteed to find a solution if one exists.",
+          "id": "q-e3f0add69c96"
+        },
+        {
+          "question": "Optimality: it is guaranteed to find the lowest-cost (best) solution.",
+          "hint": "Topic: Agents",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "Optimality: it is guaranteed to find the lowest-cost (best) solution.",
+          "id": "q-84f9f9720deb"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Time Space Breadth-first (BFS) Yes (finite b) Yes (∗) O(bd) O(bd) Uniform-cost (UCS) Yes Yes O(b1+⌊C∗/ε⌋) O(b1+⌊C∗/ε⌋) Depth-first (DFS) No (infinite/loops) No O(bm) O(bm) Depth-limited (DLS, limit ℓ) No (if ℓ< d) No O(bℓ) O(bℓ) Iterative deepening (IDS) Yes Yes (∗) O(bd) O(bd) Bidirectional (BFS) Yes Yes (∗) O(bd/2) O(bd/2) (∗) optimal only when all step costs are equal.",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Time Space Breadth-first (BFS) Yes (finite b) Yes (∗) O(bd) O(bd) Uniform-cost (UCS) Yes Yes O(b1+⌊C∗/ε⌋) O(b1+⌊C∗/ε⌋) Depth-first (DFS) No (infinite/loops) No O(bm) O(bm) Depth-limited (DLS, limit ℓ) No (if ℓ< d) No O(bℓ) O(bℓ) Iterative deepening (IDS) Yes Yes (∗) O(bd) O(bd) Bidirectional (BFS) Yes Yes (∗) O(bd/2) O(bd/2) (∗) optimal only when all step costs are equal.",
+          "id": "q-c859cc756a41"
+        },
+        {
+          "question": "UCS is the cost-sensitive version and is always optimal.",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "UCS is the cost-sensitive version and is always optimal.",
+          "id": "q-56c09b26c138"
+        },
+        {
+          "question": "How each frontier behaves — this is the algorithm BFS = FIFO queue (shallowest first).",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "How each frontier behaves — this is the algorithm BFS = FIFO queue (shallowest first).",
+          "id": "q-037b4baffc3f"
+        },
+        {
+          "question": "until a goal is found (combines DFS memory with BFS optimality).",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "until a goal is found (combines DFS memory with BFS optimality).",
+          "id": "q-6bbc1a199a83"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass • DLS, ℓ= 1: A, B, C — limit reached, G not found (it is at depth 2).",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "• DLS, ℓ= 1: A, B, C — limit reached, G not found (it is at depth 2).",
+          "id": "q-425e82a004d7"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Memory at the moment G is found = nodes in frontier + explored.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Memory at the moment G is found = nodes in frontier + explored.",
+          "id": "q-3f8457d65221"
+        },
+        {
+          "question": "Be ready to list them (the exam asks “which nodes are kept in memory”): for IDS it is only the current path + siblings O(bd); for BFS it is the whole last two layers O(bd).",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "Be ready to list them (the exam asks “which nodes are kept in memory”): for IDS it is only the current path + siblings O(bd); for BFS it is the whole last two layers O(bd).",
+          "id": "q-b825276aa678"
+        },
+        {
+          "question": "Hence the returned path can change.",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "Hence the returned path can change.",
+          "id": "q-0aed87e61021"
+        },
+        {
+          "question": "Fast, not optimal, not complete (can loop).",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "Fast, not optimal, not complete (can loop).",
+          "id": "q-99e323abb777"
+        },
+        {
+          "question": "Optimal if h is admissible (tree search) / consistent (graph search).",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "Optimal if h is admissible (tree search) / consistent (graph search).",
+          "id": "q-2bd3902f9509"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass If it is the goal →stop, report path and cost g.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "If it is the goal →stop, report path and cost g.",
+          "id": "q-899467210da5"
+        },
+        {
+          "question": "Expand S: A has g=1, f=1+4=5; B has g=4, f=4+4=8.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "Expand S: A has g=1, f=1+4=5; B has g=4, f=4+4=8.",
+          "id": "q-5bfbfe5abd0b"
+        },
+        {
+          "question": "Expand A (f=5): C has g=3, f=3+2=5; G has g=13, f=13.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "Expand A (f=5): C has g=3, f=3+2=5; G has g=13, f=13.",
+          "id": "q-ca86a7cd51e0"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Contrast — Greedy (uses h only): S →pick min(h): A(4); from A pick G(0).",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Contrast — Greedy (uses h only): S →pick min(h): A(4); from A pick G(0).",
+          "id": "q-f866f2405b03"
+        },
+        {
+          "question": "This is why the exam loves A∗: it shows greedy gets fooled by the cheap-looking h.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "This is why the exam loves A∗: it shows greedy gets fooled by the cheap-looking h.",
+          "id": "q-8a0d92797375"
+        },
+        {
+          "question": "2.6 Heuristics: admissibility, consistency, dominance The two properties — definitions are asked verbatim Admissible: h(n) ≤h∗(n) for all n — never overestimates the true cost-to-go.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "2.6 Heuristics: admissibility, consistency, dominance The two properties — definitions are asked verbatim Admissible: h(n) ≤h∗(n) for all n — never overestimates the true cost-to-go.",
+          "id": "q-7eaa42ff7a0b"
+        },
+        {
+          "question": ", hk are admissible/consistent then hmax(n) = max i hi(n) is admissible/consistent (and dominates each hi).",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": ", hk are admissible/consistent then hmax(n) = max i hi(n) is admissible/consistent (and dominates each hi).",
+          "id": "q-2439cc48a244"
+        },
+        {
+          "question": "mini hi is also admissible but usually weaker.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Falsch",
+              "correct": false
+            },
+            {
+              "text": "Richtig",
+              "correct": true
+            }
+          ],
+          "reason": "mini hi is also admissible but usually weaker.",
+          "id": "q-af9092d022ad"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass A weighted sum a h1 + b h2 (with a, b ≥0) is consistent iff a + b ≤1 (so a + b = 1, a convex combination, is safe); adding a positive constant +c can break admissibility.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "A weighted sum a h1 + b h2 (with a, b ≥0) is consistent iff a + b ≤1 (so a + b = 1, a convex combination, is safe); adding a positive constant +c can break admissibility.",
+          "id": "q-a637f3f34afc"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass Both are admissible (each move fixes at most one misplaced tile / reduces one tile’s Manhattan distance by 1) and both are consistent.",
+          "hint": "Topic: Planning",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "Both are admissible (each move fixes at most one misplaced tile / reduces one tile’s Manhattan distance by 1) and both are consistent.",
+          "id": "q-fc7ee5326f6f"
+        },
+        {
+          "question": "Es ist nicht der Fall, dass h2 ≥h1 always, so h2 dominates h1 and is the better heuristic.",
+          "hint": "Topic: Search",
+          "answers": [
+            {
+              "text": "Richtig",
+              "correct": true
+            },
+            {
+              "text": "Falsch",
+              "correct": false
+            }
+          ],
+          "reason": "h2 ≥h1 always, so h2 dominates h1 and is the better heuristic.",
+          "id": "q-ad9c13e6122f"
+        }
+      ]
+    }
+  ]
+}
