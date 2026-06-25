@@ -38,7 +38,7 @@
         },
         {
           "question": "(2023-09) The logical equivalence can be realized with a single-layer neural network.",
-          "hint": "Network architecture, activation functions, learning procedures (backpropagation). The answer begins with True/False, followed by a reason.",
+          "hint": "Network architecture, activation functions, learning procedures (backpropagation).",
           "answers": [
             {
               "text": "False",
@@ -54,7 +54,7 @@
         },
         {
           "question": "(2021-10) Simulated annealing corresponds to stochastic hill-climbing.",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "True",
@@ -134,7 +134,7 @@
         },
         {
           "question": "(2021-12) The actions of a rational agent depend exclusively on his perceptual sequence and built-in knowledge.",
-          "hint": "Consider: What components does an agent need to make a decision? The answer begins with True/False, followed by a reason.",
+          "hint": "Consider: What components does an agent need to make a decision?.",
           "answers": [
             {
               "text": "False",
@@ -646,7 +646,7 @@
         },
         {
           "question": "(2022-10) A rational agent never chooses an action whose actual gain is suboptimal with respect to his performance criterion.",
-          "hint": "Consider: What components does an agent need to make a decision? The answer begins with True/False, followed by a reason.",
+          "hint": "Consider: What components does an agent need to make a decision?.",
           "answers": [
             {
               "text": "False",
@@ -782,7 +782,7 @@
         },
         {
           "question": "(2021-06) The Uniform Cost Search with test at generation time during generation is generally not complete.",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "True",
@@ -958,7 +958,7 @@
         },
         {
           "question": "(2022-10) DFS is complete if every possible state can be reached in a finite number of steps.",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "False",
@@ -1736,7 +1736,7 @@
         },
         {
           "question": "(2022-10), (2024-01) A partial order plan is created by linearizing a total order plan",
-          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches. The answer begins with True/False, followed by a reason.",
+          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
               "text": "False",
@@ -1784,7 +1784,7 @@
         },
         {
           "question": "(2023-09) The Action Description Language only allows positive literals in States",
-          "hint": "Propositional logic, predicate logic, inference and proof. The answer begins with True/False, followed by a reason.",
+          "hint": "Propositional logic, predicate logic, inference and proof.",
           "answers": [
             {
               "text": "False",
@@ -2184,7 +2184,7 @@
         },
         {
           "question": "(2021-12), (2022-10) The open-world assumption applies in STRIPS.",
-          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches. The answer begins with True/False, followed by a reason.",
+          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
               "text": "False",
@@ -2786,7 +2786,7 @@
         },
         {
           "question": "A Recurrent Neural Network has no internal state.",
-          "hint": "Network architecture, activation functions, learning procedures (backpropagation). The answer begins with True/False, followed by a reason.",
+          "hint": "Network architecture, activation functions, learning procedures (backpropagation).",
           "answers": [
             {
               "text": "False",
@@ -2802,7 +2802,7 @@
         },
         {
           "question": "Decision trees can express any function of the input attributes.",
-          "hint": "Learning paradigms, overfitting, decision trees, learning curves. The answer begins with True/False, followed by a reason.",
+          "hint": "Learning paradigms, overfitting, decision trees, learning curves.",
           "answers": [
             {
               "text": "True",
@@ -2818,7 +2818,7 @@
         },
         {
           "question": "The logical equivalence function can be realised with a single-layer neural network.",
-          "hint": "Network architecture, activation functions, learning procedures (backpropagation). The answer begins with True/False, followed by a reason.",
+          "hint": "Network architecture, activation functions, learning procedures (backpropagation).",
           "answers": [
             {
               "text": "False",
@@ -2834,7 +2834,7 @@
         },
         {
           "question": "It is assumed that rational agents are omniscient.",
-          "hint": "Consider: What components does an agent need to make a decision? The answer begins with True/False, followed by a reason.",
+          "hint": "Consider: What components does an agent need to make a decision?.",
           "answers": [
             {
               "text": "False",
@@ -2874,7 +2874,7 @@
         },
         {
           "question": "Depth-first search is optimal if the depth of the search tree is finite.",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "False",
@@ -2890,7 +2890,7 @@
         },
         {
           "question": "Random-restart hill climbing will always find the global optimum given enough time",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "True",
@@ -2906,7 +2906,7 @@
         },
         {
           "question": "If the costs of each edge are identical, BFS is optimal",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "True",
@@ -2922,7 +2922,7 @@
         },
         {
           "question": "each consistent assignment of values ​​of a set of variables of a CSP is a solution of that CSP",
-          "hint": "Focus on constraints, variables, domains and solution methods. The answer begins with True/False, followed by a reason.",
+          "hint": "Focus on constraints, variables, domains and solution methods.",
           "answers": [
             {
               "text": "False",
@@ -2938,7 +2938,7 @@
         },
         {
           "question": "CSPs with nonlinear constraints are always decidable",
-          "hint": "Focus on constraints, variables, domains and solution methods. The answer begins with True/False, followed by a reason.",
+          "hint": "Focus on constraints, variables, domains and solution methods.",
           "answers": [
             {
               "text": "False",
@@ -2978,7 +2978,7 @@
         },
         {
           "question": "The Action Description Language (ADL) allows only positive literals in states",
-          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches. The answer begins with True/False, followed by a reason.",
+          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
               "text": "False",
@@ -2994,7 +2994,7 @@
         },
         {
           "question": "If a literal does not occur in a state in ADL, then it is assumed to be false",
-          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches. The answer begins with True/False, followed by a reason.",
+          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
               "text": "False",
@@ -3010,7 +3010,7 @@
         },
         {
           "question": "The POP-Algorithm only produces consistent plans",
-          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches. The answer begins with True/False, followed by a reason.",
+          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
               "text": "True",
@@ -3026,7 +3026,7 @@
         },
         {
           "question": "In STRIPS it is assumed that literals not mentioned in the effect remain unchanged",
-          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches. The answer begins with True/False, followed by a reason.",
+          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
               "text": "True",
@@ -3066,7 +3066,7 @@
         },
         {
           "question": "Deep neural networks are preferred over wide neural networks.",
-          "hint": "Network architecture, activation functions, learning procedures (backpropagation). The answer begins with True/False, followed by a reason.",
+          "hint": "Network architecture, activation functions, learning procedures (backpropagation).",
           "answers": [
             {
               "text": "True",
@@ -3082,7 +3082,7 @@
         },
         {
           "question": "An agent that senses only partial information about the state cannot be rational.",
-          "hint": "Consider: What components does an agent need to make a decision? The answer begins with True/False, followed by a reason.",
+          "hint": "Consider: What components does an agent need to make a decision?.",
           "answers": [
             {
               "text": "False",
@@ -3098,7 +3098,7 @@
         },
         {
           "question": "Decision Trees are an example of Supervised learning.",
-          "hint": "Learning paradigms, overfitting, decision trees, learning curves. The answer begins with True/False, followed by a reason.",
+          "hint": "Learning paradigms, overfitting, decision trees, learning curves.",
           "answers": [
             {
               "text": "True",
@@ -3114,7 +3114,7 @@
         },
         {
           "question": "A rational poker playing agent never loses.",
-          "hint": "Consider: What components does an agent need to make a decision? The answer begins with True/False, followed by a reason.",
+          "hint": "Consider: What components does an agent need to make a decision?.",
           "answers": [
             {
               "text": "False",
@@ -3226,7 +3226,7 @@
         },
         {
           "question": "The path returned by Uniform Cost Search may change when a positive constant is added to every step cost.",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "True",
@@ -3242,7 +3242,7 @@
         },
         {
           "question": "In a finite search space containing no goal state, the A*-Alg will (using graph search) always explore all reachable states",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "True",
@@ -3258,7 +3258,7 @@
         },
         {
           "question": "Simulated Annealing cannot escape local maxima",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "False",
@@ -3274,7 +3274,7 @@
         },
         {
           "question": "The Local Beam Search algorithm keeps track of k states rather than just one.",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "True",
@@ -3330,7 +3330,7 @@
         },
         {
           "question": "The task to determine whether a CSP with non-linear constraints has a solution is a decidable problem?",
-          "hint": "Focus on constraints, variables, domains and solution methods. The answer begins with True/False, followed by a reason.",
+          "hint": "Focus on constraints, variables, domains and solution methods.",
           "answers": [
             {
               "text": "False",
@@ -3346,7 +3346,7 @@
         },
         {
           "question": "Literals in STRIPS are ground and may contain functions",
-          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches. The answer begins with True/False, followed by a reason.",
+          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
               "text": "False",
@@ -3362,7 +3362,7 @@
         },
         {
           "question": "Unlike STRIPS, The Action Description Language (ADL) supports equality",
-          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches. The answer begins with True/False, followed by a reason.",
+          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
               "text": "True",
@@ -3378,7 +3378,7 @@
         },
         {
           "question": "Classical planning environments are not fully observable",
-          "hint": "Consider: What components does an agent need to make a decision? The answer begins with True/False, followed by a reason.",
+          "hint": "Consider: What components does an agent need to make a decision?.",
           "answers": [
             {
               "text": "False",
@@ -3394,7 +3394,7 @@
         },
         {
           "question": "In the POP algorithm, the relation ≺ is empty for the initial plan",
-          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches. The answer begins with True/False, followed by a reason.",
+          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
               "text": "False",
@@ -3482,7 +3482,7 @@
         },
         {
           "question": "Name the 3 properties of the Value of Perfect Information (VPI).",
-          "hint": "Utility axioms, expected value, CPI and decision networks. The answer begins with True/False, followed by a reason.",
+          "hint": "Utility axioms, expected value, CPI and decision networks.",
           "answers": [
             {
               "text": "No",
@@ -3498,7 +3498,7 @@
         },
         {
           "question": "A game of chess is a continuous environment",
-          "hint": "Consider: What components does an agent need to make a decision? The answer begins with True/False, followed by a reason.",
+          "hint": "Consider: What components does an agent need to make a decision?.",
           "answers": [
             {
               "text": "False",
@@ -3514,7 +3514,7 @@
         },
         {
           "question": "Reinforcement learning is a mix of unsupervised learning and supervised learning",
-          "hint": "Learning paradigms, overfitting, decision trees, learning curves. The answer begins with True/False, followed by a reason.",
+          "hint": "Learning paradigms, overfitting, decision trees, learning curves.",
           "answers": [
             {
               "text": "False",
@@ -3602,7 +3602,7 @@
         },
         {
           "question": "Random restart hill climbing can overcome local maxima",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "True",
@@ -3618,7 +3618,7 @@
         },
         {
           "question": "Iterative Deepening Search is for arbitrary (non-negative) costs optimal.",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "False",
@@ -3634,7 +3634,7 @@
         },
         {
           "question": "Local Search methods can not find optimal solutions.",
-          "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
+          "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "False",
@@ -3650,7 +3650,7 @@
         },
         {
           "question": "Multi-layer perceptron networks are tailored for image processing.",
-          "hint": "Network architecture, activation functions, learning procedures (backpropagation). The answer begins with True/False, followed by a reason.",
+          "hint": "Network architecture, activation functions, learning procedures (backpropagation).",
           "answers": [
             {
               "text": "False",
@@ -3666,7 +3666,7 @@
         },
         {
           "question": "A CSP can only contain binary constraints",
-          "hint": "Focus on constraints, variables, domains and solution methods. The answer begins with True/False, followed by a reason.",
+          "hint": "Focus on constraints, variables, domains and solution methods.",
           "answers": [
             {
               "text": "False",
@@ -3682,7 +3682,7 @@
         },
         {
           "question": "No CSP can be solved in polynomial time.",
-          "hint": "Focus on constraints, variables, domains and solution methods. The answer begins with True/False, followed by a reason.",
+          "hint": "Focus on constraints, variables, domains and solution methods.",
           "answers": [
             {
               "text": "False",
@@ -3698,7 +3698,7 @@
         },
         {
           "question": "Deciding whether a boolean CSP has a solution is NP-hard?",
-          "hint": "Focus on constraints, variables, domains and solution methods. The answer begins with True/False, followed by a reason.",
+          "hint": "Focus on constraints, variables, domains and solution methods.",
           "answers": [
             {
               "text": "True",
@@ -3762,7 +3762,7 @@
         },
         {
           "question": "Classical planning environments are deterministic.",
-          "hint": "Consider: What components does an agent need to make a decision? The answer begins with True/False, followed by a reason.",
+          "hint": "Consider: What components does an agent need to make a decision?.",
           "answers": [
             {
               "text": "True",
@@ -3778,7 +3778,7 @@
         },
         {
           "question": "A partial-order plan is created through linearization of a total-order plan.",
-          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches. The answer begins with True/False, followed by a reason.",
+          "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
               "text": "False",
@@ -3894,19 +3894,19 @@
           "id": "q-113b059e67fe"
         },
         {
-          "question": "It is not the case that adding a constant C > 0 to every step cost does False not change the path UCS returns (it shifts all path costs, but longer paths gain more, so the argmin can change only if path lengths differ — see §2.4).",
+          "question": "It is not the case that adding a constant C > 0 to every step cost does not change the path UCS returns",
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "True",
-              "correct": false
+              "correct": true
             },
             {
               "text": "False",
-              "correct": true
+              "correct": false
             }
           ],
-          "reason": "Adding a constant C > 0 to every step cost does False not change the path UCS returns (it shifts all path costs, but longer paths gain more, so the argmin can change only if path lengths differ — see §2.4).",
+          "reason": "Adding a constant C > 0 to every step cost does not change the path UCS returns (it shifts all path costs, but longer paths gain more, so the argmin can change only if path lengths differ). This statement is FALSE.",
           "id": "q-9ea75a7c2cd7"
         },
         {
@@ -3958,7 +3958,7 @@
           "id": "q-b0ea2ad5640d"
         },
         {
-          "question": "Environment properties (each is a True/False favourite) • Fully vs.",
+          "question": "Environment properties: fully vs. partially observable determine the agent's access to the complete state.",
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
@@ -4006,35 +4006,35 @@
           "id": "q-cb5ebb37b6aa"
         },
         {
-          "question": "“No pure reflex agent can be rational in some environment” is also True (e.g.",
+          "question": "No pure reflex agent can be rational in some environment",
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
               "text": "False",
-              "correct": false
+              "correct": true
             },
             {
               "text": "True",
-              "correct": true
+              "correct": false
             }
           ],
-          "reason": "“No pure reflex agent can be rational in some environment” is also True (e.g.",
+          "reason": "\"No pure reflex agent can be rational in some environment\" is False. A pure reflex agent can be rational in a suitably simple environment.",
           "id": "q-00a2dcecd9bb"
         },
         {
-          "question": "“Partial observability makes rationality impossible” is False.",
+          "question": "Partial observability makes rationality impossible",
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
               "text": "False",
-              "correct": false
+              "correct": true
             },
             {
               "text": "True",
-              "correct": true
+              "correct": false
             }
           ],
-          "reason": "“Partial observability makes rationality impossible” is False.",
+          "reason": "\"Partial observability makes rationality impossible\" is False. Agents can maintain internal state to handle partial observability.",
           "id": "q-9f744f67a973"
         },
         {
@@ -4326,35 +4326,35 @@
           "id": "q-91f57e88b3d2"
         },
         {
-          "question": "“Simulated annealing cannot escape local maxima” False.",
+          "question": "Simulated annealing cannot escape local maxima",
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "False",
-              "correct": false
+              "correct": true
             },
             {
               "text": "True",
-              "correct": true
+              "correct": false
             }
           ],
-          "reason": "“Simulated annealing cannot escape local maxima” False.",
+          "reason": "\"Simulated annealing cannot escape local maxima\" is False. SA can escape local maxima via probabilistic acceptance of worse states.",
           "id": "q-870c19b6ebe6"
         },
         {
-          "question": "“Local beam search with k states is just k independent hill climbs” False (it shares information — successors are chosen from the pooled best).",
+          "question": "Local beam search with k states is just k independent hill climbs",
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
               "text": "False",
-              "correct": false
+              "correct": true
             },
             {
               "text": "True",
-              "correct": true
+              "correct": false
             }
           ],
-          "reason": "“Local beam search with k states is just k independent hill climbs” False (it shares information — successors are chosen from the pooled best).",
+          "reason": "\"Local beam search with k states is just k independent hill climbs\" is False. Local beam search shares information — successors are chosen from the pooled best, unlike k independent hill climbs.",
           "id": "q-263eb6d52ae7"
         },
         {
@@ -4390,51 +4390,51 @@
           "id": "q-9973c956037d"
         },
         {
-          "question": "It is not the case that “Reinforcement learning is a mix of supervised and unsupervised” False (it is its own paradigm).",
+          "question": "It is not the case that \"Reinforcement learning is a mix of supervised and unsupervised\" (it is its own paradigm).",
           "hint": "Learning paradigms, overfitting, decision trees, learning curves.",
           "answers": [
             {
               "text": "True",
-              "correct": false
+              "correct": true
             },
             {
               "text": "False",
-              "correct": true
+              "correct": false
             }
           ],
-          "reason": "“Reinforcement learning is a mix of supervised and unsupervised” False (it is its own paradigm).",
+          "reason": "\"Reinforcement learning is a mix of supervised and unsupervised\" is False. RL is its own paradigm, distinct from supervised and unsupervised learning.",
           "id": "q-dc468310c14b"
         },
         {
-          "question": "“MLPs are tailor-made for images” False (that is CNNs).",
+          "question": "MLPs are tailor-made for image processing",
           "hint": "Learning paradigms, overfitting, decision trees, learning curves.",
           "answers": [
             {
               "text": "False",
-              "correct": false
+              "correct": true
             },
             {
               "text": "True",
-              "correct": true
+              "correct": false
             }
           ],
-          "reason": "“MLPs are tailor-made for images” False (that is CNNs).",
+          "reason": "\"MLPs are tailor-made for image processing\" is False. CNNs are specifically designed for images due to their convolutional architecture.",
           "id": "q-40c513740f8e"
         },
         {
-          "question": "“A recurrent net has no internal state” False.",
+          "question": "A recurrent neural network has no internal state",
           "hint": "Learning paradigms, overfitting, decision trees, learning curves.",
           "answers": [
             {
               "text": "False",
-              "correct": false
+              "correct": true
             },
             {
               "text": "True",
-              "correct": true
+              "correct": false
             }
           ],
-          "reason": "“A recurrent net has no internal state” False.",
+          "reason": "\"A recurrent neural network has no internal state\" is False. RNNs maintain a hidden state that captures information about previous inputs.",
           "id": "q-d88a0a00ccca"
         },
         {
@@ -4694,7 +4694,7 @@
           "id": "q-a051043ac993"
         },
         {
-          "question": "“Any Boolean function can be computed by a net with one hidden layer” True.",
+          "question": "Any Boolean function can be computed by a neural network with one hidden layer",
           "hint": "Network architecture, activation functions, learning procedures (backpropagation).",
           "answers": [
             {
@@ -4706,7 +4706,7 @@
               "correct": true
             }
           ],
-          "reason": "“Any Boolean function can be computed by a net with one hidden layer” True.",
+          "reason": "\"Any Boolean function can be computed by a neural network with one hidden layer\" is True. This follows from the universal approximation theorem for Boolean functions.",
           "id": "q-d18133a35d41"
         },
         {
