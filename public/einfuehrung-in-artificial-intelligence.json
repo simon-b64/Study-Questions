@@ -53,7 +53,7 @@
           "id": "q-4d4032ed348a"
         },
         {
-          "question": "(2021-10) Simulated Annealing entspricht stochastischem Hill-Climbing",
+          "question": "(2021-10) Simulated annealing corresponds to stochastic hill-climbing.",
           "hint": "Think about the differences between informed and uninformed search algorithms. The answer begins with True/False, followed by a reason.",
           "answers": [
             {
@@ -65,7 +65,7 @@
               "correct": false
             }
           ],
-          "reason": "True (unsicher)",
+          "reason": "True (uncertain)",
           "id": "q-48e538c49460"
         },
         {
@@ -197,7 +197,7 @@
           "id": "q-5e87f47ecb34"
         },
         {
-          "question": "(2023-12) The path returned by Unifoorm cost search may change if we add a positive constant C to the cost of each step.",
+          "question": "(2023-12) The path returned by Uniform cost search may change if we add a positive constant C to the cost of each step.",
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
@@ -313,15 +313,15 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "(1) False (2) False (3) False",
+              "text": "(1) False (2) False (3) True",
               "correct": true
             },
             {
-              "text": "(1) False (2) False (3) False",
+              "text": "(1) True (2) False (3) True",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False",
+              "text": "(1) False (2) True (3) True",
               "correct": false
             },
             {
@@ -337,19 +337,19 @@
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) True (3) False (4) True",
               "correct": true
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) True (2) True (3) False (4) True",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) False (3) False (4) True",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) True (3) True (4) True",
               "correct": false
             }
           ],
@@ -409,11 +409,11 @@
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) True (3) False (4) False",
               "correct": true
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) True (2) True (3) False (4) False",
               "correct": false
             },
             {
@@ -421,7 +421,7 @@
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) True (3) True (4) False",
               "correct": false
             }
           ],
@@ -593,19 +593,19 @@
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) True (2) False (3) True (4) True",
               "correct": true
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) False (3) True (4) True",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) True (2) True (3) True (4) True",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) True (2) False (3) False (4) True",
               "correct": false
             }
           ],
@@ -661,7 +661,7 @@
           "id": "q-1d89d630a452"
         },
         {
-          "question": "(2024-01) Raional agents always have all the information",
+          "question": "(2024-01) Rational agents always have all the information",
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
@@ -697,23 +697,23 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "endliche Zeit: False unendlich viel Zeit: True",
+              "text": "finite time: False, infinite time: True",
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that finite time: False infinite time: True",
+              "text": "Not correct:  finite time: False, infinite time: True",
               "correct": false
             },
             {
-              "text": "Starts false: It is not the case that finite time: False infinite time: True",
+              "text": "Starts wrong:  finite time: False, infinite time: True",
               "correct": false
             },
             {
-              "text": "Is incorrect: The correct answer contains other information.",
+              "text": "Not correct: The correct answer contains other information.",
               "correct": false
             }
           ],
-          "reason": "endliche Zeit: False unendlich viel Zeit: True",
+          "reason": "finite time: False, infinite time: True",
           "id": "q-be81964f76c7"
         },
         {
@@ -793,7 +793,7 @@
               "correct": false
             }
           ],
-          "reason": "True -> expansion time macht es vollständig!",
+          "reason": "True -> expansion time makes it complete!",
           "id": "q-ce1b7df78354"
         },
         {
@@ -849,23 +849,23 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) False (3) True (4) True",
               "correct": true
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) True (2) False (3) True (4) True",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) True (3) True (4) True",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) False (3) False (4) True",
               "correct": false
             }
           ],
-          "reason": "(1) False (2) False/True (3) True (4) True",
+          "reason": "(1) False (2) False (3) True (4) True",
           "id": "q-21204e6f1a53"
         },
         {
@@ -921,19 +921,19 @@
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) True (3) True (4) False",
               "correct": true
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) True (2) True (3) True (4) False",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) False (3) True (4) False",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) True (3) False (4) False",
               "correct": false
             }
           ],
@@ -941,7 +941,7 @@
           "id": "q-d2dde6f678a3"
         },
         {
-          "question": "(2021-06) Boltzmann-Maschinen entsprechen zyklen-freien Neuronalen Netzwerken",
+          "question": "(2021-06) Boltzmann machines correspond to cycle-free neural networks.",
           "hint": "Network architecture, activation functions, learning procedures (backpropagation).",
           "answers": [
             {
@@ -986,15 +986,15 @@
               "correct": true
             },
             {
-              "text": "Not correct: It is not the case that examples based on a taxi company: Performance - Safety, Time, Maximum Profit Environment - Road, Traffic Actuator - Motor, Brake Sensor - Camera,",
+              "text": "Not correct: Examples based on a taxi company: Performance - safety, time, maximum profit Environment - road, traffic Actuator - motor, brake sensor - camera, GPS, speedometer",
               "correct": false
             },
             {
-              "text": "Shortened answer: Examples based on a taxi company:...",
+              "text": "Shortened answer: Examples based on a taxi company: Performance - safety, time...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that examples based on a taxi company: Performance - Safety, Time, Maximum Profit Environment - Road, Traffic Actuator - Motor, Brake Sensor - Camera",
+              "text": "Starts wrong: Examples based on a taxi company: Performance - safety, time, maximum profit Environment - road, traffic Actuator - motor, brake sensor - camera, GPS, speedometer",
               "correct": false
             }
           ],
@@ -1010,15 +1010,15 @@
               "correct": true
             },
             {
-              "text": "Not correct: It is not the case that examples based on a taxi company: Performance - Safety, Time, Maximum Profit Environment - Road, Traffic Actuator - Motor, Brake Sensor - Camera,",
+              "text": "Not correct: Examples based on a taxi company: Performance - safety, time, maximum profit Environment - road, traffic Actuator - motor, brake sensor - camera, GPS, speedometer",
               "correct": false
             },
             {
-              "text": "Shortened answer: Examples based on a taxi company:...",
+              "text": "Shortened answer: Examples based on a taxi company: Performance - safety, time...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that examples based on a taxi company: Performance - Safety, Time, Maximum Profit Environment - Road, Traffic Actuator - Motor, Brake Sensor - Camera",
+              "text": "Starts wrong: Examples based on a taxi company: Performance - safety, time, maximum profit Environment - road, traffic Actuator - motor, brake sensor - camera, GPS, speedometer",
               "correct": false
             }
           ],
@@ -1034,15 +1034,15 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that **Space Complexity:** maximum number of nodes in memory, possibility of evaluation in search algorithms",
+              "text": "Not correct: **Space Complexity:** maximum number of nodes in memory, possibility of evaluation in search algorithms",
               "correct": false
             },
             {
-              "text": "Shortened answer: **Space Complexity:** maximale Anzahl vo...",
+              "text": "Shortened answer: **Space Complexity:** maximum number of nodes in memory, pos...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that **Space Complexity:** maximum number of nodes in memory, possibility of evaluation in search algorithms",
+              "text": "Starts wrong: **Space Complexity:** maximum number of nodes in memory, possibility of evaluation in search algorithms",
               "correct": false
             }
           ],
@@ -1058,15 +1058,15 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that w_i <- w_i + a * g'(in) * Err * x_i",
+              "text": "Not correct: Es ist nicht der Fall, dass w_i <- w_i + a * g'(in) * Err * x_i",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that w_i <- w_i + a * g'(in) * Err * x_i",
+              "text": "Starts wrong: Es ist nicht der Fall, dass w_i <- w_i + a * g'(in) * Err * x_i",
               "correct": false
             },
             {
-              "text": "Is incorrect: The correct answer contains other information.",
+              "text": "Not correct: The correct answer contains other information.",
               "correct": false
             }
           ],
@@ -1078,19 +1078,19 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "**Uninformed Search:** Searching for a target state in a tree/graph without having any prior information about the search space. Possible algorithms: BFS, DFS, DLS, IDS, UCS **Overfitting:** on",
+              "text": "**Uninformed Search:** Searching for a target state in a tree/graph without having any prior information about the search space. Possible algorithms: BFS, DFS, DLS, IDS, UCS **Overfitting:** a hypothesis function that is adapted to irrelevant attributes of a single test set **Activation function:** describes the threshold above which a neuron switches on. e.g. sigmoid-function, RELU/softplus function, tanh **Deep learning:** are neural networks with many hidden layers that are used to recognize complex structures/patterns. Requirement: large amounts of data, efficient hardware",
               "correct": true
             },
             {
-              "text": "Incorrect: **Uninformed Search:** Searching for a target state in a tree/graph without having prior information about the search space. Possible algorithms: BFS, DFS, DLS, IDS, UCS **Overfi",
+              "text": "Not correct: **Uninformed Search:** Searching for a target state in a tree/graph without having any prior information about the search space. Possible algorithms: BFS, DFS, DLS, IDS, UCS **Overfitting:** a hypothesis function that is adapted to irrelevant attributes of a single test set **Activation function:** describes the threshold above which a neuron switches on. e.g. sigmoid-function, RELU/softplus function, tanh **Deep learning:** are neural networks with many hidden layers that are used to recognize complex structures/patterns. Requirement: large amounts of data, efficient hardware",
               "correct": false
             },
             {
-              "text": "Confusion of related concepts: **Uninformed Search:** Searching for a target state in a tree/graph without having any prior information about the search space. Possible algorithms: BFS, DFS, DLS",
+              "text": "Shortened answer: **Uninformed Search:** Searching for a target state in a tre...",
               "correct": false
             },
             {
-              "text": "Shortened answer: **Uninformed Search:** Suche eines Zielz...",
+              "text": "Starts wrong: **Uninformed Search:** Searching for a target state in a tree/graph without having any prior information about the search space. Possible algorithms: BFS, DFS, DLS, IDS, UCS **Overfitting:** a hypothesis function that is adapted to irrelevant attributes of a single test set **Activation function:** describes the threshold above which a neuron switches on. e.g. sigmoid-function, RELU/softplus function, tanh **Deep learning:** are neural networks with many hidden layers that are used to recognize complex structures/patterns. Requirement: large amounts of data, efficient hardware",
               "correct": false
             }
           ],
@@ -1102,19 +1102,19 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "# Uniform Cost Search (UCS): expands nodes with the lowest costs until the goal state is reached. Uses a priority queue as a frontier **Time-Complexity:** O(b^(1+[C*/e])) **Space-Comple",
+              "text": "# Uniform Cost Search (UCS): expands nodes with the lowest costs until the goal state is reached. Uses a priority queue as a frontier **Time-Complexity:** O(b^(1+[C*/e])) **Space-Complexity:** O(b^(1+[C*/e])) **Optimality:** Yes **Completeness:** Yes (positive step costs and the branching factor must be finite)",
               "correct": true
             },
             {
-              "text": "Incorrect: # Uniform Cost Search (UCS): expands nodes with the lowest costs until the goal state is reached. Uses a priority queue as a frontier **Time-Complexity:** O(b^(1+[C*/e]))",
+              "text": "Not correct: # Uniform Cost Search (UCS): expands nodes with the lowest costs until the goal state is reached. Uses a priority queue as a frontier **Time-Complexity:** O(b^(1+[C*/e])) **Space-Complexity:** O(b^(1+[C*/e])) **Optimality:** Yes **Completeness:** Yes (positive step costs and the branching factor must be finite)",
               "correct": false
             },
             {
-              "text": "Shortened answer: # Uniform-Cost-Suche (UCS): expandiert K...",
+              "text": "Shortened answer: # Uniform Cost Search (UCS): expands nodes with the lowest c...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that # Uniform Cost Search (UCS): expands nodes with the lowest cost until the goal state has been reached.",
+              "text": "Starts wrong: # Uniform Cost Search (UCS): expands nodes with the lowest costs until the goal state is reached. Uses a priority queue as a frontier **Time-Complexity:** O(b^(1+[C*/e])) **Space-Complexity:** O(b^(1+[C*/e])) **Optimality:** Yes **Completeness:** Yes (positive step costs and the branching factor must be finite)",
               "correct": false
             }
           ],
@@ -1126,19 +1126,19 @@
           "hint": "Pay attention to the exact wording - nuances often make the difference.",
           "answers": [
             {
-              "text": "Long short-term memory is a building block that is used in recurrent neural networks to form memory for a longer period of time. Are used for natural language processing, handwriting",
+              "text": "Long short-term memory is a building block that is used in recurrent neural networks to form memory for a longer period of time. Are used for natural language processing, handwriting recognition or to bridge time lags between two events.",
               "correct": true
             },
             {
-              "text": "Incorrect: Long short-term memory is not a building block that is used in recurrent neural networks to form memory for a longer period of time. Are used for Natural Language P",
+              "text": "Not correct: Long short-term memory is a building block that is used in recurrent neural networks to form memory for a longer period of time. Are used for natural language processing, handwriting recognition or to bridge time lags between two events.",
               "correct": false
             },
             {
-              "text": "Short answer: Long short-term memory is a building block...",
+              "text": "Shortened answer: Long short-term memory is a building block that is used in r...",
               "correct": false
             },
             {
-              "text": "Starts wrong: Long short-term memory is not a building block that is used in Recurrent Neural Networks to form memory for longer periods of time.",
+              "text": "Starts wrong: Long short-term memory is a building block that is used in recurrent neural networks to form memory for a longer period of time. Are used for natural language processing, handwriting recognition or to bridge time lags between two events.",
               "correct": false
             }
           ],
@@ -1150,19 +1150,19 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "**Einsatzbereich:** VLSI layout, airline scheduling **Funktionsweise:** Man versucht lokalen Maxima zu entkommen, indem man manche \"schlechte\" Bewegungen zulässt, jedoch graduell deren Größe/Frequenz ",
+              "text": "**Area of ​​application:** VLSI layout, airline scheduling **How ​​it works:** You try to escape local maxima by allowing some \"bad\" movements, but gradually minimizing their size/frequency. In other words, changes are accepted more often at the beginning than at the end -> corresponds to the cooling process of metals in the VLSI design **What is achieved:** if you approach slowly enough, you will reach an optimal state with WK=1 **Disadvantage:**however, slow enough can also be worse than a random walk (takes too long).",
               "correct": true
             },
             {
-              "text": "Incorrect: **Area of ​​application:** VLSI layout, airline scheduling **How ​​it works:** You try to escape local maxima by allowing some \"bad\" movements, but gradually",
+              "text": "Not correct: **Area of ​​application:** VLSI layout, airline scheduling **How ​​it works:** You try to escape local maxima by allowing some \"bad\" movements, but gradually minimizing their size/frequency. In other words, changes are accepted more often at the beginning than at the end -> corresponds to the cooling process of metals in the VLSI design **What is achieved:** if you approach slowly enough, you will reach an optimal state with WK=1 **Disadvantage:**however, slow enough can also be worse than a random walk (takes too long).",
               "correct": false
             },
             {
-              "text": "Shortened answer: **Einsatzbereich:** VLSI layout, airline...",
+              "text": "Shortened answer: **Area of ​​application:** VLSI layout, airline scheduling *...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that **Area of ​​application:** VLSI layout, airline scheduling **How ​​it works:** You try to escape local maxima by making some \"bad\" movements",
+              "text": "Starts wrong: **Area of ​​application:** VLSI layout, airline scheduling **How ​​it works:** You try to escape local maxima by allowing some \"bad\" movements, but gradually minimizing their size/frequency. In other words, changes are accepted more often at the beginning than at the end -> corresponds to the cooling process of metals in the VLSI design **What is achieved:** if you approach slowly enough, you will reach an optimal state with WK=1 **Disadvantage:**however, slow enough can also be worse than a random walk (takes too long).",
               "correct": false
             }
           ],
@@ -1174,19 +1174,19 @@
           "hint": "Network architecture, activation functions, learning procedures (backpropagation).",
           "answers": [
             {
-              "text": "Backpropagation refers to the error feedback from the output layer to the hidden layers in order to be able to train/learn the weights of the multi-neural network and to minimize the errors",
+              "text": "Unter Backpropagation versteht man die error feedback von der Ausgabeschicht zu den Hidden Layers, um die Gewichte des Multi-Neuronalen-Netzwerks trainieren/anlernen zu können und die Fehler minimi",
               "correct": true
             },
             {
-              "text": "Incorrect: Backpropagation refers to the error feedback from the output layer to the hidden layers in order to be able to train/learn the weights of the multi-neural network and i.e",
+              "text": "Not correct: Unter Backpropagation versteht man die error feedback von der Ausgabeschicht zu den Hidden Layers, um die Gewichte des Multi-Neuronalen-Netzwerks trainieren/anlernen zu können und di",
               "correct": false
             },
             {
-              "text": "Short answer: Backpropagation is the...",
+              "text": "Shortened answer: Unter Backpropagation versteht man die F...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that backpropagation means the error feedback from the output layer to the hidden layers in order to train the weights of the multi-neural network",
+              "text": "Starts wrong: Es ist nicht der Fall, dass unter Backpropagation versteht man die error feedback von der Ausgabeschicht zu den Hidden Layers, um die Gewichte des Multi-Neuronalen-Netzwerks trainie",
               "correct": false
             }
           ],
@@ -1198,19 +1198,19 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "**A-Search:** Informed Search, using a priority queue, the currently minimum f(n) value is selected -> f(n) = g(n) + h(n), where g(n) is the path actually completed to node n, and h(n)",
+              "text": "**A-Search:** Informed Search, using a priority queue, the currently minimum f(n) value is selected -> f(n) = g(n) + h(n), where g(n) is the path actually completed to node n, and h(n) is a (permissible) heuristic for estimating the path to the target node. _Time Complexity + Space Complexity:_ exponential.",
               "correct": true
             },
             {
-              "text": "Incorrect: **A-Search:** Informed Search, based on a priority queue, the currently minimum f(n) value is not selected -> f(n) = g(n) + h(n), where g(n) is actually the absolute value up to node n",
+              "text": "Not correct: **A-Search:** Informed Search, using a priority queue, the currently minimum f(n) value is selected -> f(n) = g(n) + h(n), where g(n) is the path actually completed to node n, and h(n) is a (permissible) heuristic for estimating the path to the target node. _Time Complexity + Space Complexity:_ exponential.",
               "correct": false
             },
             {
-              "text": "Shortened answer: **A-Suche:** Informed Search, anhand ein...",
+              "text": "Shortened answer: **A-Search:** Informed Search, using a priority queue, the c...",
               "correct": false
             },
             {
-              "text": "Starts wrong: **A-Search:** Informed Search, based on a priority queue, the currently minimum f(n) value is not selected -> f(n) = g(n) + h(n), where g(n) is actually abso up to node n",
+              "text": "Starts wrong: **A-Search:** Informed Search, using a priority queue, the currently minimum f(n) value is selected -> f(n) = g(n) + h(n), where g(n) is the path actually completed to node n, and h(n) is a (permissible) heuristic for estimating the path to the target node. _Time Complexity + Space Complexity:_ exponential.",
               "correct": false
             }
           ],
@@ -1226,15 +1226,15 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that goal-based agents take their performance as a maximization function, while utility-based agents take their utility. Goal-based agents search and plan actions",
+              "text": "Not correct: Goal-based agents take their performance as a maximization function, utility-based agents take their utility. Goal-based agents search and plan actions to achieve the goal.",
               "correct": false
             },
             {
-              "text": "Shortened answer: Zielbasierte Agente nehmen ihre Performa...",
+              "text": "Shortened answer: Goal-based agents take their performance as a maximization f...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that goal-based agents take their performance as a maximization function, while utility-based agents take their utility.",
+              "text": "Starts wrong: Goal-based agents take their performance as a maximization function, utility-based agents take their utility. Goal-based agents search and plan actions to achieve the goal.",
               "correct": false
             }
           ],
@@ -1250,15 +1250,15 @@
               "correct": true
             },
             {
-              "text": "Incorrect: - Goal assessment with utility function - Resolving conflicts - Expected utility is not considered for decision making",
+              "text": "Not correct: - Goal assessment with utility function - Resolving conflicts - Expected utility is considered for decision making",
               "correct": false
             },
             {
-              "text": "Shortened answer: - Goal assessment with utility function - A...",
+              "text": "Shortened answer: - Goal assessment with utility function - Resolving conflict...",
               "correct": false
             },
             {
-              "text": "Starts wrong: - Goal assessment with utility function - Resolving conflicts - Expected utility is not considered for decision making",
+              "text": "Starts wrong: - Goal assessment with utility function - Resolving conflicts - Expected utility is considered for decision making",
               "correct": false
             }
           ],
@@ -1270,19 +1270,19 @@
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
-              "text": "**rational agent:** An agent who acts solely on the basis of his perceptual history, his performance maximization and his in-built knowledge. **Uninformed Search:** Search for a target state",
+              "text": "**rational agent:** An agent who acts solely on the basis of his perceptual history, his performance maximization and his in-built knowledge. **Uninformed Search:** Search for a target state in trees/graphs without available information about the search space -> BFS, DFS, UCS, etc. **Completeness:** indicates whether a search algorithm always finds a solution (if one exists). **Backpropagation:** Error feedback in neural networks to minimize errors (also in hidden layers) **Decision tree pruning:** A way to prevent overfitting -> splitting the irrelevant attributes, to understand what is \"irrelevant\" you use the information gain and statistical methods",
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that **rational agent:** An agent who acts only on the basis of his perceptual history, his performance maximization and his in-built knowledge. **Unin",
+              "text": "Not correct: **rational agent:** An agent who acts solely on the basis of his perceptual history, his performance maximization and his in-built knowledge. **Uninformed Search:** Search for a target state in trees/graphs without available information about the search space -> BFS, DFS, UCS, etc. **Completeness:** indicates whether a search algorithm always finds a solution (if one exists). **Backpropagation:** Error feedback in neural networks to minimize errors (also in hidden layers) **Decision tree pruning:** A way to prevent overfitting -> splitting the irrelevant attributes, to understand what is \"irrelevant\" you use the information gain and statistical methods",
               "correct": false
             },
             {
-              "text": "Confusion of related concepts: **rational agent:** An agent who acts solely on the basis of his perceptual history, his performance maximization and his in-built knowledge. **Uninformed Se",
+              "text": "Shortened answer: **rational agent:** An agent who acts solely on the basis of...",
               "correct": false
             },
             {
-              "text": "Short answer: **rational agent:** An agent who only...",
+              "text": "Starts wrong: **rational agent:** An agent who acts solely on the basis of his perceptual history, his performance maximization and his in-built knowledge. **Uninformed Search:** Search for a target state in trees/graphs without available information about the search space -> BFS, DFS, UCS, etc. **Completeness:** indicates whether a search algorithm always finds a solution (if one exists). **Backpropagation:** Error feedback in neural networks to minimize errors (also in hidden layers) **Decision tree pruning:** A way to prevent overfitting -> splitting the irrelevant attributes, to understand what is \"irrelevant\" you use the information gain and statistical methods",
               "correct": false
             }
           ],
@@ -1294,19 +1294,19 @@
           "hint": "Pay attention to the exact wording - nuances often make the difference.",
           "answers": [
             {
-              "text": "**Genetic algorithm = Stochastic local beam search + successor of state pairs** How it works: States are encoded as strings, so there are strings of the form r1..rn. These are based on",
+              "text": "**Genetic algorithm = Stochastic local beam search + successor of state pairs** How it works: States are encoded as strings, so there are strings of the form r1..rn. These are evaluated based on the objective function = fitness function (higher fitness function, better condition). Then the best pairs are selected based on probabilities (which can be proportional to the fitness function) and led to the crossover. (2 strings per pair, # of pairs depends on the algorithm). Ev. A single value is then mutated.",
               "correct": true
             },
             {
-              "text": "Incorrect: **Genetic algorithm = Stochastic local beam search + successors of state pairs** How it works: States are encoded as strings, so there are strings of the form r1..rn. This",
+              "text": "Not correct: **Genetic algorithm = Stochastic local beam search + successor of state pairs** How it works: States are encoded as strings, so there are strings of the form r1..rn. These are evaluated based on the objective function = fitness function (higher fitness function, better condition). Then the best pairs are selected based on probabilities (which can be proportional to the fitness function) and led to the crossover. (2 strings per pair, # of pairs depends on the algorithm). Ev. A single value is then mutated.",
               "correct": false
             },
             {
-              "text": "Shortened answer: **Genetic algorithm = Stochastische Loca...",
+              "text": "Shortened answer: **Genetic algorithm = Stochastic local beam search + success...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that **Genetic algorithm = Stochastic Local beam search + successors of state pairs** How it works: States are encoded as strings, so it is strict",
+              "text": "Starts wrong: **Genetic algorithm = Stochastic local beam search + successor of state pairs** How it works: States are encoded as strings, so there are strings of the form r1..rn. These are evaluated based on the objective function = fitness function (higher fitness function, better condition). Then the best pairs are selected based on probabilities (which can be proportional to the fitness function) and led to the crossover. (2 strings per pair, # of pairs depends on the algorithm). Ev. A single value is then mutated.",
               "correct": false
             }
           ],
@@ -1318,19 +1318,19 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "**How ​​it works:** A state landscape is considered and started at a random point. The next neighbor is selected as long as this neighbor is \"higher\", i.e. larger",
+              "text": "**How ​​it works:** A state landscape is considered and started at a random point. The next neighbor is selected as long as this neighbor has a \"higher\", i.e. a larger value than the current node **Problem:** often gets stuck in local maxima **Solution:** is complete if it restarts infinitely often at random positions",
               "correct": true
             },
             {
-              "text": "Incorrect: **How ​​it works:** A state landscape is considered and started at a random point. The next neighbor is selected as long as this neighbor is \"higher\", see",
+              "text": "Not correct: **How ​​it works:** A state landscape is considered and started at a random point. The next neighbor is selected as long as this neighbor has a \"higher\", i.e. a larger value than the current node **Problem:** often gets stuck in local maxima **Solution:** is complete if it restarts infinitely often at random positions",
               "correct": false
             },
             {
-              "text": "Shortened answer: **How ​​it works:** A state...",
+              "text": "Shortened answer: **How ​​it works:** A state landscape is considered and star...",
               "correct": false
             },
             {
-              "text": "Starts wrong: **How ​​it works:** It doesn't look at a state landscape and starts at a random point.",
+              "text": "Starts wrong: **How ​​it works:** A state landscape is considered and started at a random point. The next neighbor is selected as long as this neighbor has a \"higher\", i.e. a larger value than the current node **Problem:** often gets stuck in local maxima **Solution:** is complete if it restarts infinitely often at random positions",
               "correct": false
             }
           ],
@@ -1342,19 +1342,19 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "**IDS:** A depth first search is performed, each of which has a limit. We start with limit l=0, then with l=1, l=2, etc. until a goal state is found in one l or the search tree reaches the end i",
+              "text": "**IDS:** A depth first search is performed, each of which has a limit. It starts with limit l=0, then with l=1, l=2, etc. until a goal state is found in one l or the search tree is at the end.",
               "correct": true
             },
             {
-              "text": "Incorrect: **IDS:** A depth first search is not performed, which has a limit. It starts with limit l=0, then with l=1, l=2, etc. until a goal state is found in one l or d",
+              "text": "Not correct: **IDS:** A depth first search is performed, each of which has a limit. It starts with limit l=0, then with l=1, l=2, etc. until a goal state is found in one l or the search tree is at the end.",
               "correct": false
             },
             {
-              "text": "Shortened answer: **IDS:** A depth first search is performed...",
+              "text": "Shortened answer: **IDS:** A depth first search is performed, each of which ha...",
               "correct": false
             },
             {
-              "text": "Starts wrong: **IDS:** A depth first search is not performed, each of which has a limit.",
+              "text": "Starts wrong: **IDS:** A depth first search is performed, each of which has a limit. It starts with limit l=0, then with l=1, l=2, etc. until a goal state is found in one l or the search tree is at the end.",
               "correct": false
             }
           ],
@@ -1366,11 +1366,11 @@
           "hint": "Network architecture, activation functions, learning procedures (backpropagation).",
           "answers": [
             {
-              "text": "Single layer (1 layer, no hidden layer): All linear separable functions Multi-layer with 2 layers: All continuous functions with arbitrary precision Multi-layer with 3+ layers: All radio",
+              "text": "Single-Layer (1 Layer, no hidden layer): Alle linearen separierbaren Funktionen Multi-Layer mit 2 Layer: Alle kontinuierlichen Funktionen mit beliebiger Genauigkeit Multi-Layer mit 3+ Layer: Alle Funk",
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that single layer (1 layer, no hidden layer): All linear separable functions Multi-layer with 2 layers: All continuous functions with arbitrary gena",
+              "text": "Not correct: Es ist nicht der Fall, dass single-Layer (1 Layer, no hidden layer): Alle linearen separierbaren Funktionen Multi-Layer mit 2 Layer: Alle kontinuierlichen Funktionen mit beliebiger Gena",
               "correct": false
             },
             {
@@ -1378,7 +1378,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that single layer (1 layer, no hidden layer): All linear separable functions Multi-layer with 2 layers: All continuous functions with arbitrary gen",
+              "text": "Starts wrong: Es ist nicht der Fall, dass single-Layer (1 Layer, no hidden layer): Alle linearen separierbaren Funktionen Multi-Layer mit 2 Layer: Alle kontinuierlichen Funktionen mit beliebiger Gen",
               "correct": false
             }
           ],
@@ -1390,11 +1390,11 @@
           "hint": "Pay attention to the exact wording - nuances often make the difference.",
           "answers": [
             {
-              "text": "**Realizable:** Optimal case **Redundant:** occurs when too many attributes (that have no impact on the actual problem) are taken into account. **Non-Realizable:** not realizable",
+              "text": "**Realizable:** Optimalfall **Redundant:** entsteht, wenn zu viele Attribute (die auf die eigentliche Problemstellung keine Auswirkungen haben) berücksichtigt werden. **Non-Realizable:** nicht realisi",
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that **Realizable:** Optimal case **Redundant:** arises when too many attributes (which have no effect on the actual problem) are taken into account",
+              "text": "Not correct: Es ist nicht der Fall, dass **Realizable:** Optimalfall **Redundant:** entsteht, wenn zu viele Attribute (die auf die eigentliche Problemstellung keine Auswirkungen haben) berücksichtig",
               "correct": false
             },
             {
@@ -1402,7 +1402,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that **Realizable:** Optimal case **Redundant:** arises when too many attributes (which have no effect on the actual problem) are taken into account",
+              "text": "Starts wrong: Es ist nicht der Fall, dass **Realizable:** Optimalfall **Redundant:** entsteht, wenn zu viele Attribute (die auf die eigentliche Problemstellung keine Auswirkungen haben) berücksichti",
               "correct": false
             }
           ],
@@ -1414,19 +1414,19 @@
           "hint": "Network architecture, activation functions, learning procedures (backpropagation).",
           "answers": [
             {
-              "text": "**Deep Learning:** are neural networks with many hidden layers that are used to recognize complex structures/patterns. **Requirements:** large amounts of data, efficient hardware **area of ​​application",
+              "text": "**Deep Learning:** sind neuronale Netzwerke mit vielen Hidden Layern, welche dazu dienen komplexe Strukturen/Muster zu erkennen. **Voraussetzung:** große Datenmengen, effiziente Hardware **Einsatzbere",
               "correct": true
             },
             {
-              "text": "Incorrect: **Deep Learning:** are neural networks with many hidden layers that are used to recognize complex structures/patterns. **Requirement:** large amounts of data, efficient hardware",
+              "text": "Not correct: **Deep Learning:** sind neuronale Netzwerke mit vielen Hidden Layern, welche dazu dienen komplexe Strukturen/Muster zu erkennen. **Voraussetzung:** große Datenmengen, effiziente Hardwar",
               "correct": false
             },
             {
-              "text": "Short answer: **Deep Learning:** are neural networks...",
+              "text": "Shortened answer: **Deep Learning:** sind neuronale Netzwe...",
               "correct": false
             },
             {
-              "text": "Starts wrong: **Deep Learning:** are non-neural networks with many hidden layers that are used to recognize complex structures/patterns.",
+              "text": "Starts wrong: **Deep Learning:** sind nicht neuronale Netzwerke mit vielen Hidden Layern, welche dazu dienen komplexe Strukturen/Muster zu erkennen.",
               "correct": false
             }
           ],
@@ -1442,15 +1442,15 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that the **activation function** describes from which input the threshold for switching through a node is reached. She also describes with what strength",
+              "text": "Not correct: The **activation function** describes the input from which the threshold for switching a node through is reached. It also describes the strength with which this is then switched through.",
               "correct": false
             },
             {
-              "text": "Short answer: The **activation function** describes...",
+              "text": "Shortened answer: The **activation function** describes the input from which t...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that the **activation function** describes from which input the threshold for switching through a node is reached.",
+              "text": "Starts wrong: The **activation function** describes the input from which the threshold for switching a node through is reached. It also describes the strength with which this is then switched through.",
               "correct": false
             }
           ],
@@ -1462,19 +1462,19 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "**DFS:** Depth search, the deepest, unexpanded node is always selected. **DFS properties:** TC: O(b^m), SC: O(bm), Complete: No, Optimal: No **IDS:** Depth search with limit l (all nodes",
+              "text": "**DFS:** Depth search, the deepest, unexpanded node is always selected. **DFS-Properties:** TC: O(b^m), SC: O(bm), Complete: No, Optimal: No **IDS:** Depth-first search with limit l (all nodes outside l are ignored), where limit is increased step by step until the target is reached. **IDS properties:** TC: O(b^d), SC: O(bd), Complete: Yes (if b is finite), Optimal: Yes, but only if all step costs are equal.",
               "correct": true
             },
             {
-              "text": "Incorrect: **DFS:** Depth search, the deepest, unexpanded node is not always selected. **DFS properties:** TC: O(b^m), SC: O(bm), Complete: No, Optimal: No **IDS:** Depth-first search",
+              "text": "Not correct: **DFS:** Depth search, the deepest, unexpanded node is always selected. **DFS-Properties:** TC: O(b^m), SC: O(bm), Complete: No, Optimal: No **IDS:** Depth-first search with limit l (all nodes outside l are ignored), where limit is increased step by step until the target is reached. **IDS properties:** TC: O(b^d), SC: O(bd), Complete: Yes (if b is finite), Optimal: Yes, but only if all step costs are equal.",
               "correct": false
             },
             {
-              "text": "Confusion of related concepts: **BFS:** Depth first search, the deepest, yet unexpanded node is always selected. **DFS properties:** TC: O(b^m), SC: O(bm), Complete: No, Optimal: No **IDS:**",
+              "text": "Shortened answer: **DFS:** Depth search, the deepest, unexpanded node is alway...",
               "correct": false
             },
             {
-              "text": "Shortened answer: **DFS:** Depth first search, it will always be the...",
+              "text": "Starts wrong: **DFS:** Depth search, the deepest, unexpanded node is always selected. **DFS-Properties:** TC: O(b^m), SC: O(bm), Complete: No, Optimal: No **IDS:** Depth-first search with limit l (all nodes outside l are ignored), where limit is increased step by step until the target is reached. **IDS properties:** TC: O(b^d), SC: O(bd), Complete: Yes (if b is finite), Optimal: Yes, but only if all step costs are equal.",
               "correct": false
             }
           ],
@@ -1486,11 +1486,11 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "Dominance: h1(n) => h2(n) Assume the following situation applies. Draw the following picture and find a counterexample with suitable values ​​so that h1(n) => h2(n) and h1 is consistent, i.e. b",
+              "text": "Dominanz: h1(n) => h2(n) Angenommen, folgender Sachverhalt gilt. Zeichne folgendes Bild auf  Und finde ein Gegenbeispiel mit passenden Werten, sodass h1(n) => h2(n) und h1 konsistent ist, sprich das B",
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that dominance: h1(n) => h2(n) Assume the following situation holds. Draw the following picture and find a counterexample with suitable values ​​so that h1(n) =",
+              "text": "Not correct: Es ist nicht der Fall, dass dominanz: h1(n) => h2(n) Angenommen, folgender Sachverhalt gilt. Zeichne folgendes Bild auf  Und finde ein Gegenbeispiel mit passenden Werten, sodass h1(n) =",
               "correct": false
             },
             {
@@ -1498,7 +1498,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that dominance: h1(n) => h2(n) Assume the following situation holds.",
+              "text": "Starts wrong: Es ist nicht der Fall, dass dominanz: h1(n) => h2(n) Angenommen, folgender Sachverhalt gilt.",
               "correct": false
             }
           ],
@@ -1510,15 +1510,15 @@
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
-              "text": "**partially observable:** Sensors only detect some real-world properties, not all (=> poker game)",
+              "text": "**teilweise beobachtbar:** Sensoren detektieren nur manche Real-World Properties, nicht alle (=> Pokerspiel)",
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that **partially observable:** Sensors only detect some real-world properties, not all (=> poker game)",
+              "text": "Not correct: Es ist nicht der Fall, dass **teilweise beobachtbar:** Sensoren detektieren nur manche Real-World Properties, nicht alle (=> Pokerspiel)",
               "correct": false
             },
             {
-              "text": "Confusion of related concepts: **fully observable:** Sensors only detect some real-world properties, not all (=> poker game)",
+              "text": "Verwechslung verwandter Konzepte: **vollständig beobachtbar:** Sensoren detektieren nur manche Real-World Properties, nicht alle (=> Pokerspiel)",
               "correct": false
             },
             {
@@ -1534,19 +1534,19 @@
           "hint": "Pay attention to the exact wording - nuances often make the difference.",
           "answers": [
             {
-              "text": "Learning curve describes the % correct proportion of a hypothesis function h on a test set, depending on the test set size. 2 reasons for an unfavorable course: - Realizability of the target function",
+              "text": "Learning curve describes the % correct proportion of a hypothesis function h on a test set, depending on the test set size 2 causes for an unfavorable course: - Feasibility of the target function: missing attributes, restrictive hypothesis space (e.g. linear function instead of complex function) - redundant expression (too many unimportant attributes are taken into account)",
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that learning curve describes the % correct proportion of a hypothesis function h on a test set, depending on the test set size 2 causes for an unfavorable V",
+              "text": "Not correct: Learning curve describes the % correct proportion of a hypothesis function h on a test set, depending on the test set size 2 causes for an unfavorable course: - Feasibility of the target function: missing attributes, restrictive hypothesis space (e.g. linear function instead of complex function) - redundant expression (too many unimportant attributes are taken into account)",
               "correct": false
             },
             {
-              "text": "Shortened answer: Learning curve describes the % correct answer...",
+              "text": "Shortened answer: Learning curve describes the % correct proportion of a hypot...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that learning curve describes the % correct proportion of a hypothesis function h on a test set, depending on the test set size 2 causes for an unfavorable",
+              "text": "Starts wrong: Learning curve describes the % correct proportion of a hypothesis function h on a test set, depending on the test set size 2 causes for an unfavorable course: - Feasibility of the target function: missing attributes, restrictive hypothesis space (e.g. linear function instead of complex function) - redundant expression (too many unimportant attributes are taken into account)",
               "correct": false
             }
           ],
@@ -1575,7 +1575,7 @@
           "id": "q-b3fa7d5d28ce"
         },
         {
-          "question": "(2021-12) Ziele in ADL dürfen Quantoren enthalten.",
+          "question": "(2021-12) Goals in ADL may contain quantifiers.",
           "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
@@ -1595,15 +1595,15 @@
           "hint": "Focus on constraints, variables, domains and solution methods.",
           "answers": [
             {
-              "text": "(1) False (2) False (3) False",
+              "text": "(1) False (2) False (3) True",
               "correct": true
             },
             {
-              "text": "(1) False (2) False (3) False",
+              "text": "(1) True (2) False (3) True",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False",
+              "text": "(1) False (2) True (3) True",
               "correct": false
             },
             {
@@ -1651,19 +1651,19 @@
           "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) True (3) True (4) False",
               "correct": true
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) True (2) True (3) True (4) False",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) False (3) True (4) False",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) True (3) False (4) False",
               "correct": false
             }
           ],
@@ -1959,7 +1959,7 @@
           "id": "q-861502c61d2e"
         },
         {
-          "question": "(2022-10) Ziele in ADL dürfen Disjunktionen enthalten.",
+          "question": "(2022-10) Goals in ADL may contain disjunctions.",
           "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
@@ -2007,7 +2007,7 @@
           "id": "q-077ac4d68113"
         },
         {
-          "question": "(2021-06) ADL lässt sowohl positive als auch negative Literale in Zuständen zu.",
+          "question": "(2021-06) ADL allows both positive and negative literals in states.",
           "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
@@ -2219,19 +2219,19 @@
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
-              "text": "(1) False (2) False (3) False",
+              "text": "(1) False (2) True (3) True",
               "correct": true
             },
             {
-              "text": "(1) False (2) False (3) False",
+              "text": "(1) True (2) True (3) True",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False",
+              "text": "(1) False (2) False (3) True",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False",
+              "text": "(1) False (2) True (3) False",
               "correct": false
             }
           ],
@@ -2403,19 +2403,19 @@
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) True (2) True (3) False (4) False",
               "correct": true
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) False (2) True (3) False (4) False",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) True (2) False (3) False (4) False",
               "correct": false
             },
             {
-              "text": "(1) False (2) False (3) False (4) False",
+              "text": "(1) True (2) True (3) True (4) False",
               "correct": false
             }
           ],
@@ -2448,19 +2448,19 @@
           "hint": "Utility axioms, expected value, CPI and decision networks.",
           "answers": [
             {
-              "text": "**Definition:** A lottery L, with the possible outcomes S_1, S_2,.. S_n which occur with the probability p_1, p_2, ... p_n is written as _L = [p_1, S_1; p_2, S_2;...; p_n, S_n]_",
+              "text": "**Definition:** A lottery L, with the possible outcomes S_1, S_2,.. S_n which occur with the probability p_1, p_2, ... p_n is written as _L = [p_1, S_1; p_2, S_2;...; p_n, S_n]_ -> every state S_i is an atomic state or another lottery",
               "correct": true
             },
             {
-              "text": "Incorrect: **Definition:** A lottery L, with the possible outcomes S_1, S_2,.. S_n which occur with the probability p_1, p_2, ... p_n is written as _L = [p_1, S_1; p_2, S_2;",
+              "text": "Not correct: **Definition:** A lottery L, with the possible outcomes S_1, S_2,.. S_n which occur with the probability p_1, p_2, ... p_n is written as _L = [p_1, S_1; p_2, S_2;...; p_n, S_n]_ -> every state S_i is an atomic state or another lottery",
               "correct": false
             },
             {
-              "text": "Shortened answer: **Definition:** A lottery L, with the...",
+              "text": "Shortened answer: **Definition:** A lottery L, with the possible outcomes S_1,...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that **Definition:** A lottery L, with the possible outcomes S_1, S_2,..",
+              "text": "Starts wrong: **Definition:** A lottery L, with the possible outcomes S_1, S_2,.. S_n which occur with the probability p_1, p_2, ... p_n is written as _L = [p_1, S_1; p_2, S_2;...; p_n, S_n]_ -> every state S_i is an atomic state or another lottery",
               "correct": false
             }
           ],
@@ -2472,19 +2472,19 @@
           "hint": "Utility axioms, expected value, CPI and decision networks.",
           "answers": [
             {
-              "text": "**Utility Nodes:** Represent the utility function of the agent. These nodes have as parents all the variables that influence the utility -> diamond shaped. **Decision Nodes:** Represent Pun",
+              "text": "**Utility Nodes:** Represent the utility function of the agent. These nodes have as parents all the variables that influence the utility -> diamond shaped. **Decision Nodes:** Represent points at which the decision maker makes a decision. This can influence the Chance Nodes -> Rectangular. **Chance Nodes:** Represent random variables, can have their value depending on a stochastic distribution -> oval",
               "correct": true
             },
             {
-              "text": "Incorrect: **Utility Nodes:** Represents the utility function of the agent. These nodes have as parents all the variables that influence the utility -> diamond shaped. **Decision Nodes:** Rep",
+              "text": "Not correct: **Utility Nodes:** Represent the utility function of the agent. These nodes have as parents all the variables that influence the utility -> diamond shaped. **Decision Nodes:** Represent points at which the decision maker makes a decision. This can influence the Chance Nodes -> Rectangular. **Chance Nodes:** Represent random variables, can have their value depending on a stochastic distribution -> oval",
               "correct": false
             },
             {
-              "text": "Shortened answer: **Utility Nodes:** Represent the Ut...",
+              "text": "Shortened answer: **Utility Nodes:** Represent the utility function of the age...",
               "correct": false
             },
             {
-              "text": "Starts false: It is not the case that **Utility Nodes:** Represents the agent's utility function.",
+              "text": "Starts wrong: **Utility Nodes:** Represent the utility function of the agent. These nodes have as parents all the variables that influence the utility -> diamond shaped. **Decision Nodes:** Represent points at which the decision maker makes a decision. This can influence the Chance Nodes -> Rectangular. **Chance Nodes:** Represent random variables, can have their value depending on a stochastic distribution -> oval",
               "correct": false
             }
           ],
@@ -2500,15 +2500,15 @@
               "correct": true
             },
             {
-              "text": "Incorrect: If a lottery B is not between A and C in preference, the following applies:",
+              "text": "Not correct: If a lottery B is between A and C in preference, the following applies:",
               "correct": false
             },
             {
-              "text": "Short answer: If a lottery B is between A and...",
+              "text": "Shortened answer: If a lottery B is between A and C in preference, the followi...",
               "correct": false
             },
             {
-              "text": "Starts wrong: If a lottery B is not between A and C in preference, the following applies:",
+              "text": "Starts wrong: If a lottery B is between A and C in preference, the following applies:",
               "correct": false
             }
           ],
@@ -2524,15 +2524,15 @@
               "correct": true
             },
             {
-              "text": "Incorrect: This is not the value an agent would accept instead of playing a lottery.",
+              "text": "Not correct: This is the value an agent would accept instead of playing a lottery.",
               "correct": false
             },
             {
-              "text": "Short answer: This is the value that an agent will accept...",
+              "text": "Shortened answer: This is the value an agent would accept instead of playing a...",
               "correct": false
             },
             {
-              "text": "Starts wrong: This is not the value an agent would accept instead of playing a lottery.",
+              "text": "Starts wrong: This is the value an agent would accept instead of playing a lottery.",
               "correct": false
             }
           ],
@@ -2544,19 +2544,19 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "**Least-Constrainig-Value:** Once a variable has been selected, this heuristic describes assigning a value that excludes the fewest possibilities for its neighbors. **Minimum Rem",
+              "text": "**Least-Constrainig-Value:** Once a variable has been selected, this heuristic describes assigning a value that excludes the fewest possibilities for its neighbors. **Minimum Remaining Values:** The variable that can take on the least legal values ​​is next selected. If there is a variable with 0 remaining values, it is selected and canceled **Degree Heurisitk:** The variable that has the most constraints (edges) to other unselected variables is selected.",
               "correct": true
             },
             {
-              "text": "Incorrect: **Least-Constrainig-Value:** Once a variable is selected, this heuristic describes assigning a value that excludes the fewest possibilities for its neighbors",
+              "text": "Not correct: **Least-Constrainig-Value:** Once a variable has been selected, this heuristic describes assigning a value that excludes the fewest possibilities for its neighbors. **Minimum Remaining Values:** The variable that can take on the least legal values ​​is next selected. If there is a variable with 0 remaining values, it is selected and canceled **Degree Heurisitk:** The variable that has the most constraints (edges) to other unselected variables is selected.",
               "correct": false
             },
             {
-              "text": "Shortened answer: **Least-Constrainig-Value:** Sobald eine...",
+              "text": "Shortened answer: **Least-Constrainig-Value:** Once a variable has been select...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that **Least-Constrainig-Value:** Once a variable has been selected, this heuristic describes assigning a value that has the fewest possibilities f",
+              "text": "Starts wrong: **Least-Constrainig-Value:** Once a variable has been selected, this heuristic describes assigning a value that excludes the fewest possibilities for its neighbors. **Minimum Remaining Values:** The variable that can take on the least legal values ​​is next selected. If there is a variable with 0 remaining values, it is selected and canceled **Degree Heurisitk:** The variable that has the most constraints (edges) to other unselected variables is selected.",
               "correct": false
             }
           ],
@@ -2568,19 +2568,19 @@
           "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
-              "text": "**Frame Problem:** How are things represented that are not changed during an action -> e.g. color of a car while driving. **Ramification Problem:** How are things represented that",
+              "text": "**Frame Problem:** How are things represented that are not changed during an action -> e.g. color of a car while driving. **Ramification Problem:** How to represent things that are implicitly affected by the effect. -> e.g. people on the plane move from A to B when the plane flies from A to B. **Qualification Problem:** Which prerequisites must be met for an action to be successful. Example: Plane flies from A to B. Then it must first be fulfilled that the plane is in A.",
               "correct": true
             },
             {
-              "text": "Incorrect: **Frame Problem:** How are things represented that are not changed during an action -> e.g. color of a car while driving. **Ramification Problem:** How are things repr",
+              "text": "Not correct: **Frame Problem:** How are things represented that are not changed during an action -> e.g. color of a car while driving. **Ramification Problem:** How to represent things that are implicitly affected by the effect. -> e.g. people on the plane move from A to B when the plane flies from A to B. **Qualification Problem:** Which prerequisites must be met for an action to be successful. Example: Plane flies from A to B. Then it must first be fulfilled that the plane is in A.",
               "correct": false
             },
             {
-              "text": "Shortened Answer: **Frame Problem:** How are things repr...",
+              "text": "Shortened answer: **Frame Problem:** How are things represented that are not c...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that **Frame Problem:** How are things represented that are not changed during an action -> e.g.",
+              "text": "Starts wrong: **Frame Problem:** How are things represented that are not changed during an action -> e.g. color of a car while driving. **Ramification Problem:** How to represent things that are implicitly affected by the effect. -> e.g. people on the plane move from A to B when the plane flies from A to B. **Qualification Problem:** Which prerequisites must be met for an action to be successful. Example: Plane flies from A to B. Then it must first be fulfilled that the plane is in A.",
               "correct": false
             }
           ],
@@ -2592,11 +2592,11 @@
           "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
-              "text": "Action C conflicts if C: - has the effect ¬p - could come between A and B",
+              "text": "Aktion C conflicts, falls C: - den Effekt ¬p hat - zwischen A und B kommen könnte",
               "correct": true
             },
             {
-              "text": "Incorrect: Action C conflicts if C: - does not have the effect ¬p - could come between A and B",
+              "text": "Not correct: Aktion C conflicts, falls C: - den Effekt ¬p hat nicht - zwischen A und B kommen könnte",
               "correct": false
             },
             {
@@ -2604,7 +2604,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: Action C conflicts if C: - does not have the effect ¬p - could come between A and B",
+              "text": "Starts wrong: Aktion C conflicts, falls C: - den Effekt ¬p hat nicht - zwischen A und B kommen könnte",
               "correct": false
             }
           ],
@@ -2616,19 +2616,19 @@
           "hint": "Focus on constraints, variables, domains and solution methods.",
           "answers": [
             {
-              "text": "**consistent/legal assignment:** is an assignment that does not violate any constraints. **complete assignment:** if every variable is mentioned in the assignment, it is complete. **Solution of a CSP",
+              "text": "**consistent/legal assignment:** is an assignment that does not violate any constraints. **complete assignment:** if every variable is mentioned in the assignment, it is complete. **Solution of a CSP:** is a complete and legal assignment, i.e. it mentions all variables (with a value of the domain) and satisfies all constraints",
               "correct": true
             },
             {
-              "text": "Incorrect: **consistent/legal assignment:** is not an assignment that does not violate any constraints. **complete assignment:** if every variable is mentioned in the assignment, it is complete",
+              "text": "Not correct: **consistent/legal assignment:** is an assignment that does not violate any constraints. **complete assignment:** if every variable is mentioned in the assignment, it is complete. **Solution of a CSP:** is a complete and legal assignment, i.e. it mentions all variables (with a value of the domain) and satisfies all constraints",
               "correct": false
             },
             {
-              "text": "Shortened answer: **consistent/legal assignment:** is a...",
+              "text": "Shortened answer: **consistent/legal assignment:** is an assignment that does ...",
               "correct": false
             },
             {
-              "text": "Starts wrong: **consistent/legal assignment:** is not an assignment that does not violate any constraints.",
+              "text": "Starts wrong: **consistent/legal assignment:** is an assignment that does not violate any constraints. **complete assignment:** if every variable is mentioned in the assignment, it is complete. **Solution of a CSP:** is a complete and legal assignment, i.e. it mentions all variables (with a value of the domain) and satisfies all constraints",
               "correct": false
             }
           ],
@@ -2636,19 +2636,19 @@
           "id": "q-9ec9f0b90f73"
         },
         {
-          "question": "(2024-01) Beschrieben Sie zwei Methoden des Planens mittels State-Space",
+          "question": "(2024-01) Describe zwei Methoden des plannings mittels State-Space",
           "hint": "Remember STRIPS/ADL assumptions and the differences between planning approaches.",
           "answers": [
             {
-              "text": "**Progression Planning (Forward state-space search):** starts at the initial state of the problem and tries a sequence of actions until the goal state is reached. Actions are in one",
+              "text": "**Progression Planing (Forward state-space search):** startet beim initialen State des Problems und versucht solange eine Sequenz von Actions, bis man den Goal state erreicht hat. Actions sind in eine",
               "correct": true
             },
             {
-              "text": "Incorrect: **Progression Planning (Forward state-space search):** starts at the initial state of the problem and tries a sequence of actions until the goal state is reached. Action",
+              "text": "Not correct: **Progression Planing (Forward state-space search):** startet beim initialen State des Problems und versucht solange eine Sequenz von Actions, bis man den Goal state erreicht hat. Actio",
               "correct": false
             },
             {
-              "text": "Confusion of related concepts: **regression planning (forward state-space search):** starts at the initial state of the problem and tries a sequence of actions until you reach the goal state e",
+              "text": "Verwechslung verwandter Konzepte: **regression Planing (Forward state-space search):** startet beim initialen State des Problems und versucht solange eine Sequenz von Actions, bis man den Goal state e",
               "correct": false
             },
             {
@@ -2664,19 +2664,19 @@
           "hint": "Pay attention to the exact wording - nuances often make the difference.",
           "answers": [
             {
-              "text": "**Monotony**: Suppose 2 lotteries have the same outcome A and B. If an agent prefers A over B, then the agent must precisely prefer the lottery that has a higher probability",
+              "text": "**Monotony**: Suppose 2 lotteries have the same outcome A and B. If an agent prefers A over B, then the agent must precisely prefer the lottery that has a higher probability of outcome A.",
               "correct": true
             },
             {
-              "text": "Incorrect: **Monotony**: Suppose 2 lotteries have the same outcome A and B. If an agent prefers A to B, then the agent does not have to precisely prefer the lottery that has a high",
+              "text": "Not correct: **Monotony**: Suppose 2 lotteries have the same outcome A and B. If an agent prefers A over B, then the agent must precisely prefer the lottery that has a higher probability of outcome A.",
               "correct": false
             },
             {
-              "text": "Shortened answer: **Monotony**: Suppose 2 lotteries have...",
+              "text": "Shortened answer: **Monotony**: Suppose 2 lotteries have the same outcome A an...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that **Monotony**: Suppose 2 lotteries have the same result A and B.",
+              "text": "Starts wrong: **Monotony**: Suppose 2 lotteries have the same outcome A and B. If an agent prefers A over B, then the agent must precisely prefer the lottery that has a higher probability of outcome A.",
               "correct": false
             }
           ],
@@ -2688,19 +2688,19 @@
           "hint": "Think about the differences between informed and uninformed search algorithms.",
           "answers": [
             {
-              "text": "With backtracking, the value for one variable is determined starting from a state without variable assignment and then recursively the value of another, etc. Depending on the heuristics and implementations",
+              "text": "With backtracking, the value for one variable is determined starting from a state without variable assignment and then recursively the value of another, etc. Depending on the heuristics and implementation, an error can be detected during expansion -> backtracking. Worst case running time: exponential, but finds a solution at the end if there is one.",
               "correct": true
             },
             {
-              "text": "Incorrect: With backtracking, the value for one variable is not determined starting from a state without variable assignment and the value of another is recursively based on this, etc. Depending on H",
+              "text": "Not correct: With backtracking, the value for one variable is determined starting from a state without variable assignment and then recursively the value of another, etc. Depending on the heuristics and implementation, an error can be detected during expansion -> backtracking. Worst case running time: exponential, but finds a solution at the end if there is one.",
               "correct": false
             },
             {
-              "text": "Short answer: Backtracking is based on...",
+              "text": "Shortened answer: With backtracking, the value for one variable is determined ...",
               "correct": false
             },
             {
-              "text": "Starts wrong: With backtracking, the value for one variable is not set starting from a state without variable assignment and the value of another is recursively based on this, etc.",
+              "text": "Starts wrong: With backtracking, the value for one variable is determined starting from a state without variable assignment and then recursively the value of another, etc. Depending on the heuristics and implementation, an error can be detected during expansion -> backtracking. Worst case running time: exponential, but finds a solution at the end if there is one.",
               "correct": false
             }
           ],
@@ -2712,23 +2712,23 @@
           "hint": "Utility axioms, expected value, CPI and decision networks.",
           "answers": [
             {
-              "text": "**Substituierbarkeit** A-B => [p,A;1-p,C] ~ [p,B; 1-p,C]",
+              "text": "**Substitutability** A-B => [p,A;1-p,C] ~ [p,B; 1-p,C]",
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that **substitutability** A-B => [p,A;1-p,C] ~ [p,B; 1-p,C]",
+              "text": "Not correct: **Substitutability** A-B => [p,A;1-p,C] ~ [p,B; 1-p,C]",
               "correct": false
             },
             {
-              "text": "Shortened answer: **Substituierbarkeit** A-B => [p,A;1-p,C...",
+              "text": "Shortened answer: **Substitutability** A-B => [p,A;1-p,C] ~ [p,B; 1-p,C]...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that **substitutability** A-B => [p,A;1-p,C] ~ [p,B; 1-p,C]",
+              "text": "Starts wrong: A-B => [p,A;1-p,C] ~ [p,B; 1-p,C]",
               "correct": false
             }
           ],
-          "reason": "**Substituierbarkeit** A-B => [p,A;1-p,C] ~ [p,B; 1-p,C]",
+          "reason": "**Substitutability** A-B => [p,A;1-p,C] ~ [p,B; 1-p,C]",
           "id": "q-3b025d9a7359"
         }
       ]
@@ -2741,11 +2741,11 @@
           "hint": "Consider: What components does an agent need to make a decision?",
           "answers": [
             {
-              "text": "PEAS stands for: Performance Measure – Criteria for success (e.g., score in a game) Environment – ​​Surroundings in which the agent operates (e.g., chessboard) Actuators – What the agent uses to act (e.",
+              "text": "PEAS stands for: Performance Measure – Criteria for success (e.g., score in a game) Environment – Surroundings in which the agent operates (e.g., chessboard) Actuators – What the agent uses to act (e.",
               "correct": true
             },
             {
-              "text": "Not correct: It is not the case that pEAS stands for: Performance Measure – Criteria for success (e.g., score in a game) Environment – ​​​​Surroundings in which the agent operates (e.g., chessboard)",
+              "text": "Not correct: Es ist nicht der Fall, dass pEAS stands for: Performance Measure – Criteria for success (e.g., score in a game) Environment – Surroundings in which the agent operates (e.g., chessboard)",
               "correct": false
             },
             {
@@ -2753,7 +2753,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that pEAS stands for: Performance Measure – Criteria for success (e.g., score in a game) Environment – ​​Surroundings in which the agent operates (e.g., chessboard",
+              "text": "Starts wrong: Es ist nicht der Fall, dass pEAS stands for: Performance Measure – Criteria for success (e.g., score in a game) Environment – Surroundings in which the agent operates (e.g., chessboard",
               "correct": false
             }
           ],
@@ -2769,7 +2769,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that assess goals with a utility function resolve conflicting goals use expected utility for decision",
+              "text": "Not correct: Es ist nicht der Fall, dass assess goals with a utility functionresolve conflicting goalsuse expected utility for decision",
               "correct": false
             },
             {
@@ -2777,7 +2777,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that assess goals with a utility functionresolve conflicting goalsuse expected utility for decision",
+              "text": "Starts wrong: Es ist nicht der Fall, dass assess goals with a utility functionresolve conflicting goalsuse expected utility for decision",
               "correct": false
             }
           ],
@@ -2857,7 +2857,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that completeness: does the algorithm always find a solution if one exists (in the search space)? Optimality: does it always find a least-cost (i.e. best) solution",
+              "text": "Not correct: Es ist nicht der Fall, dass completeness: does the algorithm always find a solution if one exists (in the search space)? Optimality: does it always find a least-cost (i.e. best) solutio",
               "correct": false
             },
             {
@@ -2865,7 +2865,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that completeness: does the algorithm always find a solution if one exists (in the search space)?",
+              "text": "Starts wrong: Es ist nicht der Fall, dass completeness: does the algorithm always find a solution if one exists (in the search space)?",
               "correct": false
             }
           ],
@@ -2961,7 +2961,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that each of the n variables can take d possible values, so the total number of complete assignments is \\(d^n\\), which is \\(O(d^n)\\).",
+              "text": "Not correct: Es ist nicht der Fall, dass each of the n variables can take d possible values, so the total number of complete assignments is \\(d^n\\), which is \\(O(d^n)\\).",
               "correct": false
             },
             {
@@ -2969,7 +2969,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that each of the n variables can take d possible values, so the total number of complete assignments is \\(d^n\\), which is \\(O(d^n)\\).",
+              "text": "Starts wrong: Es ist nicht der Fall, dass each of the n variables can take d possible values, so the total number of complete assignments is \\(d^n\\), which is \\(O(d^n)\\).",
               "correct": false
             }
           ],
@@ -3049,7 +3049,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that the activation function determines the output of a neuron based on its input. Without the activation function, the neural network would just represent a li",
+              "text": "Not correct: Es ist nicht der Fall, dass the activation function determines the output of a neuron based on its input. Without the activation function, the neuronal network would just represent a li",
               "correct": false
             },
             {
@@ -3057,7 +3057,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that the activation function determines the output of a neuron based on its input.",
+              "text": "Starts wrong: Es ist nicht der Fall, dass the activation function determines the output of a neuron based on its input.",
               "correct": false
             }
           ],
@@ -3137,7 +3137,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that time complexity refers to the number of nodes generated or expanded by a search strategy, often expressed in terms of problem parameters like branching facto",
+              "text": "Not correct: Es ist nicht der Fall, dass time complexity refers to the number of nodes generated or expanded by a search strategy, often expressed in terms of problem parameters like branching facto",
               "correct": false
             },
             {
@@ -3145,7 +3145,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that time complexity refers to the number of nodes generated or expanded by a search strategy, often expressed in terms of problem parameters like branching fact",
+              "text": "Starts wrong: Es ist nicht der Fall, dass time complexity refers to the number of nodes generated or expanded by a search strategy, often expressed in terms of problem parameters like branching fact",
               "correct": false
             }
           ],
@@ -3161,7 +3161,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that overfitting is when a hypothesis fits the training data too closely, including noise or irrelevant features, causing it to perform poorly on new, unseen exam",
+              "text": "Not correct: Es ist nicht der Fall, dass overfitting is when a hypothesis fits the training data too closely, including noise or irrelevant features, causing it to perform poorly on new, unseen exam",
               "correct": false
             },
             {
@@ -3169,7 +3169,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that overfitting is when a hypothesis fits the training data too closely, including noise or irrelevant features, causing it to perform poorly on new, unseen exa",
+              "text": "Starts wrong: Es ist nicht der Fall, dass overfitting is when a hypothesis fits the training data too closely, including noise or irrelevant features, causing it to perform poorly on new, unseen exa",
               "correct": false
             }
           ],
@@ -3185,7 +3185,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that a hidden unit is a processing node in a neural network that is neither an input nor output unit; it helps extract and transform features through weighted con",
+              "text": "Not correct: Es ist nicht der Fall, dass a hidden unit is a processing node in a neural network that is neither an input nor output unit; it helps extract and transform features through weighted con",
               "correct": false
             },
             {
@@ -3193,7 +3193,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that a hidden unit is a processing node in a neural network that is neither an input nor output unit; it helps extract and transform features through weighted co",
+              "text": "Starts wrong: Es ist nicht der Fall, dass a hidden unit is a processing node in a neural network that is neither an input nor output unit; it helps extract and transform features through weighted co",
               "correct": false
             }
           ],
@@ -3209,7 +3209,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that a Hopfield network is a type of recurrent neural network where all units are both inputs and outputs, connections are bidirectional and symmetric (i.e., \\(w_",
+              "text": "Not correct: Es ist nicht der Fall, dass a Hopfield network is a type of recurrent neural network where all units are both inputs and outputs, connections are bidirectional and symmetric (i.e., \\(w_",
               "correct": false
             },
             {
@@ -3217,7 +3217,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that a Hopfield network is a type of recurrent neural network where all units are both inputs and outputs, connections are bidirectional and symmetric (i.e., \\(w",
+              "text": "Starts wrong: Es ist nicht der Fall, dass a Hopfield network is a type of recurrent neural network where all units are both inputs and outputs, connections are bidirectional and symmetric (i.e., \\(w",
               "correct": false
             }
           ],
@@ -3313,15 +3313,15 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that any standard search algorithm",
+              "text": "Not correct: Es ist nicht der Fall, dass any standard search algorithm",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that any standard search algorithm",
+              "text": "Starts wrong: Es ist nicht der Fall, dass any standard search algorithm",
               "correct": false
             },
             {
-              "text": "Is incorrect: The correct answer contains other information.",
+              "text": "Not correct: The correct answer contains other information.",
               "correct": false
             }
           ],
@@ -3417,7 +3417,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that the expected value of information is always nonnegative.\\[ \\text{VPI}_e(E_j) \\geq 0 \\text{ for all } e \\text{ and } E_j \\]",
+              "text": "Not correct: Es ist nicht der Fall, dass the expected value of information is always nonnegative.\\[ \\text{VPI}_e(E_j) \\geq 0 \\text{ for all } e \\text{ and } E_j \\]",
               "correct": false
             },
             {
@@ -3425,7 +3425,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that the expected value of information is always nonnegative.\\[ \\text{VPI}_e(E_j) \\geq 0 \\text{ for all } e \\text{ and } E_j \\]",
+              "text": "Starts wrong: Es ist nicht der Fall, dass the expected value of information is always nonnegative.\\[ \\text{VPI}_e(E_j) \\geq 0 \\text{ for all } e \\text{ and } E_j \\]",
               "correct": false
             }
           ],
@@ -3441,7 +3441,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that vPI is nonadditive: the combined value of two pieces of evidence is not necessarily the sum of their individual values.\\[ \\text{VPI}_e(E_j, E_k) \\neq \\text{V",
+              "text": "Not correct: Es ist nicht der Fall, dass vPI is nonadditive: the combined value of two pieces of evidence is not necessarily the sum of their individual values.\\[ \\text{VPI}_e(E_j, E_k) \\neq \\text{V",
               "correct": false
             },
             {
@@ -3449,7 +3449,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that vPI is nonadditive: the combined value of two pieces of evidence is not necessarily the sum of their individual values.\\[ \\text{VPI}_e(E_j, E_k) \\neq \\text{",
+              "text": "Starts wrong: Es ist nicht der Fall, dass vPI is nonadditive: the combined value of two pieces of evidence is not necessarily the sum of their individual values.\\[ \\text{VPI}_e(E_j, E_k) \\neq \\text{",
               "correct": false
             }
           ],
@@ -3465,15 +3465,15 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that vPI is order independent: the order in which evidence is considered does not change the value.\\[ \\text{VPI}_e(E_j, E_k) = \\text{VPI}_e(E_k, E_j) \\]",
+              "text": "Not correct: Es ist nicht der Fall, dass vPI is order independent: the order in which evidence is considered does not change the value.\\[ \\text{VPI}_e(E_j, E_k) = \\text{VPI}_e(E_k, E_j) \\]",
               "correct": false
             },
             {
-              "text": "Short answer: VPI is order independent: the order in w...",
+              "text": "Shortened answer: VPI is order independent: the order in w...",
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that vPI is order independent: the order in which evidence is considered does not change the value.\\[ \\text{VPI}_e(E_j, E_k) = \\text{VPI}_e(E_k, E_j) \\]",
+              "text": "Starts wrong: Es ist nicht der Fall, dass vPI is order independent: the order in which evidence is considered does not change the value.\\[ \\text{VPI}_e(E_j, E_k) = \\text{VPI}_e(E_k, E_j) \\]",
               "correct": false
             }
           ],
@@ -3485,11 +3485,11 @@
           "hint": "Utility axioms, expected value, CPI and decision networks. The answer begins with True/False, followed by a reason.",
           "answers": [
             {
-              "text": "False",
+              "text": "No",
               "correct": true
             },
             {
-              "text": "True",
+              "text": "Yes",
               "correct": false
             }
           ],
@@ -3537,7 +3537,7 @@
               "correct": true
             },
             {
-              "text": "Not correct: It is not the case that inductive learning tries to approximate a target function \\( f \\) with a hypothesis \\( h \\) that is induced from training data, such that \\( h \\approx f \\).",
+              "text": "Not correct: Es ist nicht der Fall, dass inductive learning tries to approximate a target function \\( f \\) with a hypothesis \\( h \\) that is induced from training data, such that \\( h \\approx f \\).",
               "correct": false
             },
             {
@@ -3545,7 +3545,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that inductive learning tries to approximate a target function \\( f \\) with a hypothesis \\( h \\) that is induced from training data, such that \\( h \\approx f \\).",
+              "text": "Starts wrong: Es ist nicht der Fall, dass inductive learning tries to approximate a target function \\( f \\) with a hypothesis \\( h \\) that is induced from training data, such that \\( h \\approx f \\).",
               "correct": false
             }
           ],
@@ -3561,7 +3561,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that uCS expands the node with the least cost until a goal state is reached. It's like Dijkstra's algorithm but stops when the goal is found.Worst-case time: \\( \\",
+              "text": "Not correct: Es ist nicht der Fall, dass uCS expands the node with the least cost until a goal state is reached. It's like Dijkstra’s algorithm but stops when the goal is found.Worst-case time: \\( \\",
               "correct": false
             },
             {
@@ -3569,7 +3569,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that uCS expands the node with the least cost until a goal state is reached.",
+              "text": "Starts wrong: Es ist nicht der Fall, dass uCS expands the node with the least cost until a goal state is reached.",
               "correct": false
             }
           ],
@@ -3585,7 +3585,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that dLS performs depth-first search up to a predefined depth \\(l\\). Nodes deeper than \\(l\\) are not added to the frontier.Worst-case time: \\( O(b^l) \\)Worst-case",
+              "text": "Not correct: Es ist nicht der Fall, dass dLS performs depth-first search up to a predefined depth \\(l\\). Nodes deeper than \\(l\\) are not added to the frontier.Worst-case time: \\( O(b^l) \\)Worst-case",
               "correct": false
             },
             {
@@ -3593,7 +3593,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that dLS performs depth-first search up to a predefined depth \\(l\\).",
+              "text": "Starts wrong: Es ist nicht der Fall, dass dLS performs depth-first search up to a predefined depth \\(l\\).",
               "correct": false
             }
           ],
@@ -3717,11 +3717,11 @@
           "hint": "Utility axioms, expected value, CPI and decision networks.",
           "answers": [
             {
-              "text": "A lottery is a set of outcomes \\( S_1, S_2, ..., S_n \\) that occur with probabilities \\( p_1, p_2, ..., p_n \\).It can be written as:\\[ L = [p_1, S_1; p_2, S_2; \\dots; p_n, S_n] \\]Each \\( S_i \\) is one",
+              "text": "A lottery is a set of outcomes \\( S_1, S_2, ..., S_n \\) that occur with probabilities \\( p_1, p_2, ..., p_n \\).It can be written as:\\[ L = [p_1, S_1; p_2, S_2; \\dots; p_n, S_n] \\]Each \\( S_i \\) is eit",
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that a lottery is a set of outcomes \\( S_1, S_2, ..., S_n \\) that occur with probabilities \\( p_1, p_2, ..., p_n \\).It can be written as:\\[ L = [p_1, S_1; p_2, S_",
+              "text": "Not correct: Es ist nicht der Fall, dass a lottery is a set of outcomes \\( S_1, S_2, ..., S_n \\) that occur with probabilities \\( p_1, p_2, ..., p_n \\).It can be written as:\\[ L = [p_1, S_1; p_2, S_",
               "correct": false
             },
             {
@@ -3729,7 +3729,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that a lottery is a set of outcomes \\( S_1, S_2, ..., S_n \\) that occur with probabilities \\( p_1, p_2, ..., p_n \\).It can be written as:\\[ L = [p_1, S_1; p_2, p",
+              "text": "Starts wrong: Es ist nicht der Fall, dass a lottery is a set of outcomes \\( S_1, S_2, ..., S_n \\) that occur with probabilities \\( p_1, p_2, ..., p_n \\).It can be written as:\\[ L = [p_1, S_1; p_2, S",
               "correct": false
             }
           ],
@@ -3745,7 +3745,7 @@
               "correct": true
             },
             {
-              "text": "Not correct: It is not the case that if an agent is indifferent between outcomes A and B, then it is also indifferent between any two lotteries that differ only by substituting A for B.Formally:",
+              "text": "Not correct: Es ist nicht der Fall, dass if an agent is indifferent between outcomes A and B, then it is also indifferent between any two lotteries that differ only by substituting A for B.Formally:",
               "correct": false
             },
             {
@@ -3753,7 +3753,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that if an agent is indifferent between outcomes A and B, then it is also indifferent between any two lotteries that differ only by substituting A for B. Formally",
+              "text": "Starts wrong: Es ist nicht der Fall, dass if an agent is indifferent between outcomes A and B, then it is also indifferent between any two lotteries that differ only by substituting A for B.Formally",
               "correct": false
             }
           ],
@@ -3801,11 +3801,11 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that progression Planning: Forward state space search from the initial state to the goal.- Start with the problem's initial state and consider a sequence of actio",
+              "text": "Not correct: Es ist nicht der Fall, dass progression Planning: Forward state space search from the initial state to the goal.- Start with the problem's initial state and consider a sequence of actio",
               "correct": false
             },
             {
-              "text": "Confusion of related concepts: regression Planning: Forward state space search from the initial state to the goal.- Start with the problem's initial state and consider a sequence of actions until a",
+              "text": "Verwechslung verwandter Konzepte: regression Planning: Forward state space search from the initial state to the goal.- Start with the problem's initial state and consider a sequence of actions until a",
               "correct": false
             },
             {
@@ -3825,7 +3825,7 @@
               "correct": true
             },
             {
-              "text": "Incorrect: It is not the case that a conflict occurs if:\\(\\bullet\\) Action \\(C\\) has the effect \\(\\neg p\\), and\\(\\bullet\\) \\(C\\) could be executed after \\(A\\) and before \\(B\\).This would threaten",
+              "text": "Not correct: Es ist nicht der Fall, dass a conflict occurs if:\\(\\bullet\\) Action \\(C\\) has the effect \\(\\neg p\\), and\\(\\bullet\\) \\(C\\) could be executed after \\(A\\) and before \\(B\\).This would threa",
               "correct": false
             },
             {
@@ -3833,7 +3833,7 @@
               "correct": false
             },
             {
-              "text": "Starts wrong: It is not the case that a conflict occurs if:\\(\\bullet\\) Action \\(C\\) has the effect \\(\\neg p\\), and\\(\\bullet\\) \\(C\\) could be executed after \\(A\\) and before \\(B\\).This would thre",
+              "text": "Starts wrong: Es ist nicht der Fall, dass a conflict occurs if:\\(\\bullet\\) Action \\(C\\) has the effect \\(\\neg p\\), and\\(\\bullet\\) \\(C\\) could be executed after \\(A\\) and before \\(B\\).This would thre",
               "correct": false
             }
           ],
@@ -3851,11 +3851,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "An agent with only partial information can still be rational.",
@@ -3899,11 +3899,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "Adding a constant C > 0 to every step cost does False not change the path UCS returns (it shifts all path costs, but longer paths gain more, so the argmin can change only if path lengths differ — see §2.4).",
@@ -3931,11 +3931,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "Classical planning environments are fully observable, deterministic, finite, static, discrete.",
@@ -3947,11 +3947,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "PEAS — you must be able to give this for any agent To specify a task environment, give its Performance measure, Environment, Actuators, Sensors.",
@@ -3979,11 +3979,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "Poker: partially observable + stochastic — so a rational poker agent can still lose.",
@@ -3995,11 +3995,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "Agent types, simplest →most capable (1) Simple reflex — condition–action rules on current percept only.",
@@ -4043,11 +4043,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "A solution is a path from initial to goal; an optimal solution has least path cost.",
@@ -4091,11 +4091,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "UCS is the cost-sensitive version and is always optimal.",
@@ -4123,11 +4123,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "• DLS, ℓ= 1: A, B, C — limit reached, G not found (it is at depth 2).",
@@ -4139,11 +4139,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "Memory at the moment G is found = nodes in frontier + explored.",
@@ -4203,11 +4203,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "Expand S: A has g=1, f=1+4=5; B has g=4, f=4+4=8.",
@@ -4235,11 +4235,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "Contrast — Greedy (uses h only): S →pick min(h): A(4); from A pick G(0).",
@@ -4363,11 +4363,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "Reinforcement learning: learn from rewards/punishments, no labelled (x, y) pairs — it is neither supervised nor unsupervised.",
@@ -4395,11 +4395,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "“Reinforcement learning is a mix of supervised and unsupervised” False (it is its own paradigm).",
@@ -4507,11 +4507,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "More noise ⇒worse overfitting and the optimal complexity shifts lower; less noise ⇒can afford more complexity.",
@@ -4539,11 +4539,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "The decision boundary w0 + P wixi = 0 is a hyperplane ⇒a single perceptron can only separate linearly separable sets.",
@@ -4587,11 +4587,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "You are given a truth table for outputs O1, O2, O3 as functions of two binary inputs I1, I2, an activation g, and asked to build a net with at most one hidden layer.",
@@ -4635,11 +4635,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "XOR and XNOR (equivalence) are NOT linearly separable ⇒they need a hidden layer: XOR(x1, x2) = (x1 ∨x2) | {z } OR ∧¬(x1 ∧x2) | {z } NAND , XNOR = ¬XOR.",
@@ -4651,11 +4651,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "O1 (AND) and O3 (NAND) are linearly separable ⇒one neuron each, straight from the inputs.",
@@ -4667,11 +4667,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "Notice H2 (NAND) is exactly O3 — reuse it!",
@@ -4683,11 +4683,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "O1=I2, O2=XOR, O3=AND in another exam) uses the identical recipe: single neurons for the separable outputs, one shared hidden layer for the XOR.",
@@ -4731,11 +4731,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "If predicted correctly, Err = 0 and w is unchanged.",
@@ -4747,11 +4747,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "Cycle through the data until all are correct.",
@@ -4763,11 +4763,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "The final linear separator is the line w · x = 0.",
@@ -4779,11 +4779,11 @@
           "answers": [
             {
               "text": "True",
-              "correct": true
+              "correct": false
             },
             {
               "text": "False",
-              "correct": false
+              "correct": true
             }
           ],
           "reason": "Continue through the points; repeat full passes until none are misclassified.",
